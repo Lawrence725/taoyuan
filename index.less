@@ -22,7 +22,7 @@
 
 
 body    { margin: 0; }
-.body   { display: flex; flex-direction: column; font-family: 'Noto Sans TC', 'Noto Serif TC';
+.body   { display: flex; flex-direction: column; background-color: white !important; font-family: 'Noto Sans TC', 'Noto Serif TC';
 
     // Scanner
     &.scanner .main { height: calc(100vh - 90px); position: relative;
@@ -35,7 +35,7 @@ body    { margin: 0; }
         &.green { background-color: @cGreen; }
         &.orange { background-color: @cOrange; }
         &.red { background-color: @cRed; }
-        .itemH { margin-bottom: 20px; }
+        > .itemH { margin-bottom: 20px; }
         .translucent { color: rgba(255, 255, 255, 0.5); }
         .end span { text-align: right; }
         .qrcode { padding: 20px 0; background-color: white;
@@ -82,11 +82,11 @@ body    { margin: 0; }
 
     // Container
     .hide { display: none !important; }
-    .header { width: calc(100% - 20px); height: fit-content; padding: 10px 10px 0 10px; display: flex; align-items: center; justify-content: space-between; }
+    .header { width: calc(100% - 40px); height: fit-content; padding: 10px 10px 0 10px; display: flex; align-items: center; justify-content: space-between; }
     .main   { padding: 10px; display: flex; flex-direction: column; overflow-y: auto; }
     @media @sD, @sT { .header, .main, .footer { width: calc(100% - 100px); margin: 0 40px; }}
     &.fixed {
-        .header { height: 50px; padding: 0 10px; border-radius: 0 0 20px 20px; z-index: 1; position: fixed; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1); }
+        .header { height: 50px; padding: 0 20px; border-radius: 0 0 20px 20px; z-index: 1; position: fixed; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1); }
         .main   { padding: 70px 20px 20px; }}
     .itemH  { width: fit-content; border-radius: 5px; display: flex; align-items: center; }
     .itemV  { width: fit-content; border-radius: 5px; display: flex; flex-direction: column; }

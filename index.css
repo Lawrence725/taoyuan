@@ -4,6 +4,7 @@ body {
 .body {
   display: flex;
   flex-direction: column;
+  background-color: white !important;
   font-family: 'Noto Sans TC', 'Noto Serif TC';
 }
 .body.scanner .main {
@@ -39,7 +40,7 @@ body {
 .body.passport .card.red {
   background-color: #EB5757;
 }
-.body.passport .card .itemH {
+.body.passport .card > .itemH {
   margin-bottom: 20px;
 }
 .body.passport .card .translucent {
@@ -185,7 +186,7 @@ body {
   display: none !important;
 }
 .body .header {
-  width: calc(100% - 20px);
+  width: calc(100% - 40px);
   height: fit-content;
   padding: 10px 10px 0 10px;
   display: flex;
@@ -208,7 +209,7 @@ body {
 }
 .body.fixed .header {
   height: 50px;
-  padding: 0 10px;
+  padding: 0 20px;
   border-radius: 0 0 20px 20px;
   z-index: 1;
   position: fixed;
