@@ -2,6 +2,7 @@ body {
   margin: 0;
 }
 .body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: white !important;
@@ -204,6 +205,11 @@ body {
   border: 0;
 }
 .body *,
+.body *:link,
+.body *:visited,
+.body *:hover,
+.body *:active,
+.body *:focus,
 .body :after,
 .body :before {
   box-sizing: unset;

@@ -22,7 +22,7 @@
 
 
 body    { margin: 0; }
-.body   { display: flex; flex-direction: column; background-color: white !important; font-family: 'Noto Sans TC', 'Noto Serif TC';
+.body   { min-height: 100vh; display: flex; flex-direction: column; background-color: white !important; font-family: 'Noto Sans TC', 'Noto Serif TC';
 
     // Index
     &.index { min-height: 100vh; background-color: @c2 !important;
@@ -86,7 +86,7 @@ body    { margin: 0; }
     select              { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; border: 0; font-family: 'Noto Sans TC', 'Noto Serif TC'; }
     select:hover        { cursor: pointer; }
     iframe              { border: 0; }
-    *, :after, :before  { box-sizing: unset; -webkit-box-sizing: unset; }
+    *, *:link, *:visited, *:hover, *:active, *:focus, :after, :before  { box-sizing: unset; -webkit-box-sizing: unset; }
 
     // Container
     .hide { display: none !important; }
