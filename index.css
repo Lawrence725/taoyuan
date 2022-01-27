@@ -27,9 +27,11 @@ body {
 .body.index .main .no span {
   color: #D65792;
 }
-.body.index .main .img {
+.body.index .main img {
   min-width: 150px;
+  width: 150px;
   height: unset;
+  margin-left: 20px;
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
 }
 .body.scanner .main {
