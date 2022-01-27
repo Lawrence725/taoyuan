@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="疫苗護照">
+        <meta name="description" content="疫苗護照">
+        <meta name="author" content="桃園市政府">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>疫苗護照</title>
+        <link rel="icon" type="image/png" href="img/favicon.png"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+TC">
+        <!-- Google Icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body passport fixed"> <!-- class: fixed -->
+            <!-- Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header">
+                <a class="icon iconButton">
+                    <span class="material-icons primary">qr_code_scanner</span>
+                </a>
+                <span class="fL">疫苗護照</span>
+                <a class="icon iconButton">
+                    <i class="fas fa-times fa-lg"></i>
+                </a>
+            </section>
+            <!-- Main -->
+            <section class="main">
+                <div class="card itemV width center red">
+                    <div class="itemH width between">
+                        <div class="itemV">
+                            <span class="fM translucent">姓名</span>
+                            <span class="fXL white">陳小明</span>
+                        </div>
+                        <div class="itemH start">
+                            <!-- <a class="icon translucent"><i class="fas fa-syringe fa-2x"></i></a> -->
+                            <!-- <a class="icon translucent"><i class="fas fa-syringe fa-2x"></i></a> -->
+                            <a class="icon translucent"><i class="fas fa-exclamation-circle fa-2x"></i></a>
+                        </div>
+                    </div>
+                    <div class="itemH width between">
+                        <div class="itemV">
+                            <span class="fM translucent">上次接種日期 (日/月/年)</span>
+                            <span class="fL white">-</span>
+                        </div>
+                        <div class="itemV end">
+                            <span class="fM translucent">已接種/應接種劑次</span>
+                            <span class="fL white">0/2劑</span>
+                        </div>
+                    </div>
+                    <div class="itemH width between">
+                        <div class="itemV">
+                            <span class="fS translucent">疫苗經銷商/製造商</span>
+                            <span class="fM white">-</span>
+                        </div>
+                        <div class="itemV end">
+                            <span class="fS translucent">疫苗名稱</span>
+                            <span class="fM white">-</span>
+                        </div>
+                    </div>
+                    <!-- QR code -->
+                    <a class="qrcode itemH width middle" href="passport-g.html">
+                        <div class="img">
+                            <img src="img/qrcode.png">
+                        </div>
+                    </a>
+                    <div class="gov img">
+                        <img src="img/gov.png">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
