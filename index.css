@@ -90,6 +90,9 @@ body {
   height: unset;
   opacity: 0.5;
 }
+.body.passport .backLine {
+  margin-top: 30px;
+}
 .body .primary {
   color: #D65792 !important;
 }
