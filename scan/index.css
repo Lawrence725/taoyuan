@@ -1,12 +1,25 @@
 body {
   margin: 0;
 }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+select,
+input,
+textarea,
+button {
+  font-family: 'Noto Sans TC', 'Arial', '微軟正黑體', '新細明體', 'sans-serif';
+}
 .body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: white !important;
-  font-family: 'Noto Sans TC', 'Noto Serif TC';
 }
 .body.index {
   min-height: 100vh;
@@ -182,7 +195,6 @@ body {
   padding: 0;
   color: #333333;
   background-color: transparent;
-  font-family: 'Noto Sans TC', 'Noto Serif TC';
 }
 .body input:focus {
   box-shadow: none !important;
@@ -201,7 +213,6 @@ body {
   appearance: none;
   outline: none;
   border: 0;
-  font-family: 'Noto Sans TC', 'Noto Serif TC';
 }
 .body select:hover {
   cursor: pointer;
