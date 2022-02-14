@@ -8,6 +8,7 @@
 // CSS Color
 @c1:    #F9BB49;
 @c2:    #D03B76;
+@c3:    #F2AE15;
 @cG1:   #333333;
 @cG2:   #4F4F4F;
 @cG3:   #828282;
@@ -40,7 +41,16 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
         .name { margin: 0 5px; font-style: italic; color: @c2 !important; }}
     .pocketH { left: -300px; position: absolute; }
     .animation { animation-name: pocket; animation-duration: 0.5s; animation-iteration-count: 3; }
-    @keyframes pocket { 0%  { left: -300px; } 100% { left: calc(100vw + 300px); }}
+    .result { margin-top: 50px; position: absolute; pointer-events: none; transition: visibility 0s, opacity 0.5s linear;
+        &:nth-child(1) { z-index: 3; }
+        &:nth-child(2) { z-index: 2; }
+        &:nth-child(3) { z-index: 1; }
+        .img { width: 1000px; height: unset; }
+        .card { width: 600px; height: 300px; padding: 5px; margin-top: 100px; border: 5px solid @c3; border-radius: 15px; background-color: white; background: #FAF3EE; animation-name: result; animation-duration: 1s; animation-fill-mode:forwards; 
+            .fXXL { color: @c3 !important; margin: 5px 10px; }
+            .img { width: 150px; height: unset; }}}
+    @keyframes pocket { 0% { left: -300px; } 100% { left: calc(100vw + 300px); }}
+    @keyframes result { 0% { margin-top: 100px; margin-bottom: 0; } 100% { margin-top: 0; margin-bottom: 450px; }}
 
     // Color
     .primary    { color: @c1 !important; }
@@ -106,9 +116,6 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
 
     // Component
     .hide { display: none !important; }
-    .spaceS { width: 100%; height: 10px; }
-    .spaceL { width: 100%; height: 50px; }
-    .lineH { width: 100%; height: 1px; margin: 5px 0; background-color: @cG5; }
     .img { width: 100px; height: 100px; margin: 5px;
         img { width: 100%; height: 100%; }}
     .icon { min-width: 20px; min-height: 20px; margin: 5px; border-radius: 99px; position: relative; display: flex; align-items: center; justify-content: center; color: @c1;
@@ -124,8 +131,6 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
         .material-icons.md-24 { font-size: 24px; }
         .material-icons.md-36 { font-size: 36px; }
         .material-icons.md-48 { font-size: 48px; }}
-    .textButton { color: @c1;
-        &:hover { color: @cG3; }}
     .button { width: 100%; height: 40px; padding: 0 10px; margin: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; background-color: @c1; 
         &.fit { width: fit-content; height: fit-content; padding: 10px 20px; }
         &.delete { background-color: @cRed !important;
@@ -137,85 +142,6 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
             &:hover { background-color: @cG5; }
             i, span { color: @cG2; }}
         .icon, span { color: white; }}
-    .input { width: calc(100% - 20px); height: 40px; padding: 0 5px; margin: 5px; border-radius: 5px; display: flex; align-items: center; background-color: @cBg;
-        @media @sD { width: 400px; }
-        &.center input { text-align: center; }
-        input { width: 100%; height: 100%; }
-        .button { width: fit-content; height: calc(100% - 10px); margin: 0;
-            span { white-space: nowrap; }}}
-    textarea { width: calc(100% - 30px); min-height: 50px; padding: 10px; margin: 5px; border-radius: 5px; background-color: @cBg; color: @cG1; }
-    .number { width: 180px; height: 40px; padding: 0 10px; margin: 5px; border-radius: 5px; display: flex; align-items: center; background-color: @cBg;
-        input { width: 100%; height: 100%; text-align: right;
-            &::-webkit-inner-spin-button { width: 20px; height: 40px; }}
-        .unit { min-width: 45%; margin: 0; line-height: 40px; text-align: left; }}
-    .dropdown { width: 200px; margin: 5px; position: relative; display: flex; align-items: center;
-        select { width: 100%; height: 30px; padding: 5px 10px; margin: 0; border-radius: 5px; color: @cG1; background-color: @cBg; }
-        .arrow { width: 20px; height: 100%; top: 0; right: 5px; position: absolute; display: flex; align-items: center; justify-content: center; color: @c1; pointer-events: none; }}
-    .dateRange { width: 190px; height: 40px; padding: 0 5px; margin: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: space-around; background-color: @cBg;
-        input:hover { cursor: pointer; }}
-    .tabs { width: calc(100% - 16px); height: 24px; padding: 3px; margin: 5px; border-radius: 7px; display: flex; align-items: center; background-color: @cBg;
-        .tab { width: 100%; height: 100%; border-radius: 5px; display: flex; align-items: center; justify-content: center;
-            &.active { background-color: @c1; box-shadow: unset;
-                span { color: white;  }}
-            &:not(.active) {
-                &:hover { background-color: @cG4; }
-                span { color: @cG3; }}}}
-    .switch { position: relative; display: inline-block; min-width: 34px; max-width: 34px; height: 20px; margin: 5px;
-        input { opacity: 0; width: 0; height: 0;
-            &:checked + .slider { background-color: @cGreen; }
-            &:focus + .slider { box-shadow: 0 0 1px @cGreen; }
-            &:checked + .slider:before { -webkit-transform: translateX(14px); -ms-transform: translateX(14px); transform: translateX(14px); }}
-        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; border-radius: 34px; background-color: @cG4; -webkit-transition: .4s; transition: .4s;
-            &:before { position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; border-radius: 50%; background-color: white; -webkit-transition: .4s; transition: .4s; }}}
-    .check { width: fit-content; min-height: 20px; padding: 5px 5px 5px 25px; border-radius: 5px; position: relative; display: flex; align-items: center; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: 12px;
-        &:hover { background: @cBg; } 
-        &:hover input ~ .checkmark { background-color: white; } /* On mouse-over, add a grey background color */
-        &:hover .number { background-color: @cBg !important; }
-        .text { margin-left: 2px; }
-        input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; /* Hide the browser's default radio button */
-            &:checked ~ .checkmark { background-color: @c1; } /* When the radio button is checked, add a blue background */
-            &:checked ~ .checkmark:after { display: block; } /* Show the indicator (dot/circle) when checked */}
-        .checkmark.radio { position: absolute; top: auto; bottom: auto; left: 7px; height: 12px; width: 12px; border-radius: 50%; border: 2px solid @c1; background-color: white; 
-            &:after { content: ""; position: absolute; display: none; } /* Create the indicator (the dot/circle - hidden when not checked) */
-            &:after { top: 4px; left: 4px; width: 4px; height: 4px; border-radius: 50%; background: white; } /* Style the indicator (dot/circle) */}
-        .checkmark.checkbox { position: absolute; top: auto; bottom: auto; left: 7px; height: 12px; width: 12px; border-radius: 2px; border: solid 2px @c1; background-color: white;
-            &:after { content: ""; position: absolute; display: none; } /* Create the checkmark/indicator (hidden when not checked) */
-            &:after { left: 3px; top: 0.5px; width: 3px; height: 6px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); } /* Style the checkmark/indicator */}}
-    .banners { width: calc(100% - 10px); margin: 5px; position: relative;
-        .banner { height: 100%; display: none;
-            img { width: 100%; height: 100%; border-radius: 5px; object-fit: cover; }
-            .text { top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px; position: absolute; display: flex; align-items: center; justify-content: center; background-color:rgba(0,0,0,0.5);
-                span { color: white; }}}
-        .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -29px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
-        .next { right: 0; border-radius: 3px 0 0 3px; } /* Position the "next button" to the right */
-        .prev:hover, .next:hover { background-color: @cBg; color: @cG1; } /* On hover, add a grey background color */
-        .dots { width: 100%; display: flex; justify-content: center; position: absolute; bottom: 10px;
-            .dot { height: 8px; width: 8px; border: 1px solid white; margin: 0 5px; background-color: white; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
-            .active { background-color: @c1; }}}
-    table { margin: 5px; border-collapse: unset; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 10px;
-        tr:not(:first-child) { background-color: @cBg; }
-        th { text-align: center; }
-        td { padding: 5px 2.5px;
-            &:first-child { border-radius: 5px 0 0 5px; }
-            &:last-child { border-radius: 0 5px 5px 0; }
-            span { line-height: 30px; white-space: unset !important; }}
-        .action { width: fit-content; display: flex; align-items: center;
-            a { width: 20px; height: 20px; margin: 0 5px; display: flex; align-items: center; justify-content: center; color: @cG4; }}
-        .edit {
-            .input, .dropdown > select, .timeRange, .timeRange > select, .dateRange, .dateRange > input, .number, .number > input, .week, .el-date-editor.el-input__inner, .el-range-input { background-color: white; }
-            .action > a { color: @c1; }
-            .off { color: @cG5; }}}
-
-    // Toast
-    #toast { width: calc(100% - 20px); bottom: 90px; margin: 0 10px; display: flex; justify-content: center; position: fixed; z-index: 1; visibility: hidden; pointer-events: none;
-        &.show { visibility: visible; -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
-        div {
-            width: fit-content; padding: 10px 20px; border-radius: 99px; text-align: center; background-color: @cG1;
-            span { color: white; }}}
-    @-webkit-keyframes  fadein  { from { bottom: 0; opacity: 0; }       to { bottom: 90px; opacity: 1; } }
-    @keyframes          fadein  { from { bottom: 0; opacity: 0; }       to { bottom: 90px; opacity: 1; } }
-    @-webkit-keyframes  fadeout { from { bottom: 90px; opacity: 1; }    to { bottom: 0; opacity: 0; } }
-    @keyframes          fadeout { from { bottom: 90px; opacity: 1; }    to { bottom: 0; opacity: 0; } }
 
     // Spinner
     .spinner { top: 0; left: 0; width: 100vw; height: 100vh; position: fixed; display: flex; align-items: center; justify-content: center; z-index: 2;

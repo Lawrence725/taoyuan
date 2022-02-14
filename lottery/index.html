@@ -24,15 +24,15 @@
             <a class="img bottomLeft" href=""><img src="img/home.png"></a>
             <div class="img bottomRight"><img src="img/tiger.png"></div>
             <!-- Red Pockets -->
-            <div class="pockets itemH width height middle">
+            <div id="pockets" class="pockets itemH width height middle">
                 <div class="img pocket"><img src="img/pocket.png"></div>
                 <div class="img pocket large"><img src="img/pocket.png"></div>
                 <div class="img pocket"><img src="img/pocket.png"></div>
             </div>
             <!-- Buttons -->
-            <div class="buttons itemH width middle">
+            <div id="buttons" class="buttons itemH width middle">
                 <div class="itemH middle">
-                    <a class="button fit white">
+                    <a id="buttonResult" class="button fit white">
                         <span class="fXL bold name">88元</span>
                         <span class="fL bold">名單</span>
                     </a>
@@ -44,7 +44,7 @@
                     </a>
                 </div>
                 <div class="itemH middle">
-                    <a class="button fit">
+                    <a class="button fit" onclick="ani()">
                         <span class="fL bold">抽</span>
                         <span class="fXL bold name">168元</span>
                     </a>
@@ -54,6 +54,190 @@
             <div id="pocketH" class="pocketH itemH height middle">
                 <div class="img pocket"><img src="img/pocket.png"></div>
             </div>
+            <!-- Popup (Result) -->
+            <section id="popResult" class="popup notice">
+                <div class="result itemH height width center middle">
+                    <div class="img"><img src="img/result-front.png"></div>
+                </div>
+                <div class="result itemH height width center middle">
+                    <div class="card itemH">
+                        <div class="itemV height between">
+                            <span class="fXXL bold">888元</span>
+                            <div class="img"><img src="img/tiger.png"></div>
+                        </div>
+                        <div class="itemH height width around">
+                            <!-- Font: Small -->
+                            <div class="itemV height around">
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                            </div>
+                            <div class="itemV height around">
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                            </div>
+                            <div class="itemV height around">
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fM">陳＊文</span>
+                                    <span class="fM">098****321</span>
+                                </div>
+                            </div>
+                            <!-- Font: Middle -->
+                            <!-- <div class="itemV height around">
+                                <div class="itemH">
+                                    <span class="fL">陳＊文</span>
+                                    <span class="fL">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fL">陳＊文</span>
+                                    <span class="fL">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fL">陳＊文</span>
+                                    <span class="fL">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fL">陳＊文</span>
+                                    <span class="fL">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fL">陳＊文</span>
+                                    <span class="fL">098****321</span>
+                                </div>
+                            </div> -->
+                            <!-- Font: Large -->
+                            <!-- <div class="itemV height around">
+                                <div class="itemH">
+                                    <span class="fXL">陳＊文</span>
+                                    <span class="fXL">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fXL">陳＊文</span>
+                                    <span class="fXL">098****321</span>
+                                </div>
+                                <div class="itemH">
+                                    <span class="fXL">陳＊文</span>
+                                    <span class="fXL">098****321</span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="result itemH height width center middle">
+                    <div class="img"><img src="img/result-back.png"></div>
+                </div>
+            </section>
         </div>
         <!-- Script -->
         <script src="index.js"></script>
