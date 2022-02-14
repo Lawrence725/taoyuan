@@ -92,9 +92,11 @@ button {
   font-style: italic;
   color: #D03B76 !important;
 }
-.body .animation {
+.body .pocketH {
   left: -300px;
   position: absolute;
+}
+.body .animation {
   animation-name: pocket;
   animation-duration: 0.5s;
   animation-iteration-count: 3;

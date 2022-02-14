@@ -38,7 +38,8 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
         .button { border-radius: 10px; }
         :not(.name) { color: black !important; }
         .name { margin: 0 5px; font-style: italic; color: @c2 !important; }}
-    .animation { left: -300px; position: absolute; animation-name: pocket; animation-duration: 0.5s; animation-iteration-count: 3; }
+    .pocketH { left: -300px; position: absolute; }
+    .animation { animation-name: pocket; animation-duration: 0.5s; animation-iteration-count: 3; }
     @keyframes pocket { 0%  { left: -300px; } 100% { left: calc(100vw + 300px); }}
 
     // Color
