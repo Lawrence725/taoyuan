@@ -37,7 +37,8 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
     .buttons { bottom: 80px; position: absolute;
         > .itemH { width: 200px; 
             &.large { width: 300px; }}
-        .button { border-radius: 10px; }
+        .button { border-radius: 10px; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.2);
+            &:hover { box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.2), inset 0 0 100px 100px rgba(255, 255, 255, 0.2); }}
         :not(.name) { color: black !important; }
         .name { margin: 0 5px; font-style: italic; color: @c2 !important; }}
     .pocketH { left: -300px; position: absolute; }
