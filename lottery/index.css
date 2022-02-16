@@ -108,7 +108,7 @@ button {
 .body .animation {
   animation-name: pocket;
   animation-duration: 0.5s;
-  animation-iteration-count: 3;
+  animation-iteration-count: 12;
 }
 .body .result {
   margin-top: 50px;
