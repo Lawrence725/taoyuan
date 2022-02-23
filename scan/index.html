@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="body index fixed"> <!-- class: fixed -->
+        <div class="body index fixed mobile"> <!-- class: fixed mobile -->
             <!-- Spinner -->
             <!-- <div class="spinner"><div><div></div></div></div> -->
             <!-- Header -->
@@ -25,31 +25,109 @@
             </section>
             <!-- Main -->
             <section class="main">
-                <div class="itemH width">
-                    <a class="button white" href="passport-g.html"><span class="fM">上傳照片</span></a>
-                    <a class="button" href="scanner.html"><span class="fM">掃描QR Code</span></a>
+                <div class="itemV width">
+                    <div class="itemH width">
+                        <div class="no">
+                            <span class="fM bold">1</span>
+                        </div>
+                        <span class="fM white">於衛生福利部網站申請並取得
+                            <a class="textButton secondary" href="https://dvc.mohw.gov.tw/vapa/apply/Index.init.ctr" target="_blank">「數位新冠病毒健康證明」</a>
+                            （俗稱疫苗護照，樣式如左圖）</span>
+                    </div>
+                    <div class="itemH width">
+                        <div class="no">
+                            <span class="fM bold">2</span>
+                        </div>
+                        <span class="fM white">於本頁面點選「掃描 QR Code」按鈕，並同意相機使用權限及網頁隱私權及安全政策</span>
+                    </div>
+                    <div class="itemH width">
+                        <div class="no">
+                            <span class="fM bold">3</span>
+                        </div>
+                        <span class="fM white">將鏡頭對準疫苗護照QR Code進行掃描</span>
+                    </div>
+                    <div class="itemH width">
+                        <div class="no">
+                            <span class="fM bold">4</span>
+                        </div>
+                        <span class="fM white">完成建檔！以後就可以輕鬆出示疫苗護照囉！（將依施打狀態顯示
+                            <span class="color bold error">紅</span>、
+                            <span class="color bold orange">橘</span>、
+                            <span class="color bold success">綠</span>
+                            燈號及接種資料）</span>
+                    </div>
                 </div>
                 <div class="itemH width middle">
-                    <div class="itemV center width">
-                        <div class="no">
-                            <span class="fL white">1</span>
-                        </div>
-                        <span class="fM center">民眾請先透過</span>
-                        <a class="textButton fM" href="https://dvc.mohw.gov.tw/vapa/apply/Index.init.ctr">「數位新冠病毒健康證明」</a>
-                        <span class="fM center">查驗網頁申請<br/>「疫苗接種數位證明」</span>
-                    </div>
                     <img src="img/passport.png">
+                    <img src="img/card.png">
                 </div>
                 <div class="itemH width middle">
-                    <div class="itemV center width">
-                        <div class="no">
-                            <span class="fL white">2</span>
+                    <a class="textButton secondary fS" onclick="popPrivacy()">隱私權及安全政策</a>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section class="footer">
+                <a class="button white rounded" href="scanner.html">
+                    <div class="icon"><img src="icon/ic_round-qr-code-scanner.svg"></div>
+                    <span class="fM bold">掃描 QR Code</span>
+                </a>
+            </section>
+            <!-- Popup (Privacy)-->
+            <section id="popPrivacy" class="popup">
+                <div class="popBody">
+                    <a class="close"><img src="icon/cross.svg"></a>
+                    <section class="popHeader">
+                        <span class="fL">隱私權及安全政策</span>
+                    </section>
+                    <section class="popMain full">
+                        <div class="itemV margin padding">
+                            <span class="fM">感謝您使用桃園市市民卡行動疫苗護照！
+                                <br>「數位桃園1000+市民卡振興加碼」官方LINE帳號，為桃園市政府資訊科技局所建置之活動共構平台，為支持個人資料保護、維護個人隱私權，謹以下列聲明，向您說明本服務蒐集個人資料之目的、類別、利用範圍、方式及您所得行使之權利等事項。</span>
+                            <div class="spaceS"></div>
+                            <span class="fM bold">■ 適用範圍</span>
+                            <span class="fM">本次公告適用於桃園市政府資訊科技局提供之「桃園市市民卡行動疫苗護照」服務所涉及的個人資料蒐集、處理、利用與保護，您可以拒絕提供個人資料，不過將會導致您無法使用本服務。若您未滿二十歲，應請您的法定代理人閱讀、瞭解並同意本聲明所有內容規定後，方得使用系統服務；若您已接受本服務，則視為您已取得法定代理人同意並遵守以下所有規範。</span>
+                            <div class="spaceS"></div>
+                            <span class="fM bold">■ 個人資料的蒐集目的與類別</span>
+                            <span class="fM">本服務將依照用戶提供之「數位新冠病毒健康證明」進行資料建檔及留存，往後得以快速於指定場域完成身分驗證。本服務也將記錄用戶連上網站的IP位址、上網時間及網站內所瀏覽的網頁等資料，作為內部流量與網路行為調查的總量分析，以提昇服務品質，但不會針對個別使用者進行資料提取。</span>
+                            <div class="spaceS"></div>
+                            <span class="fM bold">■ 個人資料的利用</span>
+                            <span class="fM">本服務所蒐集之資料，僅供桃園市政府資訊科技局之桃園市市民卡APP相關活動及職權機關防疫需求使用，並於服務期間或法令所定應保存期間內，持續保管、處理及利用相關資料，絕不會提供給其他第三人或移作蒐集目的以外之使用，但在符合法令規範或依循下列原則之前提下，可能將您的個人資料提供予第三人：</span>
+                            <span class="fS">（一） 取得您的同意或授權允許時。</span>
+                            <span class="fS">（二） 為完成提供服務基於委外契約關係所必要者。</span>
+                            <span class="fS">（三） 為協助辦理保險事故出險而提供給保險人。</span>
+                            <span class="fS">（四） 配合司法及主管機關之調查命令或相關法令規定要求。</span>
+                            <div class="spaceS"></div>
+                            <span class="fM bold">■ 資訊安全</span>
+                            <span class="fM">本服務將以合於產業標準之合理技術及程序，維護您的資訊安全，採取措施如裝設防火牆、掃毒軟體、定期進行備份作業等，來防止未經授權的資料查閱、竄改、揭露或毀損。資料中心系統是採用位在彰化縣的Google Cloud Platform（GCP）台灣雲端資料中心，Google Cloud在安全性、第三方稽核與認證、說明文件與合約承諾等方面領先業界，遵循法規並確保資料安全與個資保護。詳細可參閱 Google Workspace和Google Cloud Platform的資料處理條款。</span>
+                            <div class="spaceS"></div>
+                            <span class="fM bold">■ Google Cloud 資料中心安全性與法規遵循</span>
+                            <a class="textButton fM" href="https://cloud.google.com/security/compliance/" target="_blank">https://cloud.google.com/security/compliance/</a>
+                            <div class="spaceS"></div>
+                            <span class="fM bold">■ Cookie運用政策</span>
+                            <span class="fM">當您經由網際網路使用本服務時，請您務必詳細閱讀下列有關Cookies之資訊：</span>
+                            <div class="spaceS"></div>
+                            <span class="fM">Cookie是伺服端為了區別使用者的不同喜好，由瀏覽器寫入使用者硬碟的一些簡短資訊。雖然Cookie會識別使用者的電腦，但是無法識別使用者的身分。您也可以透過在您的瀏覽器中選擇修改您對Cookie的接受程度，如果您選擇拒絕所有的Cookie，您可能無法正常使用本網站。</span>
+                            <div class="spaceS"></div>
+                            <span class="fM">若您對本服務的隱私權及安全政策有任何疑問，都歡迎您隨時與我們聯絡。</span>
+                            <div class="spaceS"></div>
+                            <span class="fM bold">■ 自我保護措施</span>
+                            <span class="fM">妥善保管您的疫苗護照及個人資料，請勿任意提供給非相關人等，以免遭受竊取、濫用。</span>
+                            <div class="spaceS"></div>
+                            <span class="fM bold">■ 隱私權及安全政策修正</span>
+                            <span class="fM">本服務將採用最新技術與法規保護您的隱私權與個人資料，並不定時修改公告說明以合時宜，不再另行個別通知，您可以隨時在此詳閱修訂後的相關事項。</span>
+                            <div class="spaceS"></div>
+                            <span class="fM bold">■ 隱私權及安全政策諮詢</span>
+                            <span class="fM">如果您有任何關於本公告或服務使用上的相關問題，歡迎來信至客服信箱（
+                                <a class="textButton" href="mailto: tycc@mail.tycg.gov.tw">tycc@mail.tycg.gov.tw</a>）詢問。</span>
                         </div>
-                        <span class="fM center">掃描黃色疫苗護照上方QR code即可存入桃園線上疫苗護照</span>
-                    </div>
-                    <img src="img/card.png">
+                    </section>
+                    <section class="popFooter">
+                        <a class="button submit"><span class="fS">確定</span></a>
+                    </section>
                 </div>
             </section>
         </div>
+        <!-- Script -->
+        <script src="index.js"></script>
     </body>
 </html>
