@@ -6,70 +6,66 @@
 @sLand: (max-height: 767px) and (min-width: 568px);     // Mobile (Landscape)
 
 // CSS Color
-@c1:        #D65792;
-@c2:        #FFF2F7;
-@c3:        #57CED6;
-@cG1:       #333333;
-@cG2:       #4F4F4F;
-@cG3:       #828282;
-@cG4:       #BDBDBD;
-@cG5:       #E0E0E0;
-@cG6:       #F2F2F2;
-@cBg:       #F2F1F6;
-@cRed:      #EB5757;
-@cGreen:    #27AE60;
-@cOrange:   #F2994A;
+@c1:    #F9BB49;
+@c2:    #D03B76;
+@c3:    #F2AE15;
+@cG1:   #333333;
+@cG2:   #4F4F4F;
+@cG3:   #828282;
+@cG4:   #BDBDBD;
+@cG5:   #E0E0E0;
+@cG6:   #F2F2F2;
+@cBg:   #F2F1F6;
+@cRed:  #EB5757;
+@cGreen:#27AE60;
 
-
+*::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
 body    { margin: 0; }
-body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 'Noto Sans TC', 'Arial', '微軟正黑體', '新細明體', 'sans-serif'; }
-.body   { min-height: 100vh; display: flex; flex-direction: column; background-color: white !important;
+body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 'cwTeXYen', 'Noto Sans TC', 'Arial', '微軟正黑體', '新細明體', 'sans-serif'; }
+.body   { min-height: 100vh; display: flex; flex-direction: column; background: url(img/bg.jpeg); background-position: center; background-attachment: fixed;
 
-    // Index
-    &.index { min-height: 100vh; background: linear-gradient(135deg, rgba(214, 87, 146, 0.5) 0%, #D65792 100%), #FFFFFF;
-        .main { padding: 70px 20px 70px !important;
-            > .itemH { margin: 10px 0 20px; }
-            > .itemV > .itemH { margin-bottom: 20px; }
-            .no { min-width: 25px; min-height: 25px; margin-right: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: white;
-                span { color: @c1; }}
-            img { width: calc(50% - 10px); max-width: 200px; height: unset; margin: 0 10px;}
-            .color { padding: 2px; margin: 0 2px; border-radius: 2px; background-color: white; }}
-        .footer .button { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); }}
-
-    // Scanner
-    &.scanner .main { height: 100vh; padding: 0 !important; position: relative;
-        .img.scan { width: 100%; height: 100%; margin: 0; position: absolute; display: flex; justify-content: center;
-            img { width: 80%; }}
-        canvas { width: 100% !important; height: 100% !important; }}
-
-    // Passport
-    &.passport {
-        .card { width: calc(100% - 40px) !important; padding: 20px; border-radius: 10px; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
-            &.green { background-color: @cGreen; }
-            &.orange { background-color: @cOrange; }
-            &.red { background-color: @cRed; }
-            > .itemH { margin-bottom: 20px; }
-            .translucent { color: rgba(255, 255, 255, 0.5); }
-            .end span { text-align: right; }
-            .qrcode { padding: 20px 0; background-color: white;
-                .img { width: 200px; height: 200px; }}
-            .img.gov { width: 150px; height: unset; opacity: 0.5; }}
-        .backLine { margin-top: 30px; }}
-
-    // List
-    // &.list .main .img { width: 20px; }
+    // Unique
+    .img { margin: 0 !important;
+        &.topLeft { width: 300px; height: unset; top: 50px; left: 50px; position: absolute; }
+        &.bottomLeft { width: 300px; height: unset; bottom: 50px; left: 50px; position: absolute; }
+        &.pocket { width: 600px; height: unset; filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.2)); }}
+    .pockets { position: absolute; pointer-events: none; }
+    .buttons { bottom: 80px; position: absolute;
+        > .itemH { width: 200px; }
+        .button { border-radius: 10px; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.2);
+            &:hover { box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.2), inset 0 0 100px 100px rgba(255, 255, 255, 0.2); }}
+        :not(.name) { color: black !important; }
+        .name { margin: 0 5px; font-style: italic; color: @c2 !important; }}
+    .pocketH { left: -600px; position: absolute; }
+    .animation { animation-name: pocket; animation-duration: 0.5s; animation-iteration-count: 12; }
+    .rewards { width: 250px !important; position: absolute; top: 50px; right: 50px;
+        .reward { width: calc(100% - 40px); padding: 10px 20px; border: 2px solid @cG4; margin: 10px 0; border-radius: 10px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); box-shadow: 0px 1px 24px rgba(55, 84, 170, 0.05); backdrop-filter: blur(20px);
+            &.active { border: 2px solid @c1; background: linear-gradient(104.62deg, rgba(249, 187, 73, 0.8) 0%, rgba(249, 187, 73, 0.5) 100%); }
+            &:hover { border: 2px solid @c1; }}
+        .iconButton { margin: 10px; }}
+    .result { margin-top: 50px; position: absolute; pointer-events: none; transition: visibility 0s, opacity 0.5s linear;
+        &:nth-child(1) { z-index: 3; }
+        &:nth-child(2) { z-index: 2; }
+        &:nth-child(3) { z-index: 1; }
+        .img { width: 1000px; height: unset; }
+        .card { width: 600px; height: 300px; padding: 5px; margin-top: 100px; border: 5px solid @c3; border-radius: 15px; background-color: white; background: #FAF3EE; animation-name: result; animation-duration: 0.5s; animation-fill-mode:forwards; 
+            .fXXL { color: @c3 !important; margin: 5px 10px; }
+            .img { width: 150px; height: unset; }}}
+    @keyframes pocket { 0% { left: -300px; } 100% { left: calc(100vw + 600px); }}
+    @keyframes result { 0% { margin-top: 100px; margin-bottom: 0; } 100% { margin-top: 0; margin-bottom: 450px; }}
 
     // Color
     .primary    { color: @c1 !important; }
     .secondary  { color: @c2 !important; }
     .gray       { color: @cG3 !important; }
+    .minor      { color: @cG4 !important; }
     .disabled   { color: @cG4 !important; filter: grayscale(100%); pointer-events: none; }
     .error      { color: @cRed !important; }
     .success    { color: @cGreen !important; }
-    .orange     { color: @cOrange !important; }
     .background { background-color: @cBg !important; }
 
     // Font
+    .fXXL       { font-size: 36px; }
     .fXL        { font-size: 24px; }
     .fL         { font-size: 18px; }
     .fM         { font-size: 14px; }
@@ -77,15 +73,12 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
     .fXS        { font-size: 10px; }
     .bold       { font-weight: bold; }
     .under      { text-decoration: underline !important; }
+    span.white  { color: white; }
+    span.center { text-align: center; }
+    span.margin { margin: 5px; }
+    span.width  { width: 100%; }
     .single     { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .double     { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
-    .textButton { color: @c1; border-radius: 5px;
-        &:hover { color: @cG3; }}
-    span, .textButton {
-        &.white  { color: white; }
-        &.center { text-align: center; }
-        &.margin { margin: 5px; }
-        &.width  { width: 100%; }}
     
     // Reset
     span                { color: @cG1; }
@@ -99,20 +92,11 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
     select              { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; border: 0; }
     select:hover        { cursor: pointer; }
     iframe              { border: 0; }
-    *, *:link, *:visited, *:hover, *:active, *:focus, :after, :before  { box-sizing: unset; -webkit-box-sizing: unset; }
+    *, :after, :before  { box-sizing: unset; -webkit-box-sizing: unset; }
 
     // Container
-    .hide { display: none !important; }
-    .spaceS { width: 100%; height: 20px; }
-    .header { width: calc(100% - 40px); height: fit-content; padding: 10px 10px 0 10px; display: flex; align-items: center; justify-content: space-between; }
-    .main   { padding: 10px; display: flex; flex-direction: column; overflow-y: auto; }
-    .footer { width: calc(100% - 20px); height: fit-content; padding: 0 10px 10px 10px; display: flex; align-items: center; justify-content: center; }
-    @media @sD, @sT { .header, .main, .footer { width: calc(100% - 100px); margin: 0 40px; }}
-    &.fixed {
-        .header { height: 50px; padding: 0 20px; border-radius: 0 0 20px 20px; z-index: 1; position: fixed; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1); }
-        .main   { padding: 70px 20px 20px; }
-        .footer { height: 70px; padding: 0 10px; border-radius: 20px 20px 0 0; bottom: 0; z-index: 1; position: fixed; }}
-    &.mobile { @media @sD, @sT { .header, .main, .footer { width: 748px; margin-left: calc(50% - 374px); margin-right: calc(50% - 374px); }}}
+    // .main   { min-height: calc(100vh - 20px); padding: 10px; display: flex; flex-direction: column; overflow-y: auto; }
+    // @media @sD, @sT { .main { width: calc(100% - 100px); margin: 0 40px; }}
     .itemH  { width: fit-content; border-radius: 5px; display: flex; align-items: center; }
     .itemV  { width: fit-content; border-radius: 5px; display: flex; flex-direction: column; }
     .itemH, .itemV {
@@ -133,24 +117,27 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
         &.padding.margin.width  { width: calc(100% - 20px); }}
 
     // Component
+    .hide { display: none !important; }
     .rounded { border-radius: 999px !important; }
-    .lineH { width: 100%; height: 1px; margin: 5px 0; background-color: @cG5; }
     .img { width: 100px; height: 100px; margin: 5px;
-        &.logo { width: 30px; height: 30px; }
         img { width: 100%; height: 100%; }}
     .icon { min-width: 20px; min-height: 20px; margin: 5px; border-radius: 99px; position: relative; display: flex; align-items: center; justify-content: center; color: @c1;
-        &.iconButton { min-width: 30px; min-height: 30px;
+        &.iconButton { min-width: 40px; min-height: 40px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             &:hover { background-color: @cBg; }
             &.fill { color: white; background-color: @c1; }
             .new { top: 2px; right: 2px; }}
         &.black { color: @cG1; }
         &.white { color: white; }
+        &.fit { min-width: fit-content; min-height: fit-content; margin: 0; }
         .new { width: 10px; height: 10px; border: 1px solid white; border-radius: 99px; top: -3px; right: -3px; position: absolute; background-color: @cRed; }
         .material-icons.md-18 { font-size: 18px; }
         .material-icons.md-24 { font-size: 24px; }
         .material-icons.md-36 { font-size: 36px; }
         .material-icons.md-48 { font-size: 48px; }}
+    .input { width: 100%; position: relative; display: flex; align-items: center;
+        input { width: 100%; height: 100%; margin-bottom: 2px; }}
     .button { width: 100%; height: 40px; padding: 0 10px; margin: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; background-color: @c1; 
+        &.fit { width: fit-content; height: fit-content; padding: 10px 20px; }
         &.delete { background-color: @cRed !important;
             i, span { color: white !important; }}
         &.secondary { background-color: @c2;
@@ -158,9 +145,9 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
             i, span { color: @c1; }}
         &.white { background-color: white;
             &:hover { background-color: @cG5; }
-            i, span { color: @c1; }}
+            i, span { color: @cG2; }}
         .icon, span { color: white; }}
-    
+
     // Spinner
     .spinner { top: 0; left: 0; width: 100vw; height: 100vh; position: fixed; display: flex; align-items: center; justify-content: center; z-index: 2;
         > div { min-width: 80px; min-height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.75); backdrop-filter: blur(4px); 
@@ -171,15 +158,23 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
     // Popup
     .popup { width: 100%; height: 100%; left: 0; top: 0; position: fixed; display: none; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: hidden; z-index: 2; background-color: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
         &.notice .popBody { width: 300px; height: fit-content; }
-        .close { top: 15px; right: 15px; height: 20px; width: 20px; position: absolute; display: flex; align-items: center; justify-content: center; color: @cG4;
+        .close { top: 20px; right: 20px; height: 20px; width: 20px; position: absolute; display: flex; align-items: center; justify-content: center; color: @cG4;
             &:hover, &:focus { color: @cG1; }}
-        .popBody { width: 100%; max-height: calc(100% - 60px); padding: 10px; margin: 20px; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @cBg;
+        .popBody { width: 100%; height: calc(100% - 60px); padding: 10px; margin: 20px; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @cBg;
             .popHeader { margin: 5px; display: flex; flex-direction: column; }
             .popMain { margin: 15px 0px; display: flex; flex-direction: column; align-items: center; justify-content: center;
                 &.full { height: 100%; margin: 15px 5px; border-radius: 5px; align-items: flex-start; justify-content: flex-start; background-color: white; overflow-y: auto; 
                     &::-webkit-scrollbar { -webkit-appearance: none; }
                     &::-webkit-scrollbar:vertical { width: 10px; }
                     &::-webkit-scrollbar-thumb { border-radius: 5px; background-color: @cG5; border: 2.5px solid white; } /* should match background, can't be transparent */}
+                ol { padding: 0 0 20px 30px;
+                    &.chin { list-style-type: none;
+                        > li { margin-left: -20px; }}
+                    &.romanU { list-style-type: upper-roman; }
+                    ol { padding: 0 0 10px 20px; } 
+                    ul { padding: 0 0 10px 20px; list-style-type: disc; }
+                    li { margin: 5px 0;
+                        &.none { list-style-type: none; }}}
                 .message { width: calc(100% - 10px); margin: 5px; text-align: center; }}
             .popFooter { display: flex; }}}
 }
