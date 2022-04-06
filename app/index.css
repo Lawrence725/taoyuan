@@ -342,6 +342,9 @@ button {
 .body .footer .iconButton {
   width: 100%;
 }
+.body .footer .iconButton.active > img {
+  filter: drop-shadow(0px 0px 5px #EF6079) drop-shadow(0px 0px 5px #EF6079) drop-shadow(0px 0px 5px #EF6079);
+}
 .body .footer .iconButton.active > img:first-child {
   display: none;
 }
