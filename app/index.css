@@ -119,6 +119,9 @@ button {
 .body .index .discounts > .flexH::-webkit-scrollbar {
   -webkit-appearance: none;
 }
+.body .index .discounts > .flexH::-webkit-scrollbar:vertical {
+  width: 0;
+}
 .body .index .discounts > .title {
   padding-left: 5px;
   margin: 0 0 5px 20px;
@@ -145,17 +148,22 @@ button {
   height: calc(100vh - 130px);
   padding: 60px 0 70px !important;
 }
+.body .scan.main::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.body .scan.main::-webkit-scrollbar:vertical {
+  width: 0;
+}
 .body .scan canvas {
   width: 100% !important;
   height: calc(100vh - 130px) !important;
-  padding: 60px 0 70px;
   position: absolute;
 }
 .body .scan .swipeup {
   width: calc(100% - 40px);
-  height: 1000px;
+  min-height: 300px;
   padding: 10px 20px 30px;
-  margin-top: 100%;
+  margin-top: calc(100vh - 200px);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
   backdrop-filter: blur(20px);
@@ -171,8 +179,14 @@ button {
   margin: 20px 0;
 }
 .body .scan .swipeup .img {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
+  margin-right: 10px;
+}
+.body .scan .swipeup .light {
+  min-width: 50px;
+  height: 50px;
+  background-color: #5CB8B2;
 }
 .body .primary {
   color: #EF6079 !important;

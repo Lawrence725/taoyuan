@@ -45,19 +45,23 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                 img { border-radius: 5px; }}
         .discounts { width: 100vw !important; margin: 5px 0 0 -10px !important; padding: 0 !important;
             > .flexH { width: calc(100% - 35px); padding: 0 15px 0 20px !important; overflow-x: auto;
-                &::-webkit-scrollbar { -webkit-appearance: none; }}
+                &::-webkit-scrollbar { -webkit-appearance: none; }
+                &::-webkit-scrollbar:vertical { width: 0; }}
             > .title { padding-left: 5px; margin: 0 0 5px 20px; border-left: 1px solid @c4; }
             .discount { margin-right: 10px; border: 1px solid @cBg; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%); 
                 > * > .title { color: @c3; }
                 .img { margin: 0;
                     img { border-radius: 10px 10px 0 0; }}}}}
     .scan {
-        &.main { width: 100vw; height: calc(100vh - 130px); padding: 60px 0 70px !important; }
-        canvas { width: 100% !important; height: calc(100vh - 130px) !important; padding: 60px 0 70px; position: absolute; }
-        .swipeup { width: calc(100% - 40px); height: 1000px; padding: 10px 20px 30px; margin-top: 100%; background: rgba(255, 255, 255, 0.9); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(20px); border-radius: 30px 30px 0px 0px; 
+        &.main { width: 100vw; height: calc(100vh - 130px); padding: 60px 0 70px !important;
+            &::-webkit-scrollbar { -webkit-appearance: none; }
+            &::-webkit-scrollbar:vertical { width: 0; }}
+        canvas { width: 100% !important; height: calc(100vh - 130px) !important; position: absolute; }
+        .swipeup { width: calc(100% - 40px); min-height: 300px; padding: 10px 20px 30px; margin-top: calc(100vh - 200px); background: rgba(255, 255, 255, 0.9); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(20px); border-radius: 30px 30px 0px 0px; 
             .holder { width: 30px; height: 5px; border-radius: 99px; background-color: @cG4; }
             .fL.primary { margin: 20px 0; }
-            .img { width: 60px; height: 60px; }}}
+            .img { min-width: 60px; height: 60px; margin-right: 10px; }
+            .light { min-width: 50px; height: 50px; background-color: @c3; }}}
 
     // Color
     .primary    { color: @c1 !important; }
