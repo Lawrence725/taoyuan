@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="TTPush">
+        <meta name="description" content="TTPush">
+        <meta name="author" content="TTPush">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>TTPush</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="index body fixed mobile"> <!-- class: fixed, mobile -->
+            <!-- Loading Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header">
+                <div class="icon"></div>
+                <div class="flexH">
+                    <div class="img"><img src="img/favicon-b.svg"></div>
+                    <div class="img"><img src="img/title.svg"></div>
+                </div>
+                <a class="icon iconButton">
+                    <img src="icon/bell.svg">
+                    <div class="new"><span class="fXS white">3</span></div>
+                </a>
+            </section>
+            <!-- Main -->
+            <section class="main">
+                <!-- Banner -->
+                <div class="banners">
+                    <div class="banner">
+                        <img src="img/banner1.png">
+                    </div>
+                    <div class="banner">
+                        <img src="img/banner2.png">
+                    </div>
+                    <div class="banner">
+                        <img src="img/banner1.png">
+                        <div class="text">
+                            <span class="fL">Slogan</span>
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                    <div class="dots">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                    </div>
+                </div>
+                <!-- 功能 -->
+                <div class="function flexH width padding">
+                    <a class="flexV center width">
+                        <img src="icon/point.svg">
+                        <span class="fM">紅桃點數</span>
+                        <span class="fS">1,000</span>
+                    </a>
+                    <a class="flexV center width">
+                        <img src="icon/point-b.svg">
+                        <span class="fM">黑桃點數</span>
+                        <span class="fS">5,000</span>
+                    </a>
+                    <a class="flexV center width">
+                        <img src="icon/ticket.svg">
+                        <span class="fM">優惠卷</span>
+                        <span class="fS">50張</span>
+                    </a>
+                    <a class="flexV center width">
+                        <img src="icon/stamp.svg">
+                        <span class="fM">集章</span>
+                        <span class="fS">5張</span>
+                    </a>
+                </div>
+                <!-- 任務 -->
+                <div class="mission flexH width">
+                    <div class="title flexH middle width">
+                        <span class="fM">活動任務</span>
+                    </div>
+                    <a class="flexV center width">
+                        <img src="icon/checkin.svg">
+                        <span class="fM">每日簽到</span>
+                    </a>
+                    <a class="flexV center width">
+                        <img src="icon/game.svg">
+                        <span class="fM">小遊戲</span>
+                    </a>
+                    <a class="flexV center width">
+                        <img src="icon/video.svg">
+                        <span class="fM">看影片</span>
+                    </a>
+                    <a class="flexV center width">
+                        <img src="icon/question.svg">
+                        <span class="fM">問答</span>
+                    </a>
+                </div>
+                <!-- Tabs -->
+                <div class="tabs line fM">
+                    <a class="tab active">
+                        <span>最新消息</span>
+                    </a>
+                    <span class="secondary">|</span>
+                    <a class="tab">
+                        <span>特店優惠</span>
+                    </a>
+                    <span class="secondary">|</span>
+                    <a class="tab">
+                        <span>桃園卷</span>
+                    </a>
+                </div>
+                <!-- 最新消息 -->
+                <a class="news flexH width margin">
+                    <div class="flexV padding margin height between">
+                        <span class="fM title">標題活動</span>
+                        <span class="fS">主辦單位名稱</span>
+                        <span class="fS double">內容優惠券，成當元育廣主字著起清人化的政病其主著常出臺當元的政廣主字著起清人化的政</span>
+                        <span class="fXS gray">到期日 2022/01/22</span>
+                    </div>
+                    <div class="img"><img src="img/news.png"></div>
+                </a>
+                <a class="news flexH width margin">
+                    <div class="flexV padding margin height between">
+                        <span class="fM title">標題活動</span>
+                        <span class="fS">主辦單位名稱</span>
+                        <span class="fS double">內容優惠券，成當元育廣主字著起清人化的政病其主著常出臺當元的政廣主字著起清人化的政</span>
+                        <span class="fXS gray">到期日 2022/01/22</span>
+                    </div>
+                    <div class="img"><img src="img/news.png"></div>
+                </a>
+                <!-- 特店優惠 -->
+                <div class="discounts flexV width">
+                    <span class="fM title">標題活動</span>
+                    <div class="flexH width">
+                        <a class="discount flexV">
+                            <div class="img"><img src="img/news.png"></div>
+                            <div class="flexV padding">
+                                <span class="fS">主辦單位名稱</span>
+                                <span class="fM title">買一送一</span>
+                                <span class="fXS gray">2022/01/22</span>
+                            </div>
+                        </a>
+                        <a class="discount flexV">
+                            <div class="img"><img src="img/news.png"></div>
+                            <div class="flexV padding">
+                                <span class="fS">主辦單位名稱</span>
+                                <span class="fM title">買一送一</span>
+                                <span class="fXS gray">2022/01/22</span>
+                            </div>
+                        </a>
+                        <a class="discount flexV">
+                            <div class="img"><img src="img/news.png"></div>
+                            <div class="flexV padding">
+                                <span class="fS">主辦單位名稱</span>
+                                <span class="fM title">買一送一</span>
+                                <span class="fXS gray">2022/01/22</span>
+                            </div>
+                        </a>
+                        <a class="discount flexV">
+                            <div class="img"><img src="img/news.png"></div>
+                            <div class="flexV padding">
+                                <span class="fS">主辦單位名稱</span>
+                                <span class="fM title">買一送一</span>
+                                <span class="fXS gray">2022/01/22</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="discounts flexV width">
+                    <span class="fM title">標題活動</span>
+                    <div class="flexH width">
+                        <a class="discount flexV">
+                            <div class="img"><img src="img/news.png"></div>
+                            <div class="flexV padding">
+                                <span class="fS">主辦單位名稱</span>
+                                <span class="fM title">買一送一</span>
+                                <span class="fXS gray">2022/01/22</span>
+                            </div>
+                        </a>
+                        <a class="discount flexV">
+                            <div class="img"><img src="img/news.png"></div>
+                            <div class="flexV padding">
+                                <span class="fS">主辦單位名稱</span>
+                                <span class="fM title">買一送一</span>
+                                <span class="fXS gray">2022/01/22</span>
+                            </div>
+                        </a>
+                        <a class="discount flexV">
+                            <div class="img"><img src="img/news.png"></div>
+                            <div class="flexV padding">
+                                <span class="fS">主辦單位名稱</span>
+                                <span class="fM title">買一送一</span>
+                                <span class="fXS gray">2022/01/22</span>
+                            </div>
+                        </a>
+                        <a class="discount flexV">
+                            <div class="img"><img src="img/news.png"></div>
+                            <div class="flexV padding">
+                                <span class="fS">主辦單位名稱</span>
+                                <span class="fM title">買一送一</span>
+                                <span class="fXS gray">2022/01/22</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- 廣告 -->
+                <a class="advertise flexH width margin between">
+                    <div class="flexV padding margin height between">
+                        <span class="fM">廣告名稱桃園市政府</span>
+                        <span class="fS gray">AD 桃園市政府</span>
+                    </div>
+                    <div class="img"><img src="img/advertise.png"></div>
+                </a>
+            </section>
+            <!-- Footer -->
+            <section class="footer">
+                <a class="icon iconButton active" href="index.html">
+                    <img src="icon/home.svg">
+                    <img src="icon/home-a.svg">
+                </a>
+                <a class="icon iconButton">
+                    <img src="icon/service.svg">
+                    <img src="icon/service-a.svg">
+                </a>
+                <a class="icon iconButton" href="scan.html">
+                    <img src="icon/scan.svg">
+                    <img src="icon/scan-a.svg">
+                </a>
+                <a class="icon iconButton">
+                    <img src="icon/store.svg">
+                    <img src="icon/store-a.svg">
+                </a>
+                <a class="icon iconButton">
+                    <img src="icon/user.svg">
+                    <img src="icon/user-a.svg">
+                </a>
+            </section>
+        </div>
+        <!-- Script -->
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
