@@ -27,20 +27,20 @@ button {
   background-attachment: fixed;
   background-size: cover;
 }
-.body.index .function {
+.body .index .function {
   margin: 10px 0;
 }
-.body.index .function .fM {
+.body .index .function .fM {
   margin: 5px 0;
 }
-.body.index .function .fS {
+.body .index .function .fS {
   width: 70%;
   padding: 2px;
   border: 1px solid #F3CBC7;
   border-radius: 99px;
   text-align: center;
 }
-.body.index .mission {
+.body .index .mission {
   width: calc(100% - 42px) !important;
   padding: 25px 10px 20px;
   margin: 15px 10px 10px;
@@ -48,25 +48,25 @@ button {
   border-radius: 20px !important;
   position: relative;
 }
-.body.index .mission .fM {
+.body .index .mission .fM {
   margin-top: 5px;
 }
-.body.index .mission .title {
+.body .index .mission .title {
   width: calc(100% - 20px) !important;
   top: -10px;
   position: absolute;
   text-align: center;
 }
-.body.index .mission .title span {
+.body .index .mission .title span {
   padding: 0 10px;
   margin: 0;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
-.body.index .tabs {
+.body .index .tabs {
   margin: 10px 5px 5px;
 }
-.body.index .news {
+.body .index .news {
   width: calc(100% - 22px) !important;
   height: 120px;
   margin: 5px 10px !important;
@@ -75,20 +75,20 @@ button {
   backdrop-filter: blur(30px);
   background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
 }
-.body.index .news .title {
+.body .index .news .title {
   padding-left: 5px;
   border-left: 1px solid #5CB8B2;
   color: #5CB8B2;
 }
-.body.index .news .img {
+.body .index .news .img {
   min-width: 120px;
   min-height: 120px;
   margin: 0;
 }
-.body.index .news img {
+.body .index .news img {
   border-radius: 0 10px 10px 0;
 }
-.body.index .advertise {
+.body .index .advertise {
   width: calc(100% - 22px) !important;
   height: 60px;
   padding: 5px 5px 5px 0;
@@ -98,56 +98,81 @@ button {
   backdrop-filter: blur(30px);
   background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
 }
-.body.index .advertise .img {
+.body .index .advertise .img {
   width: fit-content !important;
   height: 60px !important;
   margin: 0;
 }
-.body.index .advertise img {
+.body .index .advertise img {
   border-radius: 5px;
 }
-.body.index .discounts {
+.body .index .discounts {
   width: 100vw !important;
   margin: 5px 0 0 -10px !important;
   padding: 0 !important;
 }
-.body.index .discounts > .flexH {
+.body .index .discounts > .flexH {
   width: calc(100% - 35px);
   padding: 0 15px 0 20px !important;
   overflow-x: auto;
 }
-.body.index .discounts > .flexH::-webkit-scrollbar {
+.body .index .discounts > .flexH::-webkit-scrollbar {
   -webkit-appearance: none;
 }
-.body.index .discounts > .title {
+.body .index .discounts > .title {
   padding-left: 5px;
   margin: 0 0 5px 20px;
   border-left: 1px solid #333F48;
 }
-.body.index .discounts .discount {
+.body .index .discounts .discount {
   margin-right: 10px;
   border: 1px solid #F2F1F6;
   border-radius: 10px;
   backdrop-filter: blur(30px);
   background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
 }
-.body.index .discounts .discount > * > .title {
+.body .index .discounts .discount > * > .title {
   color: #5CB8B2;
 }
-.body.index .discounts .discount .img {
+.body .index .discounts .discount .img {
   margin: 0;
 }
-.body.index .discounts .discount .img img {
+.body .index .discounts .discount .img img {
   border-radius: 10px 10px 0 0;
 }
-.body.scan .main {
+.body .scan.main {
   width: 100vw;
   height: calc(100vh - 130px);
   padding: 60px 0 70px !important;
 }
-.body.scan canvas {
+.body .scan canvas {
   width: 100% !important;
-  height: 100% !important;
+  height: calc(100vh - 130px) !important;
+  padding: 60px 0 70px;
+  position: absolute;
+}
+.body .scan .swipeup {
+  width: calc(100% - 40px);
+  height: 1000px;
+  padding: 10px 20px 30px;
+  margin-top: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 30px 30px 0px 0px;
+}
+.body .scan .swipeup .holder {
+  width: 30px;
+  height: 5px;
+  border-radius: 99px;
+  background-color: #BDBDBD;
+}
+.body .scan .swipeup .fL.primary {
+  margin: 20px 0;
+}
+.body .scan .swipeup .img {
+  width: 60px;
+  height: 60px;
 }
 .body .primary {
   color: #EF6079 !important;
