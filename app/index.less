@@ -21,7 +21,7 @@
 @cGreen:#27AE60;
 
 .popNoScroll > * { overflow: hidden; }
-body    { margin: 0; }
+body    { margin: 0 !important; }
 body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 'Noto Sans TC', 'Arial', '微軟正黑體', '新細明體', 'sans-serif'; }
 .body   { min-height: 100vh; display: flex; flex-direction: column; background: url(img/bg.png); background-position: center; background-attachment: fixed; background-size: cover;
 
@@ -50,10 +50,14 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                 > * > .title { color: @c3; }
                 .img { margin: 0;
                     img { border-radius: 10px 10px 0 0; }}}}}
+    &.scan {
+        .main { width: 100vw; height: calc(100vh - 130px); padding: 60px 0 70px !important; }
+        canvas { width: 100% !important; height: 100% !important; }}
 
     // Color
     .primary    { color: @c1 !important; }
     .secondary  { color: @c2 !important; }
+    .third      { color: @c3 !important; }
     .gray       { color: @cG3 !important; }
     .minor      { color: @cG4 !important; }
     .disabled   { color: @cG4 !important; filter: grayscale(100%); pointer-events: none; }

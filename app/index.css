@@ -2,7 +2,7 @@
   overflow: hidden;
 }
 body {
-  margin: 0;
+  margin: 0 !important;
 }
 body,
 h1,
@@ -140,11 +140,23 @@ button {
 .body.index .discounts .discount .img img {
   border-radius: 10px 10px 0 0;
 }
+.body.scan .main {
+  width: 100vw;
+  height: calc(100vh - 130px);
+  padding: 60px 0 70px !important;
+}
+.body.scan canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
 .body .primary {
   color: #EF6079 !important;
 }
 .body .secondary {
   color: #F3CBC7 !important;
+}
+.body .third {
+  color: #5CB8B2 !important;
 }
 .body .gray {
   color: #828282 !important;
