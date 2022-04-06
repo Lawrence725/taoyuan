@@ -30,18 +30,18 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
     .index {
         .function { margin: 10px 0;
             .fM { margin: 5px 0; }
-            .fS { width: 70%; padding: 2px; border: 1px solid @c2; border-radius: 99px; text-align: center; }}
-        .mission { width: calc(100% - 42px) !important; padding: 25px 10px 20px; margin: 15px 10px 10px; border: 1px solid @cG4; border-radius: 20px !important; position: relative;
+            .fS { width: 70px; padding: 2px; border: 1px solid @c2; border-radius: 99px; text-align: center; }}
+        .mission { width: calc(100% - 42px) !important; padding: 45px 10px 20px; margin: 15px 10px 10px; border: 1px solid @cG4; border-radius: 20px !important; position: relative;
             .fM { margin-top: 5px; }
-            .title { width: calc(100% - 20px) !important; top: -10px; position: absolute; text-align: center;
+            .title { width: calc(100% - 20px) !important; top: 10px; position: absolute; text-align: center;
                 span { padding: 0 10px; margin: 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }}}
         .tabs { margin: 10px 5px 5px; }
         .news { width: calc(100% - 22px) !important; height: 120px; margin: 5px 10px !important; border: 1px solid @cBg; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
             .title { padding-left: 5px; border-left: 1px solid @c3; color: @c3; }
             .img { min-width: 120px; min-height: 120px; margin: 0; }
                 img { border-radius: 0 10px 10px 0; }}
-        .advertise { width: calc(100% - 22px) !important; height: 60px; padding: 5px 5px 5px 0; margin: 5px 10px !important; border: 1px solid @cBg; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
-            .img { width: fit-content !important; height: 60px !important; margin: 0; }
+        .advertise { width: calc(100% - 22px) !important; height: fit-content; padding: 5px 5px 5px 0; margin: 5px 10px !important; border: 1px solid @cBg; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
+            .img { width: 30% !important; height: fit-content !important; margin: 0; }
                 img { border-radius: 5px; }}
         .discounts { width: 100vw !important; margin: 5px 0 0 -10px !important; padding: 0 !important;
             > .flexH { width: calc(100% - 35px); padding: 0 15px 0 20px !important; overflow-x: auto;
@@ -53,15 +53,21 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                 .img { margin: 0;
                     img { border-radius: 10px 10px 0 0; }}}}}
     .scan {
-        &.main { width: 100vw; height: calc(100vh - 130px); padding: 60px 0 70px !important;
+        &.main { width: 100vw; height: calc(100vh - 60px); padding: 60px 0 0 !important;
             &::-webkit-scrollbar { -webkit-appearance: none; }
             &::-webkit-scrollbar:vertical { width: 0; }}
         canvas { width: 100% !important; height: calc(100vh - 130px) !important; position: absolute; }
-        .swipeup { width: calc(100% - 40px); min-height: 300px; padding: 10px 20px 30px; margin-top: calc(100vh - 200px); background: rgba(255, 255, 255, 0.9); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(20px); border-radius: 30px 30px 0px 0px; 
+        .testImg { width: 100% !important; height: calc(100vh - 130px) !important; margin: 0; position: absolute; z-index: 1;
+            img { object-fit: cover; }}
+        .swipeup { width: calc(100% - 40px); min-height: fit-content; padding: 10px 20px 100px; margin-top: calc(100vh - 180px); background: rgba(255, 255, 255, 0.9); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(20px); border-radius: 30px 30px 0px 0px; z-index: 2;
             .holder { width: 30px; height: 5px; border-radius: 99px; background-color: @cG4; }
             .fL.primary { margin: 20px 0; }
-            .img { min-width: 60px; height: 60px; margin-right: 10px; }
-            .light { min-width: 50px; height: 50px; background-color: @c3; }}}
+            .img.profile { min-width: 60px; height: 60px; margin-right: 10px; }
+            .light { min-width: 50px; height: 50px; background-color: @c3; }
+            .qrcode { padding: 20px 0; margin: 20px 0; border-radius: 20px; background-color: white; 
+                .img { width: 200px; height: 200px; }}
+            .input { background-color: white; }
+            .submit { background-color: @c1; margin-right: -5px; }}}
 
     // Color
     .primary    { color: @c1 !important; }
@@ -102,11 +108,11 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
             &.none { list-style-type: none; }}}
     
     // Reset
-    span                { color: @cG1; }
-    ol, ul              { color: @cG1; }
+    span                { color: @c4; }
+    ol, ul              { color: @c4; }
     a                   { text-decoration: none !important; }
     a:hover             { cursor: pointer; box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2); }
-    input               { border: 0; padding: 0; color: @cG1; background-color: transparent; }
+    input               { border: 0; padding: 0; color: @c4; background-color: transparent; }
     input:focus         { box-shadow: none !important; outline: none; }
     textarea            { border: 0; }
     textarea:focus      { box-shadow: none !important; outline: none; }
@@ -126,9 +132,9 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
             &:not(.active) > img:nth-child(2) { display: none; }}}
     @media @sD, @sT { .header, .main, .footer { width: calc(100% - 100px); margin: 0 40px; }}
     &.fixed {
-        .header { height: 60px; padding: 0 10px; z-index: 1; position: fixed; background: url(img/bg.png); background-position: top; background-attachment: fixed; background-size: cover; }
+        .header { height: 60px; padding: 0 10px; z-index: 9; position: fixed; background: url(img/bg.png); background-position: top; background-attachment: fixed; background-size: cover; }
         .main   { padding: 60px 10px 90px; }
-        .footer { height: 70px; padding: 0 10px; bottom: 0; z-index: 1; position: fixed; background: url(img/bg.png); background-position: bottom; background-attachment: fixed; background-size: cover; box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); }}
+        .footer { height: 70px; padding: 0 10px; bottom: 0; z-index: 9; position: fixed; background: url(img/bg.png); background-position: bottom; background-attachment: fixed; background-size: cover; box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); }}
     &.mobile { @media @sD, @sT { .header, .main, .footer { width: 748px; margin-left: calc(50% - 374px); margin-right: calc(50% - 374px); }}}
     .flexH  { width: fit-content; border-radius: 5px; display: flex; align-items: center; }
     .flexV  { width: fit-content; border-radius: 5px; display: flex; flex-direction: column; }

@@ -34,7 +34,7 @@ button {
   margin: 5px 0;
 }
 .body .index .function .fS {
-  width: 70%;
+  width: 70px;
   padding: 2px;
   border: 1px solid #F3CBC7;
   border-radius: 99px;
@@ -42,7 +42,7 @@ button {
 }
 .body .index .mission {
   width: calc(100% - 42px) !important;
-  padding: 25px 10px 20px;
+  padding: 45px 10px 20px;
   margin: 15px 10px 10px;
   border: 1px solid #BDBDBD;
   border-radius: 20px !important;
@@ -53,7 +53,7 @@ button {
 }
 .body .index .mission .title {
   width: calc(100% - 20px) !important;
-  top: -10px;
+  top: 10px;
   position: absolute;
   text-align: center;
 }
@@ -90,7 +90,7 @@ button {
 }
 .body .index .advertise {
   width: calc(100% - 22px) !important;
-  height: 60px;
+  height: fit-content;
   padding: 5px 5px 5px 0;
   margin: 5px 10px !important;
   border: 1px solid #F2F1F6;
@@ -99,8 +99,8 @@ button {
   background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
 }
 .body .index .advertise .img {
-  width: fit-content !important;
-  height: 60px !important;
+  width: 30% !important;
+  height: fit-content !important;
   margin: 0;
 }
 .body .index .advertise img {
@@ -145,8 +145,8 @@ button {
 }
 .body .scan.main {
   width: 100vw;
-  height: calc(100vh - 130px);
-  padding: 60px 0 70px !important;
+  height: calc(100vh - 60px);
+  padding: 60px 0 0 !important;
 }
 .body .scan.main::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -159,15 +159,26 @@ button {
   height: calc(100vh - 130px) !important;
   position: absolute;
 }
+.body .scan .testImg {
+  width: 100% !important;
+  height: calc(100vh - 130px) !important;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+}
+.body .scan .testImg img {
+  object-fit: cover;
+}
 .body .scan .swipeup {
   width: calc(100% - 40px);
-  min-height: 300px;
-  padding: 10px 20px 30px;
-  margin-top: calc(100vh - 200px);
+  min-height: fit-content;
+  padding: 10px 20px 100px;
+  margin-top: calc(100vh - 180px);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
   backdrop-filter: blur(20px);
   border-radius: 30px 30px 0px 0px;
+  z-index: 2;
 }
 .body .scan .swipeup .holder {
   width: 30px;
@@ -178,7 +189,7 @@ button {
 .body .scan .swipeup .fL.primary {
   margin: 20px 0;
 }
-.body .scan .swipeup .img {
+.body .scan .swipeup .img.profile {
   min-width: 60px;
   height: 60px;
   margin-right: 10px;
@@ -187,6 +198,23 @@ button {
   min-width: 50px;
   height: 50px;
   background-color: #5CB8B2;
+}
+.body .scan .swipeup .qrcode {
+  padding: 20px 0;
+  margin: 20px 0;
+  border-radius: 20px;
+  background-color: white;
+}
+.body .scan .swipeup .qrcode .img {
+  width: 200px;
+  height: 200px;
+}
+.body .scan .swipeup .input {
+  background-color: white;
+}
+.body .scan .swipeup .submit {
+  background-color: #EF6079;
+  margin-right: -5px;
 }
 .body .primary {
   color: #EF6079 !important;
@@ -302,11 +330,11 @@ button {
   list-style-type: none;
 }
 .body span {
-  color: #333333;
+  color: #333F48;
 }
 .body ol,
 .body ul {
-  color: #333333;
+  color: #333F48;
 }
 .body a {
   text-decoration: none !important;
@@ -318,7 +346,7 @@ button {
 .body input {
   border: 0;
   padding: 0;
-  color: #333333;
+  color: #333F48;
   background-color: transparent;
 }
 .body input:focus {
@@ -401,7 +429,7 @@ button {
 .body.fixed .header {
   height: 60px;
   padding: 0 10px;
-  z-index: 1;
+  z-index: 9;
   position: fixed;
   background: url(img/bg.png);
   background-position: top;
@@ -415,7 +443,7 @@ button {
   height: 70px;
   padding: 0 10px;
   bottom: 0;
-  z-index: 1;
+  z-index: 9;
   position: fixed;
   background: url(img/bg.png);
   background-position: bottom;

@@ -29,16 +29,28 @@
             <!-- Main -->
             <section class="main scan">
                 <canvas></canvas>
+                <!--vvvvvvvvvv REMOVE TEST IMAGE vvvvvvvvvv-->
+                <div class="img testImg"><img src="img/scan.png"></div>
+                <!--^^^^^^^^^^ REMOVE TEST IMAGE ^^^^^^^^^^-->
                 <div class="swipeup flexV center">
                     <div class="holder"></div>
                     <span class="fL primary">我的條碼</span>
                     <div class="flexH width between">
-                        <div class="img"><img src="img/profile.png"></div>
+                        <div class="img profile"><img src="img/profile.png"></div>
                         <div class="flexV width">
                             <span class="fL">陳小明</span>
                             <span class="fM gray">A1*****789</span>
                         </div>
                         <a class="light icon white"><i class="fa-regular fa-lightbulb fa-xl"></i></a>
+                    </div>
+                    <div class="qrcode flexH width middle">
+                        <div class="img"><img src="img/qrcode.png"></div>
+                    </div>
+                    <div class="input rounded"> <!-- class: fake / error -->
+                        <div class="icon third"><i class="fas fa-qrcode"></i></div>
+                        <input type="text" class="fM" placeholder="手動輸入代碼" value="">
+                        <!-- <span class="fS error message">必填</span> -->
+                        <a class="icon iconButton submit white"><i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </section>

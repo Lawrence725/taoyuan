@@ -29,27 +29,3 @@ function showToast() {
     var toast = document.getElementById("toast");
     toast.className = "show";
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000); }
-
-// Popup (Small)
-function popSmall() {
-    var popSmall    = document.getElementById("popSmall");
-    var close       = popSmall.getElementsByClassName("close")[0];
-    var submit      = popSmall.getElementsByClassName("submit")[0];
-    var cancel      = popSmall.getElementsByClassName("cancel")[0];
-    close.onclick   = function() { popSmall.style.display = "none"; }
-    submit.onclick  = function() { popSmall.style.display = "none"; }
-    cancel.onclick  = function() { popSmall.style.display = "none"; }
-    window.onclick  = function(event) { if (event.target == popSmall) { popSmall.style.display = "none"; }}
-    popSmall.style.display = "flex"; }
-
-// Popup (Large)
-function popLarge() {
-    var popLarge    = document.getElementById("popLarge");
-    var close       = popLarge.getElementsByClassName("close")[0];
-    var submit      = popLarge.getElementsByClassName("submit")[0];
-    var cancel      = popLarge.getElementsByClassName("cancel")[0];
-    close.onclick   = function() { popLarge.style.display = "none"; }
-    submit.onclick  = function() { popLarge.style.display = "none"; }
-    cancel.onclick  = function() { popLarge.style.display = "none"; }
-    window.onclick  = function(event) { if (event.target == popLarge) { popLarge.style.display = "none"; }}
-    popLarge.style.display = "flex"; }
