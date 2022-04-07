@@ -78,7 +78,16 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                 img { border-radius: 10px; }
                 .cover { border-radius: 10px; background: rgba(0, 0, 0, 0.5); position: absolute; }}}
         .point { width: calc(100% - 20px); padding: 10px; margin: 20px 0; border: 1px solid #EF6079; border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(242, 241, 246, 0.5) 50.65%, rgba(242, 241, 246, 0.8) 100%);
-            .img { width: 50px; height: fit-content; }}}
+            .img { width: 50px; height: fit-content; }}
+        .ticket {
+            .img { width: 45px; height: fit-content; margin-right: 10px; }
+            .lineV { height: 50px; background-color: @c2; }}
+        .function { width: calc(100% - 2px); margin: 20px 0; border: 1px solid #F2F1F6; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
+            > .flexH { padding: 5px 0; }
+            .img { width: 24px; height: fit-content; }
+            .lineV { height: 20px; background-color: @cG4; }}
+        .menu {
+            .img { width: 24px; height: fit-content; margin-right: 10px; }}}
 
     // Color
     .primary    { color: @c1 !important; }
@@ -203,6 +212,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
     .spaceS { width: 100%; height: 10px; }
     .spaceL { width: 100%; height: 50px; }
     .lineH { width: 100%; height: 1px; margin: 5px 0; background-color: @cG5; }
+    .lineV { width: 1px; height: 100%; margin: 0 5px; background-color: @cG5; }
     .rounded { border-radius: 999px !important; }
     .img { width: 100px; height: 100px; margin: 5px;
         img { width: 100%; height: 100%; display: flex; }}
