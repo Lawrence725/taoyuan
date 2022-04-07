@@ -23,9 +23,3 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
     // setTimeout(plusSlides(1), 2000); // Change image every 2 seconds
 }
-
-// Toast
-function showToast() {
-    var toast = document.getElementById("toast");
-    toast.className = "show";
-    setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000); }
