@@ -337,40 +337,40 @@ button {
   border-radius: 20px;
   background-color: white;
 }
-.body.point_send .record .img,
-.body.point_success .record .img {
+.body.point_send .main .record .img,
+.body.point_success .main .record .img {
   width: 20px;
   height: fit-content;
 }
-.body.point_send .record .lineV,
-.body.point_success .record .lineV {
+.body.point_send .main .record .lineV,
+.body.point_success .main .record .lineV {
   height: 30px;
 }
-.body.point_send .info,
-.body.point_success .info {
+.body.point_send .main .info,
+.body.point_success .main .info {
   margin: 40px 0;
 }
-.body.point_send .info .total .img,
-.body.point_success .info .total .img {
+.body.point_send .main .info .total .img,
+.body.point_success .main .info .total .img {
   width: 30px;
   height: fit-content;
 }
-.body.point_send .info .hint,
-.body.point_success .info .hint {
+.body.point_send .main .info .hint,
+.body.point_success .main .info .hint {
   width: calc(100% - 20px);
   margin: 0 10px;
 }
-.body.point_send .info .hint .img,
-.body.point_success .info .hint .img {
+.body.point_send .main .info .hint .img,
+.body.point_success .main .info .hint .img {
   width: 20px;
   height: fit-content;
 }
-.body.point_send .number a,
-.body.point_success .number a {
+.body.point_send .main .number a,
+.body.point_success .main .number a {
   height: 60px;
 }
-.body.point_send .button,
-.body.point_success .button {
+.body.point_send .main .button,
+.body.point_success .main .button {
   width: calc(100% - 30px);
   margin-top: 40px;
 }
@@ -1489,7 +1489,7 @@ button {
   max-height: calc(100% - 60px);
   padding: 10px;
   margin: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
