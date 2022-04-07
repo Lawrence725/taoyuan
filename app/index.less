@@ -75,7 +75,9 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
     .third      { color: @c3 !important; }
     .gray       { color: @cG3 !important; }
     .minor      { color: @cG4 !important; }
-    .disabled   { color: @cG4 !important; filter: grayscale(100%); pointer-events: none; }
+    .disabled   { color: @cG4 !important; filter: grayscale(100%); opacity: 0.5; pointer-events: none;
+        *       { color: @cG4 !important; }
+        img     { filter: grayscale(100%); opacity: 0.5; }}
     .error      { color: @cRed !important; }
     .success    { color: @cGreen !important; }
     .background { background-color: @cBg !important; }

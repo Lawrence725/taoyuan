@@ -234,7 +234,15 @@ button {
 .body .disabled {
   color: #BDBDBD !important;
   filter: grayscale(100%);
+  opacity: 0.5;
   pointer-events: none;
+}
+.body .disabled * {
+  color: #BDBDBD !important;
+}
+.body .disabled img {
+  filter: grayscale(100%);
+  opacity: 0.5;
 }
 .body .error {
   color: #EB5757 !important;
