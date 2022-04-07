@@ -19,40 +19,41 @@
             <!-- Loading Spinner -->
             <!-- <div class="spinner"><div><div></div></div></div> -->
             <!-- Header -->
-            <section class="header scan">
+            <section class="header profile">
                 <div class="icon"><img src="img/favicon.svg"></div>
-                <span class="fL">掃碼</span>
-                <a class="icon iconButton third">
-                    <i class="fa-regular fa-images fa-xl"></i>
+                <span class="fL">會員中心</span>
+                <a class="icon iconButton">
+                    <img src="icon/bell.svg">
+                    <div class="new"><span class="fXS white">3</span></div>
                 </a>
             </section>
             <!-- Main -->
-            <section class="main scan">
-                <canvas></canvas>
-                <!--vvvvvvvvvv REMOVE TEST IMAGE vvvvvvvvvv-->
-                <div class="img testImg"><img src="img/scan.png"></div>
-                <!--^^^^^^^^^^ REMOVE TEST IMAGE ^^^^^^^^^^-->
-                <div class="swipeup flexV center">
-                    <div class="holder"></div>
-                    <span class="fL primary">我的條碼</span>
-                    <div class="flexH width between">
-                        <div class="img profile"><img src="img/profile.png"></div>
-                        <div class="flexV width">
-                            <span class="fL">陳小明</span>
-                            <span class="fM gray">A1*****789</span>
-                        </div>
-                        <a class="light icon white"><i class="fa-regular fa-lightbulb fa-xl"></i></a>
-                    </div>
-                    <div class="qrcode flexH width middle">
-                        <div class="img"><img src="img/qrcode.png"></div>
-                    </div>
-                    <div class="input rounded"> <!-- class: fake / error -->
-                        <div class="icon third"><i class="fas fa-qrcode"></i></div>
-                        <input type="text" class="fM" placeholder="手動輸入代碼" value="">
-                        <!-- <span class="fS error message">必填</span> -->
-                        <a class="icon iconButton submit white"><i class="fas fa-arrow-right"></i></a>
+            <section class="main profile">
+                <div class="card">
+                    <div class="flexH">
+                        <div class="img"><img src="img/card.png"></div>
+                        <div class="img"><img src="img/card.png"></div>
+                        <a class="img">
+                            <div class="cover flexH width height middle">
+                                <div class="icon white"><i class="fa-solid fa-circle-plus fa-3x"></i></div>
+                            </div>
+                            <img src="img/card.png">
+                        </a>
                     </div>
                 </div>
+                <a class="point flexH between end">
+                    <div class="flexH">
+                        <div class="img"><img src="icon/point.svg"></div>
+                        <div class="flexV">
+                            <span class="fM">紅利桃子</span>
+                            <span class="fXL primary">1,000<span class="fM primary">點</span></span>
+                        </div>
+                    </div>
+                    <div class="flexV">
+                        <span class="fS">點數到期日</span>
+                        <span class="fS">2023/12/31</span>
+                    </div>
+                </a>
             </section>
             <!-- Footer -->
             <section class="footer">
@@ -64,7 +65,7 @@
                     <img src="icon/service.svg">
                     <img src="icon/service-a.svg">
                 </a>
-                <a class="icon iconButton active" href="scan.html">
+                <a class="icon iconButton" href="scan.html">
                     <img src="icon/scan.svg">
                     <img src="icon/scan-a.svg">
                 </a>
@@ -72,7 +73,7 @@
                     <img src="icon/store.svg">
                     <img src="icon/store-a.svg">
                 </a>
-                <a class="icon iconButton" href="profile.html">
+                <a class="icon iconButton active" href="profile.html">
                     <img src="icon/user.svg">
                     <img src="icon/user-a.svg">
                 </a>

@@ -107,24 +107,20 @@ button {
   border-radius: 5px;
 }
 .body .index .discounts {
-  width: 100vw !important;
-  margin: 5px 0 0 -10px !important;
-  padding: 0 !important;
+  width: 100vw;
+  margin: 10px 0 10px -10px;
 }
-.body .index .discounts > .flexH {
-  width: calc(100% - 35px);
-  padding: 0 15px 0 20px !important;
+.body .index .discounts > .scroll {
   overflow-x: auto;
 }
-.body .index .discounts > .flexH::-webkit-scrollbar {
+.body .index .discounts > .scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
   -webkit-appearance: none;
 }
-.body .index .discounts > .flexH::-webkit-scrollbar:vertical {
-  width: 0;
-}
 .body .index .discounts > .title {
-  padding-left: 5px;
   margin: 0 0 5px 20px;
+  padding-left: 5px;
   border-left: 1px solid #333F48;
 }
 .body .index .discounts .discount {
@@ -133,6 +129,12 @@ button {
   border-radius: 10px;
   backdrop-filter: blur(30px);
   background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
+}
+.body .index .discounts .discount:first-child {
+  margin-left: 20px;
+}
+.body .index .discounts .discount:last-child {
+  margin-right: 20px;
 }
 .body .index .discounts .discount > * > .title {
   color: #5CB8B2;
@@ -149,10 +151,9 @@ button {
   padding: 60px 0 0 !important;
 }
 .body .scan.main::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
-.body .scan.main::-webkit-scrollbar:vertical {
   width: 0;
+  height: 0;
+  -webkit-appearance: none;
 }
 .body .scan canvas {
   width: 100% !important;
@@ -215,6 +216,52 @@ button {
 .body .scan .swipeup .submit {
   background-color: #EF6079;
   margin-right: -5px;
+}
+.body .profile.main {
+  padding: 60px 20px 90px !important;
+}
+.body .profile .card {
+  width: 100vw;
+  margin-left: -20px;
+  overflow-x: auto !important;
+}
+.body .profile .card::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+}
+.body .profile .card > .flexH > .img:first-child {
+  margin-left: 20px;
+}
+.body .profile .card > .flexH > .img:last-child {
+  margin-right: 20px;
+}
+.body .profile .card .img {
+  width: calc(100vw - 40px) !important;
+  margin: 0 5px;
+  height: fit-content;
+  position: relative;
+}
+.body .profile .card .img img {
+  border-radius: 10px;
+}
+.body .profile .card .img .cover {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+.body .profile .point {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #EF6079;
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(242, 241, 246, 0.5) 50.65%, rgba(242, 241, 246, 0.8) 100%);
+}
+.body .profile .point .img {
+  width: 50px;
+  height: fit-content;
 }
 .body .primary {
   color: #EF6079 !important;
@@ -669,6 +716,7 @@ button {
 .body .img img {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 .body .icon {
   min-width: 20px;
