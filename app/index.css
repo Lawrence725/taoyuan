@@ -150,6 +150,11 @@ button {
   height: calc(100vh - 60px);
   padding: 60px 0 0 !important;
 }
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .scan.main {
+    width: 768px !important;
+  }
+}
 .body .scan.main::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -166,6 +171,11 @@ button {
   margin: 0;
   position: absolute;
   z-index: 1;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .scan .testImg {
+    width: 768px !important;
+  }
 }
 .body .scan .testImg img {
   object-fit: cover;
@@ -191,8 +201,9 @@ button {
   margin: 20px 0;
 }
 .body .scan .swipeup .img.profile {
-  min-width: 60px;
+  width: 60px;
   height: 60px;
+  min-width: 60px;
   margin-right: 10px;
 }
 .body .scan .swipeup .light {
@@ -220,10 +231,20 @@ button {
 .body .profile.main {
   padding: 60px 20px 90px !important;
 }
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .profile.main {
+    width: 728px !important;
+  }
+}
 .body .profile .card {
   width: 100vw;
   margin-left: -20px;
   overflow-x: auto !important;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .profile .card {
+    width: 768px !important;
+  }
 }
 .body .profile .card::-webkit-scrollbar {
   width: 0;
@@ -241,6 +262,11 @@ button {
   margin: 0 5px;
   height: fit-content;
   position: relative;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .profile .card .img {
+    width: 728px !important;
+  }
 }
 .body .profile .card .img img {
   border-radius: 10px;
@@ -294,6 +320,71 @@ button {
   width: 24px;
   height: fit-content;
   margin-right: 10px;
+}
+.body.point_send,
+.body.point_success {
+  background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
+}
+.body.point_send .header,
+.body.point_success .header {
+  padding: 10px;
+  background: none !important;
+}
+.body.point_send .main,
+.body.point_success .main {
+  min-height: calc(100vh - 100px);
+  margin: 0 20px 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+.body.point_send .record .img,
+.body.point_success .record .img {
+  width: 20px;
+  height: fit-content;
+}
+.body.point_send .record .lineV,
+.body.point_success .record .lineV {
+  height: 30px;
+}
+.body.point_send .info,
+.body.point_success .info {
+  margin: 40px 0;
+}
+.body.point_send .info .total .img,
+.body.point_success .info .total .img {
+  width: 30px;
+  height: fit-content;
+}
+.body.point_send .info .hint,
+.body.point_success .info .hint {
+  width: calc(100% - 20px);
+  margin: 0 10px;
+}
+.body.point_send .info .hint .img,
+.body.point_success .info .hint .img {
+  width: 20px;
+  height: fit-content;
+}
+.body.point_send .number a,
+.body.point_success .number a {
+  height: 60px;
+}
+.body.point_send .button,
+.body.point_success .button {
+  width: calc(100% - 30px);
+  margin-top: 40px;
+}
+.body.point_success .title {
+  margin-top: auto;
+}
+.body.point_success .info {
+  margin: auto;
+}
+.body.point_success .record {
+  margin-top: auto;
+}
+.body.point_success .background {
+  background-color: transparent !important;
 }
 .body .primary {
   color: #EF6079 !important;
@@ -582,6 +673,10 @@ button {
 .body .flexH.around,
 .body .flexV.around {
   justify-content: space-around;
+}
+.body .flexH.right,
+.body .flexV.right {
+  justify-content: flex-end;
 }
 .body .flexH.radius,
 .body .flexV.radius {

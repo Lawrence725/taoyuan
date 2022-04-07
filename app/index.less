@@ -55,26 +55,31 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                     img { border-radius: 10px 10px 0 0; }}}}}
     .scan {
         &.main { width: 100vw; height: calc(100vh - 60px); padding: 60px 0 0 !important;
+            @media @sD, @sT { width: 768px !important; }
             &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }}
         canvas { width: 100% !important; height: calc(100vh - 130px) !important; position: absolute; }
         .testImg { width: 100% !important; height: calc(100vh - 130px) !important; margin: 0; position: absolute; z-index: 1;
+            @media @sD, @sT { width: 768px !important; }
             img { object-fit: cover; }}
         .swipeup { width: calc(100% - 40px); min-height: fit-content; padding: 10px 20px 100px; margin-top: calc(100vh - 180px); background: rgba(255, 255, 255, 0.9); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(20px); border-radius: 30px 30px 0px 0px; z-index: 2;
             .holder { width: 30px; height: 5px; border-radius: 99px; background-color: @cG4; }
             .fL.primary { margin: 20px 0; }
-            .img.profile { min-width: 60px; height: 60px; margin-right: 10px; }
+            .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px; }
             .light { min-width: 50px; height: 50px; background-color: @c3; }
             .qrcode { padding: 20px 0; margin: 20px 0; border-radius: 20px; background-color: white; 
                 .img { width: 200px; height: 200px; }}
             .input { background-color: white; }
             .submit { background-color: @c1; margin-right: -5px; }}}
     .profile {
-        &.main { padding: 60px 20px 90px !important; }
+        &.main { padding: 60px 20px 90px !important;
+            @media @sD, @sT { width: 728px !important; }}
         .card { width: 100vw; margin-left: -20px; overflow-x: auto !important;
+            @media @sD, @sT { width: 768px !important; }
             &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
             > .flexH > .img:first-child { margin-left: 20px; }
             > .flexH > .img:last-child { margin-right: 20px; }
             .img { width: calc(100vw - 40px) !important; margin: 0 5px; height: fit-content; position: relative;
+                @media @sD, @sT { width: 728px !important; }
                 img { border-radius: 10px; }
                 .cover { border-radius: 10px; background: rgba(0, 0, 0, 0.5); position: absolute; }}}
         .point { width: calc(100% - 20px); padding: 10px; margin: 20px 0; border: 1px solid #EF6079; border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(242, 241, 246, 0.5) 50.65%, rgba(242, 241, 246, 0.8) 100%);
@@ -88,6 +93,23 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
             .lineV { height: 20px; background-color: @cG4; }}
         .menu {
             .img { width: 24px; height: fit-content; margin-right: 10px; }}}
+    &.point_send, &.point_success { background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
+        .header { padding: 10px; background: none !important; }
+        .main { min-height: calc(100vh - 100px); margin: 0 20px 20px; border-radius: 20px; background-color: white; }
+        .record {
+            .img { width: 20px; height: fit-content; }
+            .lineV { height: 30px; }}
+        .info { margin: 40px 0;
+            .total .img { width: 30px; height: fit-content; }
+            .hint { width: calc(100% - 20px); margin: 0 10px;
+                .img { width: 20px; height: fit-content; }}}
+        .number a { height: 60px; }
+        .button { width: calc(100% - 30px); margin-top: 40px; }}
+    &.point_success {
+        .title { margin-top: auto; }
+        .info { margin: auto; }
+        .record { margin-top: auto; }
+        .background { background-color: transparent !important; }}
 
     // Color
     .primary    { color: @c1 !important; }
@@ -167,6 +189,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
         &.middle            { justify-content: center; }
         &.between           { justify-content: space-between; }
         &.around            { justify-content: space-around; }
+        &.right             { justify-content: flex-end; }
         &.radius            { border-radius: 0; }
         &.full              { width: 100vw; }
         &.width             { width: 100%; }
