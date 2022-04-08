@@ -70,10 +70,10 @@ button {
   width: calc(100% - 22px) !important;
   height: 120px;
   margin: 5px 10px !important;
-  border: 1px solid #F2F1F6;
+  border: 1px solid white;
   border-radius: 10px;
   backdrop-filter: blur(30px);
-  background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 .body .index .news .title {
   padding-left: 5px;
@@ -87,24 +87,6 @@ button {
 }
 .body .index .news img {
   border-radius: 0 10px 10px 0;
-}
-.body .index .advertise {
-  width: calc(100% - 22px) !important;
-  height: fit-content;
-  padding: 5px 5px 5px 0;
-  margin: 5px 10px !important;
-  border: 1px solid #F2F1F6;
-  border-radius: 10px;
-  backdrop-filter: blur(30px);
-  background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
-}
-.body .index .advertise .img {
-  width: 30% !important;
-  height: fit-content !important;
-  margin: 0;
-}
-.body .index .advertise img {
-  border-radius: 5px;
 }
 .body .index .discounts {
   width: 100vw;
@@ -125,10 +107,10 @@ button {
 }
 .body .index .discounts .discount {
   margin-right: 10px;
-  border: 1px solid #F2F1F6;
+  border: 1px solid white;
   border-radius: 10px;
   backdrop-filter: blur(30px);
-  background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 .body .index .discounts .discount:first-child {
   margin-left: 20px;
@@ -144,6 +126,24 @@ button {
 }
 .body .index .discounts .discount .img img {
   border-radius: 10px 10px 0 0;
+}
+.body .index .advertise {
+  width: calc(100% - 22px) !important;
+  height: fit-content;
+  padding: 5px 5px 5px 0;
+  margin: 5px 10px !important;
+  border: 1px solid white;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .index .advertise .img {
+  width: 30% !important;
+  height: fit-content !important;
+  margin: 0;
+}
+.body .index .advertise img {
+  border-radius: 5px;
 }
 .body .scan.main {
   width: 100vw;
@@ -283,7 +283,7 @@ button {
   border: 1px solid #EF6079;
   border-radius: 20px;
   backdrop-filter: blur(30px);
-  background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(242, 241, 246, 0.5) 50.65%, rgba(242, 241, 246, 0.8) 100%);
+  background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
 }
 .body .profile .point .img {
   width: 50px;
@@ -301,9 +301,9 @@ button {
 .body .profile .function {
   width: calc(100% - 2px);
   margin: 20px 0;
-  border: 1px solid #F2F1F6;
+  border: 1px solid white;
   backdrop-filter: blur(30px);
-  background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 .body .profile .function > .flexH {
   padding: 5px 0;
@@ -321,69 +321,65 @@ button {
   height: fit-content;
   margin-right: 10px;
 }
-.body.point_send,
-.body.point_success {
-  background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
-}
-.body.point_send .header,
-.body.point_success .header {
+.body .point_send.header,
+.body .point_success.header {
   padding: 10px;
   background: none !important;
 }
-.body.point_send .main,
-.body.point_success .main {
+.body .point_send.main,
+.body .point_success.main {
   min-height: calc(100vh - 100px);
   margin: 0 20px 20px;
   border-radius: 20px;
   background-color: white;
 }
-.body.point_send .main .record .img,
-.body.point_success .main .record .img {
+.body .point_send.main .record .img,
+.body .point_success.main .record .img {
   width: 20px;
   height: fit-content;
 }
-.body.point_send .main .record .lineV,
-.body.point_success .main .record .lineV {
+.body .point_send.main .record .lineV,
+.body .point_success.main .record .lineV {
   height: 30px;
 }
-.body.point_send .main .info,
-.body.point_success .main .info {
+.body .point_send.main .info,
+.body .point_success.main .info {
   margin: 40px 0;
 }
-.body.point_send .main .info .total .img,
-.body.point_success .main .info .total .img {
+.body .point_send.main .info .total .img,
+.body .point_success.main .info .total .img {
   width: 30px;
   height: fit-content;
 }
-.body.point_send .main .info .hint,
-.body.point_success .main .info .hint {
+.body .point_send.main .info .hint,
+.body .point_success.main .info .hint {
   width: calc(100% - 20px);
   margin: 0 10px;
 }
-.body.point_send .main .info .hint .img,
-.body.point_success .main .info .hint .img {
+.body .point_send.main .info .hint .img,
+.body .point_success.main .info .hint .img {
   width: 20px;
   height: fit-content;
 }
-.body.point_send .main .number a,
-.body.point_success .main .number a {
+.body .point_send.main .number a,
+.body .point_success.main .number a {
   height: 60px;
 }
-.body.point_send .main .button,
-.body.point_success .main .button {
+.body .point_send.main .button,
+.body .point_success.main .button {
   width: calc(100% - 30px);
   margin-top: 40px;
 }
-.body.point_success .title {
+.body .point_success .title {
   margin-top: auto;
 }
-.body.point_success .info {
+.body .point_success .info {
   margin: auto;
 }
-.body.point_success .record {
+.body .point_success .record {
   margin-top: auto;
 }
-.body.point_success .background {
+.body .point_success .background {
   background-color: transparent !important;
 }
 .body .primary {

@@ -36,23 +36,23 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
             .title { width: calc(100% - 20px) !important; top: 10px; position: absolute; text-align: center;
                 span { padding: 0 10px; margin: 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }}}
         .tabs { margin: 10px 5px 5px; }
-        .news { width: calc(100% - 22px) !important; height: 120px; margin: 5px 10px !important; border: 1px solid @cBg; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
+        .news { width: calc(100% - 22px) !important; height: 120px; margin: 5px 10px !important; border: 1px solid white; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .title { padding-left: 5px; border-left: 1px solid @c3; color: @c3; }
             .img { min-width: 120px; min-height: 120px; margin: 0; }
                 img { border-radius: 0 10px 10px 0; }}
-        .advertise { width: calc(100% - 22px) !important; height: fit-content; padding: 5px 5px 5px 0; margin: 5px 10px !important; border: 1px solid @cBg; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
-            .img { width: 30% !important; height: fit-content !important; margin: 0; }
-                img { border-radius: 5px; }}
         .discounts { width: 100vw; margin: 10px 0 10px -10px;
             > .scroll { overflow-x: auto;
                 &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }}
             > .title { margin: 0 0 5px 20px; padding-left: 5px; border-left: 1px solid @c4; }
-            .discount { margin-right: 10px; border: 1px solid @cBg; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%); 
+            .discount { margin-right: 10px; border: 1px solid white; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
                 &:first-child { margin-left: 20px; }
                 &:last-child { margin-right: 20px; }
                 > * > .title { color: @c3; }
                 .img { margin: 0;
-                    img { border-radius: 10px 10px 0 0; }}}}}
+                    img { border-radius: 10px 10px 0 0; }}}}
+        .advertise { width: calc(100% - 22px) !important; height: fit-content; padding: 5px 5px 5px 0; margin: 5px 10px !important; border: 1px solid white; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .img { width: 30% !important; height: fit-content !important; margin: 0; }
+                img { border-radius: 5px; }}}
     .scan {
         &.main { width: 100vw; height: calc(100vh - 60px); padding: 60px 0 0 !important;
             @media @sD, @sT { width: 768px !important; }
@@ -82,20 +82,20 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                 @media @sD, @sT { width: 728px !important; }
                 img { border-radius: 10px; }
                 .cover { border-radius: 10px; background: rgba(0, 0, 0, 0.5); position: absolute; }}}
-        .point { width: calc(100% - 20px); padding: 10px; margin: 20px 0; border: 1px solid #EF6079; border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(242, 241, 246, 0.5) 50.65%, rgba(242, 241, 246, 0.8) 100%);
+        .point { width: calc(100% - 20px); padding: 10px; margin: 20px 0; border: 1px solid #EF6079; border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
             .img { width: 50px; height: fit-content; }}
         .ticket {
             .img { width: 45px; height: fit-content; margin-right: 10px; }
             .lineV { height: 50px; background-color: @c2; }}
-        .function { width: calc(100% - 2px); margin: 20px 0; border: 1px solid #F2F1F6; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(242, 241, 246, 0.8) 0%, rgba(242, 241, 246, 0.5) 100%);
+        .function { width: calc(100% - 2px); margin: 20px 0; border: 1px solid white; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             > .flexH { padding: 5px 0; }
             .img { width: 24px; height: fit-content; }
             .lineV { height: 20px; background-color: @cG4; }}
         .menu {
             .img { width: 24px; height: fit-content; margin-right: 10px; }}}
-    &.point_send, &.point_success { background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
-        .header { padding: 10px; background: none !important; }
-        .main { min-height: calc(100vh - 100px); margin: 0 20px 20px; border-radius: 20px; background-color: white;
+    .point_send, .point_success {
+        &.header { padding: 10px; background: none !important; }
+        &.main { min-height: calc(100vh - 100px); margin: 0 20px 20px; border-radius: 20px; background-color: white;
             .record {
                 .img { width: 20px; height: fit-content; }
                 .lineV { height: 30px; }}
@@ -105,7 +105,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                     .img { width: 20px; height: fit-content; }}}
             .number a { height: 60px; }
             .button { width: calc(100% - 30px); margin-top: 40px; }}}
-    &.point_success {
+    .point_success {
         .title { margin-top: auto; }
         .info { margin: auto; }
         .record { margin-top: auto; }
