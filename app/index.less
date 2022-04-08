@@ -104,12 +104,25 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                 .hint { width: calc(100% - 20px); margin: 0 10px;
                     .img { width: 20px; height: fit-content; }}}
             .number a { height: 60px; }
-            .button { width: calc(100% - 30px); margin-top: 40px; }}}
+            .button { margin-top: 40px; }}}
     .point_success {
         .title { margin-top: auto; }
         .info { margin: auto; }
         .record { margin-top: auto; }
         .background { background-color: transparent !important; }}
+    .point_history {
+        &.footer .img { width: 20px; height: fit-content; }
+        &.main { max-height: calc(100vh - 130px); padding: 60px 10px 70px; }
+        .tabs { height: fit-content; margin-bottom: 0; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .tab { padding: 5px 0;
+                &.active { color: @c1; }
+                &:not(.active) {
+                    * { color: @cG4; }
+                    .img { filter: grayscale(100%); opacity: 0.5; }}}
+            .img { width: 20px; height: fit-content; }
+            .lineV { height: 40px; background-color: @cG4; }}
+        .records { max-height: 100%; overflow-y: auto;
+            .img { width: 20px; height: fit-content;}}}
 
     // Color
     .primary    { color: @c1 !important; }
@@ -234,8 +247,8 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
     .hide { display: none !important; }
     .spaceS { width: 100%; height: 10px; }
     .spaceL { width: 100%; height: 50px; }
-    .lineH { width: 100%; height: 1px; margin: 5px 0; background-color: @cG5; }
-    .lineV { width: 1px; height: 100%; margin: 0 5px; background-color: @cG5; }
+    .lineH { width: 100%; min-height: 1px; margin: 5px 0; background-color: @cG5; }
+    .lineV { min-width: 1px; height: 100%; margin: 0 5px; background-color: @cG5; }
     .rounded { border-radius: 999px !important; }
     .img { width: 100px; height: 100px; margin: 5px;
         img { width: 100%; height: 100%; display: flex; }}
@@ -252,7 +265,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
         .material-icons.md-24 { font-size: 24px; }
         .material-icons.md-36 { font-size: 36px; }
         .material-icons.md-48 { font-size: 48px; }}
-    .button { width: 100%; height: 40px; padding: 0 10px; margin: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; background-color: @c1; 
+    .button { width: calc(100% - 30px); height: 40px; padding: 0 10px; margin: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; background-color: @c1; 
         &.fit { width: fit-content; height: fit-content; padding: 10px 20px; }
         &.delete { background-color: @cRed !important;
             i, span { color: white !important; }}

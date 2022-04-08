@@ -367,7 +367,6 @@ button {
 }
 .body .point_send.main .button,
 .body .point_success.main .button {
-  width: calc(100% - 30px);
   margin-top: 40px;
 }
 .body .point_success .title {
@@ -381,6 +380,49 @@ button {
 }
 .body .point_success .background {
   background-color: transparent !important;
+}
+.body .point_history.footer .img {
+  width: 20px;
+  height: fit-content;
+}
+.body .point_history.main {
+  max-height: calc(100vh - 130px);
+  padding: 60px 10px 70px;
+}
+.body .point_history .tabs {
+  height: fit-content;
+  margin-bottom: 0;
+  border: 1px solid white;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .point_history .tabs .tab {
+  padding: 5px 0;
+}
+.body .point_history .tabs .tab.active {
+  color: #EF6079;
+}
+.body .point_history .tabs .tab:not(.active) * {
+  color: #BDBDBD;
+}
+.body .point_history .tabs .tab:not(.active) .img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.body .point_history .tabs .img {
+  width: 20px;
+  height: fit-content;
+}
+.body .point_history .tabs .lineV {
+  height: 40px;
+  background-color: #BDBDBD;
+}
+.body .point_history .records {
+  max-height: 100%;
+  overflow-y: auto;
+}
+.body .point_history .records .img {
+  width: 20px;
+  height: fit-content;
 }
 .body .primary {
   color: #EF6079 !important;
@@ -824,12 +866,12 @@ button {
 }
 .body .lineH {
   width: 100%;
-  height: 1px;
+  min-height: 1px;
   margin: 5px 0;
   background-color: #E0E0E0;
 }
 .body .lineV {
-  width: 1px;
+  min-width: 1px;
   height: 100%;
   margin: 0 5px;
   background-color: #E0E0E0;
@@ -906,7 +948,7 @@ button {
   font-size: 48px;
 }
 .body .button {
-  width: 100%;
+  width: calc(100% - 30px);
   height: 40px;
   padding: 0 10px;
   margin: 5px;
