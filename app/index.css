@@ -221,9 +221,6 @@ button {
   width: 200px;
   height: 200px;
 }
-.body .scan .swipeup .input {
-  background-color: white;
-}
 .body .scan .swipeup .submit {
   background-color: #EF6079;
   margin-right: -5px;
@@ -424,6 +421,67 @@ button {
   width: 20px;
   height: fit-content;
 }
+.body .store_register.main {
+  max-height: calc(100vh - 60px);
+  padding: 60px 10px 0 !important;
+}
+.body .store_register .steps .step {
+  padding: 0 5px 5px;
+  margin: 0;
+  border-bottom: 2px solid transparent;
+}
+.body .store_register .steps .step.active {
+  border-bottom: 2px solid #EF6079;
+}
+.body .store_register .steps .step.active > span {
+  color: #EF6079;
+}
+.body .store_register .steps .step:not(.active) * {
+  color: #828282;
+}
+.body .store_register .steps .icon {
+  padding: 0px 10px 5px;
+  margin: 0 5px;
+}
+.body .store_register .info {
+  overflow-y: auto;
+}
+.body .store_register .info .input {
+  width: calc(100% - 40px);
+  padding: 0 15px;
+}
+.body .store_register .info .input input {
+  text-align: right;
+}
+.body .store_register .info .dropdown {
+  width: calc(100% - 25px);
+  padding-left: 15px;
+  background-color: white;
+}
+.body .store_register .info .dropdown select {
+  padding-right: 30px;
+}
+.body .store_register .info .dropdown .arrow {
+  right: 10px;
+}
+.body .store_register .info .title {
+  margin: 20px 0 0 5px;
+}
+.body .store_register .info .map {
+  width: calc(100% - 10px);
+  height: 150px;
+  margin: 5px;
+  border-radius: 20px;
+  background-color: white;
+}
+.body .store_register .info ol {
+  margin: 0;
+  padding: 0 0 0 30px;
+}
+.body .store_register .info .button {
+  width: calc(50% - 30px);
+  margin: 20px 5px;
+}
 .body .primary {
   color: #EF6079 !important;
 }
@@ -484,6 +542,9 @@ button {
 }
 .body .under {
   text-decoration: underline !important;
+}
+.body .nowrap {
+  white-space: nowrap;
 }
 .body .single {
   white-space: nowrap;
@@ -843,10 +904,6 @@ button {
   justify-content: center;
   color: #BDBDBD;
 }
-.body table .edit .input,
-.body table .edit .dropdown > select {
-  background-color: white;
-}
 .body table .edit .action > a {
   color: #EF6079;
 }
@@ -997,13 +1054,14 @@ button {
 .body .input {
   width: calc(100% - 30px);
   height: 40px;
+  min-height: 40px;
   padding: 0 10px;
   margin: 5px;
   border-radius: 5px;
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #F2F1F6;
+  background-color: white;
 }
 @media (min-width: 1024px) {
   .body .input {
@@ -1062,7 +1120,7 @@ button {
   color: #333333;
 }
 .body .dropdown {
-  width: 200px;
+  width: calc(100% - 10px);
   margin: 5px;
   position: relative;
   display: flex;
@@ -1075,7 +1133,7 @@ button {
   margin: 0;
   border-radius: 5px;
   color: #333333;
-  background-color: #F2F1F6;
+  background-color: white;
 }
 .body .dropdown .arrow {
   width: 20px;
@@ -1501,7 +1559,7 @@ button {
   justify-content: center;
   overflow-x: hidden;
   overflow-y: hidden;
-  z-index: 2;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(4px);
 }

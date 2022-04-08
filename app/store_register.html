@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="桃園市民卡">
+        <meta name="description" content="桃園市民卡">
+        <meta name="author" content="桃園市民卡">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>桃園市民卡</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+    </head>
+    <body class="marginX">
+        <div class="body fixed mobile"> <!-- class: fixed, mobile -->
+            <!-- Loading Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header store_register">
+                <div class="flexH width">
+                    <a class="icon iconButton third" href="profile.html">
+                        <i class="fa-solid fa-chevron-left fa-lg"></i>
+                    </a>
+                </div>
+                <span class="fL nowrap">特約商店申請</span>
+                <div class="flexH width right">
+                    <a class="textButton fM third">草稿暫存</a>
+                </div>
+            </section>
+            <!-- Main -->
+            <section class="main store_register">
+                <div class="steps flexH width middle">
+                    <div class="step flexH middle radius active">
+                        <span class="fM">1.<span class="fM"> 營業資訊</span></span>
+                    </div>
+                    <div class="icon gray"><i class="fa-solid fa-angle-right"></i></div>
+                    <div class="step flexH middle radius">
+                        <span class="fM">2.<span class="fM"> 聯絡人</span></span>
+                    </div>
+                    <div class="icon gray"><i class="fa-solid fa-angle-right"></i></div>
+                    <div class="step flexH middle radius">
+                        <span class="fM">3.<span class="fM"> 銀行資料</span></span>
+                    </div>
+                </div>
+                <div class="info flexV width padding">
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">統一編號</span>
+                        <input type="text" class="fM" placeholder="" value="123456">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">商店名稱</span>
+                        <input type="text" class="fM" placeholder="" value="快一點餐廳">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="dropdown rounded">
+                        <span class="fM nowrap gray">營業電話</span>
+                        <select name="type" class="fM rounded" dir="rtl">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">營業電話</span>
+                        <input type="text" class="fM" placeholder="" value="02 87654321">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">營業地址</span>
+                        <input type="text" class="fM" placeholder="" value="信義路">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <!-- Google評價 -->
+                    <span class="title fL bold">Google評價</span>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">商店名稱</span>
+                        <input type="text" class="fM" placeholder="" value="快一點餐廳">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="map"></div>
+                    <ol>
+                        <li class="fS gray">在地圖上方輸入框中輸入您的商店名稱</li>
+                        <li class="fS gray">在出現的列表中點擊您的商店名稱</li>
+                    </ol>
+                    <!-- 負責人資訊 -->
+                    <span class="title fL bold">負責人資訊</span>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">負責人姓名</span>
+                        <input type="text" class="fM" placeholder="" value="陳小明">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <!-- 聯絡人資訊 -->
+                    <span class="title fL bold">聯絡人資訊</span>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">聯絡人姓名</span>
+                        <input type="text" class="fM" placeholder="" value="陳小明">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">手機號碼</span>
+                        <input type="text" class="fM" placeholder="" value="0987654321">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">信箱</span>
+                        <input type="text" class="fM" placeholder="" value="name@mail.com">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <!-- 提領帳戶 -->
+                    <span class="title fL bold">提領帳戶</span>
+                    <div class="dropdown rounded">
+                        <span class="fM nowrap gray">銀行代碼</span>
+                        <select name="type" class="fM rounded" dir="rtl">
+                            <option value="004台灣銀行">004台灣銀行</option>
+                            <option value="005台灣銀行">005台灣銀行</option>
+                        </select>
+                        <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">分行代碼</span>
+                        <input type="text" class="fM" placeholder="" value="123">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">銀行帳號</span>
+                        <input type="text" class="fM" placeholder="" value="0987654321098765">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">銀行戶名</span>
+                        <input type="text" class="fM" placeholder="" value="陳大文">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <span class="fM nowrap gray">身分證字號/統一編號</span>
+                        <input type="text" class="fM" placeholder="" value="A123456789">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <!-- 上傳存摺封面 -->
+                    <span class="title fL bold">上傳存摺封面</span>
+                    <div class="input rounded"> <!-- class: error -->
+                        <input class="file" type="file">
+                    </div>
+                    <!-- 上傳統一編號章 -->
+                    <span class="title fL bold">上傳統一編號章</span>
+                    <div class="input rounded"> <!-- class: error -->
+                        <input class="file" type="file">
+                    </div>
+                    <div class="flexH width center middle">
+                        <a class="button rounded secondary">
+                            <span class="fM">上一步</span>
+                        </a>
+                        <a class="button rounded" onclick="popSuccess()">
+                            <span class="fM">下一步</span> <!-- 提交申請 -->
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- Popup (已提交申請) -->
+            <section id="popSuccess" class="popup">
+                <div class="popBody">
+                    <section class="popHeader">
+                        <!-- <span class="fL">Title</span> -->
+                    </section>
+                    <section class="popMain">
+                        <div class="icon success"><i class="fa-regular fa-circle-check fa-2x"></i></div>
+                        <span class="fL">已提交申請</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button submit rounded" href="profile.html">
+                            <span class="fM">確定</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
+            <!-- Script -->
+            <script src="store_register.js"></script>
+        </div>
+    </body>
+</html>
