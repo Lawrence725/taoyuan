@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="桃園市民卡">
+        <meta name="description" content="桃園市民卡">
+        <meta name="author" content="桃園市民卡">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>桃園市民卡</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+    </head>
+    <body class="marginX">
+        <div class="body fixed mobile"> <!-- class: fixed, mobile -->
+            <!-- Loading Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header activity_question">
+                <a class="icon iconButton third" href="javascript:history.back()">
+                    <i class="fa-solid fa-chevron-left fa-lg"></i>
+                </a>
+                <span class="fL">問答</span>
+                <div class="icon iconButton"></div>
+            </section>
+            <!-- Main -->
+            <section class="main activity_question">
+                <div class="img"><img src="icon/question.svg"></div>
+                <span class="fXL">問答標題</span>
+                <span class="fM gray">標題說明，成當元育廣主字著起清人化的政病其主著常出臺營、美了今負對的評清第夠物那天樣的天，風我我。內容優惠券，身作行用備升麼研水成唱。</span>
+                <div class="flexV">
+                    <!-- Radio -->
+                    <label class="check">
+                        <input type="radio" name="radio1" checked> <!-- checked -->
+                        <span class="checkmark radio"></span>
+                        <span class="text fM">Radio</span>
+                    </label>
+                    <!-- Radio -->
+                    <label class="check">
+                        <input type="radio" name="radio1" checked> <!-- checked -->
+                        <span class="checkmark radio"></span>
+                        <span class="text fM">Radio</span>
+                    </label>
+                    <!-- Radio -->
+                    <label class="check">
+                        <input type="radio" name="radio1" checked> <!-- checked -->
+                        <span class="checkmark radio"></span>
+                        <span class="text fM">Radio</span>
+                    </label>
+                    <!-- Radio -->
+                    <label class="check">
+                        <input type="radio" name="radio1" checked> <!-- checked -->
+                        <span class="checkmark radio"></span>
+                        <span class="text fM">Radio</span>
+                    </label>
+                </div>
+                <div class="flexH width middle">
+                    <a class="button rounded gray" onclick="popWrong()">
+                        <span class="fM">上一頁</span>
+                    </a>
+                    <a class="button rounded" onclick="popCorrect()">
+                        <span class="fM">送出</span>
+                    </a>
+                </div>
+            </section>
+            <!-- Popup (答案錯誤) -->
+            <section id="popWrong" class="popup">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <!-- <span class="fL">Title</span> -->
+                    </section>
+                    <section class="popMain">
+                        <div class="icon"><i class="fa-regular fa-circle-xmark fa-2x"></i></div>
+                        <span class="fL">答案錯誤</span>
+                        <span class="fM gray">請再試一次</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button submit rounded"><span class="fM">確認</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (答案正確) -->
+            <section id="popCorrect" class="popCorrect popup activity_question">
+                <div class="popBody">
+                    <a class="close" href="index.html">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popHeader">
+                        <div class="img"><img src="icon/point-w.svg"></div>
+                    </section>
+                    <section class="popMain">
+                        <span class="fM gray">恭喜您獲得</span>
+                        <div class="flexH">
+                            <div class="img"><img src="icon/point.svg"></div>
+                            <span class="fXL">100</span>
+                        </div>
+                        <span class="fS gray">來自</span>
+                        <span class="fL gray">問答</span>
+                    </section>
+                    <section class="popFooter">
+                        <div class="flexH width">
+                            <a class="flexV width center" href="point_history.html">
+                                <span class="fS gray">紅利桃子</span>
+                                <div class="flexH">
+                                    <div class="img"><img src="icon/point.svg"></div>
+                                    <span class="fM bold">500</span>
+                                </div>
+                            </a>
+                            <div class="lineV"></div>
+                            <a class="flexV width center" href="point_date.html">
+                                <span class="fS gray">2022/06/30到期</span>
+                                <div class="flexH">
+                                    <div class="img"><img src="icon/point.svg"></div>
+                                    <span class="fM bold">200</span>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- Script -->
+            <script src="activity_question.js"></script>
+        </div>
+    </body>
+</html>
