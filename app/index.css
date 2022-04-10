@@ -469,7 +469,7 @@ button {
 }
 .body .store_register .info .map {
   width: calc(100% - 10px);
-  height: 150px;
+  min-height: 150px;
   margin: 5px;
   border-radius: 20px;
   background-color: white;
