@@ -3,7 +3,11 @@ function popNotice() {
     var popNotice   = document.getElementById("popNotice");
     var close       = popNotice.getElementsByClassName("close")[0];
     var submit      = popNotice.getElementsByClassName("submit")[0];
-    close.onclick   = function() { popNotice.style.display = "none"; }
-    submit.onclick  = function() { popNotice.style.display = "none"; }
-    window.onclick  = function(event) { if (event.target == popNotice) { popNotice.style.display = "none"; }}
-    popNotice.style.display = "flex"; }
+    close.onclick   = function() { popClose(); }
+    submit.onclick  = function() { popClose(); }
+    window.onclick  = function(event) { if (event.target == popNotice) { popClose(); }}
+    function popClose() { 
+        popNotice.style.display         = "none";
+        document.body.style.overflow    = "scroll"; }
+    popNotice.style.display             = "flex";
+    document.body.style.overflow        = "hidden"; }
