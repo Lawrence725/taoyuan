@@ -386,40 +386,57 @@ button {
   max-height: calc(100vh - 130px);
   padding: 60px 10px 70px;
 }
-.body .point_history .tabs {
+.body .point_history.main .tabs {
   height: fit-content;
-  margin-bottom: 0;
   border: 1px solid white;
   background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
-.body .point_history .tabs .tab {
+.body .point_history.main .tabs .tab {
   padding: 5px 0;
 }
-.body .point_history .tabs .tab.active {
+.body .point_history.main .tabs .tab.active {
   color: #EF6079;
 }
-.body .point_history .tabs .tab:not(.active) * {
+.body .point_history.main .tabs .tab:not(.active) * {
   color: #BDBDBD;
 }
-.body .point_history .tabs .tab:not(.active) .img {
+.body .point_history.main .tabs .tab:not(.active) .img {
   filter: grayscale(100%);
   opacity: 0.5;
 }
-.body .point_history .tabs .img {
+.body .point_history.main .tabs .img {
   width: 20px;
   height: fit-content;
 }
-.body .point_history .tabs .lineV {
+.body .point_history.main .tabs .lineV {
   height: 40px;
   background-color: #BDBDBD;
 }
-.body .point_history .records {
+.body .point_history.main .filter .lineV {
+  height: 20px;
+  background-color: #F3CBC7;
+}
+.body .point_history.main .filter .dropdown {
+  width: fit-content;
+}
+.body .point_history.main .filter .dropdown select {
+  width: fit-content;
+  padding: 0 30px 0 10px;
+  background-color: transparent;
+}
+.body .point_history.main .records {
   max-height: 100%;
   overflow-y: auto;
 }
-.body .point_history .records .img {
+.body .point_history.main .records .img {
   width: 20px;
   height: fit-content;
+}
+.body .point_history.popTime .tabs {
+  height: 34px;
+}
+.body .point_history.popTime .tabs .tab:hover:not(.active) {
+  background-color: #F2F1F6;
 }
 .body .store_register.main {
   max-height: calc(100vh - 60px);
@@ -1684,4 +1701,7 @@ button {
 }
 .body .popup .popBody .popFooter {
   display: flex;
+}
+.body .popup .popBody .tabs {
+  background-color: white;
 }

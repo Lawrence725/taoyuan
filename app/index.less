@@ -111,17 +111,24 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
         .background { background-color: transparent !important; }}
     .point_history {
         &.footer .img { width: 20px; height: fit-content; }
-        &.main { max-height: calc(100vh - 130px); padding: 60px 10px 70px; }
-        .tabs { height: fit-content; margin-bottom: 0; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
-            .tab { padding: 5px 0;
-                &.active { color: @c1; }
-                &:not(.active) {
-                    * { color: @cG4; }
-                    .img { filter: grayscale(100%); opacity: 0.5; }}}
-            .img { width: 20px; height: fit-content; }
-            .lineV { height: 40px; background-color: @cG4; }}
-        .records { max-height: 100%; overflow-y: auto;
-            .img { width: 20px; height: fit-content;}}}
+        &.main { max-height: calc(100vh - 130px); padding: 60px 10px 70px;
+            .tabs { height: fit-content; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+                .tab { padding: 5px 0;
+                    &.active { color: @c1; }
+                    &:not(.active) {
+                        * { color: @cG4; }
+                        .img { filter: grayscale(100%); opacity: 0.5; }}}
+                .img { width: 20px; height: fit-content; }
+                .lineV { height: 40px; background-color: @cG4; }}
+            .filter {
+                .lineV { height: 20px; background-color: @c2; }
+                .dropdown { width: fit-content;
+                    select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
+            .records { max-height: 100%; overflow-y: auto;
+                .img { width: 20px; height: fit-content;}}}
+        &.popTime {
+            .tabs { height: 34px;
+                .tab:hover:not(.active) { background-color: @cBg; }}}}
     .store_register {
         &.main { max-height: calc(100vh - 60px); padding: 60px 10px 0 !important; }
         .steps {
@@ -405,5 +412,6 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                 &::-webkit-scrollbar { -webkit-appearance: none; }
                 &::-webkit-scrollbar:vertical { width: 10px; }
                 &::-webkit-scrollbar-thumb { border-radius: 5px; background-color: @cG5; border: 2.5px solid @cBg; }}
-            .popFooter { display: flex; }}}
+            .popFooter { display: flex; }
+            .tabs { background-color: white; }}}
 }
