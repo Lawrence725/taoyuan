@@ -52,7 +52,17 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
                     img { border-radius: 10px 10px 0 0; }}}}
         .advertise { width: calc(100% - 22px) !important; height: fit-content; padding: 5px 5px 5px 0; margin: 5px 10px !important; border: 1px solid white; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .img { width: 30% !important; height: fit-content !important; margin: 0; }
-                img { border-radius: 5px; }}}
+                img { border-radius: 5px; }}
+        &.popActivity {
+            .close { color: white; border-radius: 99px;
+                &:hover { color: @cG5; }}
+            .popBody { height: 450px; padding: 0; }
+            .popHeader { height: 200px; margin: 0 !important; padding-bottom: 30px; border-radius: 20px 20px 0 0; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1)); background: url(img/bg2.png); background-position: bottom; background-attachment: initial; background-size: cover; }
+            .popMain { height: 100%; margin: 0 !important; justify-content: center !important;
+                span { margin: 5px 0; }}
+            .popFooter { margin: 30px 10px 20px;
+                .lineV { height: 30px; }
+                .img { width: 20px; height: 20px; }}}}
     .scan {
         &.main { width: 100vw; height: calc(100vh - 60px); padding: 60px 0 0 !important;
             @media @sD, @sT { width: 768px !important; }
@@ -156,12 +166,12 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
         &.popCorrect {
             .close { color: white; border-radius: 99px;
                 &:hover { color: @cG5; }}
-            .popBody { padding: 0 0 10px; }
-            .popHeader { height: 200px; margin: 0 !important; border-radius: 20px 20px 0 0; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1)); background: url(img/bg2.png); background-position: bottom; background-attachment: initial; background-size: cover; }
-            .popMain { margin: 50px 0 !important;
+            .popBody { height: 450px; padding: 0; }
+            .popHeader { height: 200px; margin: 0 !important; padding-bottom: 30px; border-radius: 20px 20px 0 0; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1)); background: url(img/bg2.png); background-position: bottom; background-attachment: initial; background-size: cover; }
+            .popMain { height: 100%; margin: 0 !important; justify-content: center !important;
                 .img { width: 30px; height: fit-content; }}
-            .popFooter .img { width: 20px; height: fit-content; }
-        }}
+            .popFooter { margin: 30px 0 10px;
+                .img { width: 20px; height: fit-content; }}}}
 
     // Color
     .primary    { color: @c1 !important; }

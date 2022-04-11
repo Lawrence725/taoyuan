@@ -1,3 +1,15 @@
+// Popup (Activity)
+function popActivity() {
+    var popActivity = document.getElementById("popActivity");
+    var close       = popActivity.getElementsByClassName("close")[0];
+    close.onclick   = function() { popClose(); }
+    window.onclick  = function(event) { if (event.target == popActivity) { popClose(); }}
+    function popClose() { 
+        popActivity.style.display = "none";
+        document.body.style.overflow = "scroll"; }
+    popActivity.style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
 // Slideshow
 var slideIndex = 1;
 showSlides(1);
