@@ -87,9 +87,26 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button { font-family: 
             &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
             > .flexH > .img:first-child { margin-left: 20px; }
             > .flexH > .img:last-child { margin-right: 20px; }
-            .img { width: calc(100vw - 40px) !important; margin: 0 5px; height: fit-content; position: relative;
+            .img { width: calc(100vw - 40px) !important; height: fit-content; margin: 0 5px; border-radius: 10px; position: relative;
                 @media @sD, @sT { width: 728px !important; }
+                &.city, &.visit {
+                    > img { visibility: hidden; }
+                    .type { display: initial; }
+                    .icon { display: initial; }
+                    .icon { bottom: 20px; right: 27px; position: absolute; }
+                }
+                &.city { background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
+                    .icon.iconVisit { display: none; }}
+                &.visit { background: @c2;
+                    span { color: @c4; }
+                    .icon.iconCity { display: none; }}
+                &.new .icon { display: initial; } 
+                .type { display: none; }
+                .icon { display: none; }
                 img { border-radius: 10px; }
+                .title { top: 30px; left: 27px; position: absolute;
+                    span:first-child { margin-bottom: 5px; letter-spacing: 0.33em; }}
+                .type { bottom: 30px; left: 27px; position: absolute; letter-spacing: 0.33em; }
                 .cover { border-radius: 10px; background: rgba(0, 0, 0, 0.5); position: absolute; }}}
         .point { width: calc(100% - 20px); padding: 10px; margin: 20px 0; border: 1px solid #EF6079; border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
             .img { width: 50px; height: fit-content; }}

@@ -298,8 +298,9 @@ button {
 }
 .body .profile .card .img {
   width: calc(100vw - 40px) !important;
-  margin: 0 5px;
   height: fit-content;
+  margin: 0 5px;
+  border-radius: 10px;
   position: relative;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
@@ -307,8 +308,65 @@ button {
     width: 728px !important;
   }
 }
+.body .profile .card .img.city > img,
+.body .profile .card .img.visit > img {
+  visibility: hidden;
+}
+.body .profile .card .img.city .type,
+.body .profile .card .img.visit .type {
+  display: initial;
+}
+.body .profile .card .img.city .icon,
+.body .profile .card .img.visit .icon {
+  display: initial;
+}
+.body .profile .card .img.city .icon,
+.body .profile .card .img.visit .icon {
+  bottom: 20px;
+  right: 27px;
+  position: absolute;
+}
+.body .profile .card .img.city {
+  background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
+}
+.body .profile .card .img.city .icon.iconVisit {
+  display: none;
+}
+.body .profile .card .img.visit {
+  background: #F3CBC7;
+}
+.body .profile .card .img.visit span {
+  color: #333F48;
+}
+.body .profile .card .img.visit .icon.iconCity {
+  display: none;
+}
+.body .profile .card .img.new .icon {
+  display: initial;
+}
+.body .profile .card .img .type {
+  display: none;
+}
+.body .profile .card .img .icon {
+  display: none;
+}
 .body .profile .card .img img {
   border-radius: 10px;
+}
+.body .profile .card .img .title {
+  top: 30px;
+  left: 27px;
+  position: absolute;
+}
+.body .profile .card .img .title span:first-child {
+  margin-bottom: 5px;
+  letter-spacing: 0.33em;
+}
+.body .profile .card .img .type {
+  bottom: 30px;
+  left: 27px;
+  position: absolute;
+  letter-spacing: 0.33em;
 }
 .body .profile .card .img .cover {
   border-radius: 10px;
