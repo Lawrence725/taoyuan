@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="桃園市民卡">
+        <meta name="description" content="桃園市民卡">
+        <meta name="author" content="桃園市民卡">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>桃園市民卡</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+    </head>
+    <body class="marginX">
+        <div class="body fixed mobile"> <!-- class: fixed, mobile -->
+            <!-- Loading Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header profile_edit">
+                <div class="flexH width">
+                    <a class="icon iconButton third" href="profile.html">
+                        <i class="fa-solid fa-chevron-left fa-lg"></i>
+                    </a>
+                </div>
+                <span class="fL nowrap">編輯個人資料</span>
+                <div class="flexH width right"></div>
+            </section>
+            <!-- Main -->
+            <section class="main profile_edit">
+                <div class="info flexV width padding center">
+                    <a class="img"><img src="img/profile.png"></a>
+                    <div class="input rounded"> <!-- class: error -->
+                        <div class="icon"><i class="fa-solid fa-user"></i></div>
+                        <span class="fM nowrap gray">姓名</span>
+                        <input type="text" class="fM" placeholder="" value="陳小明">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="dropdown rounded">
+                        <div class="icon"><i class="fa-solid fa-venus-mars"></i></div>
+                        <span class="fM nowrap gray">性別</span>
+                        <select name="type" class="fM rounded" dir="rtl">
+                            <option value="先生">先生</option>
+                            <option value="女士">女士</option>
+                        </select>
+                        <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                    </div>
+                    <div class="input rounded birth"> <!-- class: error -->
+                        <div class="icon"><i class="fa-solid fa-calendar"></i></div>
+                        <span class="fM nowrap gray">生日</span>
+                        <input class="fM date" type="date">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="dropdown rounded">
+                        <div class="icon"><i class="fa-solid fa-map"></i></div>
+                        <span class="fM nowrap gray">出生地</span>
+                        <select name="type" class="fM rounded" dir="rtl">
+                            <option value="台灣">台灣</option>
+                            <option value="台灣">台灣</option>
+                        </select>
+                        <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <div class="icon"><i class="fa-solid fa-id-card"></i></div>
+                        <span class="fM nowrap gray">身分證字號</span>
+                        <input type="text" class="fM" placeholder="" value="A123456789">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                        <span class="fM nowrap gray">手機號碼</span>
+                        <input type="text" class="fM" placeholder="" value="0987654321">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <div class="input rounded"> <!-- class: error -->
+                        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                        <span class="fM nowrap gray">信箱</span>
+                        <input type="text" class="fM" placeholder="" value="name@mail.com">
+                        <!-- <span class="fS error message">必填</span> -->
+                    </div>
+                    <a class="button rounded" onclick="popSuccess()">
+                        <div class="icon"><i class="fa-solid fa-floppy-disk"></i></div>
+                        <span class="fM">儲存</span> <!-- 提交申請 -->
+                    </a>
+                </div>
+            </section>
+            <!-- Popup (已儲存) -->
+            <section id="popSuccess" class="popup">
+                <div class="popBody">
+                    <section class="popHeader">
+                        <!-- <span class="fL">Title</span> -->
+                    </section>
+                    <section class="popMain">
+                        <div class="icon success"><i class="fa-regular fa-circle-check fa-2x"></i></div>
+                        <span class="fL">已儲存</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button submit rounded" href="profile.html">
+                            <span class="fM">確定</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <!-- Script -->
+        <script src="js/store_register.js"></script>
+    </body>
+</html>

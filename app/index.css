@@ -247,6 +247,7 @@ button {
   height: 60px;
   min-width: 60px;
   margin-right: 10px;
+  border-radius: 999px;
 }
 .body .scan .swipeup .light {
   min-width: 50px;
@@ -417,6 +418,43 @@ button {
   width: 24px;
   height: fit-content;
   margin-right: 10px;
+}
+.body .profile_edit.main {
+  max-height: calc(100vh - 60px);
+  padding: 60px 10px 0 !important;
+}
+.body .profile_edit .img {
+  margin-bottom: 20px;
+  border: 1px solid white;
+  border-radius: 999px;
+}
+.body .profile_edit .input {
+  width: calc(100% - 35px);
+  padding: 0 15px 0 10px;
+}
+.body .profile_edit .input input {
+  text-align: right;
+}
+.body .profile_edit .dropdown {
+  width: calc(100% - 20px);
+  padding-left: 10px;
+  background-color: white;
+}
+.body .profile_edit .dropdown select {
+  padding-right: 30px;
+}
+.body .profile_edit .dropdown .arrow {
+  right: 10px;
+}
+.body .profile_edit .date {
+  margin-right: 0 !important;
+}
+.body .profile_edit .button {
+  width: calc(50% - 30px);
+  margin: 20px 5px;
+}
+.body .profile_edit .birth {
+  margin-bottom: 20px;
 }
 .body .point_send.main,
 .body .point_success.main {
