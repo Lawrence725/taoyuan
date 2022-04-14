@@ -456,6 +456,15 @@ button {
 .body .profile_edit .birth {
   margin-bottom: 20px;
 }
+.body .setting.main {
+  max-height: calc(100vh - 60px);
+  padding: 60px 10px 0 !important;
+}
+.body .setting .info {
+  margin-bottom: 20px !important;
+  border-radius: 20px;
+  background-color: white;
+}
 .body .point_send.main,
 .body .point_success.main {
   min-height: calc(100vh - 100px);
@@ -953,13 +962,13 @@ button {
 }
 .body .flexH {
   width: fit-content;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
 }
 .body .flexV {
   width: fit-content;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -1051,7 +1060,7 @@ button {
 }
 .body .grid > div {
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #F2F1F6;
 }
 .body .grid .grid1 {
@@ -1095,10 +1104,10 @@ button {
   padding: 5px 2.5px;
 }
 .body table td:first-child {
-  border-radius: 5px 0 0 5px;
+  border-radius: 10px 0 0 10px;
 }
 .body table td:last-child {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 10px 10px 0;
 }
 .body table td span {
   line-height: 30px;
@@ -1223,7 +1232,7 @@ button {
   height: 40px;
   padding: 0 10px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1281,7 +1290,7 @@ button {
   min-height: 40px;
   padding: 0 10px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
   display: flex;
   align-items: center;
@@ -1339,7 +1348,7 @@ button {
   min-height: 50px;
   padding: 10px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #F2F1F6;
   color: #333333;
 }
@@ -1355,7 +1364,7 @@ button {
   height: 30px;
   padding: 5px 10px;
   margin: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #333333;
   background-color: white;
 }
@@ -1376,7 +1385,7 @@ button {
   height: 24px;
   padding: 3px;
   margin: 5px;
-  border-radius: 7px;
+  border-radius: 13px;
   display: flex;
   align-items: center;
   background-color: #F2F1F6;
@@ -1396,7 +1405,7 @@ button {
 .body .tabs .tab {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1466,7 +1475,7 @@ button {
   width: fit-content;
   min-height: 20px;
   padding: 5px 5px 5px 25px;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
   display: flex;
   align-items: center;
@@ -1580,7 +1589,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   position: absolute;
   display: flex;
   align-items: center;
