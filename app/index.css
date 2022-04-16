@@ -15,7 +15,8 @@ p,
 select,
 input,
 textarea,
-button {
+button,
+span {
   font-family: 'Noto Sans TC', 'Arial', '微軟正黑體', '新細明體', 'sans-serif';
 }
 .body {
