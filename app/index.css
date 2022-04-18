@@ -630,10 +630,14 @@ span {
 }
 .body .store_register .info .map {
   width: calc(100% - 10px);
-  min-height: 150px;
+  min-height: 300px;
   margin: 5px;
   border-radius: 20px;
+  position: relative;
   background-color: white;
+}
+.body .store_register .info .map .input {
+  z-index: 9;
 }
 .body .store_register .info ol {
   margin: 0;
@@ -1315,6 +1319,10 @@ span {
 }
 .body .input.error .message {
   display: flex;
+}
+.body .input .inputbox {
+  width: 100%;
+  height: 100%;
 }
 .body .input input {
   width: 100%;
