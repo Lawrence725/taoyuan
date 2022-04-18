@@ -637,6 +637,8 @@ span {
   background-color: white;
 }
 .body .store_register .info .map .input {
+  top: 60px;
+  position: absolute;
   z-index: 9;
 }
 .body .store_register .info ol {
