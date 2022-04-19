@@ -1640,7 +1640,7 @@ span {
 .body .check {
   width: fit-content;
   min-height: 20px;
-  padding: 5px 5px 5px 25px;
+  padding: 10px 15px 10px 35px;
   border-radius: 10px;
   position: relative;
   display: flex;
@@ -1682,7 +1682,7 @@ span {
   position: absolute;
   top: auto;
   bottom: auto;
-  left: 7px;
+  left: 12px;
   height: 12px;
   width: 12px;
   border-radius: 50%;
