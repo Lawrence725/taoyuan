@@ -392,6 +392,15 @@ span {
 .body .map .testImg img {
   object-fit: cover;
 }
+.body .map .location {
+  width: 40px;
+  height: 40px;
+  bottom: 222px;
+  right: 20px;
+  position: absolute;
+  background-color: #5CB8B2;
+  box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
+}
 .body .map .info {
   width: calc(100vw - 40px);
   margin-left: -10px;
@@ -408,6 +417,9 @@ span {
   .body .map .info {
     width: 728px !important;
   }
+}
+.body .map .info .checklist {
+  margin-top: 10px;
 }
 .body .map .info .checklist > .flexH {
   margin: 0 10px;
@@ -905,22 +917,22 @@ span {
   background-color: #F2F1F6 !important;
 }
 .body .fXXL {
-  font-size: 36px;
+  font-size: 48px;
 }
 .body .fXL {
-  font-size: 24px;
+  font-size: 36px;
 }
 .body .fL {
-  font-size: 18px;
+  font-size: 24px;
 }
 .body .fM {
-  font-size: 14px;
+  font-size: 18px;
 }
 .body .fS {
-  font-size: 12px;
+  font-size: 14px;
 }
 .body .fXS {
-  font-size: 10px;
+  font-size: 12px;
 }
 .body .bold {
   font-weight: bold;
