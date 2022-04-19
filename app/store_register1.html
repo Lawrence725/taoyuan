@@ -13,6 +13,110 @@
         <link rel="stylesheet" href="index.css">
         <!-- Awesome Icon -->
         <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+        <style>
+            /**
+             * @license
+             * Copyright 2019 Google LLC. All Rights Reserved.
+             * SPDX-License-Identifier: Apache-2.0
+             */
+            /* 
+             * Always set the map height explicitly to define the size of the div element
+             * that contains the map. 
+             */
+            #map {
+              height: 100%;
+            }
+            
+            /* 
+             * Optional: Makes the sample page fill the window. 
+             */
+            html,
+            body {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+            }
+            
+            #description {
+              font-family: Roboto;
+              font-size: 15px;
+              font-weight: 300;
+            }
+            
+            #infowindow-content .title {
+              font-weight: bold;
+            }
+            
+            #infowindow-content {
+              display: none;
+            }
+            
+            #map #infowindow-content {
+              display: inline;
+            }
+            
+            .pac-card {
+              background-color: #fff;
+              border: 0;
+              border-radius: 2px;
+              box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+              margin: 10px;
+              padding: 0 0.5em;
+              font: 400 18px Roboto, Arial, sans-serif;
+              overflow: hidden;
+              font-family: Roboto;
+              padding: 0;
+            }
+            
+            #pac-container {
+              padding-bottom: 12px;
+              margin-right: 12px;
+            }
+            
+            .pac-controls {
+              display: inline-block;
+              padding: 5px 11px;
+            }
+            
+            .pac-controls label {
+              font-family: Roboto;
+              font-size: 13px;
+              font-weight: 300;
+            }
+            
+            #pac-input {
+              top: 5px !important;
+              left: 5px !important;
+              z-index: 9 !important;
+              border-radius: 20px !important;
+              height: 50px;
+              background-color: #fff;
+              font-family: Roboto;
+              font-size: 15px;
+              font-weight: 300;
+              padding: 0 10px;
+              text-overflow: ellipsis;
+              width: calc(100% - 30px);
+            }
+            
+            #pac-input:focus {
+              border-color: #4d90fe;
+            }
+            
+            #title {
+              color: #fff;
+              background-color: #4d90fe;
+              font-size: 25px;
+              font-weight: 500;
+              padding: 6px 12px;
+            }
+            
+            #target {
+              width: 345px;
+            }
+            
+            
+            </style>
     </head>
     <body class="marginX">
         <div class="body fixed mobile"> <!-- class: fixed, mobile -->
@@ -76,20 +180,28 @@
                     </div>
                     <!-- Google評價 -->
                     <span class="title fL bold">Google評價</span>
-                    <div class="input rounded"> <!-- class: error -->
+                    <div class="input rounded">
+                        <!-- class: error -->
                         <span class="fM nowrap gray">商店名稱</span>
-                        <input type="text" class="fM" placeholder="" value="快一點餐廳">
+                        <input
+                            type="text"
+                            class="fM"
+                            placeholder=""
+                            value="store name"
+                        />
                         <!-- <span class="fS error message">必填</span> -->
                     </div>
-                    <div class="map">
-                        <div class="input rounded background"> <!-- class: error -->
-                            <span class="fM nowrap gray">商店名稱</span>
-                            <input type="text" class="fM" placeholder="" value="快一點餐廳">
-                            <!-- <span class="fS error message">必填</span> -->
-                        </div>
-                    </div>
+                    <input
+                        id="pac-input"
+                        type="text"
+                        placeholder=""
+                        value="store name"
+                    />
+                    <div class="map" id="map"></div>
                     <ol>
-                        <li class="fS gray">在地圖上方輸入框中輸入您的商店名稱</li>
+                        <li class="fS gray">
+                            在地圖上方輸入框中輸入您的商店名稱
+                        </li>
                         <li class="fS gray">在出現的列表中點擊您的商店名稱</li>
                     </ol>
                     <!-- 負責人資訊 -->
@@ -186,5 +298,94 @@
         </div>
         <!-- Script -->
         <script src="js/store_register.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj0L6_OfuVG_h4481blU8bP-JQWmW-b5o&libraries=places&region=TW"></script>
+        <script>
+            /**
+         * @license
+         * Copyright 2019 Google LLC. All Rights Reserved.
+         * SPDX-License-Identifier: Apache-2.0
+         */
+        // @ts-nocheck TODO(jpoehnelt) remove when fixed
+        // This example adds a search box to a map, using the Google Place Autocomplete
+        // feature. People can enter geographical searches. The search box will return a
+        // pick list containing a mix of places and predicted search terms.
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 24.9742352, lng: 121.0703047 },
+            zoom: 13,
+            mapTypeId: "roadmap",
+        });
+        // Create the search box and link it to the UI element.
+        const input = document.getElementById("pac-input");
+
+        const searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+            // Bias the SearchBox results towards current map's viewport.
+            map.addListener("bounds_changed", () => {
+                searchBox.setBounds(map.getBounds());
+            });
+
+            let markers = [];
+
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            searchBox.addListener("places_changed", () => {
+                const places = searchBox.getPlaces();
+                console.log(places)
+
+                if (places.length == 0) {
+                return;
+                }
+
+                // Clear out the old markers.
+                markers.forEach((marker) => {
+                marker.setMap(null);
+                });
+                markers = [];
+
+                // For each place, get the icon, name and location.
+                const bounds = new google.maps.LatLngBounds();
+
+                places.forEach((place) => {
+                    if (!place.geometry || !place.geometry.location) {
+                        console.log("Returned place contains no geometry");
+                        return;
+                    }
+
+                    Object.assign(this.data, {
+                        googleStore: place.name
+                    })
+
+                    const icon = {
+                        url: place.icon,
+                        size: new google.maps.Size(71, 71),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34),
+                        scaledSize: new google.maps.Size(25, 25),
+                    };
+
+                    // Create a marker for each place.
+                    markers.push(
+                        new google.maps.Marker({
+                        map,
+                        icon,
+                        title: place.name,
+                        position: place.geometry.location,
+                        })
+                    );
+                    if (place.geometry.viewport) {
+                        // Only geocodes have viewport.
+                        bounds.union(place.geometry.viewport);
+                    } else {
+                        bounds.extend(place.geometry.location);
+                    }
+                });
+                map.fitBounds(bounds);
+                map.setZoom(16);
+                // map.setCenter(markers.getPosition())
+            });
+        </script>
     </body>
 </html>

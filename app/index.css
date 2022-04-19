@@ -269,6 +269,114 @@ span {
   background-color: #EF6079;
   margin-right: -5px;
 }
+.body .map.main {
+  height: calc(100vh - 130px);
+  padding: 60px 10px 70px !important;
+  position: relative;
+  overflow-y: hidden;
+}
+.body .map .tabs {
+  height: 30px;
+  border: 1px solid white;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .map .tabs .tab {
+  padding: 5px 0;
+}
+.body .map .tabs .tab.active {
+  color: #EF6079;
+}
+.body .map .tabs .tab:not(.active) * {
+  color: #BDBDBD;
+}
+.body .map .tabs .lineV {
+  height: 20px;
+  background-color: #E0E0E0;
+}
+.body .map .filter {
+  width: 100vw;
+  min-height: 40px;
+  margin-left: -10px;
+  overflow-x: auto;
+}
+.body .map .filter::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+}
+.body .map .filter > .flexH > .flexH:first-child {
+  margin-left: 10px;
+}
+.body .map .filter > .flexH > .flexH:last-child {
+  margin-right: 10px;
+}
+.body .map .filter .lineV {
+  height: 20px;
+  background-color: #F3CBC7;
+}
+.body .map .filter .dropdown {
+  width: fit-content;
+}
+.body .map .filter .dropdown select {
+  width: fit-content;
+  padding: 0 30px 0 10px;
+  background-color: transparent;
+}
+.body .map .filter a {
+  padding: 0 10px;
+}
+.body .map .filter a.active span {
+  color: #EF6079;
+  font-weight: bold;
+}
+.body .map .filter a span {
+  color: #BDBDBD;
+}
+.body .map .testImg {
+  width: 100vw !important;
+  height: 100% !important;
+  margin: 0 0 0 -10px;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .map .testImg {
+    width: 768px !important;
+  }
+}
+.body .map .testImg img {
+  object-fit: cover;
+}
+.body .map .info {
+  width: calc(100vw - 40px);
+  margin-left: -10px;
+  padding: 20px;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px 30px 0px 0px;
+  bottom: 70px;
+  position: absolute;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
+  backdrop-filter: blur(30px);
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .map .info {
+    width: 728px !important;
+  }
+}
+.body .map .info .checklist > .flexH {
+  margin: 0 10px;
+}
+.body .map .info .img.store {
+  width: 50px;
+  height: 50px;
+}
+.body .map .info .img.store img {
+  border-radius: 5px;
+}
+.body .map .info .img.point {
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+}
 .body .profile.main {
   padding: 60px 20px 90px !important;
 }
