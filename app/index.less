@@ -66,19 +66,27 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
                 .lineV { height: 30px; }
                 .img { width: 20px; height: 20px; }}}}
     .scan {
-        &.main { width: 100vw; height: calc(100vh - 60px); padding: 60px 0 0 !important;
+        &.main { width: 100vw; height: calc(100vh - 130px); padding: 60px 0 70px !important;
             @media @sD, @sT { width: 768px !important; }
             &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }}
         canvas { width: 100% !important; height: calc(100vh - 130px) !important; position: absolute; }
+        .button { margin: 0; left: 50%; transform: translate(-50%, 0); bottom: 90px; position: absolute; z-index: 2; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); }
         .testImg { width: 100% !important; height: calc(100vh - 130px) !important; margin: 0; position: absolute; z-index: 1;
             @media @sD, @sT { width: 768px !important; }
             img { object-fit: cover; }}
         .swipeup { width: calc(100% - 40px); min-height: fit-content; padding: 10px 20px 100px; margin-top: calc(100vh - 180px); background: rgba(255, 255, 255, 0.9); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(20px); border-radius: 30px 30px 0px 0px; z-index: 2;
             .holder { width: 30px; height: 5px; border-radius: 99px; background-color: @cG4; }
             .fL.primary { margin: 20px 0; }
-            .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px; border-radius: 999px; }
+            .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px;
+                img { border-radius: 999px; }}
             .light { min-width: 50px; height: 50px; background-color: @c3; }
             .qrcode { padding: 20px 0; margin: 20px 0; border-radius: 20px; background-color: white; 
+                .img { width: 200px; height: 200px; }}
+            .submit { background-color: @c1; margin-right: -5px; }}
+        &.popCode {
+            .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px;
+                img { border-radius: 999px; }}
+            .qrcode { padding: 20px 0; margin: 10px 0; border-radius: 20px; background-color: white; 
                 .img { width: 200px; height: 200px; }}
             .submit { background-color: @c1; margin-right: -5px; }}}
     .map {

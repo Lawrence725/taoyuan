@@ -203,8 +203,8 @@ span {
 }
 .body .scan.main {
   width: 100vw;
-  height: calc(100vh - 60px);
-  padding: 60px 0 0 !important;
+  height: calc(100vh - 130px);
+  padding: 60px 0 70px !important;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .scan.main {
@@ -220,6 +220,15 @@ span {
   width: 100% !important;
   height: calc(100vh - 130px) !important;
   position: absolute;
+}
+.body .scan .button {
+  margin: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 90px;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
 }
 .body .scan .testImg {
   width: 100% !important;
@@ -261,6 +270,8 @@ span {
   height: 60px;
   min-width: 60px;
   margin-right: 10px;
+}
+.body .scan .swipeup .img.profile img {
   border-radius: 999px;
 }
 .body .scan .swipeup .light {
@@ -279,6 +290,29 @@ span {
   height: 200px;
 }
 .body .scan .swipeup .submit {
+  background-color: #EF6079;
+  margin-right: -5px;
+}
+.body .scan.popCode .img.profile {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  margin-right: 10px;
+}
+.body .scan.popCode .img.profile img {
+  border-radius: 999px;
+}
+.body .scan.popCode .qrcode {
+  padding: 20px 0;
+  margin: 10px 0;
+  border-radius: 20px;
+  background-color: white;
+}
+.body .scan.popCode .qrcode .img {
+  width: 200px;
+  height: 200px;
+}
+.body .scan.popCode .submit {
   background-color: #EF6079;
   margin-right: -5px;
 }
