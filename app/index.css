@@ -28,6 +28,24 @@ span {
   background-attachment: fixed;
   background-size: cover;
 }
+.body .landing {
+  height: 100vh;
+  padding: 0 !important;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
+}
+.body .landing .img {
+  width: 300px;
+  height: fit-content;
+}
+.body .landing .separate {
+  width: 20px;
+  height: 3px;
+  margin: 10px 0;
+  border-radius: 99px;
+  background-color: #F3CBC7;
+}
 .body .index .function {
   margin: 10px 0;
 }
