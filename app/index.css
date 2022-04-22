@@ -46,6 +46,45 @@ span {
   border-radius: 99px;
   background-color: #F3CBC7;
 }
+.body .notice {
+  overflow-y: hidden;
+}
+.body .notice.main {
+  max-height: calc(100vh - 60px);
+  padding: 60px 10px 0 !important;
+}
+.body .notice.main .filter .lineV {
+  height: 20px;
+  background-color: #F3CBC7;
+}
+.body .notice.main .filter .dropdown {
+  width: fit-content;
+}
+.body .notice.main .filter .dropdown select {
+  width: fit-content;
+  padding: 0 30px 0 10px;
+  background-color: transparent;
+}
+.body .notice.main .records {
+  max-height: 100%;
+  overflow-y: auto;
+}
+.body .notice.main .records .dot {
+  min-width: 10px;
+  min-height: 10px;
+  margin-right: 10px;
+  border-radius: 99px;
+}
+.body .notice.main .records .dot.active {
+  background-color: #EB5757;
+}
+.body .notice.main .records .img {
+  width: 100px;
+  height: fit-content;
+}
+.body .notice.main .records .img img {
+  border-radius: 5px;
+}
 .body .index .function {
   margin: 10px 0;
 }
@@ -755,7 +794,7 @@ span {
 }
 .body .point_history.main {
   max-height: calc(100vh - 130px);
-  padding: 60px 10px 70px;
+  padding: 60px 10px 70px !important;
 }
 .body .point_history.main .tabs {
   height: fit-content;
@@ -977,16 +1016,16 @@ span {
   background-color: #F2F1F6 !important;
 }
 .body .fXXL {
-  font-size: 48px;
-}
-.body .fXL {
   font-size: 36px;
 }
-.body .fL {
+.body .fXL {
   font-size: 24px;
 }
-.body .fM {
+.body .fL {
   font-size: 18px;
+}
+.body .fM {
+  font-size: 16px;
 }
 .body .fS {
   font-size: 14px;

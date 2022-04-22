@@ -31,6 +31,18 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
         .img { width: 300px; height: fit-content; }
         .separate { width: 20px; height: 3px; margin: 10px 0; border-radius: 99px; background-color: @c2; }
     }
+    .notice { overflow-y: hidden;
+        &.main { max-height: calc(100vh - 60px); padding: 60px 10px 0 !important;
+            .filter {
+                .lineV { height: 20px; background-color: @c2; }
+                .dropdown { width: fit-content;
+                    select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
+            .records { max-height: 100%; overflow-y: auto;
+                .dot { min-width: 10px; min-height: 10px; margin-right: 10px; border-radius: 99px;
+                    &.active { background-color: @cRed; }}
+                .img { width: 100px; height: fit-content;
+                    img { border-radius: 5px; }}}}
+    }
     .index {
         .function { margin: 10px 0;
             .fM { margin: 5px 0; }
@@ -205,7 +217,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
         .background { background-color: transparent !important; }}
     .point_history {
         &.footer .img { width: 20px; height: fit-content; }
-        &.main { max-height: calc(100vh - 130px); padding: 60px 10px 70px;
+        &.main { max-height: calc(100vh - 130px); padding: 60px 10px 70px !important;
             .tabs { height: fit-content; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
                 .tab { padding: 5px 0;
                     &.active { color: @c1; }
@@ -273,10 +285,10 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
     .background { background-color: @cBg !important; }
 
     // Font
-    .fXXL       { font-size: 48px; }
-    .fXL        { font-size: 36px; }
-    .fL         { font-size: 24px; }
-    .fM         { font-size: 18px; }
+    .fXXL       { font-size: 36px; }
+    .fXL        { font-size: 24px; }
+    .fL         { font-size: 18px; }
+    .fM         { font-size: 16px; }
     .fS         { font-size: 14px; }
     .fXS        { font-size: 12px; }
     .bold       { font-weight: bold; }
