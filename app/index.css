@@ -113,7 +113,7 @@ span {
 }
 .body .index .mission {
   width: calc(100% - 42px) !important;
-  padding: 45px 10px 20px;
+  padding: 20px 10px 45px;
   margin: 15px 10px 10px;
   border: 1px solid #BDBDBD;
   border-radius: 20px !important;
@@ -124,15 +124,17 @@ span {
 }
 .body .index .mission .title {
   width: calc(100% - 20px) !important;
-  top: 10px;
+  bottom: 10px;
   position: absolute;
   text-align: center;
 }
 .body .index .mission .title span {
-  padding: 0 10px;
   margin: 0;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+}
+.body .index .mission .title .icon {
+  margin: 0;
 }
 .body .index .tabs {
   margin: 10px 5px 5px;
@@ -142,7 +144,7 @@ span {
   height: 120px;
   margin: 5px 10px !important;
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 15px;
   backdrop-filter: blur(30px);
   background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
@@ -914,6 +916,87 @@ span {
 .body .store_register .info .button {
   width: calc(50% - 30px);
   margin: 20px 5px;
+}
+.body .activity.main {
+  max-height: calc(100vh - 70px);
+  padding: 60px 10px 10px !important;
+}
+.body .activity .mission {
+  width: calc(100% - 42px) !important;
+  padding: 20px 10px;
+  margin: 15px 10px 10px;
+  border: 1px solid #BDBDBD;
+  border-radius: 20px !important;
+  position: relative;
+}
+.body .activity .mission .fM {
+  margin-top: 5px;
+}
+.body .activity .news {
+  width: calc(100% - 22px) !important;
+  height: fit-content;
+  margin: 5px 10px !important;
+  border: 1px solid white;
+  border-radius: 15px;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .activity .news .info {
+  height: 80px !important;
+}
+.body .activity .news .info > * {
+  margin-bottom: 2px;
+}
+.body .activity .news .info .title {
+  padding-left: 5px;
+  border-left: 1px solid #5CB8B2;
+  color: #5CB8B2;
+}
+.body .activity .news .reward {
+  min-width: 80px;
+  height: 80px;
+  position: relative;
+}
+.body .activity .news .reward .img {
+  width: 50px;
+  height: fit-content;
+}
+.body .activity .news .reward img {
+  border-radius: 0 10px 10px 0;
+}
+.body .activity .news .reward .done {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%);
+  border: 1px solid #EF6079;
+  backdrop-filter: blur(2px);
+}
+.body .activity .news .reward .over {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%);
+  border: 1px solid #333F48;
+  backdrop-filter: blur(2px);
+}
+.body .activity .news .reward .over span {
+  transform: rotate(-20deg);
+}
+.body .activity .news .progress {
+  margin-top: 0;
+  padding-top: 0;
+}
+.body .activity .news .progress .bar {
+  height: 5px;
+  margin-left: 10px;
+  background-color: #E0E0E0;
+}
+.body .activity .news .progress .bar div {
+  width: 60%;
+  height: 100%;
+  border-radius: 99px;
+  background-color: #EF6079;
 }
 .body .activity_question.header {
   padding: 10px;

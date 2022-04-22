@@ -49,12 +49,13 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
             .fS { width: 70px; padding: 2px; border: 1px solid @c2; border-radius: 99px; text-align: center; }}
         .point { width: calc(100% - 40px); padding: 10px; margin: 10px; border: 1px solid #EF6079; border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
             .img { width: 50px; height: fit-content; }}
-        .mission { width: calc(100% - 42px) !important; padding: 45px 10px 20px; margin: 15px 10px 10px; border: 1px solid @cG4; border-radius: 20px !important; position: relative;
+        .mission { width: calc(100% - 42px) !important; padding: 20px 10px 45px; margin: 15px 10px 10px; border: 1px solid @cG4; border-radius: 20px !important; position: relative;
             .fM { margin-top: 5px; }
-            .title { width: calc(100% - 20px) !important; top: 10px; position: absolute; text-align: center;
-                span { padding: 0 10px; margin: 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }}}
+            .title { width: calc(100% - 20px) !important; bottom: 10px; position: absolute; text-align: center;
+                span { margin: 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+                .icon { margin: 0; }}}
         .tabs { margin: 10px 5px 5px; }
-        .news { width: calc(100% - 22px) !important; height: 120px; margin: 5px 10px !important; border: 1px solid white; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+        .news { width: calc(100% - 22px) !important; height: 120px; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .title { padding-left: 5px; border-left: 1px solid @c3; color: @c3; }
             .img { min-width: 120px; min-height: 120px; margin: 0; }
                 img { border-radius: 0 10px 10px 0; }}
@@ -254,6 +255,23 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
                 .input { top: 60px; position: absolute; z-index: 9; }}
             ol { margin: 0; padding: 0 0 0 30px; }
             .button { width: calc(50% - 30px); margin: 20px 5px; }}}
+    .activity {
+        &.main { max-height: calc(100vh - 70px); padding: 60px 10px 10px !important; }
+        .mission { width: calc(100% - 42px) !important; padding: 20px 10px; margin: 15px 10px 10px; border: 1px solid @cG4; border-radius: 20px !important; position: relative;
+            .fM { margin-top: 5px; }}
+        .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .info { height: 80px !important;
+                > * { margin-bottom: 2px; }
+                .title { padding-left: 5px; border-left: 1px solid @c3; color: @c3; }}
+            .reward { min-width: 80px; height: 80px; position: relative;
+                .img { width: 50px; height: fit-content; }
+                    img { border-radius: 0 10px 10px 0; }
+                .done { width: 80px; height: 80px; position: absolute; background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%); border: 1px solid #EF6079; backdrop-filter: blur(2px); }
+                .over { width: 80px; height: 80px; position: absolute; background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%); border: 1px solid #333F48; backdrop-filter: blur(2px);
+                    span { transform: rotate(-20deg); }}}
+            .progress { margin-top: 0; padding-top: 0;
+                .bar { height: 5px; margin-left: 10px; background-color: @cG5;
+                    div { width: 60%; height: 100%; border-radius: 99px; background-color: @c1; }}}}}
     .activity_question {
         &.header { padding: 10px; }
         &.main { min-height: calc(100vh - 100px); margin: 60px 20px 20px; padding: 10px !important; border-radius: 20px; background-color: white;
