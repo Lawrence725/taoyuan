@@ -972,11 +972,12 @@ span {
   height: fit-content;
 }
 .body .activity_question.popCorrect .popFooter {
-  margin: 30px 0 10px;
+  margin: 30px 10px 10px;
 }
 .body .activity_question.popCorrect .popFooter .img {
   width: 20px;
-  height: fit-content;
+  height: 20px;
+  margin-left: 0;
 }
 .body .primary {
   color: #EF6079 !important;
