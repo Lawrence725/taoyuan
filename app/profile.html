@@ -29,7 +29,12 @@
             </section>
             <!-- Main -->
             <section class="main profile">
-                <div class="card">
+                <div class="flexV width center">
+                    <div class="img"><img src="img/profile.png"></div>
+                    <span class="fM primary">桃園市民</span>
+                    <span class="fL">陳小明</span>
+                </div>
+                <!-- <div class="card">
                     <div class="flexH">
                         <div class="img">
                             <div class="title flexV">
@@ -68,7 +73,7 @@
                             <img src="img/card.png">
                         </a>
                     </div>
-                </div>
+                </div> -->
                 <a class="point flexH between end" href="point_history.html">
                     <div class="flexH">
                         <div class="img"><img src="icon/point.svg"></div>
@@ -137,6 +142,10 @@
                         <div class="icon gray"><i class="fa-solid fa-angle-right"></i></div>
                     </a>
                 </div>
+                <a class="invite flexH width rounded middle" onclick="popInvite()">
+                    <span class="fM">使用<span class="primary">我的邀請碼</span>，邀請朋友！</span>
+                    <div class="img"><img src="icon/point.svg"></div>
+                </a>
             </section>
             <!-- Footer -->
             <section class="footer">
@@ -161,6 +170,39 @@
                     <img src="icon/user-a.svg">
                 </a>
             </section>
+            <!-- Popup (邀請碼) -->
+            <section id="popInvite" class="popup popInvite profile">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fL primary">我的邀請碼</span>
+                    </section>
+                    <section class="popMain">
+                        <div class="flexH">
+                            <div class="img"><img src="icon/invite.svg"></div>
+                            <div class="flexV">
+                                <span class="fM">成功邀請朋友</span>
+                                <span class="fL third">10</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded code white">
+                            <div class="flexH">
+                                <div class="icon"><i class="fa-solid fa-check"></i></div>
+                                <span class="fS gray">已複製</span>
+                            </div>
+                            <span class="fM">ASDFGHJKL</span>
+                        </a>
+                        <a class="button rounded line">
+                            <div class="img"><img src="icon/line.svg"></div>
+                            <span class="fM">Line邀請好友</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
         </div>
+        <!-- Script -->
+        <script src="js/profile.js"></script>
     </body>
 </html>
