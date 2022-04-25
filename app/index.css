@@ -601,6 +601,9 @@ span {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
 }
+.body .profile .picture img {
+  border-radius: 999px;
+}
 .body .profile .point {
   width: calc(100% - 20px);
   padding: 10px;
@@ -1265,6 +1268,9 @@ span {
 }
 .body .footer .iconButton {
   width: 100%;
+}
+.body .footer .iconButton:hover {
+  box-shadow: none;
 }
 .body .footer .iconButton.active > img {
   filter: drop-shadow(0px 0px 5px #EF6079) drop-shadow(0px 0px 5px #EF6079) drop-shadow(0px 0px 5px #EF6079);
