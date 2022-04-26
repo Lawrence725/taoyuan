@@ -357,6 +357,8 @@ span {
   height: 60px;
   min-width: 60px;
   margin-right: 10px;
+  background-image: url(img/profile-d.png);
+  background-size: cover;
 }
 .body .scan.popCode .img.profile img {
   border-radius: 999px;
@@ -603,6 +605,8 @@ span {
 }
 .body .profile .picture img {
   border-radius: 999px;
+  background-image: url(img/profile-d.png);
+  background-size: cover;
 }
 .body .profile .point {
   width: calc(100% - 20px);
@@ -918,7 +922,7 @@ span {
 }
 .body .store_register .info .button {
   width: calc(50% - 30px);
-  margin: 20px 5px;
+  margin: 20px 5px 50%;
 }
 .body .activity.main {
   max-height: calc(100vh - 70px);
