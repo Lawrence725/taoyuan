@@ -19,6 +19,13 @@ function popNoQA() {
     document.getElementById("popNoQA").style.display = "flex";
     document.body.style.overflow = "hidden"; }
 
+// Mobile screen fix
+const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)}
+window.addEventListener('resize', appHeight)
+appHeight()
+
 // Slideshow
 var slideIndex = 1;
 showSlides(1);
@@ -78,10 +85,3 @@ swipedetect(el, function(swipedir){
         plusSlides(1)
     if (swipedir =='right')
         plusSlides(-1) })
-
-const appHeight = () => {
-    const doc = document.documentElement
-    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-}
-window.addEventListener('resize', appHeight)
-appHeight()

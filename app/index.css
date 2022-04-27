@@ -2,19 +2,14 @@
   --app-height: 100%;
 }
 html,
-body {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+body,
+.marginX {
   width: 100vw;
   height: 100vh;
   height: var(--app-height);
-}
-.popNoScroll > * {
-  overflow: hidden;
-}
-.marginX {
+  padding: 0 !important;
   margin: 0 !important;
+  overflow: hidden;
 }
 body,
 h1,
@@ -894,7 +889,7 @@ span {
 }
 .body .store_register .info .button {
   width: calc(50% - 30px);
-  margin: 20px 5px 50%;
+  margin: 20px 5px;
 }
 .body .activity.main {
   max-height: calc(100vh - 70px);
@@ -921,7 +916,7 @@ span {
   background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 .body .activity .news .info {
-  height: 80px !important;
+  height: 90px !important;
 }
 .body .activity .news .info > * {
   margin-bottom: 2px;
@@ -932,8 +927,8 @@ span {
   color: #5CB8B2;
 }
 .body .activity .news .reward {
-  min-width: 80px;
-  height: 80px;
+  min-width: 90px;
+  height: 90px;
   position: relative;
 }
 .body .activity .news .reward .img {
@@ -944,16 +939,16 @@ span {
   border-radius: 0 10px 10px 0;
 }
 .body .activity .news .reward .done {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   position: absolute;
   background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%);
   border: 1px solid #EF6079;
   backdrop-filter: blur(2px);
 }
 .body .activity .news .reward .over {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   position: absolute;
   background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%);
   border: 1px solid #333F48;
@@ -981,7 +976,8 @@ span {
   padding: 10px;
 }
 .body .activity_question.main {
-  min-height: calc(100vh - 100px);
+  height: 100vh;
+  height: var(--app-height);
   margin: 60px 20px 20px;
   padding: 10px !important;
   border-radius: 20px;
@@ -1568,7 +1564,7 @@ span {
 }
 .body .button {
   width: calc(100% - 30px);
-  height: 40px;
+  min-height: 40px;
   padding: 0 10px;
   margin: 5px;
   border-radius: 10px;
