@@ -710,7 +710,8 @@ span {
 }
 .body .point_send.main,
 .body .point_success.main {
-  min-height: calc(100vh - 100px);
+  height: 100vh;
+  height: var(--app-height);
   margin: 60px 20px 20px;
   padding: 10px !important;
   border-radius: 20px;
