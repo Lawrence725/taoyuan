@@ -28,7 +28,7 @@
  body {
      padding: 0;
      margin: 0;
-    //  overflow: hidden;
+     overflow: hidden;
      width: 100vw;
      height: 100vh;
      height: var(--app-height);
@@ -38,7 +38,8 @@
 // body    { margin: 0 !important; }
 .marginX { margin: 0 !important; }
 body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-family: 'Noto Sans TC', 'Arial', '微軟正黑體', '新細明體', 'sans-serif'; }
-.body   { min-height: 100vh; display: flex; flex-direction: column; background: url(img/bg.png); background-position: center; background-attachment: fixed; background-size: cover;
+.body   { height: 100vh;
+     height: var(--app-height); display: flex; flex-direction: column; background: url(img/bg.png); background-position: center; background-attachment: fixed; background-size: cover;
 
     // Unique
     .landing { height: 100vh; padding: 0 !important; align-items: center; justify-content: space-around; background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
