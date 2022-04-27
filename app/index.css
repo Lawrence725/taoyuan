@@ -1576,7 +1576,7 @@ span {
 }
 .body .button.fit {
   width: fit-content;
-  height: fit-content;
+  min-height: unset;
   padding: 10px 20px;
 }
 .body .button.delete {
