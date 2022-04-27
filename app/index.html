@@ -101,11 +101,11 @@
                         <img src="icon/checkin.svg">
                         <span class="fM">每日簽到</span>
                     </a>
-                    <a class="flexV center width disabled">
+                    <a class="flexV center width" onclick="popNoQA()">
                         <img src="icon/game.svg">
                         <span class="fM">小遊戲</span>
                     </a>
-                    <a class="flexV center width disabled">
+                    <a class="flexV center width" onclick="popPoint()">
                         <img src="icon/video.svg">
                         <span class="fM">看影片</span>
                     </a>
@@ -124,7 +124,7 @@
                         <span>特店優惠</span>
                     </a>
                     <span class="secondary">|</span>
-                    <a class="tab" onclick="popActivity()">
+                    <a class="tab">
                         <span>桃園卷</span>
                     </a>
                 </div>
@@ -145,10 +145,10 @@
                         <span class="fS double">內容優惠券，成當元育廣主字著起清人化的政病其主著常出臺當元的政廣主字著起清人化的政</span>
                         <span class="fXS gray">到期日 2022/01/22</span>
                     </div>
-                    <div class="img"><img src="img/news.png"></div>
+                    <!-- <div class="img"><img src="img/news.png"></div> -->
                 </a>
                 <!-- 特店優惠 -->
-                <div class="discounts flexV">
+                <!-- <div class="discounts flexV">
                     <span class="fM title">標題活動</span>
                     <div class="scroll">
                         <div class="flexH">
@@ -225,7 +225,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- 廣告 -->
                 <a class="advertise flexH width margin between">
                     <div class="flexV padding margin height between">
@@ -258,10 +258,10 @@
                     <img src="icon/user-a.svg">
                 </a>
             </section>
-            <!-- Popup (答案正確) -->
-            <section id="popActivity" class="popActivity popup index">
+            <!-- Popup (無問答) -->
+            <section id="popNoQA" class="popNoQA popup" onclick="popBgClose(this)"> <!-- onclick="popBgClose(this)" -->
                 <div class="popBody">
-                    <a class="close" href="index.html">
+                    <a class="close" onclick="popClose(this)"> <!-- onclick="popClose(this)" -->
                         <i class="fas fa-times"></i>
                     </a>
                     <section class="popHeader">
@@ -286,6 +286,53 @@
                             <a class="flexV center width">
                                 <div class="img"><img src="icon/video.svg"></div>
                                 <span class="fS">看影片</span>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (獲得點數) -->
+            <section id="popPoint" class="popPoint popup"> <!-- onclick="popBgClose(this)" -->
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)"> <!-- onclick="popClose(this)" -->
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popHeader">
+                        <div class="img"><img src="icon/point-w.svg"></div>
+                    </section>
+                    <section class="popMain">
+                        <span class="fM gray">恭喜您獲得</span>
+                        <div class="flexH">
+                            <div class="img"><img src="icon/point.svg"></div>
+                            <span class="fXL">100</span>
+                        </div>
+                        <span class="fS gray">來自</span>
+                        <span class="fL gray">問答</span>
+                    </section>
+                    <section class="popFooter">
+                        <div class="flexH width">
+                            <a class="flexV width center" href="point_history.html">
+                                <span class="fS gray">我的紅利桃子</span>
+                                <div class="flexH">
+                                    <div class="img"><img src="icon/point.svg"></div>
+                                    <span class="fM bold">500</span>
+                                </div>
+                            </a>
+                            <!-- <div class="lineV"></div>
+                            <a class="flexV width center" href="point_date.html">
+                                <span class="fS gray">2022/06/30到期</span>
+                                <div class="flexH">
+                                    <div class="img"><img src="icon/point.svg"></div>
+                                    <span class="fM bold">200</span>
+                                </div>
+                            </a> -->
+                            <div class="lineV"></div>
+                            <a class="flexV width center" href="notice.html">
+                                <span class="fS gray">通知中心</span>
+                                <div class="flexH">
+                                    <div class="img"><img src="icon/bell.svg"></div>
+                                    <span class="fM bold">2</span>
+                                </div>
                             </a>
                         </div>
                     </section>

@@ -63,25 +63,15 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
             > .scroll { overflow-x: auto;
                 &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }}
             > .title { margin: 0 0 5px 20px; padding-left: 5px; border-left: 1px solid @c4; }
-            .discount { margin-right: 10px; border: 1px solid white; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .discount { margin-right: 10px; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
                 &:first-child { margin-left: 20px; }
                 &:last-child { margin-right: 20px; }
                 > * > .title { color: @c3; }
                 .img { margin: 0;
                     img { border-radius: 10px 10px 0 0; }}}}
-        .advertise { width: calc(100% - 22px) !important; height: fit-content; padding: 5px 5px 5px 0; margin: 5px 10px !important; border: 1px solid white; border-radius: 10px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+        .advertise { width: calc(100% - 22px) !important; height: fit-content; padding: 5px 5px 5px 0; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .img { width: 30% !important; height: fit-content !important; margin: 0; }
-                img { border-radius: 5px; }}
-        &.popActivity {
-            .close { color: white; border-radius: 99px;
-                &:hover { color: @cG5; }}
-            .popBody { height: 450px; padding: 0; }
-            .popHeader { height: 200px; margin: 0 !important; padding-bottom: 30px; border-radius: 20px 20px 0 0; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1)); background: url(img/bg2.png); background-position: bottom; background-attachment: initial; background-size: cover; }
-            .popMain { height: 100%; margin: 0 !important; justify-content: center !important;
-                span { margin: 5px 0; }}
-            .popFooter { margin: 30px 10px 20px;
-                .lineV { height: 30px; }
-                .img { width: 20px; height: 20px; }}}}
+                img { border-radius: 5px; }}}
     .scan {
         &.main { width: 100vw; height: calc(100vh - 130px); padding: 60px 0 70px !important;
             @media @sD, @sT { width: 768px !important; }
@@ -543,4 +533,24 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
                 &::-webkit-scrollbar-thumb { border-radius: 5px; background-color: @cG5; border: 2.5px solid @cBg; }}
             .popFooter { display: flex; }
             .tabs { background-color: white; }}}
-}
+
+    .popPoint {
+        .close { color: white; border-radius: 99px;
+            &:hover { color: @cG5; }}
+        .popBody { height: 450px; padding: 0; }
+        .popHeader { height: 200px; margin: 0 !important; padding-bottom: 30px; border-radius: 20px 20px 0 0; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1)); background: url(img/bg2.png); background-position: bottom; background-attachment: initial; background-size: cover; }
+        .popMain { height: 100%; margin: 0 !important; justify-content: center !important;
+            .img { width: 30px; height: fit-content; }}
+        .popFooter { margin: 30px 10px 10px;
+            .img { width: 20px; height: 20px; margin-left: 0; }}}
+        
+    .popNoQA {
+        .close { color: white; border-radius: 99px;
+            &:hover { color: @cG5; }}
+        .popBody { height: 450px; padding: 0; }
+        .popHeader { height: 200px; margin: 0 !important; padding-bottom: 30px; border-radius: 20px 20px 0 0; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1)); background: url(img/bg2.png); background-position: bottom; background-attachment: initial; background-size: cover; }
+        .popMain { height: 100%; margin: 0 !important; justify-content: center !important;
+            span { margin: 5px 0; }}
+        .popFooter { margin: 30px 10px 20px;
+            .lineV { height: 30px; }
+            .img { width: 20px; height: 20px; }}}}
