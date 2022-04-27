@@ -78,3 +78,10 @@ swipedetect(el, function(swipedir){
         plusSlides(1)
     if (swipedir =='right')
         plusSlides(-1) })
+
+const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+}
+window.addEventListener('resize', appHeight)
+appHeight()
