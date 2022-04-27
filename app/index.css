@@ -141,7 +141,7 @@ span {
 }
 .body .index .news {
   width: calc(100% - 22px) !important;
-  height: 120px;
+  height: 140px;
   margin: 5px 10px !important;
   border: 1px solid white;
   border-radius: 15px;
@@ -1066,22 +1066,22 @@ span {
   background-color: #F2F1F6 !important;
 }
 .body .fXXL {
-  font-size: 36px;
+  font-size: 38px;
 }
 .body .fXL {
-  font-size: 24px;
+  font-size: 26px;
 }
 .body .fL {
-  font-size: 18px;
+  font-size: 22px;
 }
 .body .fM {
-  font-size: 16px;
+  font-size: 18px;
 }
 .body .fS {
-  font-size: 14px;
+  font-size: 16px;
 }
 .body .fXS {
-  font-size: 12px;
+  font-size: 14px;
 }
 .body .bold {
   font-weight: bold;
