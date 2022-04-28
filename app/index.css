@@ -817,6 +817,17 @@ span {
   height: 40px;
   background-color: #BDBDBD;
 }
+.body .point_history.main .filter {
+  overflow-y: scroll;
+}
+.body .point_history.main .filter::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+}
+.body .point_history.main .filter span.fM {
+  white-space: nowrap;
+}
 .body .point_history.main .filter .lineV {
   height: 20px;
   background-color: #F3CBC7;

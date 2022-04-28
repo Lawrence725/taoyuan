@@ -222,7 +222,9 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
                         .img { filter: grayscale(100%); opacity: 0.5; }}}
                 .img { width: 20px; height: fit-content; }
                 .lineV { height: 40px; background-color: @cG4; }}
-            .filter {
+            .filter { overflow-y: scroll;
+                &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
+                span.fM { white-space: nowrap; }
                 .lineV { height: 20px; background-color: @c2; }
                 .dropdown { width: fit-content;
                     select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
