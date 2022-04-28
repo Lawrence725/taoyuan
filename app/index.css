@@ -38,6 +38,7 @@ span {
 }
 .body .landing {
   height: 100vh;
+  height: var(--app-height);
   padding: 0 !important;
   align-items: center;
   justify-content: space-around;
@@ -53,6 +54,22 @@ span {
   margin: 10px 0;
   border-radius: 99px;
   background-color: #F3CBC7;
+}
+.body .errors.header {
+  width: 100vw;
+  background: transparent !important;
+}
+.body .errors.main {
+  height: 100vh;
+  height: var(--app-height);
+  padding: 50px 0 !important;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
+}
+.body .errors.main .img {
+  width: 150px;
+  height: fit-content;
 }
 .body .notice {
   overflow-y: hidden;
@@ -2083,6 +2100,7 @@ span {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: var(--app-height);
   position: fixed;
   display: flex;
   align-items: center;
