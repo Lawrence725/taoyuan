@@ -149,7 +149,7 @@ span {
 }
 .body .index .news {
   width: calc(100% - 22px) !important;
-  height: 140px;
+  height: fit-content;
   margin: 5px 10px !important;
   border: 1px solid white;
   border-radius: 15px;
@@ -163,11 +163,12 @@ span {
 }
 .body .index .news .img {
   min-width: 120px;
-  min-height: 120px;
+  height: 100%;
   margin: 0;
 }
 .body .index .news img {
   border-radius: 0 10px 10px 0;
+  object-fit: cover;
 }
 .body .index .discounts {
   width: 100vw;
@@ -917,7 +918,9 @@ span {
   background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 .body .activity .news .info {
-  height: 90px !important;
+  height: fit-content !important;
+  min-height: 90px;
+  justify-content: space-between;
 }
 .body .activity .news .info > * {
   margin-bottom: 2px;

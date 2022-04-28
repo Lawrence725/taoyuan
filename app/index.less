@@ -54,10 +54,10 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
                 span { margin: 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
                 .icon { margin: 0; }}}
         .tabs { margin: 10px 5px 5px; }
-        .news { width: calc(100% - 22px) !important; height: 140px; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+        .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .title { padding-left: 5px; border-left: 1px solid @c3; color: @c3; }
-            .img { min-width: 120px; min-height: 120px; margin: 0; }
-                img { border-radius: 0 10px 10px 0; }}
+            .img { min-width: 120px; height: 100%; margin: 0; }
+                img { border-radius: 0 10px 10px 0; object-fit: cover; }}
         .discounts { width: 100vw; margin: 10px 0 10px -10px;
             > .scroll { overflow-x: auto;
                 &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }}
@@ -251,7 +251,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
         .mission { width: calc(100% - 42px) !important; padding: 20px 10px; margin: 15px 10px 10px; border: 1px solid @cG4; border-radius: 20px !important; position: relative;
             .fM { margin-top: 5px; }}
         .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
-            .info { height: 90px !important;
+            .info { height: fit-content !important; min-height: 90px; justify-content: space-between;
                 > * { margin-bottom: 2px; }
                 .title { padding-left: 5px; border-left: 1px solid @c3; color: @c3; }}
             .reward { min-width: 90px; height: 90px; position: relative;
