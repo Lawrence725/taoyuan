@@ -2084,7 +2084,9 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
 }
 .body .spinner > div {
   min-width: 80px;
