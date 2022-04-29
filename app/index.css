@@ -36,6 +36,12 @@ span {
   background-attachment: fixed;
   background-size: cover;
 }
+.body .fa-chevron-left,
+.body .fa-xmark {
+  font-size: 1.5em;
+  line-height: 0.04167em;
+  vertical-align: -0.125em;
+}
 .body .landing {
   height: 100vh;
   height: var(--app-height);
@@ -77,6 +83,7 @@ span {
 .body .notice.main {
   max-height: calc(100vh - 60px);
   padding: 60px 10px 0 !important;
+  overflow-y: hidden;
 }
 .body .notice.main .filter .lineV {
   height: 20px;
@@ -248,6 +255,7 @@ span {
   width: 100vw;
   height: calc(100vh - 130px);
   padding: 60px 0 70px !important;
+  position: relative;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .scan.main {
@@ -259,12 +267,26 @@ span {
   height: 0;
   -webkit-appearance: none;
 }
-.body .scan canvas {
+.body .scan.main canvas {
   width: 100% !important;
   height: calc(100vh - 130px) !important;
   position: absolute;
 }
-.body .scan .button {
+.body .scan.main .input {
+  width: calc(100% - 70px);
+  padding: 0 5px 0 15px;
+  border: 1px solid #FFFFFF;
+  top: 80px;
+  left: 20px;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  backdrop-filter: blur(30px);
+}
+.body .scan.main .input ::placeholder {
+  color: #333F48;
+}
+.body .scan.main .button {
   margin: 0;
   left: 50%;
   transform: translate(-50%, 0);
@@ -273,7 +295,7 @@ span {
   z-index: 2;
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
 }
-.body .scan .testImg {
+.body .scan.main .testImg {
   width: 100% !important;
   height: calc(100vh - 130px) !important;
   margin: 0;
@@ -281,14 +303,14 @@ span {
   z-index: 1;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
-  .body .scan .testImg {
+  .body .scan.main .testImg {
     width: 768px !important;
   }
 }
-.body .scan .testImg img {
+.body .scan.main .testImg img {
   object-fit: cover;
 }
-.body .scan .swipeup {
+.body .scan.main .swipeup {
   width: calc(100% - 40px);
   min-height: fit-content;
   padding: 10px 20px 100px;
@@ -299,42 +321,45 @@ span {
   border-radius: 30px 30px 0px 0px;
   z-index: 2;
 }
-.body .scan .swipeup .holder {
+.body .scan.main .swipeup .holder {
   width: 30px;
   height: 5px;
   border-radius: 99px;
   background-color: #BDBDBD;
 }
-.body .scan .swipeup .fL.primary {
+.body .scan.main .swipeup .fL.primary {
   margin: 20px 0;
 }
-.body .scan .swipeup .img.profile {
+.body .scan.main .swipeup .img.profile {
   width: 60px;
   height: 60px;
   min-width: 60px;
   margin-right: 10px;
 }
-.body .scan .swipeup .img.profile img {
+.body .scan.main .swipeup .img.profile img {
   border-radius: 999px;
 }
-.body .scan .swipeup .light {
+.body .scan.main .swipeup .light {
   min-width: 50px;
   height: 50px;
   background-color: #5CB8B2;
 }
-.body .scan .swipeup .qrcode {
+.body .scan.main .swipeup .qrcode {
   padding: 20px 0;
   margin: 20px 0;
   border-radius: 20px;
   background-color: white;
 }
-.body .scan .swipeup .qrcode .img {
+.body .scan.main .swipeup .qrcode .img {
   width: 200px;
   height: 200px;
 }
-.body .scan .swipeup .submit {
+.body .scan.main .swipeup .submit {
   background-color: #EF6079;
   margin-right: -5px;
+}
+.body .scan.popCode .popMain {
+  margin-bottom: 0 !important;
 }
 .body .scan.popCode .img.profile {
   width: 60px;
@@ -349,7 +374,7 @@ span {
 }
 .body .scan.popCode .qrcode {
   padding: 20px 0;
-  margin: 10px 0;
+  margin: 10px 0 0;
   border-radius: 20px;
   background-color: white;
 }
@@ -746,7 +771,7 @@ span {
 }
 .body .point_send.main .info,
 .body .point_success.main .info {
-  margin: 40px 0;
+  margin: 30px 0;
 }
 .body .point_send.main .info .total .img,
 .body .point_success.main .info .total .img {
@@ -765,20 +790,39 @@ span {
 }
 .body .point_send.main .number a,
 .body .point_success.main .number a {
-  height: 60px;
+  height: 55px;
+  margin: 2px 1px;
 }
 .body .point_send.main .button,
 .body .point_success.main .button {
-  margin-top: 40px;
+  margin-top: 30px;
 }
-.body .point_success .title {
-  margin-top: auto;
+.body .point_success.main {
+  justify-content: space-between;
 }
-.body .point_success .info {
-  margin: auto;
+.body .point_success.main .title {
+  animation: spark 1s linear infinite;
 }
-.body .point_success .record {
-  margin-top: auto;
+@keyframes spark {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.body .point_success.main .detail .img {
+  width: 30px;
+  height: fit-content;
+}
+.body .point_success.main .button {
+  margin-top: 5px;
 }
 .body .point_success .background {
   background-color: transparent !important;
@@ -1107,22 +1151,22 @@ span {
   background-color: #F2F1F6 !important;
 }
 .body .fXXL {
-  font-size: 38px;
+  font-size: 1.6em;
 }
 .body .fXL {
-  font-size: 26px;
+  font-size: 1.4em;
 }
 .body .fL {
-  font-size: 22px;
+  font-size: 1.2em;
 }
 .body .fM {
-  font-size: 18px;
+  font-size: 1em;
 }
 .body .fS {
-  font-size: 16px;
+  font-size: 0.8em;
 }
 .body .fXS {
-  font-size: 14px;
+  font-size: 0.6em;
 }
 .body .bold {
   font-weight: bold;
@@ -1217,6 +1261,9 @@ span {
   box-shadow: none !important;
   outline: none;
 }
+.body input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
 .body textarea {
   border: 0;
 }
@@ -1272,6 +1319,8 @@ span {
 }
 .body .footer .iconButton {
   width: 100%;
+  height: 50px;
+  flex-direction: column;
 }
 .body .footer .iconButton:hover {
   box-shadow: none;
@@ -1282,8 +1331,14 @@ span {
 .body .footer .iconButton.active > img:first-child {
   display: none;
 }
+.body .footer .iconButton.active > span {
+  filter: drop-shadow(0px 0px 5px #EF6079) drop-shadow(0px 0px 5px #EF6079) drop-shadow(0px 0px 5px #EF6079);
+}
 .body .footer .iconButton:not(.active) > img:nth-child(2) {
   display: none;
+}
+.body .footer .iconButton:not(.active) > span {
+  color: #EF6079;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .header,
@@ -2180,6 +2235,7 @@ span {
   align-items: center;
   justify-content: center;
   color: #BDBDBD;
+  font-size: 24px;
   z-index: 1;
 }
 .body .popup .close:hover,
