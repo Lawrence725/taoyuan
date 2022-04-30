@@ -92,6 +92,11 @@ span {
   border-radius: 0;
   box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1);
 }
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .notice.main .filter {
+    width: 768px !important;
+  }
+}
 .body .notice.main .filter .lineV {
   height: 20px;
   background-color: #F3CBC7;
@@ -879,6 +884,11 @@ span {
   border-radius: 0;
   box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1);
   overflow-y: scroll;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .point_history.main .filter {
+    width: 768px !important;
+  }
 }
 .body .point_history.main .filter::-webkit-scrollbar {
   width: 0;

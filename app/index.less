@@ -39,6 +39,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
     .notice { overflow-y: hidden;
         &.main { padding: 60px 10px 70px !important; overflow-y: hidden;
             .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1);
+                @media @sD, @sT { width: 768px !important; }
                 .lineV { height: 20px; background-color: @c2; }
                 .dropdown { width: fit-content;
                     select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
@@ -235,6 +236,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
                 .img { width: 20px; height: fit-content; }
                 .lineV { height: 40px; background-color: @cG4; }}
             .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1); overflow-y: scroll;
+                @media @sD, @sT { width: 768px !important; }
                 &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
                 span.fM { white-space: nowrap; }
                 .lineV { height: 20px; background-color: @c2; }
