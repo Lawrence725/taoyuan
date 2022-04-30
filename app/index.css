@@ -38,6 +38,7 @@ span {
 }
 .body .fa-chevron-left,
 .body .fa-xmark {
+  color: #5CB8B2 !important;
   font-size: 1.5em;
   line-height: 0.04167em;
   vertical-align: -0.125em;
@@ -81,9 +82,15 @@ span {
   overflow-y: hidden;
 }
 .body .notice.main {
-  max-height: calc(100vh - 60px);
-  padding: 60px 10px 0 !important;
+  padding: 60px 10px 70px !important;
   overflow-y: hidden;
+}
+.body .notice.main .filter {
+  width: 100vw;
+  min-height: 40px;
+  margin-left: -10px;
+  border-radius: 0;
+  box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1);
 }
 .body .notice.main .filter .lineV {
   height: 20px;
@@ -128,6 +135,7 @@ span {
   padding: 2px;
   border: 1px solid #F3CBC7;
   border-radius: 99px;
+  line-height: 16px;
   text-align: center;
 }
 .body .index .point {
@@ -137,7 +145,7 @@ span {
   border: 1px solid #EF6079;
   border-radius: 20px;
   backdrop-filter: blur(30px);
-  background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
+  background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
 }
 .body .index .point .img {
   width: 50px;
@@ -614,6 +622,7 @@ span {
   position: absolute;
 }
 .body .profile .picture img {
+  border: 1px solid white;
   border-radius: 999px;
   background-image: url(img/profile-d.png);
   background-size: cover;
@@ -625,7 +634,7 @@ span {
   border: 1px solid #EF6079;
   border-radius: 20px;
   backdrop-filter: blur(30px);
-  background: radial-gradient(99.68% 422.68% at 0.32% 100.12%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
+  background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
 }
 .body .profile .point .img {
   width: 50px;
@@ -712,6 +721,9 @@ span {
 .body .profile_edit .img {
   margin-bottom: 20px;
   border: 1px solid white;
+  border-radius: 999px;
+}
+.body .profile_edit .img img {
   border-radius: 999px;
 }
 .body .profile_edit .input {
@@ -832,7 +844,6 @@ span {
   height: fit-content;
 }
 .body .point_history.main {
-  max-height: calc(100vh - 130px);
   padding: 60px 10px 70px !important;
 }
 .body .point_history.main .tabs {
@@ -862,6 +873,11 @@ span {
   background-color: #BDBDBD;
 }
 .body .point_history.main .filter {
+  width: 100vw;
+  min-height: 40px;
+  margin-left: -10px;
+  border-radius: 0;
+  box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1);
   overflow-y: scroll;
 }
 .body .point_history.main .filter::-webkit-scrollbar {
@@ -964,10 +980,6 @@ span {
 .body .store_register .info .button {
   width: calc(50% - 30px);
   margin: 20px 5px;
-}
-.body .activity.main {
-  max-height: calc(100vh - 70px);
-  padding: 60px 10px 10px !important;
 }
 .body .activity .mission {
   width: calc(100% - 42px) !important;
@@ -1261,7 +1273,10 @@ span {
   box-shadow: none !important;
   outline: none;
 }
+.body input:autofill,
 .body input:-webkit-autofill {
+  color: #333F48 !important;
+  background-color: transparent !important;
   box-shadow: 0 0 0px 1000px white inset !important;
 }
 .body textarea {
@@ -1339,6 +1354,9 @@ span {
 }
 .body .footer .iconButton:not(.active) > span {
   color: #EF6079;
+}
+.body .footer .iconButton span {
+  margin-top: 5px;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .header,
