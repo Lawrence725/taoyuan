@@ -1355,6 +1355,10 @@ span {
 .body .footer .iconButton:not(.active) > span {
   color: #EF6079;
 }
+.body .footer .iconButton img {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .body .footer .iconButton span {
   margin-top: 5px;
 }
