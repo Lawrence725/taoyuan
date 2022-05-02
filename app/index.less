@@ -26,7 +26,8 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
 .body   { height: 100vh; height: var(--app-height); display: flex; flex-direction: column; background: url(img/bg.png); background-position: center; background-attachment: fixed; background-size: cover;
 
     // Unique
-    .fa-chevron-left, .fa-xmark { color: @c3 !important; font-size: 1.5em; line-height: 0.04167em; vertical-align: -0.125em; }
+    .fa-chevron-left, .fa-xmark, .fa-times { color: @c3 !important; font-size: 1.5em; line-height: 0.04167em; vertical-align: -0.125em; }
+    .popup .fa-chevron-left, .popup .fa-xmark, .popup .fa-times { color: white !important; font-size: 1em; }
 
     .landing { height: 100vh; height: var(--app-height); padding: 0 !important; align-items: center; justify-content: space-around; background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
         .img { width: 300px; height: fit-content; }
@@ -37,8 +38,8 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
         &.main { height: 100vh; height: var(--app-height); padding: 50px 0 !important; align-items: center; justify-content: space-around; background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
             .img { width: 150px; height: fit-content; }}}
     .notice { overflow-y: hidden;
-        &.main { padding: 60px 10px 70px !important; overflow-y: hidden;
-            .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1);
+        &.main { padding: 60px 10px 0 !important; overflow-y: hidden;
+            .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05);
                 @media @sD, @sT { width: 768px !important; }
                 .lineV { height: 20px; background-color: @c2; }
                 .dropdown { width: fit-content;
@@ -235,7 +236,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
                         .img { filter: grayscale(100%); opacity: 0.5; }}}
                 .img { width: 20px; height: fit-content; }
                 .lineV { height: 40px; background-color: @cG4; }}
-            .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1); overflow-y: scroll;
+            .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05); overflow-y: scroll;
                 @media @sD, @sT { width: 768px !important; }
                 &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
                 span.fM { white-space: nowrap; }
@@ -552,7 +553,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
             &:hover, &:focus { color: @cG1; }}
         .popBody { min-width: 300px; max-width: 100%; height: fit-content; max-height: calc(100% - 60px); padding: 10px; margin: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: @cBg;
             .popHeader { margin: 5px; display: flex; flex-direction: column; }
-            .popMain { margin: 15px 0px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; overflow-y: auto;
+            .popMain { margin: 15px 0px; padding: 0 20px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; overflow-y: auto;
                 &::-webkit-scrollbar { -webkit-appearance: none; }
                 &::-webkit-scrollbar:vertical { width: 10px; }
                 &::-webkit-scrollbar-thumb { border-radius: 5px; background-color: @cG5; border: 2.5px solid @cBg; }}

@@ -37,11 +37,18 @@ span {
   background-size: cover;
 }
 .body .fa-chevron-left,
-.body .fa-xmark {
+.body .fa-xmark,
+.body .fa-times {
   color: #5CB8B2 !important;
   font-size: 1.5em;
   line-height: 0.04167em;
   vertical-align: -0.125em;
+}
+.body .popup .fa-chevron-left,
+.body .popup .fa-xmark,
+.body .popup .fa-times {
+  color: white !important;
+  font-size: 1em;
 }
 .body .landing {
   height: 100vh;
@@ -82,7 +89,7 @@ span {
   overflow-y: hidden;
 }
 .body .notice.main {
-  padding: 60px 10px 70px !important;
+  padding: 60px 10px 0 !important;
   overflow-y: hidden;
 }
 .body .notice.main .filter {
@@ -90,7 +97,7 @@ span {
   min-height: 40px;
   margin-left: -10px;
   border-radius: 0;
-  box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1);
+  box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05);
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .notice.main .filter {
@@ -882,7 +889,7 @@ span {
   min-height: 40px;
   margin-left: -10px;
   border-radius: 0;
-  box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.1);
+  box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05);
   overflow-y: scroll;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
@@ -2299,6 +2306,7 @@ span {
 }
 .body .popup .popBody .popMain {
   margin: 15px 0px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
