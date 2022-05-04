@@ -827,6 +827,12 @@ span {
 .body .point_success.main .title {
   animation: spark 1s linear infinite;
 }
+.body .point_success.main .title .icon {
+  font-size: 24px;
+}
+.body .point_success.main .title span {
+  font-size: 36px;
+}
 @keyframes spark {
   0% {
     opacity: 1;

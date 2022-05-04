@@ -216,14 +216,12 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
             .button { margin-top: 30px; }}}
     .point_success {
         &.main { justify-content: space-between;
-            .title { animation: spark 1s linear infinite; }
+            .title { animation: spark 1s linear infinite;
+                .icon { font-size: 24px; }
+                span { font-size: 36px; }}
             @keyframes spark { 0% { opacity: 1; } 25% { opacity: 1; } 50% { opacity: 0; }100% { opacity: 1; }}
             .detail .img { width: 30px; height: fit-content; }
             .button { margin-top: 5px; }}
-        // .record { margin-bottom: auto !important; }
-        // .title { margin: auto !important; }
-        // .info { margin: auto !important; }
-        // .button { margin-top: auto !important; }
         .background { background-color: transparent !important; }}
     .point_history {
         &.footer .img { width: 20px; height: fit-content; }
