@@ -36,19 +36,13 @@ span {
   background-attachment: fixed;
   background-size: cover;
 }
-.body .fa-chevron-left,
-.body .fa-xmark,
-.body .fa-times {
+.body .header .fa-chevron-left,
+.body .header .fa-xmark,
+.body .header .fa-times {
   color: #5CB8B2 !important;
   font-size: 1.5em;
   line-height: 0.04167em;
   vertical-align: -0.125em;
-}
-.body .popup .fa-chevron-left,
-.body .popup .fa-xmark,
-.body .popup .fa-times {
-  color: white !important;
-  font-size: 1em;
 }
 .body .landing {
   height: 100vh;
