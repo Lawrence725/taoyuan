@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="桃園市民卡">
+        <meta name="description" content="桃園市民卡">
+        <meta name="author" content="桃園市民卡">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>桃園市民卡</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/unique.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+    </head>
+    <body class="marginX">
+        <div class="body fixed mobile"> <!-- class: fixed, mobile -->
+            <!-- Loading Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header tickets">
+                <a class="icon iconButton third" href="javascript:history.back()">
+                    <i class="fa-solid fa-chevron-left fa-lg"></i>
+                </a>
+                <span class="fL">我的票夾</span>
+                <a class="icon iconButton third">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </section>
+            <!-- Main -->
+            <section class="main tickets">
+                <!-- Tabs -->
+                <div class="tabs line fM rounded">
+                    <a class="tab">
+                        <div class="img imgT"><img src="icon/ticket-on.svg"></div>
+                        <span class="fM">優惠券</span>
+                    </a>
+                    <div class="lineV"></div>
+                    <a class="tab active">
+                        <div class="img imgS"><img src="icon/stamp-on.svg"></div>
+                        <span class="fM">集章</span>
+                    </a>
+                </div>
+                <!-- Filter -->
+                <div class="filter">
+                    <div class="flexH">
+                        <div class="flexH middle">
+                            <div class="dropdown rounded">
+                                <select name="type" class="fM rounded">
+                                    <option value="店家距離">店家距離</option>
+                                    <option value="優惠有效時間">優惠有效時間</option>
+                                    <option value="票卷加入時間">票卷加入時間</option>
+                                </select>
+                                <div class="arrow third"><i class="fas fa-caret-down fa-xs"></i></div>
+                            </div>
+                        </div>
+                        <div class="lineV"></div>
+                        <div class="flexH middle">
+                            <div class="dropdown rounded">
+                                <select name="type" class="fM rounded">
+                                    <option value="可使用">可使用</option>
+                                    <option value="已使用">已使用</option>
+                                    <option value="已過期">已過期</option>
+                                </select>
+                                <div class="arrow third"><i class="fas fa-caret-down fa-xs"></i></div>
+                            </div>
+                        </div>
+                        <div class="lineV"></div>
+                        <a class="flexH middle rounded active">
+                            <span class="fM nowrap">桃園券</span>
+                        </a>
+                        <div class="lineV"></div>
+                        <a class="flexH middle rounded active">
+                            <span class="fM nowrap">品牌通路</span>
+                        </a>
+                        <div class="lineV"></div>
+                        <a class="flexH middle rounded">
+                            <span class="fM nowrap">特約商店</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- List -->
+                <div class="list flexV width">
+                    <!-- 票卷 -->
+                    <div class="item stamp flexV center">
+                        <div class="profile img">
+                            <img src="img/ticket-profile.png">
+                        </div>
+                        <div class="cover flexV width">
+                            <div class="layer"></div>
+                            <!-- 特別標示 -->
+                            <div class="heat flexH">
+                                <span class="fM bold">最新</span>
+                            </div>
+                            <!-- 已使用 (優惠券) -->
+                            <!-- <div class="used flexH middle">
+                                <span class="fL white">已使用</span>
+                            </div> -->
+                            <!-- 已完成 (集章) -->
+                            <!-- <div class="done flexH middle">
+                                <span class="fL white">已完成</span>
+                            </div> -->
+                            <!-- 已過期 -->
+                            <!-- <div class="outdated flexH middle">
+                                <span class="fL white">已過期</span>
+                            </div> -->
+                        </div>
+                        <div class="flexH width between">
+                            <!-- 分類 -->
+                            <div class="type typeS flexH">
+                                <span class="fM">集章</span>
+                                <div class="img imgS"><img src="icon/item-stamp.svg"></div>
+                            </div>
+                            <div class="type typeT flexH">
+                                <span class="fM">優惠券</span>
+                                <div class="img imgT"><img src="icon/item-ticket.svg"></div>
+                            </div>
+                            <!-- 集章數 -->
+                            <div class="stampCount flexH">
+                                <span class="fM white">2/10</span>
+                            </div>
+                            <!-- 加入票夾按鈕 -->
+                            <!-- <a class="add flexH background">
+                                <span class="fM">加入票夾</span>
+                                <div class="icon"><i class="fas fa-plus fa-sm"></i></div>
+                            </a> -->
+                        </div>
+                        <span class="fM gray">餐廳名稱</span>
+                        <span class="fXXL title">標題集章</span>
+                        <div class="flexH">
+                            <span class="fM gray">2021/10/01 - 2022/01/22</span>
+                            <span class="fM gray">・</span>
+                            <span class="fM gray">剩餘200張</span>
+                        </div>
+                    </div>
+                    <!-- 票卷 -->
+                    <div class="item stamp flexV center">
+                        <div class="profile img">
+                            <img src="img/ticket-profile.png">
+                        </div>
+                        <div class="cover flexV width">
+                            <div class="layer"></div>
+                            <!-- 特別標示 -->
+                            <div class="heat flexH">
+                                <span class="fM bold">最新</span>
+                            </div>
+                            <!-- 已使用 (優惠券) -->
+                            <div class="used flexH middle">
+                                <span class="fL white">已使用</span>
+                            </div>
+                            <!-- 已完成 (集章) -->
+                            <div class="done flexH middle">
+                                <span class="fL white">已完成</span>
+                            </div>
+                            <!-- 已過期 -->
+                            <!-- <div class="outdated flexH middle">
+                                <span class="fL white">已過期</span>
+                            </div> -->
+                        </div>
+                        <div class="flexH width between">
+                            <!-- 分類 -->
+                            <div class="type typeS flexH">
+                                <span class="fM">集章</span>
+                                <div class="img imgS"><img src="icon/item-stamp.svg"></div>
+                            </div>
+                            <div class="type typeT flexH">
+                                <span class="fM">優惠券</span>
+                                <div class="img imgT"><img src="icon/item-ticket.svg"></div>
+                            </div>
+                            <!-- 集章數 -->
+                            <div class="stampCount flexH">
+                                <span class="fM white">2/10</span>
+                            </div>
+                            <!-- 加入票夾按鈕 -->
+                            <!-- <a class="add flexH background">
+                                <span class="fM">加入票夾</span>
+                                <div class="icon"><i class="fas fa-plus fa-sm"></i></div>
+                            </a> -->
+                        </div>
+                        <span class="fM gray">餐廳名稱</span>
+                        <span class="fXXL title">標題集章</span>
+                        <div class="flexH">
+                            <span class="fM gray">2021/10/01 - 2022/01/22</span>
+                            <span class="fM gray">・</span>
+                            <span class="fM gray">剩餘200張</span>
+                        </div>
+                    </div>
+                    <!-- 票卷 -->
+                    <div class="item stamp flexV center">
+                        <div class="profile img">
+                            <img src="img/ticket-profile.png">
+                        </div>
+                        <div class="cover flexV width">
+                            <div class="layer"></div>
+                            <!-- 特別標示 -->
+                            <div class="heat flexH">
+                                <span class="fM bold">最新</span>
+                            </div>
+                            <!-- 已使用 (優惠券) -->
+                            <!-- <div class="used flexH middle">
+                                <span class="fL white">已使用</span>
+                            </div> -->
+                            <!-- 已完成 (集章) -->
+                            <!-- <div class="done flexH middle">
+                                <span class="fL white">已完成</span>
+                            </div> -->
+                            <!-- 已過期 -->
+                            <div class="outdated flexH middle">
+                                <span class="fL white">已過期</span>
+                            </div>
+                        </div>
+                        <div class="flexH width between">
+                            <!-- 分類 -->
+                            <div class="type typeS flexH">
+                                <span class="fM">集章</span>
+                                <div class="img imgS"><img src="icon/item-stamp.svg"></div>
+                            </div>
+                            <div class="type typeT flexH">
+                                <span class="fM">優惠券</span>
+                                <div class="img imgT"><img src="icon/item-ticket.svg"></div>
+                            </div>
+                            <!-- 集章數 -->
+                            <div class="stampCount flexH">
+                                <span class="fM white">2/10</span>
+                            </div>
+                            <!-- 加入票夾按鈕 -->
+                            <!-- <a class="add flexH background">
+                                <span class="fM">加入票夾</span>
+                                <div class="icon"><i class="fas fa-plus fa-sm"></i></div>
+                            </a> -->
+                        </div>
+                        <span class="fM gray">餐廳名稱</span>
+                        <span class="fXXL title">標題集章</span>
+                        <div class="flexH">
+                            <span class="fM gray">2021/10/01 - 2022/01/22</span>
+                            <span class="fM gray">・</span>
+                            <span class="fM gray">剩餘200張</span>
+                        </div>
+                    </div>
+                    <!-- 票卷 -->
+                    <div class="item ticket flexV center">
+                        <div class="profile img">
+                            <img src="img/ticket-profile.png">
+                        </div>
+                        <div class="cover flexV width">
+                            <div class="layer"></div>
+                            <!-- 特別標示 -->
+                            <div class="heat flexH">
+                                <span class="fM bold">最新</span>
+                            </div>
+                            <!-- 已使用 (優惠券) -->
+                            <!-- <div class="used flexH middle">
+                                <span class="fL white">已使用</span>
+                            </div> -->
+                            <!-- 已完成 (集章) -->
+                            <!-- <div class="done flexH middle">
+                                <span class="fL white">已完成</span>
+                            </div> -->
+                            <!-- 已過期 -->
+                            <!-- <div class="outdated flexH middle">
+                                <span class="fL white">已過期</span>
+                            </div> -->
+                        </div>
+                        <div class="flexH width between">
+                            <!-- 分類 -->
+                            <div class="type typeS flexH">
+                                <span class="fM">集章</span>
+                                <div class="img imgS"><img src="icon/item-stamp.svg"></div>
+                            </div>
+                            <div class="type typeT flexH">
+                                <span class="fM">優惠券</span>
+                                <div class="img imgT"><img src="icon/item-ticket.svg"></div>
+                            </div>
+                            <!-- 集章數 -->
+                            <div class="stampCount flexH">
+                                <span class="fM white">2/10</span>
+                            </div>
+                            <!-- 加入票夾按鈕 -->
+                            <a class="add flexH background">
+                                <span class="fM">加入票夾</span>
+                                <div class="icon"><i class="fas fa-plus fa-sm"></i></div>
+                            </a>
+                        </div>
+                        <span class="fL">餐廳名稱</span>
+                        <span class="fXXL title">滿$100折$10</span>
+                        <span class="fM gray">2021/10/01 - 2022/01/22</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section class="footer">
+                <a class="icon iconButton active" href="index.html">
+                    <img src="icon/home.svg">
+                    <img src="icon/home-a.svg">
+                    <span class="fS white">首頁</span>
+                </a>
+                <a class="icon iconButton disabled">
+                    <img src="icon/service.svg">
+                    <img src="icon/service-a.svg">
+                    <span class="fS white">市政服務</span>
+                </a>
+                <a class="icon iconButton" href="scan.html">
+                    <img src="icon/scan.svg">
+                    <img src="icon/scan-a.svg">
+                    <span class="fS white">掃碼</span>
+                </a>
+                <a class="icon iconButton" href="map.html">
+                    <img src="icon/store.svg">
+                    <img src="icon/store-a.svg">
+                    <span class="fS white">優惠好康</span>
+                </a>
+                <a class="icon iconButton" href="profile.html">
+                    <img src="icon/user.svg">
+                    <img src="icon/user-a.svg">
+                    <span class="fS white">會員</span>
+                </a>
+            </section>
+        </div>
+    </body>
+</html>

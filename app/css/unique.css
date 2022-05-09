@@ -813,10 +813,6 @@
 .body .point_success .background {
   background-color: transparent !important;
 }
-.body .point_history.footer .img {
-  width: 20px;
-  height: fit-content;
-}
 .body .point_history.main {
   padding: 60px 10px 70px !important;
 }
@@ -892,6 +888,223 @@
 }
 .body .point_history.popTime .tabs .tab:hover:not(.active) {
   background-color: var(--cBg);
+}
+.body .tickets.main {
+  padding: 60px 10px 70px !important;
+}
+.body .tickets.main .tabs {
+  height: 30px;
+  border: 1px solid white;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .tickets.main .tabs .tab {
+  padding: 5px 0;
+}
+.body .tickets.main .tabs .tab.active {
+  color: var(--c1);
+}
+.body .tickets.main .tabs .tab:not(.active) * {
+  color: var(--cG4);
+}
+.body .tickets.main .tabs .tab:not(.active) .img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.body .tickets.main .tabs .img {
+  height: fit-content;
+}
+.body .tickets.main .tabs .img.imgT {
+  width: 24px;
+}
+.body .tickets.main .tabs .img.imgS {
+  width: 20px;
+}
+.body .tickets.main .tabs .lineV {
+  height: 20px;
+  background-color: var(--cG5);
+}
+.body .tickets.main .filter {
+  width: 100vw;
+  min-height: 40px;
+  margin-left: -10px;
+  overflow-x: auto;
+  box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05);
+}
+.body .tickets.main .filter::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+}
+.body .tickets.main .filter > .flexH > .flexH:first-child {
+  margin-left: 10px;
+}
+.body .tickets.main .filter > .flexH > .flexH:last-child {
+  margin-right: 10px;
+}
+.body .tickets.main .filter .lineV {
+  height: 20px;
+  background-color: var(--c2);
+}
+.body .tickets.main .filter .dropdown {
+  width: fit-content;
+}
+.body .tickets.main .filter .dropdown select {
+  width: fit-content;
+  padding: 0 30px 0 10px;
+  background-color: transparent;
+}
+.body .tickets.main .filter a {
+  padding: 0 10px;
+}
+.body .tickets.main .filter a.active span {
+  color: var(--c1);
+  font-weight: bold;
+}
+.body .tickets.main .filter a span {
+  color: var(--cG4);
+}
+.body .tickets.main .list {
+  overflow-y: auto;
+}
+.body .tickets.main .list .item {
+  width: calc(100% - 40px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  position: relative;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .tickets.main .list .item.ticket .heat span,
+.body .tickets.main .list .item.ticket .title,
+.body .tickets.main .list .item.ticket .type span,
+.body .tickets.main .list .item.ticket .add i {
+  color: var(--c1);
+}
+.body .tickets.main .list .item.ticket .typeS,
+.body .tickets.main .list .item.ticket .stampCount,
+.body .tickets.main .list .item.ticket .done {
+  display: none;
+}
+.body .tickets.main .list .item.stamp .heat span,
+.body .tickets.main .list .item.stamp .title,
+.body .tickets.main .list .item.stamp .type span,
+.body .tickets.main .list .item.stamp .add i {
+  color: var(--c3);
+}
+.body .tickets.main .list .item.stamp .typeT,
+.body .tickets.main .list .item.stamp .used {
+  display: none;
+}
+.body .tickets.main .list .item .profile {
+  width: 80px;
+  height: 80px;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: absolute;
+  top: 75px;
+  z-index: 3;
+}
+.body .tickets.main .list .item .profile img {
+  border-radius: 10px;
+}
+.body .tickets.main .list .item .cover {
+  height: 120px;
+  margin-bottom: 10px;
+  position: relative;
+  background-image: url(../img/ticket-cover.png);
+  background-size: cover;
+}
+.body .tickets.main .list .item .cover .layer {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.body .tickets.main .list .item .cover .heat {
+  width: fit-content;
+  height: 20px;
+  margin: 5px;
+  padding: 2.5px 10px;
+  border-radius: 99px;
+  background-color: white;
+  z-index: 1;
+}
+.body .tickets.main .list .item .cover .used {
+  width: calc(100% - 2px);
+  height: calc(100% - 42px);
+  padding-bottom: 40px;
+  border: 1px solid var(--c1);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%);
+  z-index: 2;
+}
+.body .tickets.main .list .item .cover .done {
+  width: calc(100% - 2px);
+  height: calc(100% - 42px);
+  padding-bottom: 40px;
+  border: 1px solid var(--c3);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(92, 184, 178, 0.8) 0%, rgba(92, 184, 178, 0.5) 100%);
+  z-index: 2;
+}
+.body .tickets.main .list .item .cover .outdated {
+  width: calc(100% - 2px);
+  height: calc(100% - 42px);
+  padding-bottom: 40px;
+  border: 1px solid var(--c4);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%);
+  z-index: 2;
+}
+.body .tickets.main .list .item .cover .outdated span {
+  transform: rotate(-15deg);
+}
+.body .tickets.main .list .item .type {
+  height: 20px;
+  padding: 2.5px 10px;
+  border: 1px solid var(--cG5);
+  border-radius: 99px;
+}
+.body .tickets.main .list .item .type .img {
+  height: fit-content;
+  margin: 0 0 0 5px;
+}
+.body .tickets.main .list .item .type .img.imgT {
+  width: 18px;
+}
+.body .tickets.main .list .item .type .img.imgS {
+  width: 14px;
+}
+.body .tickets.main .list .item .stampCount {
+  height: 20px;
+  padding: 2.5px 10px;
+  border-radius: 99px;
+  background-color: var(--c3);
+}
+.body .tickets.main .list .item .add {
+  height: 20px;
+  padding: 2.5px 5px 2.5px 10px;
+  border-radius: 99px;
+}
+.body .tickets.main .list .item .add .icon {
+  margin: 0 0 0 1px;
 }
 .body .store_register.main {
   max-height: calc(100vh - 60px);
