@@ -1,0 +1,279 @@
+// Screen Size
+@sD:    (min-width: 1024px);                            // Desktop
+@sT:    (max-width: 1023px) and (min-width: 768px);     // Tablet
+@sM:    (max-width: 767px);                             // Mobile
+@sMs:   (max-width: 374px);                             // Mobile (Small)
+@sLand: (max-height: 767px) and (min-width: 568px);     // Mobile (Landscape)
+
+.body {
+    .header .fa-chevron-left, .header .fa-xmark, .header .fa-times { color: var(--c3) !important; font-size: 1.5em; line-height: 0.04167em; vertical-align: -0.125em; }
+    
+    .landing { height: 100vh; height: 100%; padding: 0 !important; align-items: center; justify-content: space-around; background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, var(--c1) 100%), #FFFFFF;
+        .img { width: 300px; height: fit-content; }
+        .separate { width: 20px; height: 3px; margin: 10px 0; border-radius: 99px; background-color: var(--c2); }
+    }
+    .errors {
+        &.header { width: 100vw; background: transparent !important; }
+        &.main { height: 100vh; height: 100%; padding: 50px 0 !important; align-items: center; justify-content: space-around; background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, var(--c1) 100%), #FFFFFF;
+            .img { width: 150px; height: fit-content; }}}
+    .notice { overflow-y: hidden;
+        &.main { padding: 60px 10px 0 !important; overflow-y: hidden;
+            .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05);
+                @media @sD, @sT { width: 768px !important; }
+                .lineV { height: 20px; background-color: var(--c2); }
+                .dropdown { width: fit-content;
+                    select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
+            .records { max-height: 100%; overflow-y: auto;
+                .dot { min-width: 10px; min-height: 10px; margin-right: 10px; border-radius: 99px;
+                    &.active { background-color: var(--cRed); }}
+                .img { width: 100px; height: fit-content;
+                    img { border-radius: 5px; }}}}
+    }
+    .index {
+        .function { margin: 10px 0;
+            .fM { margin: 5px 0; }
+            .fS { width: 70px; padding: 2px; border: 1px solid var(--c2); border-radius: 99px; line-height: 16px; text-align: center; }}
+        .point { width: calc(100% - 40px); padding: 10px; margin: 10px; border: 1px solid var(--c1); border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
+            .img { width: 50px; height: fit-content; }}
+        .mission { width: calc(100% - 42px) !important; padding: 20px 10px 45px; margin: 15px 10px 10px; border: 1px solid var(--cG4); border-radius: 20px !important; position: relative;
+            .fM { margin-top: 5px; }
+            .title { width: calc(100% - 20px) !important; bottom: 10px; position: absolute; text-align: center;
+                span { margin: 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+                .icon { margin: 0; }}}
+        .tabs { margin: 10px 5px 5px; }
+        .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }
+            .img { min-width: 120px; height: 100%; margin: 0; }
+                img { border-radius: 0 10px 10px 0; object-fit: cover; }}
+        .discounts { width: 100vw; margin: 10px 0 10px -10px;
+            > .scroll { overflow-x: auto;
+                &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }}
+            > .title { margin: 0 0 5px 20px; padding-left: 5px; border-left: 1px solid var(--c4); }
+            .discount { margin-right: 10px; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+                &:first-child { margin-left: 20px; }
+                &:last-child { margin-right: 20px; }
+                > * > .title { color: var(--c3); }
+                .img { margin: 0;
+                    img { border-radius: 10px 10px 0 0; }}}}
+        .advertise { width: calc(100% - 22px) !important; height: fit-content; padding: 5px 5px 5px 0; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .img { width: 30% !important; height: fit-content !important; margin: 0; }
+                img { border-radius: 5px; }}}
+    .scan {
+        &.main { width: 100vw; height: calc(100vh - 130px); padding: 60px 0 70px !important; position: relative;
+            @media @sD, @sT { width: 768px !important; }
+            &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
+            canvas { width: 100% !important; height: calc(100vh - 130px) !important; position: absolute; }
+            .input { width: calc(100% - 70px); padding: 0 5px 0 15px; border: 1px solid #FFFFFF; top: 80px; left: 20px; position: absolute; z-index: 2; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px);
+                ::placeholder { color: var(--c4); }}
+            .button { margin: 0; left: 50%; transform: translate(-50%, 0); bottom: 90px; position: absolute; z-index: 2; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); }
+            .testImg { width: 100% !important; height: calc(100vh - 130px) !important; margin: 0; position: absolute; z-index: 1;
+                @media @sD, @sT { width: 768px !important; }
+                img { object-fit: cover; }}
+            .swipeup { width: calc(100% - 40px); min-height: fit-content; padding: 10px 20px 100px; margin-top: calc(100vh - 180px); background: rgba(255, 255, 255, 0.9); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(20px); border-radius: 30px 30px 0px 0px; z-index: 2;
+                .holder { width: 30px; height: 5px; border-radius: 99px; background-color: var(--cG4); }
+                .fL.primary { margin: 20px 0; }
+                .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px;
+                    img { border-radius: 999px; }}
+                .light { min-width: 50px; height: 50px; background-color: var(--c3); }
+                .qrcode { padding: 20px 0; margin: 20px 0; border-radius: 20px; background-color: white; 
+                    .img { width: 200px; height: 200px; }}
+                .submit { background-color: var(--c1); margin-right: -5px; }}}
+        &.popCode {
+            .popMain { margin-bottom: 0 !important; }
+            .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px; background-image: url(../img/profile-d.png); background-size: cover;
+                img { border-radius: 999px; }}
+            .qrcode { padding: 20px 0; margin: 10px 0 0; border-radius: 20px; background-color: white; 
+                .img { width: 200px; height: 200px; }}
+            .submit { background-color: var(--c1); margin-right: -5px; }}}
+    .map {
+        &.main { height: calc(100vh - 130px); padding: 60px 10px 70px !important; position: relative; overflow-y: hidden; }
+        .tabs { height: 30px; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .tab { padding: 5px 0;
+                &.active { color: var(--c1); }
+                &:not(.active) * { color: var(--cG4); }}
+            .lineV { height: 20px; background-color: var(--cG5); }}
+        .filter { width: 100vw; min-height: 40px; margin-left: -10px; overflow-x: auto;
+            &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
+            > .flexH > .flexH:first-child { margin-left: 10px; }
+            > .flexH > .flexH:last-child { margin-right: 10px; }
+            .lineV { height: 20px; background-color: var(--c2); }
+            .dropdown { width: fit-content;
+                select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}
+            a { padding: 0 10px;
+                &.active span { color: var(--c1); font-weight: bold; }
+                span { color: var(--cG4); }}}
+        .testImg { width: 100vw !important; height: 100% !important; margin: 0 0 0 -10px;
+            @media @sD, @sT { width: 768px !important; }
+            img { object-fit: cover; }}
+        .bottom { width: calc(100% - 10px); bottom: 70px; position: absolute;
+            .location { width: 40px; height: 40px; margin: 20px; background-color: var(--c3); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); }
+            .info { width: calc(100vw - 40px); margin-left: -10px; padding: 20px; border: 1px solid #FFFFFF; border-radius: 30px 30px 0px 0px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(30px);
+                @media @sD, @sT { width: 728px !important; }
+                .checklist { margin-top: 10px;
+                    > .flexH { margin: 0 10px; }}
+                .img.store { width: 50px; height: 50px;
+                    img { border-radius: 5px; }}
+                .img.point { width: 20px; height: 20px; margin-left: 0; }}}}
+    .profile {
+        &.main { padding: 60px 20px 90px !important;
+            @media @sD, @sT { width: 728px !important; }}
+        .card { width: 100vw; margin-left: -20px; overflow-x: auto !important;
+            @media @sD, @sT { width: 768px !important; }
+            &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
+            > .flexH > .img:first-child { margin-left: 20px; }
+            > .flexH > .img:last-child { margin-right: 20px; }
+            .img { width: calc(100vw - 40px) !important; height: fit-content; margin: 0 5px; border-radius: 10px; position: relative;
+                @media @sD, @sT { width: 728px !important; }
+                &.city, &.visit {
+                    > img { visibility: hidden; }
+                    .type { display: initial; }
+                    .icon { display: initial; }
+                    .icon { bottom: 20px; right: 27px; position: absolute; }
+                }
+                &.city { background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, var(--c1) 100%), #FFFFFF;
+                    .icon.iconVisit { display: none; }}
+                &.visit { background: var(--c2);
+                    span { color: var(--c4); }
+                    .icon.iconCity { display: none; }}
+                &.new .icon { display: initial; } 
+                .type { display: none; }
+                .icon { display: none; }
+                img { border-radius: 10px; }
+                .title { top: 30px; left: 27px; position: absolute;
+                    span:first-child { margin-bottom: 5px; letter-spacing: 0.33em; }}
+                .type { bottom: 30px; left: 27px; position: absolute; letter-spacing: 0.33em; }
+                .cover { border-radius: 10px; background: rgba(0, 0, 0, 0.5); position: absolute; }}}
+        .picture img { border: 1px solid white; border-radius: 999px; background-image: url(../img/profile-d.png); background-size: cover; }
+        .point { width: calc(100% - 20px); padding: 10px; margin: 20px 0; border: 1px solid var(--c1); border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
+            .img { width: 50px; height: fit-content; }}
+        .ticket {
+            .img { width: 45px; height: fit-content; margin-right: 10px; }
+            .lineV { height: 50px; background-color: var(--c2); }}
+        .function { width: calc(100% - 2px); margin: 20px 0; border: 1px solid white; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            > .flexH { padding: 5px 0; }
+            .img { width: 24px; height: fit-content; }
+            .lineV { height: 20px; background-color: var(--cG4); }}
+        .menu {
+            .img { width: 24px; height: fit-content; margin-right: 10px; }}
+        .invite { width: calc(100% - 2px); margin: 20px 0; padding: 5px 0; border: 1px solid white; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .img { width: 30px; height: fit-content; }}
+        &.popInvite {
+            .popHeader span { text-align: center; }
+            .popMain .img { width: 50px; height: fit-content; }
+            .popFooter { flex-direction: column;
+                .img { width: 20px; height: fit-content; }
+                .code { position: relative;
+                    .flexH { left: 2px; position: absolute; }
+                    .icon { margin-right: 0;
+                        i { color: var(--cG3) !important; }}}
+                .line { background-color: #06C755; }}}}
+    .profile_edit {
+        &.main { max-height: calc(100vh - 60px); padding: 60px 10px 0 !important; }
+        .img { margin-bottom: 20px; border: 1px solid white; border-radius: 999px;
+            img { border-radius: 999px; }}
+        .input { width: calc(100% - 35px); padding: 0 15px 0 10px;
+            input { text-align: right; }}
+        .dropdown { width: calc(100% - 20px); padding-left: 10px; background-color: white; 
+            select { padding-right: 30px; }
+            .arrow { right: 10px; }}
+        .date { margin-right: 0 !important; }
+        .button { width: calc(50% - 30px); margin: 20px 5px; }
+        .birth { margin-bottom: 20px; }}
+    .setting {
+        &.main { max-height: calc(100vh - 60px); padding: 60px 10px 0 !important; }
+        .info { margin-bottom: 20px !important; border-radius: 20px; background-color: white; }}
+    .point_send, .point_success {
+        &.main { height: 100vh; height: 100%; margin: 60px 20px 20px; padding: 10px !important; border-radius: 20px; background-color: white;
+            .record {
+                .img { width: 20px; height: fit-content; }
+                .lineV { height: 30px; }}
+            .info { margin: 30px 0;
+                .total .img { width: 30px; height: fit-content; }
+                .hint { width: calc(100% - 20px); margin: 0 10px;
+                    .img { width: 20px; height: fit-content; }}}
+            .number a { height: 55px; margin: 2px 1px; }
+            .button { margin-top: 30px; }}}
+    .point_success {
+        &.main { justify-content: space-between;
+            .title { animation: spark 1s linear infinite;
+                .icon { font-size: 24px; }
+                span { font-size: 36px; }}
+            @keyframes spark { 0% { opacity: 1; } 25% { opacity: 1; } 50% { opacity: 0; }100% { opacity: 1; }}
+            .detail .img { width: 30px; height: fit-content; }
+            .button { margin-top: 5px; }}
+        .background { background-color: transparent !important; }}
+    .point_history {
+        &.footer .img { width: 20px; height: fit-content; }
+        &.main { padding: 60px 10px 70px !important;
+            .tabs { height: fit-content; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+                .tab { padding: 5px 0;
+                    &.active { color: var(--c1); }
+                    &:not(.active) {
+                        * { color: var(--cG4); }
+                        .img { filter: grayscale(100%); opacity: 0.5; }}}
+                .img { width: 20px; height: fit-content; }
+                .lineV { height: 40px; background-color: var(--cG4); }}
+            .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05); overflow-y: scroll;
+                @media @sD, @sT { width: 768px !important; }
+                &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
+                span.fM { white-space: nowrap; }
+                .lineV { height: 20px; background-color: var(--c2); }
+                .dropdown { width: fit-content;
+                    select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
+            .records { max-height: 100%; overflow-y: auto;
+                .img { width: 20px; height: fit-content;}}}
+        &.popTime {
+            .tabs { height: 34px;
+                .tab:hover:not(.active) { background-color: var(--cBg); }}}}
+    .store_register {
+        &.main { max-height: calc(100vh - 60px); padding: 60px 10px 0 !important; }
+        .steps {
+            .step { padding: 0 5px 5px; margin: 0; border-bottom: 2px solid transparent;
+                &.active { border-bottom: 2px solid var(--c1);
+                    > span { color: var(--c1); }}
+                &:not(.active) * { color: var(--cG3); }}
+            .icon { padding: 0px 10px 5px; margin: 0 5px; }}
+        .info { overflow-y: auto;
+            .input { width: calc(100% - 40px); padding: 0 15px;
+                input { text-align: right; }}
+            .dropdown { width: calc(100% - 25px); padding-left: 15px; background-color: white; 
+                select { padding-right: 30px; }
+                .arrow { right: 10px; }}
+            .title { margin: 20px 0 0 5px; }
+            .map { width: calc(100% - 10px); min-height: 300px; margin: 5px; border-radius: 20px; position: relative; background-color: white;
+                .input { top: 60px; position: absolute; z-index: 8; }}
+            ol { margin: 0; padding: 0 0 0 30px; }
+            .button { width: calc(50% - 30px); margin: 20px 5px; }}}
+    .activity {
+        .mission { width: calc(100% - 42px) !important; padding: 20px 10px; margin: 15px 10px 10px; border: 1px solid var(--cG4); border-radius: 20px !important; position: relative;
+            .fM { margin-top: 5px; }}
+        .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .info { height: fit-content !important; min-height: 90px; justify-content: space-between;
+                > * { margin-bottom: 2px; }
+                .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }}
+            .reward { min-width: 90px; height: 90px; position: relative;
+                .img { width: 50px; height: fit-content; }
+                    img { border-radius: 0 10px 10px 0; }
+                .done { width: 90px; height: 90px; position: absolute; background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%); border: 1px solid var(--c1); backdrop-filter: blur(2px); }
+                .over { width: 90px; height: 90px; position: absolute; background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%); border: 1px solid var(--c4); backdrop-filter: blur(2px);
+                    span { transform: rotate(-20deg); }}}
+            .progress { margin-top: 0; padding-top: 0;
+                .bar { height: 5px; margin-left: 10px; background-color: var(--cG5);
+                    div { width: 60%; height: 100%; border-radius: 99px; background-color: var(--c1); }}}}}
+    .activity_question {
+        &.header { padding: 10px; }
+        &.main { height: 100vh; height: 100%; margin: 60px 20px 20px; padding: 10px !important; border-radius: 20px; background-color: white;
+            > * { margin-bottom: 20px; }
+            > :last-child { margin: auto 0 0 0; }
+            .img { width: 80px; height: fit-content; }
+            .button { width: calc(50% - 30px); }}
+        &.popCorrect {
+            .close { color: white; border-radius: 99px;
+                &:hover { color: var(--cG5); }}
+            .popBody { height: 450px; padding: 0; }
+            .popHeader { height: 200px; margin: 0 !important; padding-bottom: 30px; border-radius: 20px 20px 0 0; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1)); background: url(../img/bg2.png); background-position: bottom; background-attachment: initial; background-size: cover; }
+            .popMain { height: 100%; margin: 0 !important; justify-content: center !important;
+                .img { width: 30px; height: fit-content; }}
+            .popFooter { margin: 30px 10px 10px;
+                .img { width: 20px; height: 20px; margin-left: 0; }}}}
+}
