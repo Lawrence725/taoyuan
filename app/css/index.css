@@ -535,6 +535,11 @@ span {
   margin: 0 5px;
   background-color: var(--cG5);
 }
+.body .dashH {
+  width: 100%;
+  margin: 5px 0;
+  border: 1px dashed var(--cG5);
+}
 .body .rounded {
   border-radius: 999px !important;
 }

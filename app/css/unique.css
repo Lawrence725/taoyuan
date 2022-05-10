@@ -1116,13 +1116,16 @@
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .ticket.main {
     width: 748px !important;
-    margin: 60px auto 20px;
+    margin: 60px auto 70px;
   }
 }
 .body .ticket.main.ticketT .title,
 .body .ticket.main.ticketT .type span,
 .body .ticket.main.ticketT .add i {
   color: var(--c1);
+}
+.body .ticket.main.ticketT .heading {
+  color: var(--c3);
 }
 .body .ticket.main.ticketT .typeS,
 .body .ticket.main.ticketT .stampCount,
@@ -1133,6 +1136,9 @@
 .body .ticket.main.ticketS .type span,
 .body .ticket.main.ticketS .add i {
   color: var(--c3);
+}
+.body .ticket.main.ticketS .heading {
+  color: var(--c1);
 }
 .body .ticket.main.ticketS .typeT,
 .body .ticket.main.ticketS .used {
@@ -1177,8 +1183,8 @@
 }
 .body .ticket.main .cover .used {
   width: calc(100% - 2px);
-  height: calc(100% - 32px);
-  padding-bottom: 30px;
+  height: calc(100% - 52px);
+  padding-bottom: 50px;
   border: 1px solid var(--c1);
   border-radius: 20px 20px 0 0;
   top: 0;
@@ -1190,8 +1196,8 @@
 }
 .body .ticket.main .cover .done {
   width: calc(100% - 2px);
-  height: calc(100% - 32px);
-  padding-bottom: 30px;
+  height: calc(100% - 52px);
+  padding-bottom: 50px;
   border: 1px solid var(--c3);
   border-radius: 20px 20px 0 0;
   top: 0;
@@ -1203,8 +1209,8 @@
 }
 .body .ticket.main .cover .outdated {
   width: calc(100% - 2px);
-  height: calc(100% - 32px);
-  padding-bottom: 30px;
+  height: calc(100% - 52px);
+  padding-bottom: 50px;
   border: 1px solid var(--c4);
   border-radius: 20px 20px 0 0;
   top: 0;
@@ -1218,7 +1224,7 @@
   transform: rotate(-15deg);
 }
 .body .ticket.main .info {
-  margin: 20px 0;
+  margin: 10px 0 20px;
 }
 .body .ticket.main .info .type {
   height: 25px;
@@ -1252,6 +1258,101 @@
 }
 .body .ticket.main .title {
   margin: 5px 0;
+}
+.body .ticket.main .sticker {
+  margin: 20px 0;
+}
+.body .ticket.main .sticker img {
+  width: calc(20% - 10px);
+  margin: 5px;
+  border-radius: 10px;
+}
+.body .ticket.main .sticker img.none {
+  filter: grayscale(100%);
+  opacity: 0.25;
+}
+.body .ticket.main .progress {
+  margin: 20px 0;
+  padding-top: 0;
+}
+.body .ticket.main .progress img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.body .ticket.main .progress .bar {
+  height: 10px;
+  margin-left: 10px;
+  background-color: var(--cG5);
+}
+.body .ticket.main .progress .bar div {
+  width: 60%;
+  height: 100%;
+  border-radius: 99px;
+  background-color: var(--c1);
+}
+.body .ticket.main .gifts {
+  width: calc(100% + 20px);
+  margin: 20px 0 10px 0;
+}
+.body .ticket.main .gifts > span {
+  margin: 0 0 5px 15px;
+}
+.body .ticket.main .gifts > .scroll {
+  overflow-x: auto;
+}
+.body .ticket.main .gifts > .scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+}
+.body .ticket.main .gifts .gift {
+  width: 150px;
+  margin-right: 10px;
+  border: 1px solid var(--cG5);
+  border-radius: 15px;
+  position: relative;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .ticket.main .gifts .gift:first-child {
+  margin-left: 10px;
+}
+.body .ticket.main .gifts .gift:last-child {
+  margin-right: 10px;
+}
+.body .ticket.main .gifts .gift .checked {
+  width: calc(100% - 2px);
+  height: 148px;
+  border: 1px solid var(--c1);
+  border-radius: 15px 15px 0 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticket.main .gifts .gift img.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+.body .ticket.main .gifts .gift img.stamp {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  margin-right: 5px;
+  object-fit: cover;
+}
+.body .ticket.main .detail {
+  margin: 10px 0;
+}
+.body .ticket.main .detail .heading {
+  margin-bottom: 5px;
 }
 .body .ticket.footer {
   box-shadow: none;
