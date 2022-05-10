@@ -12,6 +12,12 @@
   --cBg: #F2F1F6;
   --cRed: #EB5757;
   --cGreen: #27AE60;
+  --fXXL: 1.6rem;
+  --fXL: 1.4rem;
+  --fL: 1.2rem;
+  --fM: 1rem;
+  --fS: 0.8rem;
+  --fXS: 0.6rem;
 }
 html,
 body,

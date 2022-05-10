@@ -976,7 +976,6 @@
   backdrop-filter: blur(30px);
   background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
-.body .tickets.main .list .item.ticket .heat span,
 .body .tickets.main .list .item.ticket .title,
 .body .tickets.main .list .item.ticket .type span,
 .body .tickets.main .list .item.ticket .add i {
@@ -987,7 +986,6 @@
 .body .tickets.main .list .item.ticket .done {
   display: none;
 }
-.body .tickets.main .list .item.stamp .heat span,
 .body .tickets.main .list .item.stamp .title,
 .body .tickets.main .list .item.stamp .type span,
 .body .tickets.main .list .item.stamp .add i {
@@ -998,8 +996,8 @@
   display: none;
 }
 .body .tickets.main .list .item .profile {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border: 1px solid white;
   border-radius: 10px;
   position: absolute;
@@ -1010,7 +1008,7 @@
   border-radius: 10px;
 }
 .body .tickets.main .list .item .cover {
-  height: 120px;
+  height: 100px;
   margin-bottom: 10px;
   position: relative;
   background-image: url(../img/ticket-cover.png);
@@ -1027,7 +1025,6 @@
 }
 .body .tickets.main .list .item .cover .heat {
   width: fit-content;
-  height: 20px;
   margin: 5px;
   padding: 2.5px 10px;
   border-radius: 99px;
@@ -1036,8 +1033,8 @@
 }
 .body .tickets.main .list .item .cover .used {
   width: calc(100% - 2px);
-  height: calc(100% - 42px);
-  padding-bottom: 40px;
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
   border: 1px solid var(--c1);
   border-radius: 10px;
   top: 0;
@@ -1049,8 +1046,8 @@
 }
 .body .tickets.main .list .item .cover .done {
   width: calc(100% - 2px);
-  height: calc(100% - 42px);
-  padding-bottom: 40px;
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
   border: 1px solid var(--c3);
   border-radius: 10px;
   top: 0;
@@ -1062,8 +1059,8 @@
 }
 .body .tickets.main .list .item .cover .outdated {
   width: calc(100% - 2px);
-  height: calc(100% - 42px);
-  padding-bottom: 40px;
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
   border: 1px solid var(--c4);
   border-radius: 10px;
   top: 0;
