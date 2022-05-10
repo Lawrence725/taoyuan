@@ -25,7 +25,7 @@ body,
 .marginX {
   width: 100vw;
   height: 100vh;
-  height: 100%;
+  height: var(--app-height);
   padding: 0 !important;
   margin: 0 !important;
   overflow: hidden;
@@ -47,7 +47,7 @@ span {
 }
 .body {
   height: 100vh;
-  height: 100%;
+  height: var(--app-height);
   display: flex;
   flex-direction: column;
   background: url(../img/bg.png);
@@ -1123,7 +1123,7 @@ span {
   left: 0;
   width: 100vw;
   height: 100vh;
-  height: 100%;
+  height: var(--app-height);
   position: fixed;
   display: flex;
   align-items: center;
