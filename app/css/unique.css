@@ -1103,6 +1103,159 @@
 .body .tickets.main .list .item .add .icon {
   margin: 0 0 0 1px;
 }
+.body .ticket.main {
+  height: 100vh;
+  height: 100%;
+  margin: 60px 15px 70px;
+  padding: 0 10px 10px !important;
+  border-radius: 20px;
+  align-items: center;
+  position: relative;
+  background-color: white;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .ticket.main {
+    width: 748px !important;
+    margin: 60px auto 20px;
+  }
+}
+.body .ticket.main.ticketT .title,
+.body .ticket.main.ticketT .type span,
+.body .ticket.main.ticketT .add i {
+  color: var(--c1);
+}
+.body .ticket.main.ticketT .typeS,
+.body .ticket.main.ticketT .stampCount,
+.body .ticket.main.ticketT .done {
+  display: none;
+}
+.body .ticket.main.ticketS .title,
+.body .ticket.main.ticketS .type span,
+.body .ticket.main.ticketS .add i {
+  color: var(--c3);
+}
+.body .ticket.main.ticketS .typeT,
+.body .ticket.main.ticketS .used {
+  display: none;
+}
+.body .ticket.main .profile {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 20px;
+  position: absolute;
+  top: 125px;
+  z-index: 3;
+}
+.body .ticket.main .profile img {
+  border-radius: 20px;
+}
+.body .ticket.main .cover {
+  width: calc(100% + 20px);
+  min-height: 180px;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  background-image: url(../img/ticket-cover.png);
+  background-size: cover;
+}
+.body .ticket.main .cover .layer {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.body .ticket.main .cover .heat {
+  width: fit-content;
+  margin: 10px;
+  padding: 2.5px 10px;
+  border-radius: 99px;
+  background-color: white;
+  z-index: 1;
+}
+.body .ticket.main .cover .used {
+  width: calc(100% - 2px);
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
+  border: 1px solid var(--c1);
+  border-radius: 20px 20px 0 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticket.main .cover .done {
+  width: calc(100% - 2px);
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
+  border: 1px solid var(--c3);
+  border-radius: 20px 20px 0 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(92, 184, 178, 0.8) 0%, rgba(92, 184, 178, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticket.main .cover .outdated {
+  width: calc(100% - 2px);
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
+  border: 1px solid var(--c4);
+  border-radius: 20px 20px 0 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticket.main .cover .outdated span {
+  transform: rotate(-15deg);
+}
+.body .ticket.main .info {
+  margin: 20px 0;
+}
+.body .ticket.main .info .type {
+  height: 25px;
+  padding: 2.5px 10px;
+  border: 1px solid var(--cG5);
+  border-radius: 99px;
+}
+.body .ticket.main .info .type .img {
+  height: fit-content;
+  margin: 0 0 0 5px;
+}
+.body .ticket.main .info .type .img.imgT {
+  width: 18px;
+}
+.body .ticket.main .info .type .img.imgS {
+  width: 14px;
+}
+.body .ticket.main .info .stampCount {
+  height: 25px;
+  padding: 2.5px 10px;
+  border-radius: 99px;
+  background-color: var(--c3);
+}
+.body .ticket.main .info .add {
+  height: 25px;
+  padding: 2.5px 5px 2.5px 10px;
+  border-radius: 99px;
+}
+.body .ticket.main .info .add .icon {
+  margin: 0 0 0 1px;
+}
+.body .ticket.main .title {
+  margin: 5px 0;
+}
+.body .ticket.footer {
+  box-shadow: none;
+}
 .body .store_register.main {
   max-height: calc(100vh - 60px);
   padding: 60px 10px 0 !important;
@@ -1256,6 +1409,12 @@
   padding: 10px !important;
   border-radius: 20px;
   background-color: white;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .activity_question.main {
+    width: 748px !important;
+    margin: 60px auto 20px;
+  }
 }
 .body .activity_question.main > * {
   margin-bottom: 20px;
