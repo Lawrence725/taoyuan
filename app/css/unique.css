@@ -1249,9 +1249,6 @@
   border-radius: 99px;
   background-color: var(--c1);
 }
-.body .activity_question.header {
-  padding: 10px;
-}
 .body .activity_question.main {
   height: 100vh;
   height: 100%;
@@ -1264,7 +1261,7 @@
   margin-bottom: 20px;
 }
 .body .activity_question.main > :last-child {
-  margin: auto 0 0 0;
+  margin: 0;
 }
 .body .activity_question.main .img {
   width: 80px;
