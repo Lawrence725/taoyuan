@@ -1550,73 +1550,50 @@
   border-radius: 99px;
   background-color: var(--c1);
 }
-.body .activity_question.main {
+.body .activity_detail.main {
   height: 100vh;
   height: var(--app-height);
   margin: 60px 20px 20px;
-  padding: 10px !important;
+  padding: 0 10px 10px !important;
   border-radius: 20px;
   background-color: white;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
-  .body .activity_question.main {
+  .body .activity_detail.main {
     width: 748px !important;
     margin: 60px auto 20px;
   }
 }
-.body .activity_question.main > * {
+.body .activity_detail.main > * {
   margin-bottom: 20px;
 }
-.body .activity_question.main > :last-child {
-  margin: 0;
-}
-.body .activity_question.main .img {
-  width: 80px;
+.body .activity_detail.main .img.cover {
+  width: calc(100% + 20px);
   height: fit-content;
+  margin: -5px 0 10px -10px;
 }
-.body .activity_question.main .button {
-  width: calc(50% - 30px);
+.body .activity_detail.main .progress {
+  margin-top: 0;
+  padding-top: 0;
 }
-.body .activity_question.popCorrect .close {
-  color: white;
-  border-radius: 99px;
+.body .activity_detail.main .progress .bar {
+  height: 10px;
+  margin-left: 10px;
+  background-color: var(--cG5);
 }
-.body .activity_question.popCorrect .close:hover {
-  color: var(--cG5);
-}
-.body .activity_question.popCorrect .popBody {
-  height: 450px;
-  padding: 0;
-}
-.body .activity_question.popCorrect .popHeader {
-  height: 200px;
-  margin: 0 !important;
-  padding-bottom: 30px;
-  border-radius: 20px 20px 0 0;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1));
-  background: url(../img/bg2.png);
-  background-position: bottom;
-  background-attachment: initial;
-  background-size: cover;
-}
-.body .activity_question.popCorrect .popMain {
+.body .activity_detail.main .progress .bar div {
+  width: 60%;
   height: 100%;
-  margin: 0 !important;
-  justify-content: center !important;
+  border-radius: 99px;
+  background-color: var(--c1);
 }
-.body .activity_question.popCorrect .popMain .img {
-  width: 30px;
+.body .activity_detail.main .progress .reward {
+  margin-left: 10px;
+}
+.body .activity_detail.main .progress .reward .img {
+  width: 50px;
   height: fit-content;
-}
-.body .activity_question.popCorrect .popFooter {
-  margin: 30px 10px 10px;
-}
-.body .activity_question.popCorrect .popFooter .img {
-  width: 20px;
-  height: 20px;
-  margin-left: 0;
+  margin: 0;
 }
 .body .activity_questions .news {
   width: calc(100% - 22px) !important;
@@ -1687,4 +1664,72 @@
   height: 100%;
   border-radius: 99px;
   background-color: var(--c1);
+}
+.body .activity_question.main {
+  height: 100vh;
+  height: var(--app-height);
+  margin: 60px 20px 20px;
+  padding: 10px !important;
+  border-radius: 20px;
+  background-color: white;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .activity_question.main {
+    width: 748px !important;
+    margin: 60px auto 20px;
+  }
+}
+.body .activity_question.main > * {
+  margin-bottom: 20px;
+}
+.body .activity_question.main > :last-child {
+  margin: 0;
+}
+.body .activity_question.main .img {
+  width: 80px;
+  height: fit-content;
+}
+.body .activity_question.main .button {
+  width: calc(50% - 30px);
+}
+.body .activity_question.popCorrect .close {
+  color: white;
+  border-radius: 99px;
+}
+.body .activity_question.popCorrect .close:hover {
+  color: var(--cG5);
+}
+.body .activity_question.popCorrect .popBody {
+  height: 450px;
+  padding: 0;
+}
+.body .activity_question.popCorrect .popHeader {
+  height: 200px;
+  margin: 0 !important;
+  padding-bottom: 30px;
+  border-radius: 20px 20px 0 0;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1));
+  background: url(../img/bg2.png);
+  background-position: bottom;
+  background-attachment: initial;
+  background-size: cover;
+}
+.body .activity_question.popCorrect .popMain {
+  height: 100%;
+  margin: 0 !important;
+  justify-content: center !important;
+}
+.body .activity_question.popCorrect .popMain .img {
+  width: 30px;
+  height: fit-content;
+}
+.body .activity_question.popCorrect .popFooter {
+  margin: 30px 10px 10px;
+}
+.body .activity_question.popCorrect .popFooter .img {
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
 }

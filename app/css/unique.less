@@ -373,6 +373,31 @@
             .progress { margin-top: 0; padding-top: 0;
                 .bar { height: 5px; margin-left: 10px; background-color: var(--cG5);
                     div { width: 60%; height: 100%; border-radius: 99px; background-color: var(--c1); }}}}}
+    .activity_detail {
+        &.main { height: 100vh; height: var(--app-height); margin: 60px 20px 20px; padding: 0 10px 10px !important; border-radius: 20px; background-color: white;
+            @media @sD, @sT { width: 748px !important; margin: 60px auto 20px; }
+            > * { margin-bottom: 20px; }
+            .img.cover { width: calc(100% + 20px); height: fit-content; margin: -5px 0 10px -10px; }
+            .progress { margin-top: 0; padding-top: 0;
+                .bar { height: 10px; margin-left: 10px; background-color: var(--cG5);
+                    div { width: 60%; height: 100%; border-radius: 99px; background-color: var(--c1); }}
+                .reward { margin-left: 10px;
+                    .img { width: 50px; height: fit-content; margin: 0; }}}}
+    }
+    .activity_questions {
+        .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 20px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .info { height: fit-content !important; min-height: 90px; justify-content: space-between;
+                > * { margin-bottom: 2px; }
+                .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }}
+            .reward { min-width: 90px; height: 90px; position: relative;
+                .img { width: 50px; height: fit-content; }
+                    img { border-radius: 0 10px 10px 0; }
+                .done { width: 80px; height: 80px; border-radius: 20px; position: absolute; background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%); border: 1px solid var(--c1); backdrop-filter: blur(2px); }
+                .over { width: 80px; height: 80px; border-radius: 20px; position: absolute; background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%); border: 1px solid var(--c4); backdrop-filter: blur(2px);
+                    span { transform: rotate(-20deg); }}}
+            .progress { margin-top: 0; padding-top: 0;
+                .bar { height: 5px; margin-left: 10px; background-color: var(--cG5);
+                    div { width: 60%; height: 100%; border-radius: 99px; background-color: var(--c1); }}}}}
     .activity_question {
         &.main { height: 100vh; height: var(--app-height); margin: 60px 20px 20px; padding: 10px !important; border-radius: 20px; background-color: white;
             @media @sD, @sT { width: 748px !important; margin: 60px auto 20px; }
@@ -389,18 +414,4 @@
                 .img { width: 30px; height: fit-content; }}
             .popFooter { margin: 30px 10px 10px;
                 .img { width: 20px; height: 20px; margin-left: 0; }}}}
-    .activity_questions {
-        .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 20px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
-            .info { height: fit-content !important; min-height: 90px; justify-content: space-between;
-                > * { margin-bottom: 2px; }
-                .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }}
-            .reward { min-width: 90px; height: 90px; position: relative;
-                .img { width: 50px; height: fit-content; }
-                    img { border-radius: 0 10px 10px 0; }
-                .done { width: 80px; height: 80px; border-radius: 20px; position: absolute; background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%); border: 1px solid var(--c1); backdrop-filter: blur(2px); }
-                .over { width: 80px; height: 80px; border-radius: 20px; position: absolute; background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%); border: 1px solid var(--c4); backdrop-filter: blur(2px);
-                    span { transform: rotate(-20deg); }}}
-            .progress { margin-top: 0; padding-top: 0;
-                .bar { height: 5px; margin-left: 10px; background-color: var(--cG5);
-                    div { width: 60%; height: 100%; border-radius: 99px; background-color: var(--c1); }}}}}
 }
