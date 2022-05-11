@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="桃園市民卡">
+        <meta name="description" content="桃園市民卡">
+        <meta name="author" content="桃園市民卡">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>桃園市民卡</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/unique.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+    </head>
+    <body class="marginX">
+        <div class="body fixed mobile"> <!-- class: fixed, mobile -->
+            <!-- Loading Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header video">
+                <!-- Left -->
+                <div class="flexH width"></div>
+                <!-- Right -->
+                <a class="flexH" onclick="popExit()">
+                    <span class="fM nowrap white">還剩15秒</span>
+                    <div class="icon">
+                        <i class="fas fa-times fa-sm"></i>
+                    </div>
+                </a>
+            </section>
+            <!-- Main -->
+            <div class="main video">
+                <div class="box">
+                    <iframe src="https://www.youtube.com/embed/UbaXVnVxxGc"></iframe>
+                </div>
+            </div>
+            <!-- Footer -->
+            <section class="footer video">
+                <a class="button rounded" onclick="popPoint()">
+                    <span class="fM">了解更多</span>
+                </a>
+            </section>
+            <!-- Popup (Play) -->
+            <a id="popPlay" class="popup popPlay video" onclick="popBgClose(this)">
+                <div class="icon" onclick="popClose(this)">
+                    <i class="fa-solid fa-circle-play fa-5x"></i>
+                </div>
+            </a>
+            <!-- Popup (Exit) -->
+            <section id="popExit" class="popup popExit video" onclick="popBgClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popMain">
+                        <div class="icon error">
+                            <i class="fa-solid fa-circle-exclamation fa-3x"></i>
+                        </div>
+                        <span class="fL">確定離開影片？</span>
+                        <span class="fM error">影片未看完無法領取獎勵</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded white" href="index.html">
+                            <span class="fM">離開</span>
+                        </a>
+                        <a class="button rounded" onclick="popClose(this)">
+                            <span class="fM">繼續觀看</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (獲得點數) -->
+            <section id="popPoint" class="popPoint popup">
+                <div class="popBody">
+                    <a class="close" href="index.html">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popHeader">
+                        <div class="img"><img src="icon/point-w.svg"></div>
+                    </section>
+                    <section class="popMain">
+                        <span class="fM gray">恭喜您獲得</span>
+                        <div class="flexH">
+                            <div class="img"><img src="icon/point.svg"></div>
+                            <span class="fXL">100</span>
+                        </div>
+                        <span class="fS gray">來自</span>
+                        <span class="fL gray">問答</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded white" href="point_history.html">
+                            <span class="fM">前往點數頁</span>
+                        </a>
+                        <a class="button rounded" href="index.html">
+                            <span class="fM">回首頁</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <!-- Script -->
+        <script src="js/video.js"></script>
+    </body>
+</html>

@@ -92,6 +92,48 @@
 .body .notice.main .records .img img {
   border-radius: 5px;
 }
+.body .video:not(.popup) {
+  background: black !important;
+}
+.body .video.header i {
+  color: white !important;
+}
+.body .video.main {
+  height: 100vh;
+  height: var(--app-height);
+  margin: 60px 0 70px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .video.main {
+    width: 748px !important;
+    margin: 60px auto 70px;
+  }
+}
+.body .video.main .box {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.body .video.main .box iframe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.body .video.footer a {
+  background-color: var(--cG1);
+}
+.body .video.popPlay {
+  display: flex;
+}
+.body .video.popExit .icon {
+  margin: 10px 0 !important;
+}
 .body .index .function {
   margin: 10px 0;
 }
@@ -143,6 +185,9 @@
 }
 .body .index .mission .title .icon {
   margin: 0;
+}
+.body .index .mission .third {
+  color: var(--c1) !important;
 }
 .body .index .tabs {
   margin: 10px 5px 5px;
