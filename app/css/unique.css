@@ -29,6 +29,9 @@
   width: 100vw;
   background: transparent !important;
 }
+.body .errors.header .fa-chevron-left {
+  color: white !important;
+}
 .body .errors.main {
   height: 100vh;
   height: var(--app-height);
