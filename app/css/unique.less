@@ -197,8 +197,19 @@
         .info { margin-bottom: 20px !important; border-radius: 20px; background-color: white; }}
     
     // 點券章
-    .point_send, .point_success {
+    .point_get {
+        &.main { align-items: center;
+            > * { margin-bottom: 50px; }
+            .card { width: calc(100% - 10px); height: 230px; max-width: 384px; border-radius: 20px; position: relative; background-color: white; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); background: url(../img/card-point.png); background-size: cover;
+                .point { top: 20px; left: 20px; position: absolute;
+                    img { height: 26px; margin-right: 5px; }}
+                .code { top: 20px; right: 20px; position: absolute; }
+                .info { bottom: 20px; right: 20px; position: absolute; }}
+        }
+    }
+    .point_send {
         &.main { height: 100vh; height: var(--app-height); margin: 60px 20px 20px; padding: 10px !important; border-radius: 20px; background-color: white;
+            @media @sD, @sT { width: 748px !important; margin: 60px auto 70px; }
             .record {
                 .img { width: 20px; height: fit-content; }
                 .lineV { height: 30px; }}
@@ -209,14 +220,29 @@
             .number a { height: 55px; margin: 2px 1px; }
             .button { margin-top: 30px; }}}
     .point_success {
-        &.main { justify-content: space-between;
-            .title { animation: spark 1s linear infinite;
-                .icon { font-size: 24px; }
-                span { font-size: 36px; }}
-            @keyframes spark { 0% { opacity: 1; } 25% { opacity: 1; } 50% { opacity: 0; }100% { opacity: 1; }}
-            .detail .img { width: 30px; height: fit-content; }
-            .button { margin-top: 5px; }}
-        .background { background-color: transparent !important; }}
+        &.main { height: 100vh; height: var(--app-height); margin: 60px 20px 20px; padding: 0; overflow-y: hidden;
+            @media @sD, @sT { width: 748px !important; margin: 60px auto 70px; }
+            .tabs { height: fit-content; border: 1px solid white; margin-bottom: 20px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+                .tab { padding: 5px 0;
+                    &.active { color: var(--c1); }
+                    &.deactive {
+                        * { color: var(--cG4); }
+                        .img { filter: grayscale(100%); opacity: 0.5; }}
+                    &:not(.active):not(.deactive) {
+                        * { color: var(--c4); }}
+                    > .flexH { height: 20px;
+                        > img { margin-right: 5px; }
+                        .img { width: 20px; height: fit-content; }}}
+                .lineV { height: 40px; background-color: var(--cG4); }}
+            .info { width: calc(100% - 20px); height: 100%; padding: 10px !important; border-radius: 20px; background-color: white; overflow-y: auto;
+                > * { margin-bottom: 50px; }
+                .title { margin-top: 50px; animation: spark 1s linear infinite;
+                    .icon { font-size: 18px; }
+                    span { font-size: 36px; }}
+                @keyframes spark { 0% { opacity: 1; } 25% { opacity: 1; } 50% { opacity: 0; }100% { opacity: 1; }}
+                .detail {
+                    > * { height: 35px; }
+                    .img { width: 30px; height: fit-content; }}}}}
     .point_history {
         &.main { padding: 60px 10px 70px !important;
             .tabs { height: fit-content; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);

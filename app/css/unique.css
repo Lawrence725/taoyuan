@@ -779,8 +779,43 @@
   border-radius: 20px;
   background-color: white;
 }
-.body .point_send.main,
-.body .point_success.main {
+.body .point_get.main {
+  align-items: center;
+}
+.body .point_get.main > * {
+  margin-bottom: 50px;
+}
+.body .point_get.main .card {
+  width: calc(100% - 10px);
+  height: 230px;
+  max-width: 384px;
+  border-radius: 20px;
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
+  background: url(../img/card-point.png);
+  background-size: cover;
+}
+.body .point_get.main .card .point {
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+.body .point_get.main .card .point img {
+  height: 26px;
+  margin-right: 5px;
+}
+.body .point_get.main .card .code {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+}
+.body .point_get.main .card .info {
+  bottom: 20px;
+  right: 20px;
+  position: absolute;
+}
+.body .point_send.main {
   height: 100vh;
   height: var(--app-height);
   margin: 60px 20px 20px;
@@ -788,53 +823,109 @@
   border-radius: 20px;
   background-color: white;
 }
-.body .point_send.main .record .img,
-.body .point_success.main .record .img {
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .point_send.main {
+    width: 748px !important;
+    margin: 60px auto 70px;
+  }
+}
+.body .point_send.main .record .img {
   width: 20px;
   height: fit-content;
 }
-.body .point_send.main .record .lineV,
-.body .point_success.main .record .lineV {
+.body .point_send.main .record .lineV {
   height: 30px;
 }
-.body .point_send.main .info,
-.body .point_success.main .info {
+.body .point_send.main .info {
   margin: 30px 0;
 }
-.body .point_send.main .info .total .img,
-.body .point_success.main .info .total .img {
+.body .point_send.main .info .total .img {
   width: 30px;
   height: fit-content;
 }
-.body .point_send.main .info .hint,
-.body .point_success.main .info .hint {
+.body .point_send.main .info .hint {
   width: calc(100% - 20px);
   margin: 0 10px;
 }
-.body .point_send.main .info .hint .img,
-.body .point_success.main .info .hint .img {
+.body .point_send.main .info .hint .img {
   width: 20px;
   height: fit-content;
 }
-.body .point_send.main .number a,
-.body .point_success.main .number a {
+.body .point_send.main .number a {
   height: 55px;
   margin: 2px 1px;
 }
-.body .point_send.main .button,
-.body .point_success.main .button {
+.body .point_send.main .button {
   margin-top: 30px;
 }
 .body .point_success.main {
-  justify-content: space-between;
+  height: 100vh;
+  height: var(--app-height);
+  margin: 60px 20px 20px;
+  padding: 0;
+  overflow-y: hidden;
 }
-.body .point_success.main .title {
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .point_success.main {
+    width: 748px !important;
+    margin: 60px auto 70px;
+  }
+}
+.body .point_success.main .tabs {
+  height: fit-content;
+  border: 1px solid white;
+  margin-bottom: 20px;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .point_success.main .tabs .tab {
+  padding: 5px 0;
+}
+.body .point_success.main .tabs .tab.active {
+  color: var(--c1);
+}
+.body .point_success.main .tabs .tab.deactive * {
+  color: var(--cG4);
+}
+.body .point_success.main .tabs .tab.deactive .img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.body .point_success.main .tabs .tab:not(.active):not(.deactive) * {
+  color: var(--c4);
+}
+.body .point_success.main .tabs .tab > .flexH {
+  height: 20px;
+}
+.body .point_success.main .tabs .tab > .flexH > img {
+  margin-right: 5px;
+}
+.body .point_success.main .tabs .tab > .flexH .img {
+  width: 20px;
+  height: fit-content;
+}
+.body .point_success.main .tabs .lineV {
+  height: 40px;
+  background-color: var(--cG4);
+}
+.body .point_success.main .info {
+  width: calc(100% - 20px);
+  height: 100%;
+  padding: 10px !important;
+  border-radius: 20px;
+  background-color: white;
+  overflow-y: auto;
+}
+.body .point_success.main .info > * {
+  margin-bottom: 50px;
+}
+.body .point_success.main .info .title {
+  margin-top: 50px;
   animation: spark 1s linear infinite;
 }
-.body .point_success.main .title .icon {
-  font-size: 24px;
+.body .point_success.main .info .title .icon {
+  font-size: 18px;
 }
-.body .point_success.main .title span {
+.body .point_success.main .info .title span {
   font-size: 36px;
 }
 @keyframes spark {
@@ -851,15 +942,12 @@
     opacity: 1;
   }
 }
-.body .point_success.main .detail .img {
+.body .point_success.main .info .detail > * {
+  height: 35px;
+}
+.body .point_success.main .info .detail .img {
   width: 30px;
   height: fit-content;
-}
-.body .point_success.main .button {
-  margin-top: 5px;
-}
-.body .point_success .background {
-  background-color: transparent !important;
 }
 .body .point_history.main {
   padding: 60px 10px 70px !important;
