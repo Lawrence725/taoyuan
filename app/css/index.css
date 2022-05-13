@@ -93,22 +93,22 @@ span {
   background-color: var(--cBg) !important;
 }
 .body .fXXL {
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 .body .fXL {
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 .body .fL {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 .body .fM {
-  font-size: 1em;
+  font-size: 1rem;
 }
 .body .fS {
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 .body .fXS {
-  font-size: 0.6em;
+  font-size: 0.6rem;
 }
 .body .bold {
   font-weight: bold;
