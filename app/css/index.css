@@ -93,22 +93,22 @@ span {
   background-color: var(--cBg) !important;
 }
 .body .fXXL {
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 7vw, 2rem);
 }
 .body .fXL {
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 6vw, 1.8rem);
 }
 .body .fL {
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 5vw, 1.6rem);
 }
 .body .fM {
-  font-size: 1rem;
+  font-size: clamp(1rem, 4vw, 1.4rem);
 }
 .body .fS {
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 3vw, 1.2rem);
 }
 .body .fXS {
-  font-size: 0.6rem;
+  font-size: clamp(0.6rem, 3vw, 1rem);
 }
 .body .bold {
   font-weight: bold;
