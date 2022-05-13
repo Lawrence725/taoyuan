@@ -383,6 +383,7 @@
   margin-right: -5px;
 }
 .body .scan.popCode .popMain {
+  padding: 0 5px 5px;
   margin-bottom: 0 !important;
 }
 .body .scan.popCode .img.profile {
@@ -396,6 +397,9 @@
 .body .scan.popCode .img.profile img {
   border-radius: 999px;
 }
+.body .scan.popCode .refresh {
+  background-color: var(--c3);
+}
 .body .scan.popCode .qrcode {
   padding: 20px 0;
   margin: 10px 0 0;
@@ -403,8 +407,8 @@
   background-color: white;
 }
 .body .scan.popCode .qrcode .img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: fit-content;
 }
 .body .scan.popCode .submit {
   background-color: var(--c1);
