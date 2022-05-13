@@ -1846,3 +1846,169 @@
   height: 20px;
   margin-left: 0;
 }
+.body .popPoint .close {
+  color: white;
+  border-radius: 99px;
+}
+.body .popPoint .close:hover {
+  color: var(--cG5);
+}
+.body .popPoint .popBody {
+  height: 450px;
+  padding: 0;
+}
+.body .popPoint .popHeader {
+  height: 200px;
+  margin: 0 !important;
+  padding-bottom: 30px;
+  border-radius: 20px 20px 0 0;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1));
+  background: url(../img/bg2.png);
+  background-position: bottom;
+  background-attachment: initial;
+  background-size: cover;
+}
+.body .popPoint .popMain {
+  height: 100%;
+  margin: 0 !important;
+  justify-content: center !important;
+}
+.body .popPoint .popMain .img {
+  width: 30px;
+  height: fit-content;
+}
+.body .popPoint .popFooter {
+  margin: 30px 10px 10px;
+}
+.body .popPoint .popFooter .img {
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+}
+.body .popNoQA .close {
+  color: white;
+  border-radius: 99px;
+}
+.body .popNoQA .close:hover {
+  color: var(--cG5);
+}
+.body .popNoQA .popBody {
+  height: 450px;
+  padding: 0;
+}
+.body .popNoQA .popHeader {
+  height: 200px;
+  margin: 0 !important;
+  padding-bottom: 30px;
+  border-radius: 20px 20px 0 0;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1));
+  background: url(../img/bg2.png);
+  background-position: bottom;
+  background-attachment: initial;
+  background-size: cover;
+}
+.body .popNoQA .popMain {
+  height: 100%;
+  margin: 0 !important;
+  justify-content: center !important;
+}
+.body .popNoQA .popMain span {
+  margin: 5px 0;
+}
+.body .popNoQA .popFooter {
+  margin: 30px 10px 20px;
+}
+.body .popNoQA .popFooter .lineV {
+  height: 30px;
+}
+.body .popNoQA .popFooter .img {
+  width: 20px;
+  height: 20px;
+}
+.body .popNotice {
+  width: calc(100% - 22px) !important;
+  height: fit-content;
+  margin: 10px !important;
+  border: 1px solid white;
+  border-radius: 20px;
+  top: -150px;
+  left: 0;
+  position: absolute;
+  display: none;
+  z-index: 8;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(104.62deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
+  animation-name: moveIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.body .popNotice .info {
+  height: fit-content !important;
+  min-height: 90px;
+  justify-content: space-between;
+}
+.body .popNotice .info > * {
+  margin-bottom: 2px;
+}
+.body .popNotice .info .title {
+  padding-left: 5px;
+  border-left: 1px solid var(--c3);
+  color: var(--c3);
+}
+.body .popNotice .reward {
+  min-width: 90px;
+  height: 90px;
+  position: relative;
+}
+.body .popNotice .reward .img {
+  width: 50px;
+  height: fit-content;
+}
+.body .popNotice .reward img {
+  border-radius: 0 10px 10px 0;
+}
+.body .popNotice .progress {
+  margin-top: 0;
+  padding-top: 0;
+}
+.body .popNotice .progress .bar {
+  height: 5px;
+  margin-left: 10px;
+  background-color: var(--cG5);
+}
+.body .popNotice .progress .bar div {
+  width: 60%;
+  height: 100%;
+  border-radius: 99px;
+  background-color: var(--c1);
+}
+.body .moveIn {
+  animation-name: moveIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.body .moveOut {
+  animation-name: moveOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes moveIn {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes moveOut {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -150px;
+  }
+}

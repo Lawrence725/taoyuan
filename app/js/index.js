@@ -19,6 +19,31 @@ function popNoQA() {
     document.getElementById("popNoQA").style.display = "flex";
     document.body.style.overflow = "hidden"; }
 
+// Popup (上方小通知)
+function popNotice() {
+    document.getElementById("popNotice").style.display = "flex";
+    document.getElementById("popNotice").classList.add("moveIn");
+    setTimeout(function (){
+        document.getElementById("popNotice").classList.remove("moveIn");
+    }, 500); }
+
+function popNoticeClose(e) {
+    e.classList.add("moveOut");
+    setTimeout(function (){
+        e.style.display = "none";
+        e.classList.remove("moveOut");
+    }, 500);}
+
+    // var elNotice = document.getElementById('popNotice')
+    // swipedetect(elNotice, function(swipedir){
+    //     // swipedir contains either "none", "left", "right", "up", or "down"
+    //     if (swipedir =='up') {
+    //         elNotice.classList.add("moveOut");
+    //         setTimeout(function (){
+    //             elNotice.style.display = "none";
+    //             elNotice.classList.remove("moveOut");
+    //         }, 500); }})
+
 // Mobile screen fix
 const appHeight = () => {
     const doc = document.documentElement
@@ -80,7 +105,7 @@ function swipedetect(el, callback){
     }, false)}
 var el = document.getElementById('banners')
 swipedetect(el, function(swipedir){
-    // swipedir contains either "none", "left", "right", "top", or "down"
+    // swipedir contains either "none", "left", "right", "up", or "down"
     if (swipedir =='left')
         plusSlides(1)
     if (swipedir =='right')

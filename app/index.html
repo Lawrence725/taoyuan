@@ -31,7 +31,7 @@
             <!-- Main -->
             <section class="main index">
                 <!-- Banner -->
-                <div class="banners">
+                <div id="banners" class="banners">
                     <div class="banner">
                         <img src="img/banner1.png">
                     </div>
@@ -76,7 +76,7 @@
                     </a>
                 </div>
                 <!-- 點數 -->
-                <a class="point flexH between end" href="point_history.html">
+                <!-- <a class="point flexH between end" href="point_history.html">
                     <div class="flexH">
                         <div class="img"><img src="icon/point.svg"></div>
                         <div class="flexV">
@@ -88,7 +88,7 @@
                         <span class="fS">點數到期日</span>
                         <span class="fS">2023/12/31</span>
                     </div>
-                </a>
+                </a> -->
                 <!-- 任務 -->
                 <div class="mission flexH width">
                     <a class="title flexH middle width" href="activity.html">
@@ -119,11 +119,11 @@
                     </a>
                     <span class="secondary">|</span>
                     <a class="tab">
-                        <span>特店優惠</span>
+                        <span>最新優惠</span>
                     </a>
                     <span class="secondary">|</span>
-                    <a class="tab">
-                        <span>桃園券</span>
+                    <a class="tab" onclick="popNotice()">
+                        <span>最新任務</span>
                     </a>
                 </div>
                 <!-- 最新消息 -->
@@ -341,6 +341,18 @@
                     </section>
                 </div>
             </section>
+            <!-- Popup (上方小通知) -->
+            <a id="popNotice" class="popNotice flexH width margin between" href="notice.html" ontouchmove="popNoticeClose(this)">
+                <div class="info flexV padding margin height">
+                    <span class="fL title">標題問答</span>
+                    <span class="fS double">標題說明，成當元育廣主字著起清人化的政病其主著常出臺營、美了今負對的評清第夠物！</span>
+                    <span class="fS gray">2022/01/22  10:00</span>
+                </div>
+                <div class="reward flexV padding margin center middle">
+                    <div class="img"><img src="icon/point.svg"></div>
+                    <span class="fM">100點</span>
+                </div>
+            </a>
         </div>
         <!-- Script -->
         <script src="js/index.js"></script>
