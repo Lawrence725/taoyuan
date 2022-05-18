@@ -1935,6 +1935,9 @@
   width: 30px;
   height: fit-content;
 }
+.body .popPoint .popMain span {
+  text-align: center;
+}
 .body .popPoint .popFooter {
   margin: 30px 10px 10px;
 }
