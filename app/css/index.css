@@ -427,6 +427,39 @@ span {
 .body .flexV.padding.margin.height {
   height: calc(100% - 20px);
 }
+.body .carousels {
+  width: 100vw;
+  margin-left: -10px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .carousels {
+    width: 768px;
+  }
+}
+.body .carousels::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+}
+.body .carousels > .flexH {
+  margin: auto;
+  align-items: stretch;
+}
+.body .carousels .carousel {
+  margin: 2.5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.body .carousels .carousel:first-child {
+  margin-left: 20px;
+}
+.body .carousels .carousel:last-child {
+  margin-right: 20px;
+}
 .body .grid {
   width: calc(100% - 10px);
   margin: 5px;

@@ -28,7 +28,8 @@
                 .dot { min-width: 10px; min-height: 10px; margin-right: 10px; border-radius: 99px;
                     &.active { background-color: var(--cRed); }}
                 .img { width: 100px; height: fit-content;
-                    img { border-radius: 5px; }}}}}
+                    img { border-radius: 5px; }}
+                .lineH:last-child { display: none; }}}}
     .video {
         &:not(.popup) { background: black !important; }
         &.header i { color: white !important; }
@@ -42,6 +43,7 @@
     
     // Main Pages
     .index {
+        .lineH { width: calc(100% - 20px); margin: 10px; }
         .function { margin: 10px 0;
             .fM { margin: 5px 0; }
             .fS { width: 70px; padding: 2px; border: 1px solid var(--c2); border-radius: 99px; line-height: 16px; text-align: center; }}
@@ -53,6 +55,8 @@
                 span { margin: 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
                 .icon { margin: 0; }}
             .third { color: var(--c1) !important; }}
+        .missions { min-height: 80px;
+            .carousel { width: 20vw; }}
         .tabs { margin: 10px 5px 5px; }
         .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }
@@ -262,10 +266,13 @@
                 .dropdown { width: fit-content;
                     select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
             .records { max-height: 100%; overflow-y: auto;
-                .img { width: 20px; height: fit-content;}}}
+                .img { width: 20px; height: fit-content;}
+                .lineH:last-child { display: none; }
+                .record .flexV.end .fM.gray { width: min-content; margin-left: 5px; text-align: right; }}}
         &.popTime {
-            .tabs { height: 34px;
-                .tab:hover:not(.active) { background-color: var(--cBg); }}}}
+            .popMain { padding: 0;
+                .tabs { height: 34px;
+                    .tab:hover:not(.active) { background-color: var(--cBg); }}}}}
     .tickets {
         &.main { padding: 60px 10px 70px !important;
             .tabs { height: 30px; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
@@ -362,8 +369,14 @@
             .detail { margin: 10px 0;
                 .heading { margin-bottom: 5px; }}
         }
-        &.footer { box-shadow: none; } 
-    }
+        &.footer { box-shadow: none; } &.popCode {
+            .popMain { padding: 0 5px 5px; margin-bottom: 0 !important; }
+            .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px; background-image: url(../img/profile-d.png); background-size: cover;
+                img { border-radius: 10px; }}
+            .refresh { background-color: var(--c3); }
+            .qrcode { padding: 20px 0; margin: 10px 0 0; border-radius: 20px; background-color: white; 
+                .img { width: 250px; height: fit-content; }}
+            .submit { background-color: var(--c1); margin-right: -5px; }}}
 
     // 特店/任務
     .store_register {

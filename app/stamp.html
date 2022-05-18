@@ -25,7 +25,7 @@
                     <i class="fa-solid fa-chevron-left fa-lg"></i>
                 </a>
                 <span class="fL">集章</span>
-                <a class="icon iconButton third">
+                <a class="icon iconButton third" onclick="popHistory()">
                     <i class="fa-solid fa-clock-rotate-left fa-lg"></i>
                 </a>
             </section>
@@ -152,10 +152,63 @@
             </section>
             <!-- Footer -->
             <section class="footer ticket">
-                <a class="button rounded" href="scan.html">
+                <a class="button rounded" onclick="popCode()">
                     <span class="fM">現場使用</span>
                 </a>
             </section>
+            <!-- Popup (Code) -->
+            <section id="popCode" class="popup ticket popCode" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fL center">集章條碼</span>
+                    </section>
+                    <section class="popMain">
+                        <div class="flexH">
+                                <div class="img profile"><img src="img/ticket-profile.png"></div>
+                                <div class="flexV width">
+                                    <span class="fM">餐廳名稱</span>
+                                    <span class="fL third">標題集章</span>
+                                </div>
+                        </div>
+                        <div class="qrcode flexH width middle">
+                            <div class="img"><img src="img/qrcode.png"></div>
+                        </div>
+                    </section>
+                </div>
+            </section>
         </div>
+        <!-- Popup (History) -->
+        <section id="popHistory" class="popup ticket popHistory" onclick="popClose(this)">
+            <div class="popBody">
+                <a class="close" onclick="popClose(this)">
+                    <i class="fas fa-times"></i>
+                </a>
+                <section class="popHeader">
+                    <!-- Left -->
+                    <div class="flexH width">
+                        <span class="fL">Title</span>
+                    </div>
+                    <span class="fL">Title</span>
+                    <!-- Right -->
+                    <div class="flexH width right"></div>
+                </section>
+                <section class="popMain">
+                    <span class="fL">Message1</span>
+                    <span class="fM gray">Message2</span>
+                </section>
+                <section class="popFooter">
+                    <a class="button cancel white" onclick="popClose(this)">
+                        <span class="fM">Cancel</span>
+                    </a>
+                    <a class="button submit" onclick="popClose(this)">
+                        <span class="fM">Submit</span>
+                    </a>
+                </section>
+            </div>
+        </section>
+    </div>
+        <!-- Script -->
+        <script src="js/stamp.js"></script>
     </body>
 </html>

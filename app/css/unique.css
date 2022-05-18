@@ -95,6 +95,9 @@
 .body .notice.main .records .img img {
   border-radius: 5px;
 }
+.body .notice.main .records .lineH:last-child {
+  display: none;
+}
 .body .video:not(.popup) {
   background: black !important;
 }
@@ -136,6 +139,10 @@
 }
 .body .video.popExit .icon {
   margin: 10px 0 !important;
+}
+.body .index .lineH {
+  width: calc(100% - 20px);
+  margin: 10px;
 }
 .body .index .function {
   margin: 10px 0;
@@ -191,6 +198,12 @@
 }
 .body .index .mission .third {
   color: var(--c1) !important;
+}
+.body .index .missions {
+  min-height: 80px;
+}
+.body .index .missions .carousel {
+  width: 20vw;
 }
 .body .index .tabs {
   margin: 10px 5px 5px;
@@ -1023,10 +1036,21 @@
   width: 20px;
   height: fit-content;
 }
-.body .point_history.popTime .tabs {
+.body .point_history.main .records .lineH:last-child {
+  display: none;
+}
+.body .point_history.main .records .record .flexV.end .fM.gray {
+  width: min-content;
+  margin-left: 5px;
+  text-align: right;
+}
+.body .point_history.popTime .popMain {
+  padding: 0;
+}
+.body .point_history.popTime .popMain .tabs {
   height: 34px;
 }
-.body .point_history.popTime .tabs .tab:hover:not(.active) {
+.body .point_history.popTime .popMain .tabs .tab:hover:not(.active) {
   background-color: var(--cBg);
 }
 .body .tickets.main {
@@ -1496,6 +1520,38 @@
 }
 .body .ticket.footer {
   box-shadow: none;
+}
+.body .ticket.popCode .popMain {
+  padding: 0 5px 5px;
+  margin-bottom: 0 !important;
+}
+.body .ticket.popCode .img.profile {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  margin-right: 10px;
+  background-image: url(../img/profile-d.png);
+  background-size: cover;
+}
+.body .ticket.popCode .img.profile img {
+  border-radius: 10px;
+}
+.body .ticket.popCode .refresh {
+  background-color: var(--c3);
+}
+.body .ticket.popCode .qrcode {
+  padding: 20px 0;
+  margin: 10px 0 0;
+  border-radius: 20px;
+  background-color: white;
+}
+.body .ticket.popCode .qrcode .img {
+  width: 250px;
+  height: fit-content;
+}
+.body .ticket.popCode .submit {
+  background-color: var(--c1);
+  margin-right: -5px;
 }
 .body .store_register.main {
   max-height: calc(100vh - 60px);
