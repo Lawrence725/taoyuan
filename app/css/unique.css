@@ -6,6 +6,12 @@
   line-height: 0.04167em;
   vertical-align: -0.125em;
 }
+.body .listEmpty {
+  min-height: 100%;
+}
+.body .listEmpty .icon {
+  margin-bottom: 50px;
+}
 .body .landing {
   height: 100vh;
   height: var(--app-height);
