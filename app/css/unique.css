@@ -1077,8 +1077,9 @@
   display: none;
 }
 .body .point_history.main .records .record .flexV.end .fM.gray {
-  width: min-content;
-  margin-left: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   text-align: right;
 }
 .body .point_history.popTime .popMain {
