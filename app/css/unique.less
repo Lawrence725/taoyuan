@@ -43,19 +43,37 @@
         &.footer a { background-color: var(--cG1); }
         &.popPlay { display: flex; }
         &.popExit .icon { margin: 10px 0 !important; }}
+    .news {
+        &.main { padding: 60px 10px 70px !important; overflow-y: hidden;
+            .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05);
+                @media @sD, @sT { width: 768px !important; }
+                .lineV { height: 20px; background-color: var(--c2); }
+                .dropdown { width: fit-content;
+                    select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
+            .list { max-height: 100%; overflow-y: auto;
+                .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+                    .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }
+                    .img { min-width: 120px; height: 100%; margin: 0; }
+                        img { border-radius: 0 10px 10px 0; object-fit: cover; }}}}}
+    .new {
+        &.main { height: 100vh; height: var(--app-height); margin: 60px 20px 20px; padding: 0 10px 10px !important; border-radius: 20px; background-color: white;
+            @media @sD, @sT { width: 748px !important; margin: 60px auto 20px; }
+            > * { margin-bottom: 20px; }
+            .img.cover { width: calc(100% + 20px); height: fit-content; margin: -5px 0 10px -10px; }}}
     
     // Main Pages
     .index {
+        &.main { align-items: center; }
         .lineH { width: calc(100% - 20px); margin: 10px; }
         .function { margin: 10px 0;
             .fM { margin: 5px 0; }
             .fS { width: 70px; padding: 2px; border: 1px solid var(--c2); border-radius: 99px; line-height: 16px; text-align: center; }}
         .point { width: calc(100% - 40px); padding: 10px; margin: 10px; border: 1px solid var(--c1); border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
             .img { width: 50px; height: fit-content; }}
-        .mission { width: calc(100% - 42px) !important; padding: 20px 10px 45px; margin: 15px 10px 10px; border: 1px solid var(--cG4); border-radius: 20px !important; position: relative;
+        .mission { width: calc(100% - 42px) !important; padding: 20px 10px 55px; margin: 15px 10px 10px; border: 1px solid var(--cG4); border-radius: 20px !important; position: relative;
             .fM { margin-top: 5px; }
-            .title { width: calc(100% - 20px) !important; bottom: 10px; position: absolute; text-align: center;
-                span { margin: 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+            .title { width: fit-content !important; border-bottom: 2px solid var(--c1); border-radius: 0; left: 50%; transform: translate(-50%, 0); bottom: 15px; position: absolute; text-align: center;
+                span { margin: 0; }
                 .icon { margin: 0; }}
             .third { color: var(--c1) !important; }}
         .missions { min-height: 80px;
@@ -65,6 +83,7 @@
             .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }
             .img { min-width: 120px; height: 100%; margin: 0; }
                 img { border-radius: 0 10px 10px 0; object-fit: cover; }}
+        .more {  }
         .discounts { width: 100vw; margin: 10px 0 10px -10px;
             > .scroll { overflow-x: auto;
                 &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }}
@@ -432,8 +451,7 @@
                 .bar { height: 10px; margin-left: 10px; background-color: var(--cG5);
                     div { width: 60%; height: 100%; border-radius: 99px; background-color: var(--c1); }}
                 .reward { margin-left: 10px;
-                    .img { width: 50px; height: fit-content; margin: 0; }}}}
-    }
+                    .img { width: 50px; height: fit-content; margin: 0; }}}}}
     .activity_questions {
         .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 20px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .info { height: fit-content !important; min-height: 90px; justify-content: space-between;

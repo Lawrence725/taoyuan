@@ -146,6 +146,86 @@
 .body .video.popExit .icon {
   margin: 10px 0 !important;
 }
+.body .news.main {
+  padding: 60px 10px 70px !important;
+  overflow-y: hidden;
+}
+.body .news.main .filter {
+  width: 100vw;
+  min-height: 40px;
+  margin-left: -10px;
+  border-radius: 0;
+  box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05);
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .news.main .filter {
+    width: 768px !important;
+  }
+}
+.body .news.main .filter .lineV {
+  height: 20px;
+  background-color: var(--c2);
+}
+.body .news.main .filter .dropdown {
+  width: fit-content;
+}
+.body .news.main .filter .dropdown select {
+  width: fit-content;
+  padding: 0 30px 0 10px;
+  background-color: transparent;
+}
+.body .news.main .list {
+  max-height: 100%;
+  overflow-y: auto;
+}
+.body .news.main .list .news {
+  width: calc(100% - 22px) !important;
+  height: fit-content;
+  margin: 5px 10px !important;
+  border: 1px solid white;
+  border-radius: 15px;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .news.main .list .news .title {
+  padding-left: 5px;
+  border-left: 1px solid var(--c3);
+  color: var(--c3);
+}
+.body .news.main .list .news .img {
+  min-width: 120px;
+  height: 100%;
+  margin: 0;
+}
+.body .news.main .list .news img {
+  border-radius: 0 10px 10px 0;
+  object-fit: cover;
+}
+.body .new.main {
+  height: 100vh;
+  height: var(--app-height);
+  margin: 60px 20px 20px;
+  padding: 0 10px 10px !important;
+  border-radius: 20px;
+  background-color: white;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .new.main {
+    width: 748px !important;
+    margin: 60px auto 20px;
+  }
+}
+.body .new.main > * {
+  margin-bottom: 20px;
+}
+.body .new.main .img.cover {
+  width: calc(100% + 20px);
+  height: fit-content;
+  margin: -5px 0 10px -10px;
+}
+.body .index.main {
+  align-items: center;
+}
 .body .index .lineH {
   width: calc(100% - 20px);
   margin: 10px;
@@ -179,7 +259,7 @@
 }
 .body .index .mission {
   width: calc(100% - 42px) !important;
-  padding: 20px 10px 45px;
+  padding: 20px 10px 55px;
   margin: 15px 10px 10px;
   border: 1px solid var(--cG4);
   border-radius: 20px !important;
@@ -189,15 +269,17 @@
   margin-top: 5px;
 }
 .body .index .mission .title {
-  width: calc(100% - 20px) !important;
-  bottom: 10px;
+  width: fit-content !important;
+  border-bottom: 2px solid var(--c1);
+  border-radius: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 15px;
   position: absolute;
   text-align: center;
 }
 .body .index .mission .title span {
   margin: 0;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
 }
 .body .index .mission .title .icon {
   margin: 0;
