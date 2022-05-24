@@ -382,6 +382,7 @@
             .sticker { margin: 20px 0;
                 img { width: calc(20% - 10px); margin: 5px; border-radius: 10px;
                     &.none { filter: grayscale(100%); opacity: 0.25; }}}
+            .dashH { margin: 10px 0; }
             .progress { margin: 20px 0; padding-top: 0;
                 img { width: 50px; height: 50px; margin-right: 10px; border-radius: 5px; object-fit: cover; }
                 .bar { height: 10px; margin-left: 10px; background-color: var(--cG5);
@@ -399,7 +400,9 @@
             .detail { margin: 10px 0;
                 .heading { margin-bottom: 5px; }}
         }
-        &.footer { box-shadow: none; }
+        &.footer { box-shadow: none;
+            .icon.primary { margin-left: 0;
+                i { color: var(--c1) !important; }}}
         &.popCode {
             .popMain { padding: 0 5px 5px; margin-bottom: 0 !important; }
             .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px; background-image: url(../img/profile-d.png); background-size: cover;

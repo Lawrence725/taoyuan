@@ -1561,6 +1561,9 @@
   filter: grayscale(100%);
   opacity: 0.25;
 }
+.body .ticket.main .dashH {
+  margin: 10px 0;
+}
 .body .ticket.main .progress {
   margin: 20px 0;
   padding-top: 0;
@@ -1646,6 +1649,12 @@
 }
 .body .ticket.footer {
   box-shadow: none;
+}
+.body .ticket.footer .icon.primary {
+  margin-left: 0;
+}
+.body .ticket.footer .icon.primary i {
+  color: var(--c1) !important;
 }
 .body .ticket.popCode .popMain {
   padding: 0 5px 5px;
