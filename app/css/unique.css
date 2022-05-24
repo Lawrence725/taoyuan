@@ -1634,7 +1634,7 @@
 .body .ticket.main .gifts .gift img.stamp {
   width: 30px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-right: 5px;
   object-fit: cover;
 }
@@ -1678,6 +1678,22 @@
 .body .ticket.popCode .submit {
   background-color: var(--c1);
   margin-right: -5px;
+}
+.body .ticket.popHistory .popMain {
+  padding: 0 10px;
+}
+.body .ticket.popHistory .popMain .record:not(:first-child) {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--cG5);
+  border-radius: 0;
+}
+.body .ticket.popHistory .popMain img.stamp {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 5px;
+  object-fit: cover;
 }
 .body .store_register.main {
   max-height: calc(100vh - 60px);

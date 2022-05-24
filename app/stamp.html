@@ -177,36 +177,59 @@
                     </section>
                 </div>
             </section>
+            <!-- Popup (History) -->
+            <section id="popHistory" class="popup ticket popHistory" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popHeader">
+                        <span class="fL primary center">歷史紀錄</span>
+                    </section>
+                    <section class="popMain">
+                        <div class="record flexH width between">
+                            <div class="flexV">
+                                <span class="fM">獎品兌換</span>
+                                <span class="fS gray">標題獎品1</span>
+                            </div>
+                            <div class="flexV end">
+                                <div class="flexH">
+                                    <img class="stamp" src="img/stamp.png">
+                                    <span class="fM bold primary">滿3個</span>
+                                </div>
+                                <span class="fS gray">2022/01/11</span>
+                            </div>
+                        </div>
+                        <div class="record flexH width between">
+                            <div class="flexV">
+                                <span class="fM">消費回饋</span>
+                                <span class="fS gray">快一點餐廳</span>
+                            </div>
+                            <div class="flexV end">
+                                <div class="flexH">
+                                    <img class="stamp" src="img/stamp.png">
+                                    <span class="fM bold success">+1</span>
+                                </div>
+                                <span class="fS gray">2022/01/11</span>
+                            </div>
+                        </div>
+                        <div class="record flexH width between">
+                            <div class="flexV">
+                                <span class="fM">消費回饋</span>
+                                <span class="fS gray">快一點餐廳</span>
+                            </div>
+                            <div class="flexV end">
+                                <div class="flexH">
+                                    <img class="stamp" src="img/stamp.png">
+                                    <span class="fM bold success">+1</span>
+                                </div>
+                                <span class="fS gray">2022/01/11</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
         </div>
-        <!-- Popup (History) -->
-        <section id="popHistory" class="popup ticket popHistory" onclick="popClose(this)">
-            <div class="popBody">
-                <a class="close" onclick="popClose(this)">
-                    <i class="fas fa-times"></i>
-                </a>
-                <section class="popHeader">
-                    <!-- Left -->
-                    <div class="flexH width">
-                        <span class="fL">Title</span>
-                    </div>
-                    <span class="fL">Title</span>
-                    <!-- Right -->
-                    <div class="flexH width right"></div>
-                </section>
-                <section class="popMain">
-                    <span class="fL">Message1</span>
-                    <span class="fM gray">Message2</span>
-                </section>
-                <section class="popFooter">
-                    <a class="button cancel white" onclick="popClose(this)">
-                        <span class="fM">Cancel</span>
-                    </a>
-                    <a class="button submit" onclick="popClose(this)">
-                        <span class="fM">Submit</span>
-                    </a>
-                </section>
-            </div>
-        </section>
     </div>
         <!-- Script -->
         <script src="js/stamp.js"></script>

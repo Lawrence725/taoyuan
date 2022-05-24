@@ -395,18 +395,23 @@
                     &:last-child { margin-right: 10px; }
                     .checked { width: calc(100% - 2px); height: 148px; border: 1px solid var(--c1); border-radius: 15px 15px 0 0; top: 0; left: 0; position: absolute; backdrop-filter: blur(2px); background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%); z-index: 2; }
                     img.photo { width: 150px; height: 150px; border-radius: 15px 15px 0 0; object-fit: cover; }
-                    img.stamp { width: 30px; height: 30px; border-radius: 10px; margin-right: 5px; object-fit: cover; }}}
+                    img.stamp { width: 30px; height: 30px; border-radius: 5px; margin-right: 5px; object-fit: cover; }}}
             .detail { margin: 10px 0;
                 .heading { margin-bottom: 5px; }}
         }
-        &.footer { box-shadow: none; } &.popCode {
+        &.footer { box-shadow: none; }
+        &.popCode {
             .popMain { padding: 0 5px 5px; margin-bottom: 0 !important; }
             .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px; background-image: url(../img/profile-d.png); background-size: cover;
                 img { border-radius: 10px; }}
             .refresh { background-color: var(--c3); }
             .qrcode { padding: 20px 0; margin: 10px 0 0; border-radius: 20px; background-color: white; 
                 .img { width: 250px; height: fit-content; }}
-            .submit { background-color: var(--c1); margin-right: -5px; }}}
+            .submit { background-color: var(--c1); margin-right: -5px; }}
+        &.popHistory {
+            .popMain { padding: 0 10px;
+                .record:not(:first-child) { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--cG5); border-radius: 0; }
+                img.stamp { width: 30px; height: 30px; border-radius: 5px; margin-right: 5px; object-fit: cover; }}}}
 
     // 特店/任務
     .store_register {
