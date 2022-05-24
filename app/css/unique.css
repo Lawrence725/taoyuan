@@ -1079,7 +1079,13 @@
   }
 }
 .body .point_success.main .info .detail > * {
-  height: 35px;
+  min-height: 35px;
+}
+.body .point_success.main .info .detail .gray {
+  white-space: nowrap;
+}
+.body .point_success.main .info .detail .fL:not(.gray) {
+  text-align: right;
 }
 .body .point_success.main .info .detail .img {
   width: 30px;

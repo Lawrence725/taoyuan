@@ -274,7 +274,9 @@
                     span { font-size: 36px; }}
                 @keyframes spark { 0% { opacity: 1; } 25% { opacity: 1; } 50% { opacity: 0; }100% { opacity: 1; }}
                 .detail {
-                    > * { height: 35px; }
+                    > * { min-height: 35px; }
+                    .gray { white-space: nowrap; }
+                    .fL:not(.gray) { text-align: right; }
                     .img { width: 30px; height: fit-content; }}}}}
     .point_history {
         &.main { padding: 60px 10px 70px !important;
@@ -513,7 +515,6 @@
             .img { width: 20px; height: 20px; }}}
 
     .popNotice { width: calc(100% - 22px) !important; height: fit-content; margin: 10px !important; border: 1px solid white; border-radius: 20px; top: -150px; left: 0; position: absolute; display: none; z-index: 8; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 100%); animation-name: moveIn; animation-duration: 0.5s; animation-fill-mode: forwards;
-        
         .info { height: fit-content !important; min-height: 90px; justify-content: space-between;
             > * { margin-bottom: 2px; }
             .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }}
