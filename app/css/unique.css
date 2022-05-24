@@ -12,6 +12,143 @@
 .body .listEmpty .icon {
   margin-bottom: 50px;
 }
+.body .ticketStamp {
+  width: calc(100% - 40px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  position: relative;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .ticketStamp.ticket .title,
+.body .ticketStamp.ticket .type span,
+.body .ticketStamp.ticket .add i {
+  color: var(--c1);
+}
+.body .ticketStamp.ticket .typeS,
+.body .ticketStamp.ticket .stampCount,
+.body .ticketStamp.ticket .done {
+  display: none;
+}
+.body .ticketStamp.stamp .title,
+.body .ticketStamp.stamp .type span,
+.body .ticketStamp.stamp .add i {
+  color: var(--c3);
+}
+.body .ticketStamp.stamp .typeT,
+.body .ticketStamp.stamp .used {
+  display: none;
+}
+.body .ticketStamp .profile {
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: absolute;
+  top: 75px;
+  z-index: 3;
+}
+.body .ticketStamp .profile img {
+  border-radius: 10px;
+}
+.body .ticketStamp .cover {
+  height: 100px;
+  margin-bottom: 10px;
+  position: relative;
+  background-image: url(../img/ticket-cover.png);
+  background-size: cover;
+}
+.body .ticketStamp .cover .layer {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.body .ticketStamp .cover .heat {
+  width: fit-content;
+  margin: 5px;
+  padding: 2.5px 10px;
+  border-radius: 99px;
+  background-color: white;
+  z-index: 1;
+}
+.body .ticketStamp .cover .used {
+  width: calc(100% - 2px);
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
+  border: 1px solid var(--c1);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticketStamp .cover .done {
+  width: calc(100% - 2px);
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
+  border: 1px solid var(--c3);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(92, 184, 178, 0.8) 0%, rgba(92, 184, 178, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticketStamp .cover .outdated {
+  width: calc(100% - 2px);
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
+  border: 1px solid var(--c4);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticketStamp .cover .outdated span {
+  transform: rotate(-15deg);
+}
+.body .ticketStamp .type {
+  height: 20px;
+  padding: 2.5px 10px;
+  border: 1px solid var(--cG5);
+  border-radius: 99px;
+}
+.body .ticketStamp .type .img {
+  height: fit-content;
+  margin: 0 0 0 5px;
+}
+.body .ticketStamp .type .img.imgT {
+  width: 18px;
+}
+.body .ticketStamp .type .img.imgS {
+  width: 14px;
+}
+.body .ticketStamp .stampCount {
+  height: 20px;
+  padding: 2.5px 10px;
+  border-radius: 99px;
+  background-color: var(--c3);
+}
+.body .ticketStamp .add {
+  height: 20px;
+  padding: 2.5px 5px 2.5px 10px;
+  border-radius: 99px;
+}
+.body .ticketStamp .add .icon {
+  margin: 0 0 0 1px;
+}
 .body .landing {
   height: 100vh;
   height: var(--app-height);
@@ -955,9 +1092,8 @@
   height: 100vh;
   height: var(--app-height);
   margin: 60px 20px 20px;
-  padding: 10px !important;
-  border-radius: 20px;
-  background-color: white;
+  padding: 0px;
+  overflow-y: hidden;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .point_send.main {
@@ -965,33 +1101,77 @@
     margin: 60px auto 70px;
   }
 }
-.body .point_send.main .record .img {
+.body .point_send.main .tabs {
+  width: calc(100% - 8px);
+  height: fit-content;
+  border: 1px solid white;
+  margin: 0 0 20px;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .point_send.main .tabs .tab {
+  padding: 5px 0;
+}
+.body .point_send.main .tabs .tab.active {
+  color: var(--c1);
+}
+.body .point_send.main .tabs .tab.deactive * {
+  color: var(--cG4);
+}
+.body .point_send.main .tabs .tab.deactive .img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.body .point_send.main .tabs .tab.deactive img {
+  filter: grayscale(100%);
+}
+.body .point_send.main .tabs .tab:not(.active):not(.deactive) * {
+  color: var(--c4);
+}
+.body .point_send.main .tabs .tab:not(.active):not(.deactive) img {
+  filter: grayscale(100%);
+}
+.body .point_send.main .tabs .tab > .flexH {
+  height: 20px;
+}
+.body .point_send.main .tabs .tab > .flexH > img {
+  margin-right: 5px;
+}
+.body .point_send.main .tabs .tab > .flexH .img {
   width: 20px;
   height: fit-content;
 }
-.body .point_send.main .record .lineV {
-  height: 30px;
+.body .point_send.main .tabs .lineV {
+  height: 40px;
+  background-color: var(--cG4);
 }
 .body .point_send.main .info {
-  margin: 30px 0;
+  width: calc(100% - 20px);
+  height: 100%;
+  padding: 10px !important;
+  border-radius: 20px;
+  background-color: white;
+  overflow-y: auto;
 }
-.body .point_send.main .info .total .img {
+.body .point_send.main .info .content {
+  margin-bottom: 30px;
+}
+.body .point_send.main .info .content .total .img {
   width: 30px;
   height: fit-content;
 }
-.body .point_send.main .info .hint {
+.body .point_send.main .info .content .hint {
   width: calc(100% - 20px);
   margin: 0 10px;
 }
-.body .point_send.main .info .hint .img {
+.body .point_send.main .info .content .hint .img {
   width: 20px;
   height: fit-content;
 }
-.body .point_send.main .number a {
+.body .point_send.main .info .number a {
   height: 55px;
   margin: 2px 1px;
 }
-.body .point_send.main .button {
+.body .point_send.main .info .button {
   margin-top: 30px;
 }
 .body .point_success.main {
@@ -1255,143 +1435,6 @@
 }
 .body .tickets.main .list {
   overflow-y: auto;
-}
-.body .tickets.main .list .item {
-  width: calc(100% - 40px);
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #FFFFFF;
-  border-radius: 20px;
-  position: relative;
-  backdrop-filter: blur(30px);
-  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
-}
-.body .tickets.main .list .item.ticket .title,
-.body .tickets.main .list .item.ticket .type span,
-.body .tickets.main .list .item.ticket .add i {
-  color: var(--c1);
-}
-.body .tickets.main .list .item.ticket .typeS,
-.body .tickets.main .list .item.ticket .stampCount,
-.body .tickets.main .list .item.ticket .done {
-  display: none;
-}
-.body .tickets.main .list .item.stamp .title,
-.body .tickets.main .list .item.stamp .type span,
-.body .tickets.main .list .item.stamp .add i {
-  color: var(--c3);
-}
-.body .tickets.main .list .item.stamp .typeT,
-.body .tickets.main .list .item.stamp .used {
-  display: none;
-}
-.body .tickets.main .list .item .profile {
-  width: 60px;
-  height: 60px;
-  border: 1px solid white;
-  border-radius: 10px;
-  position: absolute;
-  top: 75px;
-  z-index: 3;
-}
-.body .tickets.main .list .item .profile img {
-  border-radius: 10px;
-}
-.body .tickets.main .list .item .cover {
-  height: 100px;
-  margin-bottom: 10px;
-  position: relative;
-  background-image: url(../img/ticket-cover.png);
-  background-size: cover;
-}
-.body .tickets.main .list .item .cover .layer {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.body .tickets.main .list .item .cover .heat {
-  width: fit-content;
-  margin: 5px;
-  padding: 2.5px 10px;
-  border-radius: 99px;
-  background-color: white;
-  z-index: 1;
-}
-.body .tickets.main .list .item .cover .used {
-  width: calc(100% - 2px);
-  height: calc(100% - 32px);
-  padding-bottom: 30px;
-  border: 1px solid var(--c1);
-  border-radius: 10px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  backdrop-filter: blur(2px);
-  background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%);
-  z-index: 2;
-}
-.body .tickets.main .list .item .cover .done {
-  width: calc(100% - 2px);
-  height: calc(100% - 32px);
-  padding-bottom: 30px;
-  border: 1px solid var(--c3);
-  border-radius: 10px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  backdrop-filter: blur(2px);
-  background: linear-gradient(104.62deg, rgba(92, 184, 178, 0.8) 0%, rgba(92, 184, 178, 0.5) 100%);
-  z-index: 2;
-}
-.body .tickets.main .list .item .cover .outdated {
-  width: calc(100% - 2px);
-  height: calc(100% - 32px);
-  padding-bottom: 30px;
-  border: 1px solid var(--c4);
-  border-radius: 10px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  backdrop-filter: blur(2px);
-  background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%);
-  z-index: 2;
-}
-.body .tickets.main .list .item .cover .outdated span {
-  transform: rotate(-15deg);
-}
-.body .tickets.main .list .item .type {
-  height: 20px;
-  padding: 2.5px 10px;
-  border: 1px solid var(--cG5);
-  border-radius: 99px;
-}
-.body .tickets.main .list .item .type .img {
-  height: fit-content;
-  margin: 0 0 0 5px;
-}
-.body .tickets.main .list .item .type .img.imgT {
-  width: 18px;
-}
-.body .tickets.main .list .item .type .img.imgS {
-  width: 14px;
-}
-.body .tickets.main .list .item .stampCount {
-  height: 20px;
-  padding: 2.5px 10px;
-  border-radius: 99px;
-  background-color: var(--c3);
-}
-.body .tickets.main .list .item .add {
-  height: 20px;
-  padding: 2.5px 5px 2.5px 10px;
-  border-radius: 99px;
-}
-.body .tickets.main .list .item .add .icon {
-  margin: 0 0 0 1px;
 }
 .body .ticket.main {
   height: 100vh;
@@ -1703,6 +1746,290 @@
   border-radius: 5px;
   margin-right: 5px;
   object-fit: cover;
+}
+.body .ticket_scan.main {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  padding: 60px 0 0 !important;
+  position: relative;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .ticket_scan.main {
+    width: 768px !important;
+  }
+}
+.body .ticket_scan.main::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+}
+.body .ticket_scan.main canvas {
+  width: 100% !important;
+  height: calc(100vh - 60px) !important;
+  position: absolute;
+}
+.body .ticket_scan.main .input {
+  width: calc(100% - 70px);
+  padding: 0 5px 0 15px;
+  border: 1px solid #FFFFFF;
+  top: 80px;
+  left: 20px;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  backdrop-filter: blur(30px);
+}
+.body .ticket_scan.main .input ::placeholder {
+  color: var(--c4);
+}
+.body .ticket_scan.main .item {
+  width: calc(100vw - 60px);
+  left: 20px;
+  bottom: 20px;
+  position: absolute;
+  z-index: 2;
+}
+.body .ticket_scan.main .item .itemS {
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  backdrop-filter: blur(30px);
+}
+.body .ticket_scan.main .item .itemS img.photo {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.body .ticket_scan.main .item .itemS img.stamp {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.body .ticket_scan.main .item .itemT {
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  position: relative;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .ticket_scan.main .item .itemT.ticket .title,
+.body .ticket_scan.main .item .itemT.ticket .type span,
+.body .ticket_scan.main .item .itemT.ticket .add i {
+  color: var(--c1);
+}
+.body .ticket_scan.main .item .itemT.ticket .typeS,
+.body .ticket_scan.main .item .itemT.ticket .stampCount,
+.body .ticket_scan.main .item .itemT.ticket .done {
+  display: none;
+}
+.body .ticket_scan.main .item .itemT.stamp .title,
+.body .ticket_scan.main .item .itemT.stamp .type span,
+.body .ticket_scan.main .item .itemT.stamp .add i {
+  color: var(--c3);
+}
+.body .ticket_scan.main .item .itemT.stamp .typeT,
+.body .ticket_scan.main .item .itemT.stamp .used {
+  display: none;
+}
+.body .ticket_scan.main .item .itemT .profile {
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: absolute;
+  top: 75px;
+  z-index: 3;
+}
+.body .ticket_scan.main .item .itemT .profile img {
+  border-radius: 10px;
+}
+.body .ticket_scan.main .item .itemT .cover {
+  height: 100px;
+  margin-bottom: 10px;
+  position: relative;
+  background-image: url(../img/ticket-cover.png);
+  background-size: cover;
+}
+.body .ticket_scan.main .item .itemT .cover .layer {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.body .ticket_scan.main .item .itemT .cover .heat {
+  width: fit-content;
+  margin: 5px;
+  padding: 2.5px 10px;
+  border-radius: 99px;
+  background-color: white;
+  z-index: 1;
+}
+.body .ticket_scan.main .item .itemT .cover .used {
+  width: calc(100% - 2px);
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
+  border: 1px solid var(--c1);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticket_scan.main .item .itemT .cover .done {
+  width: calc(100% - 2px);
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
+  border: 1px solid var(--c3);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(92, 184, 178, 0.8) 0%, rgba(92, 184, 178, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticket_scan.main .item .itemT .cover .outdated {
+  width: calc(100% - 2px);
+  height: calc(100% - 32px);
+  padding-bottom: 30px;
+  border: 1px solid var(--c4);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%);
+  z-index: 2;
+}
+.body .ticket_scan.main .item .itemT .cover .outdated span {
+  transform: rotate(-15deg);
+}
+.body .ticket_scan.main .item .itemT .type {
+  height: 20px;
+  padding: 2.5px 10px;
+  border: 1px solid var(--cG5);
+  border-radius: 99px;
+}
+.body .ticket_scan.main .item .itemT .type .img {
+  height: fit-content;
+  margin: 0 0 0 5px;
+}
+.body .ticket_scan.main .item .itemT .type .img.imgT {
+  width: 18px;
+}
+.body .ticket_scan.main .item .itemT .type .img.imgS {
+  width: 14px;
+}
+.body .ticket_scan.main .item .itemT .stampCount {
+  height: 20px;
+  padding: 2.5px 10px;
+  border-radius: 99px;
+  background-color: var(--c3);
+}
+.body .ticket_scan.main .item .itemT .add {
+  height: 20px;
+  padding: 2.5px 5px 2.5px 10px;
+  border-radius: 99px;
+}
+.body .ticket_scan.main .item .itemT .add .icon {
+  margin: 0 0 0 1px;
+}
+.body .ticket_scan.main .testImg {
+  width: 100% !important;
+  height: calc(100vh - 60px) !important;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .ticket_scan.main .testImg {
+    width: 768px !important;
+  }
+}
+.body .ticket_scan.main .testImg img {
+  object-fit: cover;
+}
+.body .ticket_scan.popup .icon {
+  margin-bottom: 10px;
+}
+.body .ticket_scan.popup img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.body .scan_tickets.main {
+  height: 100vh;
+  height: var(--app-height);
+  margin: 60px 20px 0;
+  padding: 0px;
+  overflow-y: hidden;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .scan_tickets.main {
+    width: 748px !important;
+    margin: 60px auto 70px;
+  }
+}
+.body .scan_tickets.main .tabs {
+  width: calc(100% - 8px);
+  height: fit-content;
+  border: 1px solid white;
+  margin: 0;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .scan_tickets.main .tabs .tab {
+  padding: 5px 0;
+}
+.body .scan_tickets.main .tabs .tab.active {
+  color: var(--c1);
+}
+.body .scan_tickets.main .tabs .tab.deactive * {
+  color: var(--cG4);
+}
+.body .scan_tickets.main .tabs .tab.deactive .img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.body .scan_tickets.main .tabs .tab.deactive img {
+  filter: grayscale(100%);
+}
+.body .scan_tickets.main .tabs .tab:not(.active):not(.deactive) * {
+  color: var(--c4);
+}
+.body .scan_tickets.main .tabs .tab:not(.active):not(.deactive) img {
+  filter: grayscale(100%);
+}
+.body .scan_tickets.main .tabs .tab > .flexH {
+  height: 20px;
+}
+.body .scan_tickets.main .tabs .tab > .flexH > img {
+  margin-right: 5px;
+}
+.body .scan_tickets.main .tabs .tab > .flexH .img {
+  width: 20px;
+  height: fit-content;
+}
+.body .scan_tickets.main .tabs .lineV {
+  height: 40px;
+  background-color: var(--cG4);
+}
+.body .scan_tickets.main .list {
+  padding: 10px 0;
+  overflow-y: auto;
+}
+.body .scan_tickets.main .list .ticketStamp {
+  width: calc(100% - 22px);
+  margin: 10px 0;
 }
 .body .store_register.main {
   max-height: calc(100vh - 60px);

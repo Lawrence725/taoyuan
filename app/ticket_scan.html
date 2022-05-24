@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="桃園市民卡">
+        <meta name="description" content="桃園市民卡">
+        <meta name="author" content="桃園市民卡">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>桃園市民卡</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/unique.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+    </head>
+    <body class="marginX">
+        <div class="body fixed mobile"> <!-- class: fixed, mobile -->
+            <!-- Loading Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header ticket_scan">
+                <a class="icon iconButton third" href="javascript:history.back()">
+                    <i class="fa-solid fa-chevron-left fa-lg"></i>
+                </a>
+                <span class="fL">掃描店家代碼</span>
+                <div class="icon iconButton"></div>
+            </section>
+            <!-- Main -->
+            <section class="main ticket_scan">
+                <canvas></canvas>
+                <div class="input rounded">
+                    <input type="text" class="fM" placeholder="手動輸入代碼" value="">
+                    <a class="icon iconButton"><i class="fas fa-arrow-right fa-lg"></i></a>
+                </div>
+                <div class="item flexV">
+                    <!-- 優惠券 (二選一) -->
+                    <div class="itemT ticket flexV center width" onclick="popTicket()">
+                        <div class="profile img">
+                            <img src="img/ticket-profile.png">
+                        </div>
+                        <div class="cover flexV width">
+                            <div class="layer"></div>
+                            <!-- 特別標示 -->
+                            <div class="heat flexH">
+                                <span class="fS">最新</span>
+                            </div>
+                        </div>
+                        <div class="flexH width between">
+                            <!-- 分類 -->
+                            <div class="type typeT flexH">
+                                <span class="fS">優惠券</span>
+                                <div class="img imgT"><img src="icon/item-ticket.svg"></div>
+                            </div>
+                        </div>
+                        <span class="fM gray">餐廳名稱</span>
+                        <span class="fXXL title">標題集章</span>
+                        <div class="flexH">
+                            <span class="fM gray">2021/10/01 - 2022/01/22</span>
+                            <!-- <span class="fM gray">・</span>
+                            <span class="fM gray">剩餘200張</span> -->
+                        </div>
+                    </div>
+                    <!-- 集章獎品 (二選一) -->
+                    <div class="itemS flexH width" onclick="popStamp()">
+                        <img class="photo" src="img/news.png">
+                        <div class="flexV width">
+                            <span class="fM">標題集章</span>
+                            <span class="fXL primary">標題獎品2</span>
+                            <div class="flexH">
+                                <img class="stamp" src="img/stamp.png">
+                                <span class="fM bold">滿3個</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--vvvvvvvvvv REMOVE TEST IMAGE vvvvvvvvvv-->
+                <div class="img testImg">
+                    <img src="img/scan.png">
+                </div>
+                <!--^^^^^^^^^^ REMOVE TEST IMAGE ^^^^^^^^^^-->
+            </section>
+            <!-- Popup (Ticket) -->
+            <section id="popTicket" class="popup ticket_scan" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popMain">
+                        <div class="icon error"><i class="fa-solid fa-circle-exclamation fa-3x"></i></div>
+                        <span class="fL">確定使用滿$100折$10？</span>
+                        <span class="fS error">使用後將無法取消，請確認已出示給現場人員</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded white" onclick="popClose(this)">
+                            <span class="fM">取消</span>
+                        </a>
+                        <a class="button rounded" onclick="popClose(this)">
+                            <span class="fM">確定使用</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (Stamp) -->
+            <section id="popStamp" class="popup ticket_scan" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popMain">
+                        <img src="img/news.png">
+                        <span class="fL">確認兌換標題獎品1？</span>
+                        <span class="fS error">兌換後將無法取消，請確認已出示給現場人員</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded white" onclick="popClose(this)">
+                            <span class="fM">取消</span>
+                        </a>
+                        <a class="button rounded" onclick="popClose(this)">
+                            <span class="fM">確認兌換</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <!-- Script -->
+        <script src="js/ticket_scan.js"></script>
+    </body>
+</html>

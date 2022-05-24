@@ -21,99 +21,110 @@
             <!-- <div class="spinner"><div><div></div></div></div> -->
             <!-- Header -->
             <section class="header point_send">
-                <a class="icon iconButton third" href="javascript:history.back()">
+                <a class="icon iconButton third" href="scan.html">
                     <i class="fa-solid fa-chevron-left fa-lg"></i>
                 </a>
-                <span class="fL">點數消費</span>
+                <span class="fL">店家名稱</span>
                 <div class="icon iconButton"></div>
             </section>
             <!-- Main -->
             <section class="main point_send">
-                <div class="record flexH width">
-                    <div class="flexV width center">
-                        <span class="fS gray">紅利桃子</span>
+                <!-- Tabs -->
+                <div class="tabs line fM rounded">
+                    <a class="tab flexV width center active" href="point_send.html">
+                        <span class="fS">紅利桃子</span>
                         <div class="flexH">
-                            <div class="img"><img src="icon/point.svg"></div>
+                            <div class="img point"><img src="icon/point.svg"></div>
                             <span class="fM bold">500</span>
                         </div>
-                    </div>
+                    </a>
                     <div class="lineV"></div>
-                    <div class="flexV width center">
-                        <span class="fS gray">2022/06/30到期</span>
+                    <a class="tab flexV width center" href="scan_tickets.html">
+                        <span class="fS">優惠券</span>
                         <div class="flexH">
-                            <div class="img"><img src="icon/point.svg"></div>
-                            <span class="fM bold">200</span>
+                            <img src="icon/ticket-on.svg">
+                            <span class="fM bold">5</span>
                         </div>
-                    </div>
+                    </a>
+                    <div class="lineV"></div>
+                    <a class="tab flexV width center deactive" href="scan_stamps.html">
+                        <span class="fS">集章</span>
+                        <div class="flexH">
+                            <img src="icon/stamp-on.svg">
+                            <span class="fM bold">未啟用</span>
+                        </div>
+                    </a>
                 </div>
-                <div class="info flexV width center">
-                    <span class="fM gray">您即將支付</span>
-                    <div class="total flexH width rounded middle padding margin background">
-                        <div class="img"><img src="icon/point.svg"></div>
-                        <span class="fXL">100</span>
+                <div class="info flexV width">
+                    <div class="content flexV width center">
+                        <span class="fM gray">您即將支付</span>
+                        <div class="total flexH width rounded middle padding margin background">
+                            <div class="img"><img src="icon/point.svg"></div>
+                            <span class="fXL">100</span>
+                        </div>
+                        <div class="hint flexH between">
+                            <div class="flexH width">
+                                <!-- 餘額不足提示 -->
+                                <!-- <span class="fS error">餘額不足</span> -->
+                            </div>
+                            <span class="fS gray">給</span>
+                            <div class="flexH width right">
+                                <div class="img"><img src="icon/point.svg"></div>
+                                <span class="fS gray">1 = NT$1</span>
+                            </div>
+                        </div>
+                        <span class="fL gray">桃園美味麵食店</span>
                     </div>
-                    <div class="hint flexH between">
+                    <div class="number flexV width">
                         <div class="flexH width">
-                            <!-- 餘額不足提示 -->
-                            <!-- <span class="fS error">餘額不足</span> -->
+                            <a class="flexH width middle margin background rounded">
+                                <span class="fXL">1</span>
+                            </a>
+                            <a class="flexH width middle margin background rounded">
+                                <span class="fXL">2</span>
+                            </a>
+                            <a class="flexH width middle margin background rounded">
+                                <span class="fXL">3</span>
+                            </a>
                         </div>
-                        <span class="fS gray">給</span>
-                        <div class="flexH width right">
-                            <div class="img"><img src="icon/point.svg"></div>
-                            <span class="fS gray">1 = NT$1</span>
+                        <div class="flexH width">
+                            <a class="flexH width middle margin background rounded">
+                                <span class="fXL">4</span>
+                            </a>
+                            <a class="flexH width middle margin background rounded">
+                                <span class="fXL">5</span>
+                            </a>
+                            <a class="flexH width middle margin background rounded">
+                                <span class="fXL">6</span>
+                            </a>
+                        </div>
+                        <div class="flexH width">
+                            <a class="flexH width middle margin background rounded">
+                                <span class="fXL">7</span>
+                            </a>
+                            <a class="flexH width middle margin background rounded">
+                                <span class="fXL">8</span>
+                            </a>
+                            <a class="flexH width middle margin background rounded" onclick="popNotice()"> <!-- Popup (餘額不足) -->
+                                <span class="fXL">9</span>
+                            </a>
+                        </div>
+                        <div class="flexH width">
+                            <a class="flexH width middle margin">
+                                <span class="fL gray">Clear</span>
+                            </a>
+                            <a class="flexH width middle margin background rounded">
+                                <span class="fXL">0</span>
+                            </a>
+                            <a class="flexH width middle margin">
+                                <i class="gray fa-solid fa-delete-left"></i>
+                            </a>
                         </div>
                     </div>
-                    <span class="fL gray">桃園美味麵食店</span>
+                    <a class="button rounded" href="point_success.html">
+                        <span class="fM">確認送出</span>
+                    </a>
                 </div>
-                <div class="number flexV width">
-                    <div class="flexH width">
-                        <a class="flexH width middle margin background rounded">
-                            <span class="fXL">1</span>
-                        </a>
-                        <a class="flexH width middle margin background rounded">
-                            <span class="fXL">2</span>
-                        </a>
-                        <a class="flexH width middle margin background rounded">
-                            <span class="fXL">3</span>
-                        </a>
-                    </div>
-                    <div class="flexH width">
-                        <a class="flexH width middle margin background rounded">
-                            <span class="fXL">4</span>
-                        </a>
-                        <a class="flexH width middle margin background rounded">
-                            <span class="fXL">5</span>
-                        </a>
-                        <a class="flexH width middle margin background rounded">
-                            <span class="fXL">6</span>
-                        </a>
-                    </div>
-                    <div class="flexH width">
-                        <a class="flexH width middle margin background rounded">
-                            <span class="fXL">7</span>
-                        </a>
-                        <a class="flexH width middle margin background rounded">
-                            <span class="fXL">8</span>
-                        </a>
-                        <a class="flexH width middle margin background rounded" onclick="popNotice()"> <!-- Popup (餘額不足) -->
-                            <span class="fXL">9</span>
-                        </a>
-                    </div>
-                    <div class="flexH width">
-                        <a class="flexH width middle margin">
-                            <span class="fL gray">Clear</span>
-                        </a>
-                        <a class="flexH width middle margin background rounded">
-                            <span class="fXL">0</span>
-                        </a>
-                        <a class="flexH width middle margin">
-                            <i class="gray fa-solid fa-delete-left"></i>
-                        </a>
-                    </div>
-                </div>
-                <a class="button rounded" href="point_success.html">
-                    <span class="fM">確認送出</span>
-                </a>
             </section>
             <!-- Popup (餘額不足) -->
             <section id="popNotice" class="popup">
