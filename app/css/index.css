@@ -606,10 +606,6 @@ span {
   color: white;
   background-color: var(--c1);
 }
-.body .icon.iconButton .new {
-  top: 0;
-  left: -3px;
-}
 .body .icon.black {
   color: var(--cG1);
 }
@@ -622,11 +618,12 @@ span {
   margin: 0;
 }
 .body .icon .new {
-  width: 15px;
-  height: 15px;
+  min-width: 10px;
+  height: 16px;
+  padding: 0 3px;
   border-radius: 99px;
-  top: -3px;
-  right: -3px;
+  bottom: 15px;
+  right: 18px;
   position: absolute;
   display: flex;
   align-items: center;

@@ -360,6 +360,10 @@
   height: fit-content;
   margin: -5px 0 10px -10px;
 }
+.body .new.main iframe {
+  width: 100%;
+  height: fit-content;
+}
 .body .index.main {
   align-items: center;
 }
@@ -531,8 +535,9 @@
 }
 .body .scan.main canvas {
   width: 100% !important;
-  height: calc(100vh - 130px) !important;
+  height: calc(100vh - 200px) !important;
   position: absolute;
+  object-fit: cover;
 }
 .body .scan.main .input {
   width: calc(100% - 70px);
@@ -644,7 +649,8 @@
   border-radius: 20px;
   background-color: white;
 }
-.body .scan.popCode .qrcode .img {
+.body .scan.popCode .qrcode .img,
+.body .scan.popCode .qrcode svg {
   width: 250px;
   height: fit-content;
 }
@@ -1765,8 +1771,9 @@
 }
 .body .ticket_scan.main canvas {
   width: 100% !important;
-  height: calc(100vh - 60px) !important;
+  height: calc(100vh - 130px) !important;
   position: absolute;
+  object-fit: cover;
 }
 .body .ticket_scan.main .input {
   width: calc(100% - 70px);

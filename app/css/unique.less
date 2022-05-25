@@ -81,7 +81,8 @@
         &.main { height: 100vh; height: var(--app-height); margin: 60px 20px 20px; padding: 0 10px 10px !important; border-radius: 20px; background-color: white;
             @media @sD, @sT { width: 748px !important; margin: 60px auto 20px; }
             > * { margin-bottom: 20px; }
-            .img.cover { width: calc(100% + 20px); height: fit-content; margin: -5px 0 10px -10px; }}}
+            .img.cover { width: calc(100% + 20px); height: fit-content; margin: -5px 0 10px -10px; }
+            iframe { width: 100%; height: fit-content; }}}
     
     // Main Pages
     .index {
@@ -123,7 +124,7 @@
         &.main { width: 100vw; height: calc(100vh - 130px); padding: 60px 0 70px !important; position: relative;
             @media @sD, @sT { width: 768px !important; }
             &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
-            canvas { width: 100% !important; height: calc(100vh - 130px) !important; position: absolute; }
+            canvas { width: 100% !important; height: calc(100vh - 200px) !important; position: absolute; object-fit: cover; }
             .input { width: calc(100% - 70px); padding: 0 5px 0 15px; border: 1px solid #FFFFFF; top: 80px; left: 20px; position: absolute; z-index: 2; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px);
                 ::placeholder { color: var(--c4); }}
             .button { margin: 0; left: 50%; transform: translate(-50%, 0); bottom: 90px; position: absolute; z-index: 2; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); }
@@ -145,7 +146,7 @@
                 img { border-radius: 999px; }}
             .refresh { background-color: var(--c3); }
             .qrcode { padding: 20px 0; margin: 10px 0 0; border-radius: 20px; background-color: white; 
-                .img { width: 250px; height: fit-content; }}
+                .img, svg { width: 250px; height: fit-content; }}
             .submit { background-color: var(--c1); margin-right: -5px; }}}
     .map {
         &.main { height: calc(100vh - 130px); padding: 60px 10px 70px !important; position: relative; overflow-y: hidden; }
@@ -427,7 +428,7 @@
         &.main { width: 100vw; height: calc(100vh - 60px); padding: 60px 0 0 !important; position: relative;
             @media @sD, @sT { width: 768px !important; }
             &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
-            canvas { width: 100% !important; height: calc(100vh - 60px) !important; position: absolute; }
+            canvas { width: 100% !important; height: calc(100vh - 130px) !important; position: absolute; object-fit: cover; }
             .input { width: calc(100% - 70px); padding: 0 5px 0 15px; border: 1px solid #FFFFFF; top: 80px; left: 20px; position: absolute; z-index: 2; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px);
                 ::placeholder { color: var(--c4); }}
             .item { width: calc(100vw - 60px); left: 20px; bottom: 20px; position: absolute; z-index: 2;
