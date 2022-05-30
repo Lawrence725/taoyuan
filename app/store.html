@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="桃園市民卡">
+        <meta name="description" content="桃園市民卡">
+        <meta name="author" content="桃園市民卡">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>桃園市民卡</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/unique.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+    </head>
+    <body class="marginX">
+        <div class="body fixed mobile"> <!-- class: fixed, mobile -->
+            <!-- Loading Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Main -->
+            <section class="main store">
+                <a class="back icon iconButton third" href="javascript:history.back()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                <img class="cover" src="img/ticket-cover.png">
+                <img class="profile" src="img/ticket-profile.png">
+                <span class="fL">餐廳名稱</span>
+                <span class="fM gray">分類名稱</span>
+                <div class="flexH">
+                    <div class="flexH">
+                        <div class="icon third">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="fM">特約店家</span>
+                    </div>
+                    <div class="flexH">
+                        <div class="icon third">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="fM">紅利桃子</span>
+                        <div class="img point"><img src="icon/point.svg"></div>
+                    </div>
+                </div>
+                <!-- Tabs -->
+                <div class="tabs line fM">
+                    <a class="tab active">
+                        <span>最新消息</span>
+                    </a>
+                    <span class="secondary">|</span>
+                    <a class="tab">
+                        <span>最新優惠</span>
+                    </a>
+                    <span class="secondary">|</span>
+                    <a class="tab" onclick="popNotice()">
+                        <span>最新任務</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <!-- Script -->
+        <script src="js/index.js"></script>
+    </body>
+</html>

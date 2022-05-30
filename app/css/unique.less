@@ -490,6 +490,13 @@
                 .ticketStamp { width: calc(100% - 22px); margin: 10px 0; }}}}
 
     // 特店/任務
+    .store {
+        &.main { padding: 0 10px 10px !important; align-items: center;
+            .back { top: 20px; left: 20px; position: absolute; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); }
+            img {
+                .cover { width: 100vw; height: 250px; object-fit: cover; }
+                .profile { width: 100px; height: 100px; margin-top: -51px; border: 1px solid white; border-radius: 20px; object-fit: cover; }
+                .point {  }}}}
     .store_register {
         &.main { max-height: calc(100vh - 60px); padding: 60px 10px 0 !important; }
         .steps {
