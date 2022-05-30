@@ -1,6 +1,19 @@
+// Scroll to top
+document.getElementById('main').onscroll = function() {
+    var top = document.getElementById('main').scrollTop == 0;
+    document.getElementById('toTop').style.display = top ? 'none' : 'flex';
+};
+function toTop() {
+    document.getElementById("main").scrollTo({top: 0, behavior: 'smooth'}); }
+
 // Popup close
 function popClose(e) {
-    e.closest('.popup').style.display = "none";
+    if (e.classList.contains('popup'))
+        window.onclick  = function(event) {
+            if (event.target == e)
+                e.style.display = "none"; }
+    else if (!(e.classList.contains('popBody')))
+        e.closest('.popup').style.display = "none";
     document.body.style.overflow = "scroll"; }
 
 // Popup background close
@@ -17,6 +30,11 @@ function popPoint() {
 // Popup (無問答)
 function popNoQA() {
     document.getElementById("popNoQA").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Popup (主題訂閱)
+function popTheme() {
+    document.getElementById("popTheme").style.display = "flex";
     document.body.style.overflow = "hidden"; }
 
 // Popup (上方小通知)

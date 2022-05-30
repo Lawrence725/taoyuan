@@ -245,7 +245,7 @@ span {
 }
 .body .header .img {
   width: fit-content;
-  height: 30px;
+  height: 38px;
 }
 .body .main {
   padding: 10px;
@@ -308,7 +308,7 @@ span {
 .body.fixed .header {
   height: 60px;
   padding: 0 10px;
-  z-index: 7;
+  z-index: 6;
   position: fixed;
   background: url(../img/bg.png);
   background-position: top;
@@ -322,7 +322,7 @@ span {
   height: 70px;
   padding: 0 10px;
   bottom: 0;
-  z-index: 7;
+  z-index: 6x;
   position: fixed;
   background: url(../img/bg.png);
   background-position: bottom;
@@ -597,6 +597,16 @@ span {
   align-items: center;
   justify-content: center;
   color: var(--c1);
+}
+.body .icon.toTop {
+  display: none;
+  position: absolute;
+  right: 20px;
+  bottom: 90px;
+  z-index: 8;
+  color: white;
+  background: rgba(189, 189, 189, 0.5);
+  backdrop-filter: blur(30px);
 }
 .body .icon.iconButton {
   min-width: 30px;

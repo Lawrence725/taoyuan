@@ -105,6 +105,14 @@
         .missions { min-height: 80px;
             .carousel { width: 20vw; }}
         .tabs { margin: 10px 5px 5px; }
+        .theme { min-height: 50px; margin-left: 0;
+            .carousel { padding: 2.5px 10px; border: 1px solid var(--cG4); border-radius: 99px; flex-direction: row; align-items: center;
+                &:first-child { margin-left: 20px; }
+                &:last-child { margin-right: 20px; }
+                span { color: var(--cG4); }
+                &.active { border: 1px solid var(--c3);
+                    span { color: var(--c3); }}
+                &.subscribe .icon { margin: 0 5px 0 0; }}}
         .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }
             .img { min-width: 120px; height: 100%; margin: 0; }

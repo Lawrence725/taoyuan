@@ -19,6 +19,10 @@
         <div class="body fixed mobile"> <!-- class: fixed, mobile -->
             <!-- Loading Spinner -->
             <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- 回頂端 -->
+            <a id="toTop" class="toTop icon iconButton" onclick="toTop()">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
             <!-- Header -->
             <section class="header index">
                 <div class="icon iconButton"></div>
@@ -29,7 +33,7 @@
                 </a>
             </section>
             <!-- Main -->
-            <section class="main index">
+            <section id="main" class="main index">
                 <!-- Banner -->
                 <div id="banners" class="banners">
                     <div class="banner">
@@ -141,18 +145,41 @@
                 <!-- Tabs -->
                 <div class="tabs line fM">
                     <a class="tab active">
-                        <span>最新消息</span>
+                        <span>熱門活動</span>
                     </a>
                     <span class="secondary">|</span>
                     <a class="tab">
-                        <span>最新優惠</span>
+                        <span>特店優惠</span>
                     </a>
                     <span class="secondary">|</span>
                     <a class="tab" onclick="popNotice()">
-                        <span>最新任務</span>
+                        <span>最新消息</span>
                     </a>
                 </div>
-                <!-- 最新消息 -->
+                <!-- 熱門活動/最新消息 -->
+                <div class="theme carousels">
+                    <div class="flexH">
+                        <a class="carousel active">
+                            <span class="fS nowrap">市政快訊</span>
+                        </a>
+                        <a class="carousel active">
+                            <span class="fS nowrap">地方生活</span>
+                        </a>
+                        <a class="carousel active">
+                            <span class="fS nowrap">觀光旅遊</span>
+                        </a>
+                        <a class="carousel">
+                            <span class="fS nowrap">體育休閒</span>
+                        </a>
+                        <a class="carousel">
+                            <span class="fS nowrap">優惠訊息</span>
+                        </a>
+                        <a class="carousel subscribe" onclick="popTheme()">
+                            <div class="icon"><i class="fa-regular fa-bell"></i></div>
+                            <span class="fS nowrap primary">主題訂閱</span>
+                        </a>
+                    </div>
+                </div>
                 <a class="news flexH width margin between" href="new.html">
                     <div class="flexV padding margin height between">
                         <span class="fM title">標題活動</span>
@@ -179,9 +206,9 @@
                     </div>
                     <!-- <div class="img"><img src="img/news.png"></div> -->
                 </a>
-                <a class="more button rounded fit" href="news.html">
+                <!-- <a class="more button rounded fit" href="news.html">
                     <span class="fS">看更多最新消息</span>
-                </a>
+                </a> -->
                 <!-- 特店優惠 -->
                 <!-- <div class="discounts flexV">
                     <span class="fM title">標題活動</span>
@@ -262,13 +289,13 @@
                     </div>
                 </div> -->
                 <!-- 廣告 -->
-                <a class="advertise flexH width margin between">
+                <!-- <a class="advertise flexH width margin between">
                     <div class="flexV padding margin height between">
                         <span class="fM">廣告名稱桃園市政府</span>
                         <span class="fS gray">AD 桃園市政府</span>
                     </div>
                     <div class="img"><img src="img/advertise.png"></div>
-                </a>
+                </a> -->
             </section>
             <!-- Footer -->
             <section class="footer">
@@ -399,6 +426,52 @@
                     <span class="fM">100點</span>
                 </div>
             </a>
+            <!-- Popup (Theme) -->
+            <section id="popTheme" class="popup" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popHeader">
+                        <span class="fL">主題訂閱</span>
+                    </section>
+                    <section class="popMain">
+                        <label class="check">
+                            <input type="checkbox" name="checkbox1" checked> <!-- checked -->
+                            <span class="checkmark checkbox"></span>
+                            <span class="text fM">市政快訊</span>
+                        </label>
+                        <label class="check">
+                            <input type="checkbox" name="checkbox1" checked> <!-- checked -->
+                            <span class="checkmark checkbox"></span>
+                            <span class="text fM">地方生活</span>
+                        </label>
+                        <label class="check">
+                            <input type="checkbox" name="checkbox1" checked> <!-- checked -->
+                            <span class="checkmark checkbox"></span>
+                            <span class="text fM">觀光旅遊</span>
+                        </label>
+                        <label class="check">
+                            <input type="checkbox" name="checkbox1" checked> <!-- checked -->
+                            <span class="checkmark checkbox"></span>
+                            <span class="text fM">體育休閒</span>
+                        </label>
+                        <label class="check">
+                            <input type="checkbox" name="checkbox1" checked> <!-- checked -->
+                            <span class="checkmark checkbox"></span>
+                            <span class="text fM">優惠訊息</span>
+                        </label>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded white" onclick="popClose(this)">
+                            <span class="fM">取消</span>
+                        </a>
+                        <a class="button rounded" onclick="popClose(this)">
+                            <span class="fM">確認</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
         </div>
         <!-- Script -->
         <script src="js/index.js"></script>

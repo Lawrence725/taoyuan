@@ -450,6 +450,35 @@
 .body .index .tabs {
   margin: 10px 5px 5px;
 }
+.body .index .theme {
+  min-height: 50px;
+  margin-left: 0;
+}
+.body .index .theme .carousel {
+  padding: 2.5px 10px;
+  border: 1px solid var(--cG4);
+  border-radius: 99px;
+  flex-direction: row;
+  align-items: center;
+}
+.body .index .theme .carousel:first-child {
+  margin-left: 20px;
+}
+.body .index .theme .carousel:last-child {
+  margin-right: 20px;
+}
+.body .index .theme .carousel span {
+  color: var(--cG4);
+}
+.body .index .theme .carousel.active {
+  border: 1px solid var(--c3);
+}
+.body .index .theme .carousel.active span {
+  color: var(--c3);
+}
+.body .index .theme .carousel.subscribe .icon {
+  margin: 0 5px 0 0;
+}
 .body .index .news {
   width: calc(100% - 22px) !important;
   height: fit-content;
