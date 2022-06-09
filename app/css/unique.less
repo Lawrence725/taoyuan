@@ -116,7 +116,8 @@
         .news { width: calc(100% - 22px) !important; height: fit-content; margin: 5px 10px !important; border: 1px solid white; border-radius: 15px; justify-content: space-between; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .title { padding-left: 5px; border-left: 1px solid var(--c3); color: var(--c3); }
             .img { min-width: 120px; height: 100%; margin: 0; }
-                img { border-radius: 0 10px 10px 0; object-fit: cover; }}
+            img { border-radius: 0 10px 10px 0; object-fit: cover; }
+            .fS.double > *:not(:first-child) { display: none; }}
         .more {  }
         .discounts { width: 100vw; margin: 10px 0 10px -10px;
             > .scroll { overflow-x: auto;
@@ -156,7 +157,7 @@
             .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px; background-image: url(../img/profile-d.png); background-size: cover;
                 img { border-radius: 999px; }}
             .refresh { background-color: var(--c3); }
-            .qrcode { padding: 20px 0; margin: 10px 0 0; border-radius: 20px; background-color: white; 
+            .qrcode { padding: 20px 0; margin: 10px 0 0; border-radius: 20px; justify-content: center; background-color: white; 
                 .img, svg { width: 250px; height: fit-content; }}
             .submit { background-color: var(--c1); margin-right: -5px; }}}
     .map {

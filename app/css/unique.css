@@ -503,6 +503,9 @@
   border-radius: 0 10px 10px 0;
   object-fit: cover;
 }
+.body .index .news .fS.double > *:not(:first-child) {
+  display: none;
+}
 .body .index .discounts {
   width: 100vw;
   margin: 10px 0 10px -10px;
@@ -690,6 +693,7 @@
   padding: 20px 0;
   margin: 10px 0 0;
   border-radius: 20px;
+  justify-content: center;
   background-color: white;
 }
 .body .scan.popCode .qrcode .img,
