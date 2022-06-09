@@ -860,25 +860,27 @@
     width: 728px !important;
   }
 }
-.body .map .bottom .information .img.store {
+.body .map .bottom .information img.store {
   width: 80px;
   height: 80px;
   margin-right: 10px;
-}
-.body .map .bottom .information .img.store img {
   border-radius: 5px;
+  aspect-ratio: 1/1;
 }
-.body .map .bottom .information .img.point {
+.body .map .bottom .information .detail {
+  flex-wrap: wrap;
+}
+.body .map .bottom .information .detail .img.point {
   width: 20px;
   height: 20px;
   margin: 0 5px 0 0;
 }
-.body .map .bottom .information .img.ticket {
+.body .map .bottom .information .detail .img.ticket {
   width: 18px;
   height: 18px;
   margin: 0 5px 0 0;
 }
-.body .map .bottom .information .img.stamp {
+.body .map .bottom .information .detail .img.stamp {
   width: 16px;
   height: 16px;
   margin: 0 5px 0 0;
