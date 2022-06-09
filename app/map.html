@@ -23,8 +23,9 @@
             <section class="header map">
                 <div class="icon iconButton"></div>
                 <span class="fL">優惠好康</span>
-                <a class="icon iconButton third">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <a class="icon iconButton" href="notice.html">
+                    <img src="icon/bell.svg">
+                    <div class="new"><span class="fXS white">3</span></div>
                 </a>
             </section>
             <!-- Main -->
@@ -35,16 +36,12 @@
                         <span class="fM">優惠券</span>
                     </a>
                     <div class="lineV"></div>
-                    <a class="tab" href="discount_stamps.html">
-                        <span class="fM">集章</span>
+                    <a class="tab">
+                        <span class="fM">特店列表</span>
                     </a>
                     <div class="lineV"></div>
                     <a class="tab active" href="map.html">
                         <span class="fM">特店地圖</span>
-                    </a>
-                    <div class="lineV"></div>
-                    <a class="tab">
-                        <span class="fM">特店列表</span>
                     </a>
                 </div>
                 <!-- Filter -->
@@ -69,7 +66,7 @@
                                 <div class="arrow third"><i class="fas fa-caret-down fa-xs"></i></div>
                             </div>
                         </div>
-                        <div class="lineV"></div>
+                        <!-- <div class="lineV"></div>
                         <div class="flexH middle">
                             <div class="dropdown rounded">
                                 <select name="type" class="fM rounded">
@@ -90,7 +87,7 @@
                         <div class="lineV"></div>
                         <a class="flexH middle rounded">
                             <span class="fM nowrap">紅利桃子</span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 <!--vvvvvvvvvv REMOVE TEST IMAGE vvvvvvvvvv-->
@@ -98,37 +95,16 @@
                     <img src="img/map.png">
                 </div>
                 <!--^^^^^^^^^^ REMOVE TEST IMAGE ^^^^^^^^^^-->
+                <!-- 搜尋 -->
+                <div class="input rounded">
+                    <input type="text" class="fM" placeholder="地址搜尋" value="">
+                    <a class="icon iconButton"><i class="fas fa-arrow-right fa-lg"></i></a>
+                </div>
+                <!-- 定位+特店資訊 -->
                 <div class="bottom flexV end">
                     <!-- 定位 -->
                     <a class="location icon iconButton white"><i class="fa-solid fa-location-crosshairs fa-xl"></i></a>
-                    <!-- Info -->
-                    <!-- <div class="info flexV">
-                        <div class="flexH width between start">
-                            <div class="flexH">
-                                <div class="img store"><img src="img/store.png"></div>
-                                <div class="flexV">
-                                    <span class="fL">快一點餐聽</span>
-                                    <span class="fM gray">分類名稱</span>
-                                </div>
-                            </div>
-                            <a class="button fit rounded"><span class="fS">詳細資訊</span></a>
-                        </div>
-                        <div class="checklist flexH width middle">
-                            <div class="flexH">
-                                <div class="icon third">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <span class="fM">特約店家</span>
-                            </div>
-                            <div class="flexH">
-                                <div class="icon third">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <div class="img point"><img src="icon/point.svg"></div>
-                                <span class="fM">紅利桃子</span>
-                            </div>
-                        </div>
-                    </div> -->
+                    <!-- 特店資訊 -->
                     <a class="information flexH width between" href="store.html"> <!-- class: hide -->
                         <div class="flexH">
                             <div class="img store"><img src="img/store.png"></div>
@@ -136,17 +112,14 @@
                                 <span class="fL">快一點餐聽</span>
                                 <span class="fM gray">分類名稱</span>
                                 <div class="flexH">
-                                    <div class="icon third">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                    <span class="fM gray">特約店家</span>
-                                </div>
-                                <div class="flexH">
-                                    <div class="icon third">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                    <span class="fM gray">紅利桃子</span>
                                     <div class="img point"><img src="icon/point.svg"></div>
+                                    <span class="fS gray">紅利桃子</span>
+                                    <span class="fS gray">・</span>
+                                    <div class="img ticket"><img src="icon/ticket.svg"></div>
+                                    <span class="fS gray">優惠券</span>
+                                    <span class="fS gray">・</span>
+                                    <div class="img stamp"><img src="icon/stamp.svg"></div>
+                                    <span class="fS gray">集章</span>
                                 </div>
                             </div>
                         </div>

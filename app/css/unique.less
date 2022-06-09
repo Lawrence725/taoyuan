@@ -171,6 +171,7 @@
             &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
             > .flexH > .flexH:first-child { margin-left: 10px; }
             > .flexH > .flexH:last-child { margin-right: 10px; }
+            > .flexH, > .flexH > .flexH { width: 100%; }
             .lineV { height: 20px; background-color: var(--c2); }
             .dropdown { width: fit-content;
                 select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}
@@ -180,6 +181,8 @@
         .testImg { width: 100vw !important; height: 100% !important; margin: 0 0 0 -10px;
             @media @sD, @sT { width: 768px !important; }
             img { object-fit: cover; }}
+        .input { width: calc(100% - 62px); padding: 0 5px 0 15px; margin: 0; border: 1px solid #FFFFFF; top: 168px; left: 20px; position: absolute; z-index: 2; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px);
+            ::placeholder { color: var(--cG4); }}
         .bottom { width: calc(100% - 10px); bottom: 70px; position: absolute;
             .location { width: 40px; height: 40px; margin: 20px; background-color: var(--c3); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); }
             .info { width: calc(100vw - 40px); margin-left: -10px; padding: 20px; border: 1px solid #FFFFFF; border-radius: 30px 30px 0px 0px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(30px);
@@ -191,9 +194,11 @@
                 .img.point { width: 20px; height: 20px; margin-left: 0; }}
             .information { width: calc(100vw - 60px); margin: 0 20px 20px 10px; padding: 10px; border: 1px solid #FFFFFF; border-radius: 20px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(30px);
                 @media @sD, @sT { width: 728px !important; }
-                .img.store { width: 60px; height: 60px; margin-right: 10px;
+                .img.store { width: 80px; height: 80px; margin-right: 10px;
                     img { border-radius: 5px; }}
-                .img.point { width: 20px; height: 20px; margin: 0 0 0 5px; }
+                .img.point { width: 20px; height: 20px; margin: 0 5px 0 0; }
+                .img.ticket { width: 18px; height: 18px; margin: 0 5px 0 0; }
+                .img.stamp { width: 16px; height: 16px; margin: 0 5px 0 0; }
                 .icon { margin: 0 5px 0 0; }}}}
     .profile {
         &.main { padding: 60px 20px 90px !important;

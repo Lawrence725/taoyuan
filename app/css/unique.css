@@ -746,6 +746,10 @@
 .body .map .filter > .flexH > .flexH:last-child {
   margin-right: 10px;
 }
+.body .map .filter > .flexH,
+.body .map .filter > .flexH > .flexH {
+  width: 100%;
+}
 .body .map .filter .lineV {
   height: 20px;
   background-color: var(--c2);
@@ -780,6 +784,21 @@
 }
 .body .map .testImg img {
   object-fit: cover;
+}
+.body .map .input {
+  width: calc(100% - 62px);
+  padding: 0 5px 0 15px;
+  margin: 0;
+  border: 1px solid #FFFFFF;
+  top: 168px;
+  left: 20px;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  backdrop-filter: blur(30px);
+}
+.body .map .input ::placeholder {
+  color: var(--cG4);
 }
 .body .map .bottom {
   width: calc(100% - 10px);
@@ -842,8 +861,8 @@
   }
 }
 .body .map .bottom .information .img.store {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   margin-right: 10px;
 }
 .body .map .bottom .information .img.store img {
@@ -852,7 +871,17 @@
 .body .map .bottom .information .img.point {
   width: 20px;
   height: 20px;
-  margin: 0 0 0 5px;
+  margin: 0 5px 0 0;
+}
+.body .map .bottom .information .img.ticket {
+  width: 18px;
+  height: 18px;
+  margin: 0 5px 0 0;
+}
+.body .map .bottom .information .img.stamp {
+  width: 16px;
+  height: 16px;
+  margin: 0 5px 0 0;
 }
 .body .map .bottom .information .icon {
   margin: 0 5px 0 0;
