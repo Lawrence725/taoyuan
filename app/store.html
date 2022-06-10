@@ -19,47 +19,113 @@
         <div class="body fixed mobile"> <!-- class: fixed, mobile -->
             <!-- Loading Spinner -->
             <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- 回頂端 -->
+            <a id="toTop" class="toTop icon iconButton" onclick="toTop()">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
             <!-- Main -->
-            <section class="main store">
+            <section id="main" class="main store">
                 <a class="back icon iconButton third" href="javascript:history.back()">
                     <i class="fa-solid fa-chevron-left"></i>
                 </a>
                 <img class="cover" src="img/ticket-cover.png">
                 <img class="profile" src="img/ticket-profile.png">
+                <a class="favorite flexV active"> <!-- class: active 切換模式 -->
+                    <div class="icon iconButton"><i class="fa-solid fa-heart fa-xl error"></i></div>
+                    <div class="icon iconButton"><i class="fa-regular fa-heart fa-xl minor"></i></div>
+                </a>
                 <span class="fL">餐廳名稱</span>
                 <span class="fM gray">分類名稱</span>
-                <div class="flexH">
-                    <div class="flexH">
-                        <div class="icon third">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        <span class="fM">特約店家</span>
-                    </div>
-                    <div class="flexH">
-                        <div class="icon third">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        <span class="fM">紅利桃子</span>
-                        <div class="img point"><img src="icon/point.svg"></div>
-                    </div>
-                </div>
                 <!-- Tabs -->
-                <div class="tabs line fM">
+                <div class="tabs line fM rounded">
                     <a class="tab active">
-                        <span>最新消息</span>
+                        <span>優惠券</span>
                     </a>
-                    <span class="secondary">|</span>
+                    <div class="lineV"></div>
                     <a class="tab">
-                        <span>最新優惠</span>
+                        <span>集章</span>
                     </a>
-                    <span class="secondary">|</span>
-                    <a class="tab" onclick="popNotice()">
-                        <span>最新任務</span>
+                    <div class="lineV"></div>
+                    <a class="tab">
+                        <span>店家資訊</span>
                     </a>
                 </div>
+                <!-- 集章列表 -->
+                <a class="stamps flexV around" href="stamp.html">
+                    <span class="fL third single">集章標題</span>
+                    <div class="topLeft">
+                        <div class="textBg flexV center"> <!-- class: active 切換開關 -->
+                            <span class="fM white">已完成</span> <!-- 已完成/已過期 -->
+                        </div>
+                    </div>
+                    <div class="topRight">
+                        <div class="textBg flexV center active"> <!-- class: active 切換開關 -->
+                            <span class="fM primary">最新</span>
+                        </div>
+                    </div>
+                    <span class="fM single">特店名稱</span>
+                    <span class="fS gray">集章 2021/10/01 - 2022/01/22</span>
+                    <span class="fS gray">兌換 2021/10/01 - 2022/02/22</span>
+                    <div class="flexH width">
+                        <img src="img/stamp.png">
+                        <div class="bar flexH width rounded">
+                            <div></div>
+                        </div>
+                        <span class="fM bold primary">8/20</span>
+                    </div>
+                </a>
+                <a class="stamps flexV around" href="stamp.html">
+                    <span class="fL third single">集章標題</span>
+                    <div class="topLeft">
+                        <div class="textBg flexV center active"> <!-- class: active 切換開關 -->
+                            <span class="fM white">已完成</span> <!-- 已完成/已過期 -->
+                        </div>
+                    </div>
+                    <div class="topRight">
+                        <div class="textBg flexV center"> <!-- class: active 切換開關 -->
+                            <span class="fM primary">最新</span>
+                        </div>
+                    </div>
+                    <span class="fM single">特店名稱</span>
+                    <span class="fS gray">集章 2021/10/01 - 2022/01/22</span>
+                    <span class="fS gray">兌換 2021/10/01 - 2022/02/22</span>
+                    <div class="flexH width">
+                        <img src="img/stamp.png">
+                        <div class="bar flexH width rounded">
+                            <div></div>
+                        </div>
+                        <span class="fM bold primary">8/20</span>
+                    </div>
+                </a>
+                <!-- 店家資訊 -->
+                <div class="flexH width margin padding">
+                    <div class="icon third"><i class="fa-solid fa-star"></i></div>
+                    <span class="fM">4.7</span>
+                    <span class="fM">・</span>
+                    <span class="fM">352個評分</span>
+                </div>
+                <div class="flexH width margin padding between">
+                    <div class="flexH">
+                        <div class="icon third"><i class="fa-solid fa-map"></i></div>
+                        <a class="textButton fM">桃園市特店地址100號</a>
+                    </div>
+                    <a class="icon gray"><i class="fa-solid fa-copy"></i></a>
+                </div>
+                <div class="flexH width margin padding between">
+                    <div class="flexH">
+                        <div class="icon third"><i class="fa-solid fa-phone"></i></div>
+                        <a class="textButton fM">0987 654 321</a>
+                    </div>
+                    <a class="icon gray"><i class="fa-solid fa-copy"></i></a>
+                </div>
+                <!--vvvvvvvvvv REMOVE TEST IMAGE vvvvvvvvvv-->
+                <div class="img testImg">
+                    <img src="img/map.png">
+                </div>
+                <!--^^^^^^^^^^ REMOVE TEST IMAGE ^^^^^^^^^^-->
             </section>
         </div>
         <!-- Script -->
-        <script src="js/index.js"></script>
+        <script src="js/store.js"></script>
     </body>
 </html>

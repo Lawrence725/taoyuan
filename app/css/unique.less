@@ -9,6 +9,19 @@
     .header .fa-chevron-left, .header .fa-xmark, .header .fa-times { color: var(--c3) !important; font-size: 1.5em; line-height: 0.04167em; vertical-align: -0.125em; }
     .listEmpty { min-height: calc(100vh - 150px);
         .icon { margin-bottom: 50px; }}
+    .stamps { width: calc(100vw - 30px); aspect-ratio: 335/150; box-sizing: border-box; padding: 0 30px; margin: 10px 0; position: relative; background-image: url(../img/bg-stamp.svg); background-size: contain; background-repeat: no-repeat;
+        > *:first-child { margin-top: 10px; }
+        > *:last-child { margin-bottom: 10px; }
+        .topLeft { width: 100px; height: 60px; top: 0; left: 0; position: absolute; overflow: hidden;
+            .textBg { width: 150px; top: 10px; left: -40px; position: absolute; display: none; background-color: var(--cG4); transform: rotate(-30deg);
+                &.active { display: flex; }}}
+        .topRight { width: 100px; height: 60px; top: 0; right: 0; position: absolute; overflow: hidden;
+            .textBg { width: 150px; top: 10px; right: -40px; position: absolute; display: none; background-color: var(--c2); transform: rotate(30deg);
+                &.active { display: flex; }}}
+        img { width: 40px; aspect-ratio: 1/1; border-radius: 4px; }
+        .bar { height: 10px; margin: 0 10px; background-color: var(--cG5);
+            div { width: 60%; height: 100%; border-radius: 99px; background-color: var(--c1); }}}
+    // 舊版優惠券集章
     .ticketStamp { width: calc(100% - 40px); margin: 10px; padding: 10px; border: 1px solid var(--cBg); border-radius: 20px; position: relative; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);                    
         &.ticket {
             .title, .type span, .add i { color: var(--c1); }
@@ -542,12 +555,31 @@
                         .img.stamp { width: 16px; height: 16px; margin: 0 5px 0 0; }}
                     .icon { margin: 0 5px 0 0; }}}}}
     .store {
-        &.main { padding: 0 10px 10px !important; align-items: center;
-            .back { top: 20px; left: 20px; position: absolute; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); }
+        &.main { padding: 0 10px 10px !important; position: relative; align-items: center;
+            .back { top: 20px; left: 20px; position: fixed; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); }
             img {
-                .cover { width: 100vw; height: 250px; object-fit: cover; }
-                .profile { width: 100px; height: 100px; margin-top: -51px; border: 1px solid white; border-radius: 20px; object-fit: cover; }
-                .point {  }}}}
+                &.cover { width: 100vw; min-height: 250px; object-fit: cover; }
+                &.profile { width: 100px; height: 100px; margin-top: -51px; border: 1px solid white; border-radius: 20px; object-fit: cover; }}
+            .favorite { top: 260px; right: 10px; position: absolute;
+                &.active {
+                    .icon:first-child { display: flex; }
+                    .icon:nth-child(2) { display: none; }}
+                &:not(.active) {
+                    .icon:first-child { display: none; }
+                    .icon:nth-child(2) { display: flex; }}}
+            .tabs { height: 30px; margin: 10px 5px; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+                .tab { padding: 5px 0;
+                    &.active { color: var(--c1); }
+                    &:not(.active) {
+                        * { color: var(--cG4); }
+                        .img { filter: grayscale(100%); opacity: 0.5; }}}
+                .img { height: fit-content;
+                    &.imgT { width: 24px; }
+                    &.imgS { width: 20px; }}
+                .lineV { height: 20px; background-color: var(--cG5) !important; }}
+            .testImg { width: 100% !important; height: 250px !important;
+                @media @sD, @sT { width: 768px !important; }
+                img { object-fit: cover; border-radius: 10px; }}}}
     .store_register {
         &.main { max-height: calc(100vh - 60px); padding: 60px 10px 0 !important; }
         .steps {
