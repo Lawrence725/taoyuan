@@ -264,6 +264,9 @@ span {
   overflow-y: auto;
   overflow-x: hidden;
 }
+.body .main > * {
+  min-height: fit-content;
+}
 .body .footer {
   width: calc(100% - 20px);
   height: fit-content;
