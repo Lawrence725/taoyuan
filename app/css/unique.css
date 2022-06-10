@@ -2211,6 +2211,7 @@
 }
 .body .stores.main .list input {
   width: calc(100vw - 30px) !important;
+  padding-left: 10px;
 }
 .body .stores.main .list .information {
   width: calc(100vw - 32px) !important;
