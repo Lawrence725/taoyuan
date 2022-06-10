@@ -2160,6 +2160,102 @@
   width: calc(100% - 22px);
   margin: 10px 0;
 }
+.body .stores.main {
+  padding: 60px 10px 70px !important;
+}
+.body .stores.main .tabs {
+  height: 30px;
+  border: 1px solid white;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.body .stores.main .tabs .tab {
+  padding: 5px 0;
+}
+.body .stores.main .tabs .tab.active {
+  color: var(--c1);
+}
+.body .stores.main .tabs .tab:not(.active) * {
+  color: var(--cG4);
+}
+.body .stores.main .tabs .tab:not(.active) .img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.body .stores.main .tabs .img {
+  height: fit-content;
+}
+.body .stores.main .tabs .img.imgT {
+  width: 24px;
+}
+.body .stores.main .tabs .img.imgS {
+  width: 20px;
+}
+.body .stores.main .tabs .lineV {
+  height: 20px;
+  background-color: var(--cG5);
+}
+.body .stores.main .filter .lineV {
+  height: 20px;
+  background-color: var(--c2);
+}
+.body .stores.main .filter .dropdown {
+  width: fit-content;
+}
+.body .stores.main .filter .dropdown select {
+  width: fit-content;
+  padding: 0 30px 0 10px;
+  background-color: transparent;
+}
+.body .stores.main .list {
+  overflow-y: auto;
+}
+.body .stores.main .list input {
+  width: calc(100vw - 30px) !important;
+}
+.body .stores.main .list .information {
+  width: calc(100vw - 32px) !important;
+  height: 100px;
+  margin: 10px 5px;
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  backdrop-filter: blur(30px);
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .stores.main .list .information {
+    width: 728px !important;
+  }
+}
+.body .stores.main .list .information img.store {
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  border-radius: 5px;
+  aspect-ratio: 1/1;
+}
+.body .stores.main .list .information .detail {
+  flex-wrap: wrap;
+}
+.body .stores.main .list .information .detail .img.point {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 0 0;
+}
+.body .stores.main .list .information .detail .img.ticket {
+  width: 18px;
+  height: 18px;
+  margin: 0 5px 0 0;
+}
+.body .stores.main .list .information .detail .img.stamp {
+  width: 16px;
+  height: 16px;
+  margin: 0 5px 0 0;
+}
+.body .stores.main .list .information .icon {
+  margin: 0 5px 0 0;
+}
 .body .store.main {
   padding: 0 10px 10px !important;
   align-items: center;
