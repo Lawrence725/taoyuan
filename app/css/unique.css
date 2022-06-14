@@ -14,6 +14,7 @@
 }
 .body .stamps {
   width: calc(100vw - 30px);
+  max-width: 500px;
   aspect-ratio: 335/150;
   box-sizing: border-box;
   padding: 0 30px;
@@ -2232,6 +2233,229 @@
 .body .scan_tickets.main .list .ticketStamp {
   width: calc(100% - 22px);
   margin: 10px 0;
+}
+.body .stamp.main {
+  height: 100vh;
+  height: var(--app-height);
+  margin: 60px 15px 70px;
+  padding: 10px 20px !important;
+  border-radius: 20px;
+  position: relative;
+  background-color: white;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .stamp.main {
+    width: 748px !important;
+    margin: 60px auto 70px;
+  }
+}
+.body .stamp.main .topLeft {
+  width: 150px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.body .stamp.main .topLeft .textBg {
+  width: 200px;
+  padding: 2.5px 0;
+  top: 10px;
+  left: -60px;
+  position: absolute;
+  display: none;
+  background-color: var(--cG4);
+  transform: rotate(-30deg);
+}
+.body .stamp.main .topLeft .textBg.active {
+  display: flex;
+}
+.body .stamp.main .topRight {
+  width: 150px;
+  height: 100px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.body .stamp.main .topRight .textBg {
+  width: 200px;
+  padding: 2.5px 0;
+  top: 10px;
+  right: -60px;
+  position: absolute;
+  display: none;
+  background-color: var(--c2);
+  transform: rotate(30deg);
+}
+.body .stamp.main .topRight .textBg.active {
+  display: flex;
+}
+.body .stamp.main .sticker {
+  margin: 10px 0;
+}
+.body .stamp.main .sticker img {
+  width: calc(20% - 10px);
+  margin: 5px;
+  border-radius: 10px;
+}
+.body .stamp.main .sticker img.none {
+  filter: grayscale(100%);
+  opacity: 0.25;
+}
+.body .stamp.main .dashH {
+  margin: 10px 0;
+}
+.body .stamp.main .gift {
+  max-width: 400px;
+  aspect-ratio: 285/120;
+  margin: 10px auto;
+  padding: 0 30px 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background-image: url(../img/bg-gift.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.body .stamp.main .gift .topLeft {
+  width: 100px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.body .stamp.main .gift .topLeft .textBg {
+  width: 150px;
+  top: 5px;
+  left: -50px;
+  position: absolute;
+  display: none;
+  background-color: var(--cG4);
+  transform: rotate(-30deg);
+}
+.body .stamp.main .gift .topLeft .textBg.active {
+  display: flex;
+}
+.body .stamp.main .gift .topLeft .textBg span {
+  line-height: 10px;
+}
+.body .stamp.main .gift .fS {
+  margin: 5px 0;
+}
+.body .stamp.main .gift img.photo {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.body .stamp.main .gift img.stamp {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 5px;
+  object-fit: cover;
+}
+.body .stamp.main .detail {
+  margin: 10px 0;
+}
+.body .stamp.main .detail .fL {
+  margin-bottom: 5px;
+}
+.body .stamp.footer {
+  box-shadow: none;
+}
+.body .stamp.footer .icon.primary {
+  margin-left: 0;
+}
+.body .stamp.footer .icon.primary i {
+  color: var(--c1) !important;
+}
+.body .stamp.popCode .popMain {
+  padding: 0 5px 5px;
+  margin-bottom: 0 !important;
+}
+.body .stamp.popCode .img.profile {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  margin-right: 10px;
+  background-image: url(../img/profile-d.png);
+  background-size: cover;
+}
+.body .stamp.popCode .img.profile img {
+  border-radius: 10px;
+}
+.body .stamp.popCode .refresh {
+  background-color: var(--c3);
+}
+.body .stamp.popCode .qrcode {
+  padding: 20px 0;
+  margin: 10px 0 0;
+  border-radius: 20px;
+  background-color: white;
+}
+.body .stamp.popCode .qrcode .img {
+  width: 250px;
+  height: fit-content;
+}
+.body .stamp.popCode .submit {
+  background-color: var(--c1);
+  margin-right: -5px;
+}
+.body .stamp.popHistory .popMain {
+  padding: 0 10px;
+}
+.body .stamp.popHistory .popMain .record:not(:first-child) {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--cG5);
+  border-radius: 0;
+}
+.body .stamp.popHistory .popMain img.stamp {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 5px;
+  object-fit: cover;
+}
+.body .stamp.popGift .popBody {
+  padding: 0 20px;
+}
+.body .stamp.popGift .popBody .popMain {
+  padding: 0;
+  margin: 0;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+.body .stamp.popGift .popBody .popMain .detail {
+  margin: 10px 0;
+}
+.body .stamp.popGift .popBody .popMain img.photo {
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.body .stamp.popGift .popBody .popMain img.stamp {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 5px;
+  object-fit: cover;
+}
+.body .stamp.popGiftGet .popMain {
+  padding: 10px;
+  margin-top: 0;
+}
+.body .stamp.popGiftGet .popMain img.photo {
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 .body .stores.main {
   padding: 60px 10px 70px !important;

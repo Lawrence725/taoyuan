@@ -20,57 +20,38 @@
             <!-- Loading Spinner -->
             <!-- <div class="spinner"><div><div></div></div></div> -->
             <!-- Header -->
-            <section class="header ticket">
-                <a class="icon iconButton third" href="javascript:history.back()">
-                    <i class="fa-solid fa-chevron-left fa-lg"></i>
-                </a>
-                <span class="fL">集章</span>
-                <a class="icon iconButton third" onclick="popHistory()">
-                    <i class="fa-solid fa-clock-rotate-left fa-lg"></i>
-                </a>
+            <section class="header stamp">
+                <!-- Left -->
+                <div class="flexH width">
+                    <a class="icon iconButton third" href="javascript:history.back()">
+                        <i class="fa-solid fa-chevron-left fa-lg"></i>
+                    </a>
+                </div>
+                <span class="fL nowrap">集章</span>
+                <!-- Right -->
+                <div class="flexH width right">
+                    <a class="icon textButton" onclick="popHistory()">
+                        <span class="fM third">歷史紀錄</span>
+                    </a>
+                </div>
             </section>
             <!-- Main -->
-            <section class="main ticket ticketS">
-                <div class="profile img">
-                    <img src="img/ticket-profile.png">
-                </div>
-                <div class="cover flexV width">
-                    <div class="layer"></div>
-                    <!-- 特別標示 -->
-                    <div class="heat flexH">
-                        <span class="fM">最新</span>
+            <section class="main stamp">
+                <div class="topLeft">
+                    <div class="textBg flexV center"> <!-- class: active 切換開關 -->
+                        <span class="fL white">已完成</span> <!-- 已完成/已過期 -->
                     </div>
-                    <!-- 已完成 -->
-                    <!-- <div class="done flexH middle">
-                        <span class="fXL white">已完成</span>
-                    </div> -->
-                    <!-- 已過期 -->
-                    <!-- <div class="outdated flexH middle">
-                        <span class="fXL white">已過期</span>
-                    </div> -->
-                    <img src="img/ticket-cover.png">
                 </div>
-                <div class="info flexH width between">
-                    <!-- 分類 -->
-                    <div class="type typeS flexH">
-                        <span class="fM">集章</span>
-                        <div class="img imgS"><img src="icon/item-stamp.svg"></div>
+                <div class="topRight">
+                    <div class="textBg flexV center active"> <!-- class: active 切換開關 -->
+                        <span class="fL primary">最新</span>
                     </div>
-                    <!-- 集章數 -->
-                    <div class="stampCount flexH">
-                        <span class="fM white">7/10</span>
-                    </div>
-                    <!-- 加入票夾按鈕 -->
-                    <!-- <a class="add flexH background">
-                        <span class="fM">加入票夾</span>
-                        <div class="icon"><i class="fas fa-plus fa-sm"></i></div>
-                    </a> -->
                 </div>
-                <span class="fM gray">餐廳名稱</span>
-                <span class="fXXL title">標題集章</span>
+                <span class="fXL third">標題集章</span>
+                <span class="fL">餐廳名稱</span>
                 <span class="fM gray">集章時間 2021/10/01 - 2022/01/22</span>
                 <span class="fM gray">兌換時間 2022/01/01 - 2022/03/22</span>
-                <!-- 貼紙 (1-10個) -->
+                <!-- 貼紙 -->
                 <div class="sticker flexV">
                     <div class="flexH">
                         <img src="img/stamp.png">
@@ -84,81 +65,77 @@
                         <img src="img/stamp.png">
                         <img src="img/stamp.png" class="none">
                         <img src="img/stamp.png" class="none">
-                        <img src="img/stamp.png" class="none">
-                    </div>
-                </div>
-                <!-- 進度條 (>10個) -->
-                <div class="progress flexH width padding margin ">
-                    <img src="img/stamp.png">
-                    <span class="fL bold primary">12/20</span>
-                    <div class="bar flexH width rounded">
-                        <div></div>
                     </div>
                 </div>
                 <div class="dashH"></div>
-                <!-- 獎品列表 -->
-                <div class="gifts flexV">
-                    <span class="fM heading">兌換獎品</span>
-                    <div class="scroll">
-                        <div class="flexH">
-                            <!-- 獎品 -->
-                            <a class="gift flexV" href="ticket_scan.html">
-                                <img src="img/news.png" class="photo">
-                                <div class="checked flexH middle">
-                                    <span class="fL white">已兌換</span>
-                                </div>
-                                <div class="flexV padding">
-                                    <span class="fM">標題獎品1</span>
-                                    <div class="flexH">
-                                        <img src="img/stamp.png" class="stamp">
-                                        <span class="fM heading bold">滿3個</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- 獎品 -->
-                            <a class="gift flexV" href="ticket_scan.html">
-                                <img src="img/news.png" class="photo">
-                                <!-- <div class="checked flexH middle">
-                                    <span class="fL white">已兌換</span>
-                                </div> -->
-                                <div class="flexV padding">
-                                    <span class="fM">標題獎品1</span>
-                                    <div class="flexH">
-                                        <img src="img/stamp.png" class="stamp">
-                                        <span class="fM heading bold">滿3個</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- 獎品 -->
-                            <a class="gift flexV" href="ticket_scan.html">
-                                <img src="img/news.png" class="photo">
-                                <!-- <div class="checked flexH middle">
-                                    <span class="fL white">已兌換</span>
-                                </div> -->
-                                <div class="flexV padding">
-                                    <span class="fM">標題獎品1</span>
-                                    <div class="flexH">
-                                        <img src="img/stamp.png" class="stamp">
-                                        <span class="fM heading bold">滿3個</span>
-                                    </div>
-                                </div>
-                            </a>
+                <!-- 獎品 -->
+                <a class="gift flexH width" onclick="popGift()">
+                    <div class="topLeft">
+                        <div class="textBg flexV center"> <!-- class: active 切換開關 -->
+                            <span class="fS white">已兌換</span> <!-- 已兌換/缺貨 -->
                         </div>
                     </div>
-                </div>
+                    <div class="flexV width padding">
+                        <span class="fM">獎品名稱</span>
+                        <span class="fS gray double">說明內容，法場不目經手上中光康自大到是如下快就家音事去北於得去為童三動港百無營的空動，開當程親資整少庭異時的人、目斷下球邊見活了國，花國字！</span>
+                        <div class="flexH">
+                            <img src="img/stamp.png" class="stamp">
+                            <span class="fM bold primary">滿3個</span>
+                        </div>
+                    </div>
+                    <img src="img/news.png" class="photo">
+                </a>
+                <!-- 獎品 -->
+                <a class="gift flexH width" onclick="popGift()">
+                    <div class="topLeft">
+                        <div class="textBg flexV center active"> <!-- class: active 切換開關 -->
+                            <span class="fS white">已兌換</span> <!-- 已兌換/缺貨 -->
+                        </div>
+                    </div>
+                    <div class="flexV width padding">
+                        <span class="fM">獎品名稱</span>
+                        <span class="fS gray double">說明內容，法場不目經手上中光康自大到是如下快就家音事去北於得去為童三動港百無營的空動，開當程親資整少庭異時的人、目斷下球邊見活了國，花國字！</span>
+                        <div class="flexH">
+                            <img src="img/stamp.png" class="stamp">
+                            <span class="fM bold primary">滿3個</span>
+                        </div>
+                    </div>
+                    <img src="img/news.png" class="photo">
+                </a>
+                <!-- 獎品 -->
+                <a class="gift flexH width" onclick="popGift()">
+                    <div class="topLeft">
+                        <div class="textBg flexV center active"> <!-- class: active 切換開關 -->
+                            <span class="fS white">缺貨</span> <!-- 已兌換/缺貨 -->
+                        </div>
+                    </div>
+                    <div class="flexV width padding">
+                        <span class="fM">獎品名稱</span>
+                        <span class="fS gray double">說明內容，法場不目經手上中光康自大到是如下快就家音事去北於得去為童三動港百無營的空動，開當程親資整少庭異時的人、目斷下球邊見活了國，花國字！</span>
+                        <div class="flexH">
+                            <img src="img/stamp.png" class="stamp">
+                            <span class="fM bold primary">滿3個</span>
+                        </div>
+                    </div>
+                    <img src="img/news.png" class="photo">
+                </a>
+                <div class="dashH"></div>
                 <div class="detail flexV width">
-                    <span class="fM heading">集章說明</span>
-                    <span class="fM">內容，身作行用備升麼研水成唱。平世往式較也受新，南然是，光充知孩的學出長大可來一，眼重考情己論色火死怕筆。事是行性孩資構深的香為可以間良快上難城？</span>
+                    <span class="fL">集章說明</span>
+                    <span class="fM gray">內容，身作行用備升麼研水成唱。平世往式較也受新，南然是，光充知孩的學出長大可來一，眼重考情己論色火死怕筆。事是行性孩資構深的香為可以間良快上難城？</span>
                 </div>
             </section>
             <!-- Footer -->
             <section class="footer ticket">
-                <a class="button rounded white">
+                <a class="button rounded white" href="stamps.html"> <!-- 已完成/已過期 -->
+                    <span class="fM primary">返回票夾</span>
+                </a>
+                <a class="button rounded white" onclick="popWallet()"> <!-- 未加入票夾 -->
                     <div class="icon primary"><i class="fa-solid fa-plus"></i></div>
                     <span class="fM">加入票夾</span>
                 </a>
-                <a class="button rounded" onclick="popCode()">
-                    <span class="fM">現場使用</span>
+                <a class="button rounded" onclick="popCode()"> <!-- 非已完成/已過期 -->
+                    <span class="fM">現場集章</span>
                 </a>
             </section>
             <!-- Popup (Code) -->
@@ -182,6 +159,26 @@
                     </section>
                 </div>
             </section>
+            <!-- Popup (Wallet) -->
+            <section id="popWallet" class="popup" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popMain">
+                        <div class="icon"><i class="fa-regular fa-circle-check fa-3x success"></i></div>
+                        <span class="fL">已加入您的票夾</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded white" href="stamps.html">
+                            <span class="fM primary">前往票夾</span>
+                        </a>
+                        <a class="button rounded" onclick="popClose(this)">
+                            <span class="fM">繼續瀏覽</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
             <!-- Popup (History) -->
             <section id="popHistory" class="popup ticket popHistory" onclick="popClose(this)">
                 <div class="popBody">
@@ -199,8 +196,8 @@
                             </div>
                             <div class="flexV end">
                                 <div class="flexH">
-                                    <img class="stamp" src="img/stamp.png">
                                     <span class="fM bold primary">滿3個</span>
+                                    <img class="stamp" src="img/stamp.png">
                                 </div>
                                 <span class="fS gray">2022/01/11</span>
                             </div>
@@ -212,8 +209,8 @@
                             </div>
                             <div class="flexV end">
                                 <div class="flexH">
-                                    <img class="stamp" src="img/stamp.png">
                                     <span class="fM bold success">+1</span>
+                                    <img class="stamp" src="img/stamp.png">
                                 </div>
                                 <span class="fS gray">2022/01/11</span>
                             </div>
@@ -225,12 +222,64 @@
                             </div>
                             <div class="flexV end">
                                 <div class="flexH">
-                                    <img class="stamp" src="img/stamp.png">
                                     <span class="fM bold success">+1</span>
+                                    <img class="stamp" src="img/stamp.png">
                                 </div>
                                 <span class="fS gray">2022/01/11</span>
                             </div>
                         </div>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (Gift) -->
+            <section id="popGift" class="popup stamp popGift" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popMain">
+                        <img class="photo" src="img/news.png">
+                        <span class="fXL third">獎品名稱</span>
+                        <span class="fM gray">兌換 2021/10/01 - 2022/02/22</span>
+                        <div class="detail flexH width between">
+                            <div class="flexH">
+                                <img src="img/stamp.png" class="stamp">
+                                <span class="fM bold primary">滿3個</span>
+                            </div>
+                            <a class="button rounded fit" onclick="popGiftGet()">
+                                <span class="fM">兌換獎品</span>
+                            </a>
+                        </div>
+                        <div class="dashH"></div>
+                        <div class="detail flexV width">
+                            <span class="fL">集章說明</span>
+                            <span class="fM gray">內容，身作行用備升麼研水成唱。平世往式較也受新，南然是，光充知孩的學出長大可來一，眼重考情己論色火死怕筆。事是行性孩資構深的香為可以間良快上難城？</span>
+                        </div>
+                        <div class="detail flexV width">
+                            <span class="fL">集章說明</span>
+                            <span class="fM gray">內容，身作行用備升麼研水成唱。平世往式較也受新，南然是，光充知孩的學出長大可來一，眼重考情己論色火死怕筆。事是行性孩資構深的香為可以間良快上難城？</span>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (GiftGet) -->
+            <section id="popGiftGet" class="popup stamp popGiftGet" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popMain">
+                        <img class="photo" src="img/news.png">
+                        <span class="fL">確認兌換獎品名稱？</span>
+                        <span class="fS error">兌換後將無法取消，請確認已出示給現場人員</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded white" onclick="popClose(this)">
+                            <span class="fM">取消</span>
+                        </a>
+                        <a class="button rounded" href="stamp.html">
+                            <span class="fM">確定兌換</span>
+                        </a>
                     </section>
                 </div>
             </section>

@@ -1243,10 +1243,12 @@ span {
   backdrop-filter: blur(4px);
 }
 .body .popup .close {
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   height: 20px;
   width: 20px;
+  padding: 5px;
+  border-radius: 99px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -1254,6 +1256,8 @@ span {
   color: var(--cG4);
   font-size: 24px;
   z-index: 1;
+  background: rgba(242, 241, 246, 0.5);
+  backdrop-filter: blur(20px);
 }
 .body .popup .close:hover,
 .body .popup .close:focus {

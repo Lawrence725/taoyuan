@@ -9,7 +9,7 @@
     .header .fa-chevron-left, .header .fa-xmark, .header .fa-times { color: var(--c3) !important; font-size: 1.5em; line-height: 0.04167em; vertical-align: -0.125em; }
     .listEmpty { min-height: calc(100vh - 150px);
         .icon { margin-bottom: 50px; }}
-    .stamps { width: calc(100vw - 30px); aspect-ratio: 335/150; box-sizing: border-box; padding: 0 30px; margin: 10px 0; position: relative; background-image: url(../img/bg-stamp.svg); background-size: contain; background-repeat: no-repeat;
+    .stamps { width: calc(100vw - 30px); max-width: 500px; aspect-ratio: 335/150; box-sizing: border-box; padding: 0 30px; margin: 10px 0; position: relative; background-image: url(../img/bg-stamp.svg); background-size: contain; background-repeat: no-repeat;
         > *:first-child { margin-top: 10px; }
         > *:last-child { margin-bottom: 10px; }
         .topLeft { width: 100px; height: 60px; top: 0; left: 0; position: absolute; overflow: hidden;
@@ -449,8 +449,7 @@
                     img.photo { width: 150px; height: 150px; border-radius: 15px 15px 0 0; object-fit: cover; }
                     img.stamp { width: 30px; height: 30px; border-radius: 5px; margin-right: 5px; object-fit: cover; }}}
             .detail { margin: 10px 0;
-                .heading { margin-bottom: 5px; }}
-        }
+                .heading { margin-bottom: 5px; }}}
         &.footer { box-shadow: none;
             .icon.primary { margin-left: 0;
                 i { color: var(--c1) !important; }}}
@@ -526,6 +525,53 @@
                 .lineV { height: 40px; background-color: var(--cG4); }}
             .list { padding: 10px 0; overflow-y: auto;
                 .ticketStamp { width: calc(100% - 22px); margin: 10px 0; }}}}
+    .stamp {
+        &.main { height: 100vh; height: var(--app-height); margin: 60px 15px 70px; padding: 10px 20px !important; border-radius: 20px; position: relative; background-color: white;
+            @media @sD, @sT { width: 748px !important; margin: 60px auto 70px; }
+            .topLeft { width: 150px; height: 100px; top: 0; left: 0; position: absolute; overflow: hidden;
+                .textBg { width: 200px; padding: 2.5px 0; top: 10px; left: -60px; position: absolute; display: none; background-color: var(--cG4); transform: rotate(-30deg);
+                    &.active { display: flex; }}}
+            .topRight { width: 150px; height: 100px; top: 0; right: 0; position: absolute; overflow: hidden;
+                .textBg { width: 200px; padding: 2.5px 0; top: 10px; right: -60px; position: absolute; display: none; background-color: var(--c2); transform: rotate(30deg);
+                    &.active { display: flex; }}}
+            .sticker { margin: 10px 0;
+                img { width: calc(20% - 10px); margin: 5px; border-radius: 10px;
+                    &.none { filter: grayscale(100%); opacity: 0.25; }}}
+            .dashH { margin: 10px 0; }
+            .gift { max-width: 400px; aspect-ratio: 285/120; margin: 10px auto; padding: 0 30px 0 20px; box-sizing: border-box; position: relative; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); background-image: url(../img/bg-gift.svg); background-size: contain; background-repeat: no-repeat;
+                .topLeft { width: 100px; height: 60px; top: 0; left: 0; position: absolute; overflow: hidden;
+                    .textBg { width: 150px; top: 5px; left: -50px; position: absolute; display: none; background-color: var(--cG4); transform: rotate(-30deg);
+                        &.active { display: flex; }
+                        span { line-height: 10px; }}}
+                .fS { margin: 5px 0; }
+                img.photo { width: 100px; height: 100px; margin-left: 10px; border-radius: 10px; object-fit: cover; }
+                img.stamp { width: 40px; height: 40px; border-radius: 5px; margin-right: 5px; object-fit: cover; }}
+            .detail { margin: 10px 0;
+                .fL { margin-bottom: 5px; }}}
+        &.footer { box-shadow: none;
+            .icon.primary { margin-left: 0;
+                i { color: var(--c1) !important; }}}
+        &.popCode {
+            .popMain { padding: 0 5px 5px; margin-bottom: 0 !important; }
+            .img.profile { width: 60px; height: 60px; min-width: 60px; margin-right: 10px; background-image: url(../img/profile-d.png); background-size: cover;
+                img { border-radius: 10px; }}
+            .refresh { background-color: var(--c3); }
+            .qrcode { padding: 20px 0; margin: 10px 0 0; border-radius: 20px; background-color: white; 
+                .img { width: 250px; height: fit-content; }}
+            .submit { background-color: var(--c1); margin-right: -5px; }}
+        &.popHistory {
+            .popMain { padding: 0 10px;
+                .record:not(:first-child) { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--cG5); border-radius: 0; }
+                img.stamp { width: 30px; height: 30px; border-radius: 5px; margin-right: 5px; object-fit: cover; }}}
+        &.popGift {
+            .popBody { padding: 0 20px;
+            .popMain { padding: 0; margin: 0; align-items: flex-start; overflow-x: hidden;
+            .detail { margin: 10px 0; }
+            img.photo { width: 100%; aspect-ratio: 1/1; margin: 20px 0; border-radius: 10px; }
+            img.stamp { width: 40px; height: 40px; border-radius: 5px; margin-right: 5px; object-fit: cover; }}}}
+        &.popGiftGet {
+            .popMain { padding: 10px; margin-top: 0;
+            img.photo { width: 100%; aspect-ratio: 1/1; margin-bottom: 20px; border-radius: 10px; }}}}
 
     // 特店/任務
     .stores {
