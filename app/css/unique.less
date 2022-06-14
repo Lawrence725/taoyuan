@@ -9,7 +9,7 @@
     .header .fa-chevron-left, .header .fa-xmark, .header .fa-times { color: var(--c3) !important; font-size: 1.5em; line-height: 0.04167em; vertical-align: -0.125em; }
     .listEmpty { min-height: calc(100vh - 150px);
         .icon { margin-bottom: 50px; }}
-    .stamps { width: calc(100vw - 30px); max-width: 500px; aspect-ratio: 335/150; box-sizing: border-box; padding: 0 30px; margin: 10px 0; position: relative; background-image: url(../img/bg-stamp.svg); background-size: contain; background-repeat: no-repeat;
+    .stampsItem { width: calc(100vw - 30px); max-width: 500px; aspect-ratio: 335/150; box-sizing: border-box; padding: 0 30px; margin: 10px 0; position: relative; background-image: url(../img/bg-stamp.svg); background-size: contain; background-repeat: no-repeat;
         > *:first-child { margin-top: 10px; }
         > *:last-child { margin-bottom: 10px; }
         .topLeft { width: 100px; height: 60px; top: 0; left: 0; position: absolute; overflow: hidden;
@@ -525,6 +525,13 @@
                 .lineV { height: 40px; background-color: var(--cG4); }}
             .list { padding: 10px 0; overflow-y: auto;
                 .ticketStamp { width: calc(100% - 22px); margin: 10px 0; }}}}
+    .stemps {
+        &.main { padding: 60px 10px 70px !important;
+            .filter {
+                .lineV { height: 20px; background-color: var(--c2); }
+                .dropdown { width: fit-content;
+                    select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
+            .list { overflow-y: auto; }}}
     .stamp {
         &.main { height: 100vh; height: var(--app-height); margin: 60px 15px 70px; padding: 10px 20px !important; border-radius: 20px; position: relative; background-color: white;
             @media @sD, @sT { width: 748px !important; margin: 60px auto 70px; }
