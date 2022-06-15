@@ -3052,6 +3052,7 @@
   text-align: center;
 }
 .body .popPoint .popFooter {
+  min-height: fit-content;
   margin: 30px 10px 10px;
 }
 .body .popPoint .popFooter .img {
