@@ -3027,7 +3027,7 @@
   padding: 0;
 }
 .body .popPoint .popHeader {
-  height: 200px;
+  min-height: 200px;
   margin: 0 !important;
   padding-bottom: 30px;
   border-radius: 20px 20px 0 0;
