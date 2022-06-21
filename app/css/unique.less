@@ -729,6 +729,22 @@
             .popFooter { margin: 30px 10px 10px;
                 .img { width: 20px; height: 20px; margin-left: 0; }}}}
 
+    // 設定
+    .code {
+        &.main { height: 100vh; height: var(--app-height); margin: 60px 20px 20px; padding: 0px; overflow-y: hidden;
+            @media @sD, @sT { width: 748px !important; margin: 60px auto 70px; }
+            .info { width: calc(100% - 20px); height: 100%; padding: 10px !important; border-radius: 20px; background-color: white; overflow-y: auto;
+                > * { margin: 30px 0; }
+                .code .dot { width: 30px; height: 40px; margin: 0 10px; border-bottom: 2px solid var(--c1); display: flex; align-items: center; justify-content: center;
+                    &.active { border-bottom: 2px solid transparent;
+                        div { width: 10px; height: 10px; border-radius: 99px; background-color: var(--c1); }}}
+                .number a { height: 60px; margin: 2px 1px; }}}}
+    .code_set {
+        &.main > div {
+            > * { margin-bottom: 30px; }
+            .input .button { min-height: unset; height: 30px; padding: 0; margin-right: -5px; }
+            .button { width: calc(50% - 30px); }}}
+
     // Popup
     .popPoint {
         .close { color: white; border-radius: 99px;

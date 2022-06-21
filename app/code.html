@@ -20,24 +20,16 @@
             <!-- Loading Spinner -->
             <!-- <div class="spinner"><div><div></div></div></div> -->
             <!-- Header -->
-            <section class="header point_code">
-                <a class="icon iconButton third" href="point_send.html">
+            <section class="header code">
+                <a class="icon iconButton third" href="javascript:history.back()">
                     <i class="fa-solid fa-chevron-left fa-lg"></i>
                 </a>
-                <span class="fL">店家名稱</span>
+                <span class="fL">設定交易密碼</span>
                 <div class="icon iconButton"></div>
             </section>
             <!-- Main -->
-            <section class="main point_code">
+            <section class="main code">
                 <div class="info flexV width">
-                    <div class="content flexV width center">
-                        <span class="fM gray">您即將支付</span>
-                        <div class="total flexH width rounded middle padding margin">
-                            <div class="img"><img src="icon/point.svg"></div>
-                            <span class="fXL">100</span>
-                        </div>
-                        <span class="fL">輸入交易密碼</span>
-                    </div>
                     <div class="code flexH width middle">
                         <div class="dot active"><div></div></div>
                         <div class="dot active"><div></div></div>
@@ -45,9 +37,6 @@
                         <div class="dot"><div></div></div>
                         <div class="dot"><div></div></div>
                         <div class="dot"><div></div></div>
-                    </div>
-                    <div class="flexH width middle">
-                        <a class="fM gray" href="code_set.html">忘記密碼</a>
                     </div>
                     <div class="number flexV width">
                         <div class="flexH width">
@@ -95,59 +84,16 @@
                             </a>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!-- Popup (未設定交易密碼) -->
-            <section id="popNone" class="popup">
-                <div class="popBody">
-                    <section class="popMain">
-                        <div class="icon"><i class="fa-solid fa-triangle-exclamation fa-3x"></i></div>
-                        <span class="fL">未設定交易密碼</span>
-                    </section>
-                    <section class="popFooter">
-                        <a class="button rounded" href="code.html">
-                            <span class="fM">前往設定</span>
+                    <div class="flexH width">
+                        <a class="button rounded secondary" href="javascript:history.back()"">
+                            <span class="fM">上一步</span>
                         </a>
-                    </section>
-                </div>
-            </section>
-            <!-- Popup (密碼錯誤) -->
-            <section id="popWrong" class="popup" onclick="popClose(this)">
-                <div class="popBody">
-                    <section class="popMain">
-                        <div class="icon"><i class="fa-solid fa-triangle-exclamation fa-3x"></i></div>
-                        <span class="fL">密碼錯誤</span>
-                    </section>
-                    <section class="popFooter">
-                        <a class="button rounded white" href="code_set.html">
-                            <span class="fM">忘記密碼</span>
+                        <a class="button rounded" href="index.html">
+                            <span class="fM">送出</span>
                         </a>
-                        <a class="button rounded" onclick="popClose(this)">
-                            <span class="fM">確定</span>
-                        </a>
-                    </section>
+                    </div>
                 </div>
             </section>
         </div>
-        <!-- Script -->
-        <script>
-            // Popup close
-            function popClose(e) {
-                if (e.classList.contains('popup'))
-                    window.onclick  = function(event) {
-                        if (event.target == e)
-                            e.style.display = "none"; }
-                else if (!(e.classList.contains('popBody')))
-                    e.closest('.popup').style.display = "none";
-                document.body.style.overflow = "scroll"; }
-            // Popup (未設定交易密碼)
-            function popNone() {
-                document.getElementById("popNone").style.display = "flex";
-                document.body.style.overflow = "hidden"; }
-            // Popup (密碼錯誤)
-            function popWrong() {
-                document.getElementById("popWrong").style.display = "flex";
-                document.body.style.overflow = "hidden"; }
-        </script>
     </body>
 </html>
