@@ -20,60 +20,34 @@
             <!-- Loading Spinner -->
             <!-- <div class="spinner"><div><div></div></div></div> -->
             <!-- Header -->
-            <section class="header scan_point">
-                <a class="icon iconButton third" href="scan.html">
+            <section class="header point_code">
+                <a class="icon iconButton third" href="point_send.html">
                     <i class="fa-solid fa-chevron-left fa-lg"></i>
                 </a>
                 <span class="fL">店家名稱</span>
                 <div class="icon iconButton"></div>
             </section>
             <!-- Main -->
-            <section class="main scan_point">
-                <!-- Tabs -->
-                <div class="tabs line fM rounded">
-                    <a class="tab flexV width center active" href="point_send.html">
-                        <span class="fS">紅利桃子</span>
-                        <div class="flexH">
-                            <div class="img point"><img src="icon/point.svg"></div>
-                            <span class="fM bold">500</span>
-                        </div>
-                    </a>
-                    <div class="lineV"></div>
-                    <a class="tab flexV width center" href="scan_tickets.html">
-                        <span class="fS">優惠券</span>
-                        <div class="flexH">
-                            <img src="icon/ticket-on.svg">
-                            <span class="fM bold">5</span>
-                        </div>
-                    </a>
-                    <!-- <div class="lineV"></div>
-                    <a class="tab flexV width center deactive" href="scan_stamps.html">
-                        <span class="fS">集章</span>
-                        <div class="flexH">
-                            <img src="icon/stamp-on.svg">
-                            <span class="fM bold">未啟用</span>
-                        </div>
-                    </a> -->
-                </div>
+            <section class="main point_code">
                 <div class="info flexV width">
                     <div class="content flexV width center">
                         <span class="fM gray">您即將支付</span>
-                        <div class="total flexH width rounded middle padding margin background">
+                        <div class="total flexH width rounded middle padding margin">
                             <div class="img"><img src="icon/point.svg"></div>
                             <span class="fXL">100</span>
                         </div>
-                        <div class="hint flexH between">
-                            <div class="flexH width">
-                                <!-- 餘額不足提示 -->
-                                <!-- <span class="fS error">餘額不足</span> -->
-                            </div>
-                            <span class="fS gray">給</span>
-                            <div class="flexH width right">
-                                <div class="img"><img src="icon/point.svg"></div>
-                                <span class="fS gray">1 = NT$1</span>
-                            </div>
-                        </div>
-                        <span class="fL gray">桃園美味麵食店</span>
+                        <span class="fL">輸入交易密碼</span>
+                    </div>
+                    <div class="code flexH width middle">
+                        <div class="dot active"><div></div></div>
+                        <div class="dot active"><div></div></div>
+                        <div class="dot active"><div></div></div>
+                        <div class="dot"><div></div></div>
+                        <div class="dot"><div></div></div>
+                        <div class="dot"><div></div></div>
+                    </div>
+                    <div class="flexH width middle">
+                        <a class="fM gray">忘記密碼</a>
                     </div>
                     <div class="number flexV width">
                         <div class="flexH width">
@@ -110,40 +84,67 @@
                             </a>
                         </div>
                         <div class="flexH width">
-                            <a class="flexH width middle margin">
+                            <a class="flexH width middle margin" onclick="popNone()">
                                 <span class="fM gray">清除</span>
                             </a>
-                            <a class="flexH width middle margin background rounded">
+                            <a class="flexH width middle margin background rounded" href="point_success.html">
                                 <span class="fXL">0</span>
                             </a>
-                            <a class="flexH width middle margin">
+                            <a class="flexH width middle margin" onclick="popWrong()">
                                 <i class="gray fa-solid fa-delete-left"></i>
                             </a>
                         </div>
                     </div>
-                    <a class="button rounded" href="point_code.html">
-                        <span class="fM">確認送出</span>
-                    </a>
                 </div>
             </section>
-            <!-- Popup (餘額不足) -->
-            <section id="popNotice" class="popup">
+            <!-- Popup (未設定交易密碼) -->
+            <section id="popNone" class="popup" onclick="popClose(this)">
                 <div class="popBody">
-                    <a class="close"><i class="fas fa-times"></i></a>
-                    <section class="popHeader">
-                        <!-- <span class="fL">Title</span> -->
-                    </section>
                     <section class="popMain">
-                        <div class="icon"><i class="fa-solid fa-triangle-exclamation fa-2x"></i></div>
-                        <span class="fL">餘額不足</span>
+                        <div class="icon"><i class="fa-solid fa-triangle-exclamation fa-3x"></i></div>
+                        <span class="fL">未設定交易密碼</span>
                     </section>
                     <section class="popFooter">
-                        <a class="button submit rounded"><span class="fM">確認</span></a>
+                        <a class="button rounded" onclick="popClose(this)">
+                            <span class="fM">前往設定</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (密碼錯誤) -->
+            <section id="popWrong" class="popup" onclick="popClose(this)">
+                <div class="popBody">
+                    <section class="popMain">
+                        <div class="icon"><i class="fa-solid fa-triangle-exclamation fa-3x"></i></div>
+                        <span class="fL">密碼錯誤</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded" onclick="popClose(this)">
+                            <span class="fM">確定</span>
+                        </a>
                     </section>
                 </div>
             </section>
         </div>
         <!-- Script -->
-        <script src="js/point_send.js"></script>
+        <script>
+            // Popup close
+            function popClose(e) {
+                if (e.classList.contains('popup'))
+                    window.onclick  = function(event) {
+                        if (event.target == e)
+                            e.style.display = "none"; }
+                else if (!(e.classList.contains('popBody')))
+                    e.closest('.popup').style.display = "none";
+                document.body.style.overflow = "scroll"; }
+            // Popup (未設定交易密碼)
+            function popNone() {
+                document.getElementById("popNone").style.display = "flex";
+                document.body.style.overflow = "hidden"; }
+            // Popup (密碼錯誤)
+            function popWrong() {
+                document.getElementById("popWrong").style.display = "flex";
+                document.body.style.overflow = "hidden"; }
+        </script>
     </body>
 </html>
