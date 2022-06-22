@@ -1332,6 +1332,10 @@
 .body .scan_point.main .info .button {
   margin-top: 30px;
 }
+.body .scan_point.popConfirm .img {
+  width: 30px;
+  height: fit-content;
+}
 .body .point_send.main {
   height: 100vh;
   height: 100%;
@@ -1486,7 +1490,7 @@
   overflow-y: auto;
 }
 .body .point_success.main .info > * {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .body .point_success.main .info .title {
   margin-top: 50px;
@@ -1511,6 +1515,10 @@
   100% {
     opacity: 1;
   }
+}
+.body .point_success.main .info .subtitle .img {
+  width: 40px;
+  height: fit-content;
 }
 .body .point_success.main .info .detail > * {
   min-height: 35px;

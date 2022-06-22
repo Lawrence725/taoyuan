@@ -99,7 +99,7 @@
                             </a>
                         </div>
                         <div class="flexH width">
-                            <a class="flexH width middle margin background rounded">
+                            <a class="flexH width middle margin background rounded" onclick="popConfirm()">
                                 <span class="fXL">7</span>
                             </a>
                             <a class="flexH width middle margin background rounded">
@@ -142,8 +142,60 @@
                     </section>
                 </div>
             </section>
+            <!-- Popup (Confirm) -->
+            <section id="popConfirm" class="popup scan_point popConfirm" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popMain">
+                        <span class="fM gray">您即將支付</span>
+                        <div class="total flexH width rounded middle padding margin background">
+                            <div class="img"><img src="icon/point.svg"></div>
+                            <span class="fXL">100</span>
+                        </div>
+                        <span class="fS gray">給</span>
+                        <span class="fL gray">桃園美味麵食店</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button rounded white" onclick="popClose(this)">
+                            <span class="fM">取消</span>
+                        </a>
+                        <a class="button rounded" href="point_success.html">
+                            <span class="fM">確認送出</span>
+                        </a>
+                    </section>
+                </div>
+            </section>
         </div>
         <!-- Script -->
-        <script src="js/point_send.js"></script>
+        <script>
+            // Popup close
+            function popClose(e) {
+                if (e.classList.contains('popup'))
+                    window.onclick  = function(event) {
+                        if (event.target == e)
+                            e.style.display = "none"; }
+                else if (!(e.classList.contains('popBody')))
+                    e.closest('.popup').style.display = "none";
+                document.body.style.overflow = "scroll"; }
+            // Popup (Confirm)
+            function popConfirm() {
+                document.getElementById("popConfirm").style.display = "flex";
+                document.body.style.overflow = "hidden"; }
+            // Popup (餘額不足)
+            function popNotice() {
+                var popNotice   = document.getElementById("popNotice");
+                var close       = popNotice.getElementsByClassName("close")[0];
+                var submit      = popNotice.getElementsByClassName("submit")[0];
+                close.onclick   = function() { popClose(); }
+                submit.onclick  = function() { popClose(); }
+                window.onclick  = function(event) { if (event.target == popNotice) { popClose(); }}
+                function popClose() { 
+                    popNotice.style.display         = "none";
+                    document.body.style.overflow    = "scroll"; }
+                popNotice.style.display             = "flex";
+                document.body.style.overflow        = "hidden"; }
+        </script>
     </body>
 </html>

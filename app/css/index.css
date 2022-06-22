@@ -1011,7 +1011,6 @@ span {
 }
 .body .banners {
   width: calc(100% + 20px);
-  margin: 0 0 10px -10px;
   position: relative;
   /* Position the "next button" to the right */
   /* On hover, add a grey background color */
