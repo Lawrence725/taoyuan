@@ -150,7 +150,7 @@
             @media @sD, @sT { width: 768px !important; }
             &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
             canvas { width: 100% !important; height: calc(100vh - 200px) !important; position: absolute; object-fit: cover; }
-            .input { width: calc(100% - 70px); padding: 0 5px 0 15px; border: 1px solid #FFFFFF; top: 80px; left: 20px; position: absolute; z-index: 2; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px);
+            .input { width: calc(100% - 70px); padding: 0 5px 0 15px; top: 80px; left: 20px; position: absolute; z-index: 2; background: white;
                 ::placeholder { color: var(--c4); }}
             .button { margin: 0; left: 50%; transform: translate(-50%, 0); bottom: 90px; position: absolute; z-index: 2; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); }
             .testImg { width: 100% !important; height: calc(100vh - 130px) !important; margin: 0; position: absolute; z-index: 1;
@@ -196,7 +196,7 @@
             img { object-fit: cover; }}
         .input { width: calc(100% - 62px); padding: 0 5px 0 15px; margin: 0; border: 1px solid #FFFFFF; top: 168px; left: 20px; position: absolute; z-index: 2; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px);
             ::placeholder { color: var(--cG4); }}
-        .bottom { width: calc(100% - 10px); bottom: 70px; position: absolute;
+        .bottom { width: calc(100% - 10px); bottom: 70px; position: absolute; pointer-events: none;
             .location { width: 40px; height: 40px; margin: 20px; background-color: var(--c3); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); }
             .info { width: calc(100vw - 40px); margin-left: -10px; padding: 20px; border: 1px solid #FFFFFF; border-radius: 30px 30px 0px 0px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(30px);
                 @media @sD, @sT { width: 728px !important; }
@@ -205,7 +205,7 @@
                 .img.store { width: 50px; height: 50px;
                     img { border-radius: 5px; }}
                 .img.point { width: 20px; height: 20px; margin-left: 0; }}
-            .information { width: calc(100vw - 60px); margin: 0 20px 20px 10px; padding: 10px; border: 1px solid #FFFFFF; border-radius: 20px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(30px);
+            .information { width: calc(100vw - 60px); margin: 0 20px 20px 10px; padding: 10px; border: 1px solid #FFFFFF; border-radius: 20px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(30px); pointer-events: initial;
                 @media @sD, @sT { width: 728px !important; }
                 img.store { width: 80px; height: 80px; margin-right: 10px; border-radius: 5px; aspect-ratio: 1/1; }
                 .detail { flex-wrap: wrap;

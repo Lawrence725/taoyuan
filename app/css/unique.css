@@ -662,13 +662,11 @@
 .body .scan.main .input {
   width: calc(100% - 70px);
   padding: 0 5px 0 15px;
-  border: 1px solid #FFFFFF;
   top: 80px;
   left: 20px;
   position: absolute;
   z-index: 2;
-  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
-  backdrop-filter: blur(30px);
+  background: white;
 }
 .body .scan.main .input ::placeholder {
   color: var(--c4);
@@ -878,6 +876,7 @@
   width: calc(100% - 10px);
   bottom: 70px;
   position: absolute;
+  pointer-events: none;
 }
 .body .map .bottom .location {
   width: 40px;
@@ -928,6 +927,7 @@
   background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
   box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
   backdrop-filter: blur(30px);
+  pointer-events: initial;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .map .bottom .information {
