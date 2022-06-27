@@ -118,9 +118,6 @@
 .body .ticketStamp.stamp .used {
   display: none;
 }
-.body .ticketStamp.stamp .cover {
-  background-image: url(../img/bg-stamp.png);
-}
 .body .ticketStamp .profile {
   width: 60px;
   height: 60px;
