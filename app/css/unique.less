@@ -560,12 +560,15 @@
                     &.none { filter: grayscale(100%); opacity: 0.25; }}}
             .dashH { margin: 10px 0; }
             .gift { max-width: 400px; aspect-ratio: 285/120; margin: 10px auto; padding: 0 30px 0 20px; box-sizing: border-box; position: relative; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); background-image: url(../img/bg-gift.svg); background-size: contain; background-repeat: no-repeat;
+                > .flexV {
+                    > * { margin: 5px 0 0 0; }
+                    > .fM { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }}
                 .topLeft { width: 100px; height: 60px; top: 0; left: 0; position: absolute; overflow: hidden;
                     .textBg { width: 150px; top: 5px; left: -50px; position: absolute; display: none; background-color: var(--cG4); transform: rotate(-30deg);
                         &.active { display: flex; }
                         span { line-height: 10px; }}}
                 .fS { margin: 5px 0; }
-                img.photo { width: 100px; height: 100px; margin-left: 10px; border-radius: 10px; object-fit: cover; }
+                img.photo { min-width: 100px; height: 100px; margin-left: 10px; border-radius: 10px; object-fit: cover; }
                 img.stamp { width: 40px; height: 40px; border-radius: 5px; margin-right: 5px; object-fit: cover; }}
             .detail { margin: 10px 0;
                 .fL { margin-bottom: 5px; }}}
@@ -623,7 +626,7 @@
                     .icon { margin: 0 5px 0 0; }}}}}
     .store {
         &.main { padding: 0 10px 10px !important; position: relative; align-items: center;
-            .back { top: 20px; left: 20px; position: fixed; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); }
+            .back { top: 20px; left: 20px; position: fixed; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); z-index: 2; }
             img {
                 &.cover { width: 100vw; min-height: 250px; object-fit: cover; }
                 &.profile { width: 100px; height: 100px; margin-top: -51px; border: 1px solid white; border-radius: 20px; object-fit: cover; }}
