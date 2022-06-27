@@ -2625,6 +2625,13 @@
   border-radius: 5px;
   aspect-ratio: 1/1;
 }
+.body .stores.main .list .information .fM {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .body .stores.main .list .information .detail {
   flex-wrap: wrap;
 }
