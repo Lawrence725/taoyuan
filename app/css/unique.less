@@ -65,11 +65,12 @@
                 .dropdown { width: fit-content;
                     select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
             .records { max-height: 100%; overflow-y: auto;
+                .record { padding-bottom: 10px; margin-top: 10px; margin-bottom: 0; border-bottom: 1px solid var(--cG5); border-radius: 0; }
                 .dot { min-width: 10px; min-height: 10px; margin-right: 10px; border-radius: 99px;
                     &.active { background-color: var(--cRed); }}
                 .img { width: 100px; height: fit-content;
                     img { border-radius: 5px; }}
-                .lineH:last-child { display: none; }}}}
+                .lineH { display: none; }}}}
     .video {
         &:not(.popup) { background: black !important; }
         &.header i { color: white !important; }
@@ -109,11 +110,14 @@
         .point { width: calc(100% - 40px); padding: 10px; margin: 10px; border: 1px solid var(--c1); border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
             .img { width: 50px; height: fit-content; }}
         .mission { width: calc(100% - 42px) !important; padding: 20px 10px 55px; margin: 15px 10px 10px; border: 1px solid var(--cG4); border-radius: 20px !important; position: relative;
+            a { position: relative; }
             .fM { margin-top: 5px; }
             .title { width: fit-content !important; border-bottom: 2px solid var(--c1); border-radius: 0; left: 50%; transform: translate(-50%, 0); bottom: 15px; position: absolute; text-align: center;
                 span { margin: 0; }
                 .icon { margin: 0; }}
-            .third { color: var(--c1) !important; }}
+            .third { color: var(--c1) !important; }
+            .none { pointer-events: none;
+                .label { padding: 2.5px 5px; border: 1px solid var(--c1) !important; border-radius: 5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); filter: grayscale(0%) !important; opacity: 1 !important; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); }}}
         .missions { min-height: 80px;
             .carousel { width: 20vw; }}
         .tabs { margin: 10px 5px 5px; }
@@ -196,7 +200,7 @@
         .input { width: calc(100% - 62px); padding: 0 5px 0 15px; margin: 0; border: 1px solid #FFFFFF; top: 168px; left: 20px; position: absolute; z-index: 2; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px);
             ::placeholder { color: var(--cG4); }}
         .bottom { width: calc(100% - 10px); bottom: 70px; position: absolute; pointer-events: none;
-            .location { width: 40px; height: 40px; margin: 20px; background-color: var(--c3); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); }
+            .location { width: 40px; height: 40px; margin: 20px; background-color: var(--c3); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); pointer-events: initial; }
             .info { width: calc(100vw - 40px); margin-left: -10px; padding: 20px; border: 1px solid #FFFFFF; border-radius: 30px 30px 0px 0px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(30px);
                 @media @sD, @sT { width: 728px !important; }
                 .checklist { margin-top: 10px;
@@ -207,7 +211,11 @@
             .information { width: calc(100vw - 60px); margin: 0 20px 20px 10px; padding: 10px; border: 1px solid #FFFFFF; border-radius: 20px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); backdrop-filter: blur(30px); pointer-events: initial;
                 @media @sD, @sT { width: 728px !important; }
                 img.store { width: 80px; height: 80px; margin-right: 10px; border-radius: 5px; aspect-ratio: 1/1; }
-                .detail { flex-wrap: wrap;
+                .flexV > *:not(:last-child) { margin-top: 2.5px; }
+                .fL { order: 2; }
+                .fM { order: 3; }
+                .detail { flex-wrap: wrap; order: 1; padding: 1px 5px; border: 1px solid var(--c1); border-radius: 99px;
+                    span { color: var(--c1) !important; }
                     .img.point { width: 20px; height: 20px; margin: 0 5px 0 0; }
                     .img.ticket { width: 18px; height: 18px; margin: 0 5px 0 0; }
                     .img.stamp { width: 16px; height: 16px; margin: 0 5px 0 0; }}
@@ -252,7 +260,9 @@
             .img { width: 24px; height: fit-content; }
             .lineV { height: 20px; background-color: var(--cG4); }}
         .menu {
-            .img { width: 24px; height: fit-content; margin-right: 10px; }}
+            a:not(:last-child) { padding-bottom: 5px; margin-bottom: 5px; border-bottom: 1px dashed solid var(--cG5); border-radius: 0; }
+            .img { width: 24px; height: fit-content; margin-right: 10px; }
+            .lineH { display: none; }}
         .invite { width: calc(100% - 2px); margin: 20px 0; padding: 5px 0; border: 1px solid white; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .img { width: 30px; height: fit-content; }}
         &.popInvite {
@@ -369,7 +379,7 @@
     .point_history {
         &.main { padding: 60px 10px 70px !important;
             .tabs { height: fit-content; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
-                .tab { padding: 5px 0;
+                .tab { padding: 0;
                     &.active { color: var(--c1); }
                     &:not(.active) {
                         * { color: var(--cG4); }
@@ -385,8 +395,9 @@
                     select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
             .records { max-height: 100%; overflow-y: auto;
                 .img { width: 20px; height: fit-content;}
-                .lineH:last-child { display: none; }
-                .record .flexV.end .fM.gray { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-align: right; }}}
+                .lineH { display: none; }
+                .record { padding-bottom: 10px; margin-top: 10px; margin-bottom: 0; border-bottom: 1px solid var(--cG5); border-radius: 0;
+                    .flexV.end .fM.gray { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-align: right; }}}}
         &.popTime {
             .popMain { padding: 0;
                 .tabs { height: 34px;
@@ -616,11 +627,15 @@
                     select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
             .list { overflow-y: auto;
                 input { width: calc(100vw - 30px) !important; padding-left: 10px; }
-                .information { width: calc(100vw - 32px) !important; height: 100px; margin: 10px 5px; padding: 10px; border: 1px solid #FFFFFF; border-radius: 20px; box-sizing: border-box; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px);
+                .information { width: calc(100vw - 32px) !important; min-height: 100px; margin: 0 5px; padding: 0 10px; border-radius: 0; box-sizing: border-box;
+                    &:not(:last-child) { border-bottom: 1px solid var(--cG5); }
                     @media @sD, @sT { width: 728px !important; }
-                    img.store { width: 80px; height: 80px; margin-left: 10px; border-radius: 5px; aspect-ratio: 1/1; }
-                    .fM { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
-                    .detail { flex-wrap: wrap;
+                    img.store { display: none; width: 80px; height: 80px; margin-left: 10px; border-radius: 5px; aspect-ratio: 1/1; }
+                    .fL { order: 2; }
+                    .fM { order: 3; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+                    .flexV > *:not(:last-child) { margin-top: 2.5px; }
+                    .detail { flex-wrap: wrap; order: 1; padding: 1px 5px; border: 1px solid var(--c1); border-radius: 99px;
+                        span { color: var(--c1) !important; }
                         .img.point { width: 20px; height: 20px; margin: 0 5px 0 0; }
                         .img.ticket { width: 18px; height: 18px; margin: 0 5px 0 0; }
                         .img.stamp { width: 16px; height: 16px; margin: 0 5px 0 0; }}

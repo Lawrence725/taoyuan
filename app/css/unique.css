@@ -306,6 +306,13 @@
   max-height: 100%;
   overflow-y: auto;
 }
+.body .notice.main .records .record {
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--cG5);
+  border-radius: 0;
+}
 .body .notice.main .records .dot {
   min-width: 10px;
   min-height: 10px;
@@ -322,7 +329,7 @@
 .body .notice.main .records .img img {
   border-radius: 5px;
 }
-.body .notice.main .records .lineH:last-child {
+.body .notice.main .records .lineH {
   display: none;
 }
 .body .video:not(.popup) {
@@ -490,6 +497,9 @@
   border-radius: 20px !important;
   position: relative;
 }
+.body .index .mission a {
+  position: relative;
+}
 .body .index .mission .fM {
   margin-top: 5px;
 }
@@ -511,6 +521,22 @@
 }
 .body .index .mission .third {
   color: var(--c1) !important;
+}
+.body .index .mission .none {
+  pointer-events: none;
+}
+.body .index .mission .none .label {
+  padding: 2.5px 5px;
+  border: 1px solid var(--c1) !important;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  filter: grayscale(0%) !important;
+  opacity: 1 !important;
+  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  backdrop-filter: blur(30px);
 }
 .body .index .missions {
   min-height: 80px;
@@ -881,6 +907,7 @@
   margin: 20px;
   background-color: var(--c3);
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
+  pointer-events: initial;
 }
 .body .map .bottom .info {
   width: calc(100vw - 40px);
@@ -938,8 +965,24 @@
   border-radius: 5px;
   aspect-ratio: 1/1;
 }
+.body .map .bottom .information .flexV > *:not(:last-child) {
+  margin-top: 2.5px;
+}
+.body .map .bottom .information .fL {
+  order: 2;
+}
+.body .map .bottom .information .fM {
+  order: 3;
+}
 .body .map .bottom .information .detail {
   flex-wrap: wrap;
+  order: 1;
+  padding: 1px 5px;
+  border: 1px solid var(--c1);
+  border-radius: 99px;
+}
+.body .map .bottom .information .detail span {
+  color: var(--c1) !important;
 }
 .body .map .bottom .information .detail .img.point {
   width: 20px;
@@ -1111,10 +1154,19 @@
   height: 20px;
   background-color: var(--cG4);
 }
+.body .profile .menu a:not(:last-child) {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed solid var(--cG5);
+  border-radius: 0;
+}
 .body .profile .menu .img {
   width: 24px;
   height: fit-content;
   margin-right: 10px;
+}
+.body .profile .menu .lineH {
+  display: none;
 }
 .body .profile .invite {
   width: calc(100% - 2px);
@@ -1539,7 +1591,7 @@
   background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 .body .point_history.main .tabs .tab {
-  padding: 5px 0;
+  padding: 0;
 }
 .body .point_history.main .tabs .tab.active {
   color: var(--c1);
@@ -1600,8 +1652,15 @@
   width: 20px;
   height: fit-content;
 }
-.body .point_history.main .records .lineH:last-child {
+.body .point_history.main .records .lineH {
   display: none;
+}
+.body .point_history.main .records .record {
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--cG5);
+  border-radius: 0;
 }
 .body .point_history.main .records .record .flexV.end .fM.gray {
   display: -webkit-box;
@@ -2604,14 +2663,14 @@
 }
 .body .stores.main .list .information {
   width: calc(100vw - 32px) !important;
-  height: 100px;
-  margin: 10px 5px;
-  padding: 10px;
-  border: 1px solid #FFFFFF;
-  border-radius: 20px;
+  min-height: 100px;
+  margin: 0 5px;
+  padding: 0 10px;
+  border-radius: 0;
   box-sizing: border-box;
-  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
-  backdrop-filter: blur(30px);
+}
+.body .stores.main .list .information:not(:last-child) {
+  border-bottom: 1px solid var(--cG5);
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .stores.main .list .information {
@@ -2619,21 +2678,36 @@
   }
 }
 .body .stores.main .list .information img.store {
+  display: none;
   width: 80px;
   height: 80px;
   margin-left: 10px;
   border-radius: 5px;
   aspect-ratio: 1/1;
 }
+.body .stores.main .list .information .fL {
+  order: 2;
+}
 .body .stores.main .list .information .fM {
+  order: 3;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.body .stores.main .list .information .flexV > *:not(:last-child) {
+  margin-top: 2.5px;
+}
 .body .stores.main .list .information .detail {
   flex-wrap: wrap;
+  order: 1;
+  padding: 1px 5px;
+  border: 1px solid var(--c1);
+  border-radius: 99px;
+}
+.body .stores.main .list .information .detail span {
+  color: var(--c1) !important;
 }
 .body .stores.main .list .information .detail .img.point {
   width: 20px;
