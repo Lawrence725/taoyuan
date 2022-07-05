@@ -3417,7 +3417,7 @@
   filter: drop-shadow(0px 5px 10px rgba(55, 84, 170, 0.2));
 }
 .body .popPWA img.share {
-  margin: 0 2.5px;
+  margin: 0 2.5px -2.5px;
 }
 .body .popPWA .info > *:not(:last-child) {
   margin-bottom: 5px;
