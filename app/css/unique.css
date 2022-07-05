@@ -3401,6 +3401,7 @@
 }
 .body .popPWA .popBody {
   width: 100%;
+  max-width: 688px;
   margin-bottom: 30px !important;
   position: relative;
   animation-name: popPWA;
