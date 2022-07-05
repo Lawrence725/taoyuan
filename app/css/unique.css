@@ -522,6 +522,12 @@
 .body .index .mission .third {
   color: var(--c1) !important;
 }
+.body .index .mission a:nth-child(2) img {
+  margin: -2.5px 0;
+}
+.body .index .mission .label {
+  display: none;
+}
 .body .index .mission .none {
   pointer-events: none;
 }
@@ -529,6 +535,7 @@
   padding: 2.5px 5px;
   border: 1px solid var(--c1) !important;
   border-radius: 5px;
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1114,6 +1121,21 @@
   background-image: url(../img/profile-d.png);
   background-size: cover;
 }
+.body .profile .functions {
+  width: calc(100% + 10px) !important;
+  margin: 0 -10px;
+}
+.body .profile .functions .fM {
+  margin: 5px 0;
+}
+.body .profile .functions .fS {
+  width: 70px;
+  padding: 2px;
+  border: 1px solid var(--c2);
+  border-radius: 99px;
+  line-height: 16px;
+  text-align: center;
+}
 .body .profile .point {
   width: calc(100% - 20px);
   padding: 10px;
@@ -1156,8 +1178,8 @@
 }
 .body .profile .menu a:not(:last-child) {
   padding-bottom: 5px;
-  margin-bottom: 5px;
-  border-bottom: 1px dashed solid var(--cG5);
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--cG5);
   border-radius: 0;
 }
 .body .profile .menu .img {

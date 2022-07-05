@@ -116,8 +116,10 @@
                 span { margin: 0; }
                 .icon { margin: 0; }}
             .third { color: var(--c1) !important; }
+            a:nth-child(2) img { margin: -2.5px 0; }
+            .label { display: none; }
             .none { pointer-events: none;
-                .label { padding: 2.5px 5px; border: 1px solid var(--c1) !important; border-radius: 5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); filter: grayscale(0%) !important; opacity: 1 !important; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); }}}
+                .label { padding: 2.5px 5px; border: 1px solid var(--c1) !important; border-radius: 5px; display: flex; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); filter: grayscale(0%) !important; opacity: 1 !important; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); }}}
         .missions { min-height: 80px;
             .carousel { width: 20vw; }}
         .tabs { margin: 10px 5px 5px; }
@@ -250,6 +252,9 @@
                 .type { bottom: 30px; left: 27px; position: absolute; letter-spacing: 0.33em; }
                 .cover { border-radius: 10px; background: rgba(0, 0, 0, 0.5); position: absolute; }}}
         .picture img { border: 1px solid white; border-radius: 999px; background-image: url(../img/profile-d.png); background-size: cover; }
+        .functions { width: calc(100% + 10px) !important; margin: 0 -10px;
+            .fM { margin: 5px 0; }
+            .fS { width: 70px; padding: 2px; border: 1px solid var(--c2); border-radius: 99px; line-height: 16px; text-align: center; }}
         .point { width: calc(100% - 20px); padding: 10px; margin: 20px 0; border: 1px solid var(--c1); border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
             .img { width: 50px; height: fit-content; }}
         .ticket {
@@ -260,7 +265,7 @@
             .img { width: 24px; height: fit-content; }
             .lineV { height: 20px; background-color: var(--cG4); }}
         .menu {
-            a:not(:last-child) { padding-bottom: 5px; margin-bottom: 5px; border-bottom: 1px dashed solid var(--cG5); border-radius: 0; }
+            a:not(:last-child) { padding-bottom: 5px; margin-bottom: 10px; border-bottom: 1px solid var(--cG5); border-radius: 0; }
             .img { width: 24px; height: fit-content; margin-right: 10px; }
             .lineH { display: none; }}
         .invite { width: calc(100% - 2px); margin: 20px 0; padding: 5px 0; border: 1px solid white; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
