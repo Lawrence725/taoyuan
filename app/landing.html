@@ -31,6 +31,48 @@
                     <span class="fM white">桃園市政府</span>
                 </div>
             </a>
+            <!-- Popup (PWA) -->
+            <section id="popPWA" class="popup popPWA" onclick="popClose(this)">
+                <div class="popBody">
+                    <div class="triangle"></div> <!-- Android disable -->
+                    <div class="flexV width center">
+                        <img class="logo" src="img/logo.png">
+                    </div>
+                    <div class="info flexV width center">
+                        <span class="fXL">安裝紅利桃子？</span>
+                        <span class="fS gray center">
+                            安裝紅利桃子到您的首頁，以享有最完整之功能
+                            <br>按下Safari分享選單 <!-- Android disable -->
+                            <img class="share" src="icon/share.svg">
+                            ，點選「新增至主畫面」</span>
+                    </div>
+                    <div class="flexH width">
+                        <a class="button rounded white" onclick="popClose(this)">
+                            <span class="fM">暫時不要</span>
+                        </a>
+                        <a class="button rounded" href="index.html">
+                            <span class="fM">加到首頁</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
+        <script>
+            // Popup close
+            function popClose(e) {
+                if (e.classList.contains('popup'))
+                    window.onclick  = function(event) {
+                        if (event.target == e)
+                            e.style.display = "none"; }
+                else if (!(e.classList.contains('popBody')))
+                    e.closest('.popup').style.display = "none";
+                document.body.style.overflow = "scroll"; }
+            // Popup (PWA)
+            function popPWA() {
+                document.getElementById("popPWA").style.display = "flex";
+                document.body.style.overflow = "hidden"; }
+            // Open Popup
+            setTimeout(function() { popPWA(); }, 2000);
+        </script>
     </body>
 </html>
