@@ -2778,7 +2778,7 @@
   align-items: center;
 }
 .body .store.main > .fL {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .body .store.main > .fM {
   margin-bottom: 10px;
@@ -2794,11 +2794,12 @@
 }
 .body .store.main img.cover {
   width: 100vw;
-  min-height: 250px;
+  aspect-ratio: 21/9;
   object-fit: cover;
 }
 .body .store.main img.profile {
   width: 100px;
+  min-height: unset;
   height: 100px;
   margin-top: -51px;
   border: 1px solid white;

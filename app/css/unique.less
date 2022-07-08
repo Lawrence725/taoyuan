@@ -654,12 +654,12 @@
                     .icon { margin: 0 5px 0 0; }}}}}
     .store {
         &.main { padding: 0 10px 10px !important; position: relative; align-items: center;
-            > .fL { margin-top: 10px; }
+            > .fL { margin-top: 20px; }
             > .fM { margin-bottom: 10px; }
             .back { top: 20px; left: 20px; position: fixed; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); z-index: 2; }
             img {
-                &.cover { width: 100vw; min-height: 250px; object-fit: cover; }
-                &.profile { width: 100px; height: 100px; margin-top: -51px; border: 1px solid white; border-radius: 20px; object-fit: cover; }}
+                &.cover { width: 100vw; aspect-ratio: 21/9; object-fit: cover; }
+                &.profile { width: 100px; min-height: unset; height: 100px; margin-top: -51px; border: 1px solid white; border-radius: 20px; object-fit: cover; }}
             .favorite { top: 260px; right: 10px; position: absolute;
                 &.active {
                     .icon:first-child { display: flex; }
