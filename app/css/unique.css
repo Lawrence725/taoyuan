@@ -844,6 +844,11 @@
   margin-left: -10px;
   overflow-x: auto;
 }
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .map .filter {
+    width: 768px !important;
+  }
+}
 .body .map .filter::-webkit-scrollbar {
   width: 0;
   height: 0;

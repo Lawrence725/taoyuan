@@ -188,6 +188,7 @@
                 &:not(.active) * { color: var(--cG4); }}
             .lineV { height: 20px; background-color: var(--cG5); }}
         .filter { width: 100vw; min-height: 40px; margin-left: -10px; overflow-x: auto;
+            @media @sD, @sT { width: 768px !important; }
             &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
             > .flexH > .flexH:first-child { margin-left: 10px; }
             > .flexH > .flexH:last-child { margin-right: 10px; }
