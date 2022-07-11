@@ -3432,6 +3432,7 @@
   background-color: var(--c1);
 }
 .body .popPWA {
+  display: flex;
   align-items: flex-end;
   background-color: transparent;
 }
