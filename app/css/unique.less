@@ -1,14 +1,17 @@
 // Screen Size
-@sD:    (min-width: 1024px);                            // Desktop
-@sT:    (max-width: 1023px) and (min-width: 768px);     // Tablet
-@sM:    (max-width: 767px);                             // Mobile
-@sMs:   (max-width: 374px);                             // Mobile (Small)
-@sLand: (max-height: 767px) and (min-width: 568px);     // Mobile (Landscape)
+@sD:    (min-width: 1024px);                                                        // Desktop
+@sT:    (max-width: 1023px) and (min-width: 768px);                                 // Tablet
+@sM:    (max-width: 767px);                                                         // Mobile
+@sMs:   (max-width: 374px);                                                         // Mobile (Small)
+@sLand: (max-height: 767px) and (min-width: 568px) and (orientation: landscape);    // Mobile (Landscape)
 
 .body {
     .header .fa-chevron-left, .header .fa-xmark, .header .fa-times { color: var(--c3) !important; font-size: 1.5em; line-height: 0.04167em; vertical-align: -0.125em; }
     .listEmpty { min-height: calc(100vh - 150px);
         .icon { margin-bottom: 50px; }}
+    .landscape { border-radius: 0; display: none; position: absolute; background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF; z-index: 9;
+        @media @sLand { display: flex; }
+        .icon { margin: 0 20px 0 0; }}
     .stampsItem { width: calc(100vw - 30px); min-width: calc(100vw - 30px); max-width: 500px; aspect-ratio: 335/150; box-sizing: border-box; padding: 0 30px; margin: 10px 0; position: relative; background-image: url(../img/bg-stamp.svg); background-size: contain; background-repeat: no-repeat;
         > *:first-child { margin-top: 10px; }
         > *:last-child { margin-bottom: 10px; }

@@ -12,6 +12,21 @@
 .body .listEmpty .icon {
   margin-bottom: 50px;
 }
+.body .landscape {
+  border-radius: 0;
+  display: none;
+  position: absolute;
+  background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF;
+  z-index: 9;
+}
+@media (max-height: 767px) and (min-width: 568px) and (orientation: landscape) {
+  .body .landscape {
+    display: flex;
+  }
+}
+.body .landscape .icon {
+  margin: 0 20px 0 0;
+}
 .body .stampsItem {
   width: calc(100vw - 30px);
   min-width: calc(100vw - 30px);
