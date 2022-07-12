@@ -3435,6 +3435,7 @@
   display: flex;
   align-items: flex-end;
   background-color: transparent;
+  backdrop-filter: none;
 }
 .body .popPWA .popBody {
   width: 100%;
@@ -3445,7 +3446,7 @@
   animation-duration: 1s;
   animation-iteration-count: 1;
 }
-.body .popPWA .popBody > *:not(.triangle):not(:last-child) {
+.body .popPWA .popBody > *:not(.triangle):not(:last-child):not(:last-child) {
   margin-bottom: 20px;
 }
 .body .popPWA img.logo {
