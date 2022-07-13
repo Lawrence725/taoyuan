@@ -348,8 +348,8 @@ span {
   .body.mobile .main,
   .body.mobile .footer {
     width: 748px;
-    margin-left: calc(50% - 374px);
-    margin-right: calc(50% - 374px);
+    margin-left: calc(50% - 384px);
+    margin-right: calc(50% - 384px);
   }
 }
 .body .flexH {

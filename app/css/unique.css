@@ -1352,8 +1352,8 @@
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .scan_point.main {
-    width: 748px !important;
-    margin: 60px auto 70px;
+    width: 768px !important;
+    margin: 60px auto 20px;
   }
 }
 .body .scan_point.main .tabs {
@@ -1443,6 +1443,12 @@
   padding: 10px !important;
   border-radius: 20px;
   background-color: white;
+}
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .point_send.main {
+    width: 748px !important;
+    margin: 60px auto 20px;
+  }
 }
 .body .point_send.main .record .img {
   width: 20px;

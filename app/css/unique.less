@@ -313,7 +313,7 @@
                 .info { bottom: 20px; right: 20px; position: absolute; }}}}
     .scan_point {
         &.main { height: 100vh; height: var(--app-height); margin: 60px 20px 20px; padding: 0px;
-            @media @sD, @sT { width: 748px !important; margin: 60px auto 70px; }
+            @media @sD, @sT { width: 768px !important; margin: 60px auto 20px; }
             .tabs { width: calc(100% - 8px); height: fit-content; border: 1px solid white; margin: 0 0 20px; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
                 .tab { padding: 0;
                     &.active { color: var(--c1); }
@@ -339,6 +339,7 @@
         &.popConfirm .img { width: 30px; height: fit-content; }}
     .point_send {
          &.main { height: 100vh; height: 100%; margin: 60px 20px 20px; padding: 10px !important; border-radius: 20px; background-color: white;
+            @media @sD, @sT { width: 748px !important; margin: 60px auto 20px; }
              .record {
                  .img { width: 20px; height: fit-content; }
                  .lineV { height: 30px; }}
