@@ -1623,8 +1623,11 @@
   }
 }
 .body .point_success.main .info .subtitle .img {
-  width: 40px;
+  width: 50px;
   height: fit-content;
+}
+.body .point_success.main .info .subtitle span {
+  font-size: 36px;
 }
 .body .point_success.main .info .detail > * {
   min-height: 35px;
