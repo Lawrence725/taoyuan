@@ -440,6 +440,15 @@ span {
 .body .flexV.padding.margin.height {
   height: calc(100% - 20px);
 }
+.body .gapS {
+  gap: 5px !important;
+}
+.body .gapM {
+  gap: 10px !important;
+}
+.body .gapL {
+  gap: 20px !important;
+}
 .body .carousels {
   width: 100vw;
   margin-left: -10px;
@@ -736,6 +745,9 @@ span {
 }
 .body .input.center input {
   text-align: center;
+}
+.body .input.right input {
+  text-align: right;
 }
 .body .input.fake {
   background-color: transparent;
