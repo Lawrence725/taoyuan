@@ -3226,6 +3226,28 @@
 .body .activity_questions .news .reward .over span {
   transform: rotate(-20deg);
 }
+.body .activity_questions .news .reward .label {
+  padding: 2.5px 5px;
+  border: 1px solid var(--c1) !important;
+  border-radius: 5px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+}
+.body .activity_questions .news .reward .label.absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
+.body .activity_questions .news .reward .label.gray {
+  border: 1px solid var(--cG3) !important;
+}
+.body .activity_questions .news .reward .label.soon {
+  border: 1px solid var(--cOrange) !important;
+}
+.body .activity_questions .news .reward .label .icon {
+  margin: 0 2.5px 0 0;
+}
 .body .activity_questions .news .progress {
   margin-top: 0;
   padding-top: 0;
@@ -3277,11 +3299,18 @@
 .body .activity_question.main ol li:first-child {
   margin-top: 5px;
 }
+.body .activity_question.main ol label.check {
+  width: 100%;
+  box-sizing: border-box;
+}
 .body .activity_question.main ol .checkmark.radio {
   border: 2px solid var(--cG3);
 }
 .body .activity_question.main ol .check input:checked ~ .checkmark {
   border: 2px solid var(--c1);
+}
+.body .activity_question.main ol .text {
+  width: 100%;
 }
 .body .activity_question.main .button {
   width: calc(50% - 30px);

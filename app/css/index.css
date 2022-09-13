@@ -13,6 +13,7 @@
   --cBg: #F2F1F6;
   --cRed: #EB5757;
   --cGreen: #27AE60;
+  --cOrange: #F2994A;
   --fXXL: 1.6rem;
   --fXL: 1.4rem;
   --fL: 1.2rem;
@@ -88,6 +89,9 @@ span {
 }
 .body .success {
   color: var(--cGreen) !important;
+}
+.body .orange {
+  color: var(--cOrange) !important;
 }
 .body .background {
   background-color: var(--cBg) !important;
