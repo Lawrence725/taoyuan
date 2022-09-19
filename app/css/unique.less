@@ -250,7 +250,7 @@
                     .img.stamp { width: 16px; height: 16px; margin: 0 5px 0 0; }}
                 .icon { margin: 0 5px 0 0; }}}}
     .profile {
-        &.main { padding: 60px 20px 90px !important;
+        &.main { padding: 60px 20px 90px !important; gap: 20px;
             @media @sD, @sT { width: 728px !important; }}
         .card { width: 100vw; margin-left: -20px; overflow-x: auto !important;
             @media @sD, @sT { width: 768px !important; }
@@ -281,13 +281,14 @@
         .picture img { border: 1px solid white; border-radius: 999px; background-image: url(../img/profile-d.png); background-size: cover; }
         .functions { width: calc(100% + 10px) !important; margin: 0 -10px;
             .fM { margin: 5px 0; }
-            .fS { width: 70px; padding: 2px; border: 1px solid var(--c2); border-radius: 99px; line-height: 16px; text-align: center; }}
+            .fS { width: 70px; padding: 2px; border: 1px solid var(--c2); border-radius: 99px; line-height: 16px; text-align: center; display: flex; justify-content: center;
+                img { width: 20px; margin-right: 2px; }}}
         .point { width: calc(100% - 20px); padding: 10px; margin: 20px 0; border: 1px solid var(--c1); border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
             .img { width: 50px; height: fit-content; }}
         .ticket {
             .img { width: 45px; height: fit-content; margin-right: 10px; }
             .lineV { height: 50px; background-color: var(--c2); }}
-        .function { width: calc(100% - 2px); margin: 20px 0; border: 1px solid white; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+        .function { width: calc(100% - 2px); border: 1px solid white; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             > .flexH { padding: 5px 0; }
             .img { width: 24px; height: fit-content; }
             .lineV { height: 20px; background-color: var(--cG4); }}
@@ -295,7 +296,7 @@
             a:not(:last-child) { padding-bottom: 5px; margin-bottom: 10px; border-bottom: 1px solid var(--cG5); border-radius: 0; }
             .img { width: 24px; height: fit-content; margin-right: 10px; }
             .lineH { display: none; }}
-        .invite { width: calc(100% - 2px); margin: 20px 0; padding: 5px 0; border: 1px solid white; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+        .invite { width: calc(100% - 2px); padding: 5px 0; border: 1px solid white; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .img { width: 30px; height: fit-content; }}
         &.popInvite {
             .popHeader span { text-align: center; }

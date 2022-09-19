@@ -1108,6 +1108,7 @@
 }
 .body .profile.main {
   padding: 60px 20px 90px !important;
+  gap: 20px;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .profile.main {
@@ -1232,6 +1233,12 @@
   border-radius: 99px;
   line-height: 16px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.body .profile .functions .fS img {
+  width: 20px;
+  margin-right: 2px;
 }
 .body .profile .point {
   width: calc(100% - 20px);
@@ -1257,7 +1264,6 @@
 }
 .body .profile .function {
   width: calc(100% - 2px);
-  margin: 20px 0;
   border: 1px solid white;
   backdrop-filter: blur(30px);
   background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
@@ -1289,7 +1295,6 @@
 }
 .body .profile .invite {
   width: calc(100% - 2px);
-  margin: 20px 0;
   padding: 5px 0;
   border: 1px solid white;
   backdrop-filter: blur(30px);
