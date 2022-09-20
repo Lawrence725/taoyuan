@@ -3308,13 +3308,19 @@
   width: 100%;
   box-sizing: border-box;
 }
-.body .activity_question.main ol .checkmark.radio {
+.body .activity_question.main ol label.check .checkmark.radio {
   border: 2px solid var(--cG3);
 }
-.body .activity_question.main ol .check input:checked ~ .checkmark {
+.body .activity_question.main ol label.check .checkmark.checkbox {
+  border: 2px solid var(--cG3);
+}
+.body .activity_question.main ol label.check input:checked ~ .checkmark {
   border: 2px solid var(--c1);
 }
-.body .activity_question.main ol .text {
+.body .activity_question.main ol label.check .fM.bold.third {
+  white-space: nowrap;
+}
+.body .activity_question.main ol label.check .text {
   width: 100%;
 }
 .body .activity_question.main .button {

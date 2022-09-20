@@ -785,10 +785,12 @@
             ol { padding: 0 0 0 40px; margin-top: 0;
                 li { margin-top: 20px;
                     &:first-child { margin-top: 5px; }}
-                label.check { width: 100%; box-sizing: border-box; }
-                .checkmark.radio { border: 2px solid var(--cG3); }
-                .check input:checked ~ .checkmark { border: 2px solid var(--c1); }
-                .text { width: 100%; }}
+                label.check { width: 100%; box-sizing: border-box;
+                    .checkmark.radio { border: 2px solid var(--cG3); }
+                    .checkmark.checkbox { border: 2px solid var(--cG3); }
+                    input:checked ~ .checkmark { border: 2px solid var(--c1); }
+                    .fM.bold.third { white-space: nowrap; }
+                    .text { width: 100%; }}}
             .button { width: calc(50% - 30px); }}
         &.popCorrect {
             .close { color: white; border-radius: 99px;
