@@ -3350,6 +3350,9 @@
   width: 80px;
   height: fit-content;
 }
+.body .activity_question.main span.fXXL.third {
+  color: var(--c4) !important;
+}
 .body .activity_question.main ol {
   padding: 0 0 0 40px;
   margin-top: 0;
@@ -3360,15 +3363,19 @@
 .body .activity_question.main ol li:first-child {
   margin-top: 5px;
 }
+.body .activity_question.main ol li.fXXL.primary {
+  font-size: var(--fL);
+  color: var(--c4) !important;
+}
 .body .activity_question.main ol label.check {
   width: 100%;
   box-sizing: border-box;
 }
 .body .activity_question.main ol label.check .checkmark.radio {
-  border: 2px solid var(--cG3);
+  border: 2px solid var(--cG4);
 }
 .body .activity_question.main ol label.check .checkmark.checkbox {
-  border: 2px solid var(--cG3);
+  border: 2px solid var(--cG4);
 }
 .body .activity_question.main ol label.check input:checked ~ .checkmark {
   border: 2px solid var(--c1);
