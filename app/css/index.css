@@ -356,6 +356,12 @@ span {
     margin-right: calc(50% - 384px);
   }
 }
+.body .absoluteC {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
 .body .flexH {
   width: fit-content;
   border-radius: 10px;
