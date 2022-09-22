@@ -751,6 +751,12 @@
             .reward { min-width: 90px; height: 90px; position: relative;
                 .img { width: 50px; height: fit-content; }
                     img { border-radius: 0 10px 10px 0; }
+                span.fM.primary { color: var(--c4) !important; }
+                .label { padding: 2.5px 5px; border: 1px solid var(--c1) !important; border-radius: 5px; display: flex; background: rgba(255, 255, 255, 0.9);
+                    &.absolute { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); }
+                    &.gray { border: 1px solid var(--cG3) !important; }
+                    &.soon { border: 1px solid var(--cOrange) !important; }
+                    .icon { margin: 0 2.5px 0 0; }}
                 .done { width: 80px; height: 80px; border-radius: 20px; position: absolute; background: linear-gradient(104.62deg, rgba(239, 96, 121, 0.8) 0%, rgba(239, 96, 121, 0.5) 100%); border: 1px solid var(--c1); backdrop-filter: blur(2px); }
                 .over { width: 80px; height: 80px; border-radius: 20px; position: absolute; background: linear-gradient(104.62deg, rgba(51, 63, 72, 0.8) 0%, rgba(51, 63, 72, 0.5) 100%); border: 1px solid var(--c4); backdrop-filter: blur(2px);
                     span { transform: rotate(-20deg); }}}

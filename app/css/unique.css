@@ -3145,6 +3145,31 @@
 .body .activity .news .reward img {
   border-radius: 0 10px 10px 0;
 }
+.body .activity .news .reward span.fM.primary {
+  color: var(--c4) !important;
+}
+.body .activity .news .reward .label {
+  padding: 2.5px 5px;
+  border: 1px solid var(--c1) !important;
+  border-radius: 5px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+}
+.body .activity .news .reward .label.absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
+.body .activity .news .reward .label.gray {
+  border: 1px solid var(--cG3) !important;
+}
+.body .activity .news .reward .label.soon {
+  border: 1px solid var(--cOrange) !important;
+}
+.body .activity .news .reward .label .icon {
+  margin: 0 2.5px 0 0;
+}
 .body .activity .news .reward .done {
   width: 80px;
   height: 80px;
