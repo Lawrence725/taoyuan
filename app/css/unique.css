@@ -494,6 +494,12 @@
   border-radius: 99px;
   line-height: 16px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.body .index .function .fS img {
+  width: 20px;
+  margin-right: 2px;
 }
 .body .index .point {
   width: calc(100% - 40px);
