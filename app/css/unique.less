@@ -428,30 +428,38 @@
                     .img { width: 30px; height: fit-content; }}}}}
     .point_history {
         &.main { padding: 60px 10px 70px !important;
-            .tabs { height: fit-content; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .tabs { height: 30px; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
                 .tab { padding: 0;
                     &.active { color: var(--c1); }
                     &:not(.active) {
                         * { color: var(--cG4); }
                         .img { filter: grayscale(100%); opacity: 0.5; }}}
                 .img { width: 20px; height: fit-content; }
-                .lineV { height: 40px; background-color: var(--cG4); }}
-            .filter { width: 100vw; min-height: 40px; margin-left: -10px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05); overflow-y: scroll;
+                .fS { font-size: var(--fM); }
+                .lineV { height: 20px; background-color: var(--cG5); }}
+            .filter { width: 100vw; min-height: 40px; margin-left: -10px; padding: 0 20px; border-radius: 0; box-shadow: 0px 10px 20px rgba(55, 84, 170, 0.05); box-sizing: border-box; overflow-y: scroll;
                 @media @sD, @sT { width: 768px !important; }
                 &::-webkit-scrollbar { width: 0; height: 0; -webkit-appearance: none; }
+                .fM { font-size: var(--fS); }
                 span.fM { white-space: nowrap; }
+                .icon { margin: 0; }
                 .lineV { height: 20px; background-color: var(--c2); }
                 .dropdown { width: fit-content;
-                    select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
+                    select { width: fit-content; padding: 0 25px 0 10px; background-color: transparent; }}}
             .records { max-height: 100%; overflow-y: auto;
-                .img { width: 20px; height: fit-content;}
+                .img { width: 20px; height: fit-content; margin: 0 2px 0 0; }
+                .type { width: 50px; height: fit-content; margin: 0 10px 0 0; }
                 .lineH { display: none; }
                 .record { padding-bottom: 10px; margin-top: 10px; margin-bottom: 0; border-bottom: 1px solid var(--cG5); border-radius: 0;
                     .flexV.end .fM.gray { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-align: right; }}}}
         &.popTime {
             .popMain { padding: 0;
                 .tabs { height: 34px;
-                    .tab:hover:not(.active) { background-color: var(--cBg); }}}}}
+                    .tab:hover:not(.active) { background-color: var(--cBg); }}}}
+        &.popDetail {
+            .popMain { padding: 5px; margin: 0; gap: 10px;
+                .cost { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid var(--cG5); border-radius: 0; gap: 5px; }}
+        }}
     .tickets {
         &.main { padding: 60px 10px 70px !important;
             .tabs { height: 30px; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
