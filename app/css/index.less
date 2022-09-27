@@ -34,9 +34,9 @@
     --fXS:  0.6rem;
 }
 
-html, body, .marginX { width: 100vw; height: 100vh; height: var(--app-height); padding: 0 !important; margin: 0 !important; overflow: hidden; }
+html, body, .marginX { width: 100vw; /* height: 100vh; height: var(--app-height); */ padding: 0 !important; margin: 0 !important; /* overflow: hidden; */ }
 body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-family: 'Noto Sans TC', 'Arial', '微軟正黑體', '新細明體', 'sans-serif'; }
-.body { height: 100vh; height: var(--app-height); display: flex; flex-direction: column; background: url(../img/bg.png); background-position: center; background-attachment: fixed; background-size: cover;
+.body { /* height: 100vh; height: var(--app-height); */ display: flex; flex-direction: column; background: url(../img/bg.png); background-position: center; background-attachment: fixed; background-size: cover;
 
     // Color
     .primary    { color: var(--c1) !important; }
@@ -294,7 +294,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
     @-webkit-keyframes  fadeout { from { bottom: 90px; opacity: 1; }    to { bottom: 0; opacity: 0; } }
     @keyframes          fadeout { from { bottom: 90px; opacity: 1; }    to { bottom: 0; opacity: 0; } }
 
-    .spinner { top: 0; left: 0; width: 100vw; height: 100vh; height: var(--app-height); position: fixed; display: flex; align-items: center; justify-content: center; z-index: 9; background-color: rgba(255,255,255,0.75); backdrop-filter: blur(4px);
+    .spinner { top: 0; left: 0; width: 100vw; /* height: 100vh; height: var(--app-height); */ position: fixed; display: flex; align-items: center; justify-content: center; z-index: 9; background-color: rgba(255,255,255,0.75); backdrop-filter: blur(4px);
         > div { min-width: 80px; min-height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.75); backdrop-filter: blur(4px); 
             > div { min-width: 40px; min-height: 40px; border: 3px solid var(--c1); border-top: 3px solid transparent; border-radius: 50%; -webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; }}}
     @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
