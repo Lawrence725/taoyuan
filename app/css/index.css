@@ -265,11 +265,13 @@ span {
   height: 38px;
 }
 .body .main {
+  /* min-height: 100vh; */
   padding: 10px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
+  /* box-sizing: border-box; */
 }
 .body .main > * {
   min-height: fit-content;
