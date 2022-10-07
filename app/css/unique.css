@@ -1512,7 +1512,7 @@
 }
 .body .website.main {
   max-height: calc(100vh - 60px);
-  padding: 60px 10px 0 !important;
+  padding: 60px 20px 0 !important;
   gap: 20px;
 }
 .body .website.main a {
