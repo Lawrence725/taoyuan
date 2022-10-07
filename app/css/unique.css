@@ -1201,7 +1201,8 @@
   font-size: var(--fM);
   color: var(--c1);
 }
-.body .profile .tag a i {
+.body .profile .tag a i,
+.body .profile .tag a svg {
   color: var(--c1);
 }
 .body .profile .category {
@@ -1237,7 +1238,8 @@
   justify-content: center;
   background-color: white;
 }
-.body .profile .category div.item a div.pic i {
+.body .profile .category div.item a div.pic i,
+.body .profile .category div.item a div.pic svg {
   color: var(--c3);
 }
 .body .profile .category div.item a div.pic img {
