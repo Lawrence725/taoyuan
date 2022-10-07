@@ -31,11 +31,20 @@
             </section>
             <!-- Main -->
             <section class="main profile">
-                <div class="flexV width center">
+                <!-- 個人資訊 -->
+                <div class="tag">
+                    <img src="img/profile.png">
+                    <div>
+                        <span class="title">桃園市民</span>
+                        <span>陳小明</span>
+                    </div>
+                    <a href="profile_edit.html"><i class="fa-regular fa-pen-to-square fa-lg"></i></a>
+                </div>
+                <!-- <div class="flexV width center">
                     <div class="img picture"><img src="img/profile.png"></div>
                     <span class="fM primary">桃園市民</span>
                     <span class="fL">陳小明</span>
-                </div>
+                </div> -->
                 <!-- <div class="card">
                     <div class="flexH">
                         <div class="img">
@@ -111,25 +120,84 @@
                         </div>
                     </a>
                 </div> -->
-                <!-- 功能 -->
+                <!-- 點券章 -->
                 <div class="functions flexH width">
                     <a class="flexV center width" href="point_receipt.html">
                         <img src="icon/record.svg">
                         <span class="fM">交易紀錄</span>
-                        <span class="fS"><img src="icon/point.svg">1,000</span>
+                        <!-- <span class="fS"><img src="icon/point.svg">1,000</span> -->
                     </a>
                     <a class="flexV center width disabled" href="tickets.html">
                         <img src="icon/ticket.svg">
-                        <span class="fM">我的優惠券</span>
-                        <span class="fS">50張</span>
+                        <span class="fM">我的票券</span>
+                        <!-- <span class="fS">50張</span> -->
                     </a>
                     <a class="flexV center width" href="stamps.html">
                         <img src="icon/stamp.svg">
-                        <span class="fM">我的集章</span>
-                        <span class="fS">5張</span>
+                        <span class="fM">集章卡</span>
+                        <!-- <span class="fS">5張</span> -->
                     </a>
                 </div>
-                <div class="function flexH rounded">
+                <!-- 邀請 -->
+                <a class="invite flexH width rounded middle" onclick="popInvite()">
+                    <span class="fM">使用<span class="primary">我的邀請碼</span>，邀請朋友！</span>
+                    <div class="img"><img src="icon/point.svg"></div>
+                </a>
+                <!-- 分類 -->
+                <div class="category">
+                    <span class="title">會員服務</span>
+                    <div class="item">
+                        <a>
+                            <div class="pic"><img src="icon/barcode.svg"></div>
+                            <span>我的條碼</span>
+                        </a>
+                        <a href="receipt.html">
+                            <div class="pic"><img src="icon/carrier.svg"></div>
+                            <span>手機載具</span>
+                        </a>
+                        <a href="website.html">
+                            <div class="pic"><img src="icon/website.svg"></div>
+                            <span>友站連結</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- 分類 -->
+                <div class="category">
+                    <span class="title">特約商店</span>
+                    <div class="item">
+                        <a href="store_register.html">
+                            <div class="pic"><img src="icon/store-new.svg"></div>
+                            <span>特約商店申請</span>
+                        </a>
+                        <a href="../app_admin/index.html">
+                            <div class="pic"><img src="icon/store-admin.svg"></div>
+                            <span>特店後台管理</span>
+                        </a>
+                        <a>
+                            <div class="pic"><img src="icon/contract.svg"></i></div>
+                            <span>特店合約</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- 分類 -->
+                <div class="category">
+                    <span class="title">系統設定</span>
+                    <div class="item">
+                        <a href="https://lin.ee/4LypwdI">
+                            <div class="pic"><img src="icon/cs.svg"></div>
+                            <span>線上客服</span>
+                        </a>
+                        <a href="setting.html">
+                            <div class="pic"><img src="icon/setting.svg"></div>
+                            <span>設定</span>
+                        </a>
+                        <a href="landing.html">
+                            <div class="pic"><img src="icon/logout.svg"></div>
+                            <span>登出</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="function flexH rounded">
                     <a class="flexH width middle">
                         <div class="icon primary"><i class="fa-solid fa-barcode"></i></div>
                         <span class="fM">我的代碼</span>
@@ -139,8 +207,8 @@
                         <div class="icon primary"><i class="fa-solid fa-receipt"></i></div>
                         <span class="fM">手機載具</span>
                     </a>
-                </div>
-                <div class="menu flexV width">
+                </div> -->
+                <!-- <div class="menu flexV width">
                     <a class="flexH width between" href="profile_edit.html">
                         <div class="flexH">
                             <div class="img"><img src="icon/edit.svg"></div>
@@ -195,11 +263,7 @@
                         </div>
                         <div class="icon gray"><i class="fa-solid fa-angle-right"></i></div>
                     </a>
-                </div>
-                <a class="invite flexH width rounded middle" onclick="popInvite()">
-                    <span class="fM">使用<span class="primary">我的邀請碼</span>，邀請朋友！</span>
-                    <div class="img"><img src="icon/point.svg"></div>
-                </a>
+                </div> -->
             </section>
             <!-- Footer -->
             <section class="footer">
