@@ -472,6 +472,7 @@
 }
 .body .index.main {
   align-items: center;
+  gap: 10px;
 }
 .body .index .lineH {
   width: calc(100% - 20px);
@@ -520,6 +521,9 @@
 }
 .body .index .mission a {
   position: relative;
+}
+.body .index .mission img {
+  height: 40px;
 }
 .body .index .mission .fM {
   margin-top: 5px;
@@ -573,7 +577,16 @@
   width: 20vw;
 }
 .body .index .tabs {
+  height: 30px;
+  border-bottom: 1px solid var(--cG4);
+  padding-bottom: 0;
   margin: 10px 5px 5px;
+  border-radius: 0;
+}
+.body .index .tabs .tab.active {
+  height: 30px;
+  border-bottom: 2px solid var(--c1);
+  border-radius: 0;
 }
 .body .index .theme {
   min-height: 50px;

@@ -106,7 +106,7 @@
     
     // Main Pages
     .index {
-        &.main { align-items: center; }
+        &.main { align-items: center; gap: 10px; }
         .lineH { width: calc(100% - 20px); margin: 10px; }
         .function { margin: 10px 0;
             .fM { margin: 5px 0; }
@@ -116,6 +116,7 @@
             .img { width: 50px; height: fit-content; }}
         .mission { width: calc(100% - 42px) !important; padding: 20px 10px 55px; margin: 15px 10px 10px; border: 1px solid var(--cG4); border-radius: 20px !important; position: relative;
             a { position: relative; }
+            img { height: 40px; }
             .fM { margin-top: 5px; }
             .title { width: fit-content !important; border-bottom: 2px solid var(--c1); border-radius: 0; left: 50%; transform: translate(-50%, 0); bottom: 15px; position: absolute; text-align: center;
                 span { margin: 0; }
@@ -127,7 +128,8 @@
                 .label { padding: 2.5px 5px; border: 1px solid var(--c1) !important; border-radius: 5px; display: flex; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); filter: grayscale(0%) !important; opacity: 1 !important; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); }}}
         .missions { min-height: 80px;
             .carousel { width: 20vw; }}
-        .tabs { margin: 10px 5px 5px; }
+        .tabs { height: 30px; border-bottom: 1px solid var(--cG4); padding-bottom: 0; margin: 10px 5px 5px; border-radius: 0;
+            .tab.active { height: 30px; border-bottom: 2px solid var(--c1); border-radius: 0; }}
         .theme { min-height: 50px; margin-left: 0;
             .carousel { padding: 2.5px 10px; border: 1px solid var(--cG4); border-radius: 99px; flex-direction: row; align-items: center;
                 &:first-child { margin-left: 20px; }

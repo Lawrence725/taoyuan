@@ -33,15 +33,47 @@
             </div>
             <!-- Header -->
             <section class="header index">
-                <div class="icon iconButton"></div>
-                <div class="img"><img src="img/title.svg"></div>
-                <a class="icon iconButton" href="notice.html">
-                    <img src="icon/bell.svg">
-                    <div class="new"><span class="fXS white">3</span></div>
+                <a class="left" href="point_history.html">
+                    <img class="logo" src="img/favicon.svg">
+                    <span>200</span>
                 </a>
+                <img src="img/title.svg">
+                <span>標題</span>
+                <div class="right">
+                    <a class="icon iconButton">
+                        <i class="fa-solid fa-barcode fa-xl"></i>
+                    </a>
+                    <a class="icon iconButton" href="notice.html">
+                        <img src="icon/bell.svg">
+                        <div class="new"><span class="fXS white">3</span></div>
+                    </a>
+                </div>
             </section>
             <!-- Main -->
             <section id="main" class="main index">
+                <!-- 點券章 -->
+                <div class="function flexH width padding">
+                    <a class="flexV center width" href="point_receipt.html">
+                        <img src="icon/record.svg">
+                        <span class="fM">交易紀錄</span>
+                        <!-- <span class="fS"><img src="icon/point.svg">1,000</span> -->
+                    </a>
+                    <!-- <a class="flexV center width">
+                        <img src="icon/point-b.svg">
+                        <span class="fM">黑桃點數</span>
+                        <span class="fS">5,000</span>
+                    </a> -->
+                    <a class="flexV center width disabled" href="tickets.html">
+                        <img src="icon/ticket.svg">
+                        <span class="fM">優惠券</span>
+                        <!-- <span class="fS">50張</span> -->
+                    </a>
+                    <a class="flexV center width" href="stamps.html">
+                        <img src="icon/stamp.svg">
+                        <span class="fM">集章</span>
+                        <!-- <span class="fS">5張</span> -->
+                    </a>
+                </div>
                 <!-- Banner -->
                 <div id="banners" class="banners">
                     <a class="banner" href="scan.html">
@@ -64,31 +96,8 @@
                         <span class="dot"></span> 
                     </div>
                 </div>
-                <!-- 功能 -->
-                <div class="function flexH width padding">
-                    <a class="flexV center width" href="point_receipt.html">
-                        <img src="icon/record.svg">
-                        <span class="fM">交易紀錄</span>
-                        <span class="fS"><img src="icon/point.svg">1,000</span>
-                    </a>
-                    <!-- <a class="flexV center width">
-                        <img src="icon/point-b.svg">
-                        <span class="fM">黑桃點數</span>
-                        <span class="fS">5,000</span>
-                    </a> -->
-                    <a class="flexV center width disabled" href="tickets.html">
-                        <img src="icon/ticket.svg">
-                        <span class="fM">優惠券</span>
-                        <span class="fS">50張</span>
-                    </a>
-                    <a class="flexV center width" href="stamps.html">
-                        <img src="icon/stamp.svg">
-                        <span class="fM">集章</span>
-                        <span class="fS">5張</span>
-                    </a>
-                </div>
                 <!-- 點數 -->
-                <a class="point flexH between end" href="point_history.html">
+                <!-- <a class="point flexH between end" href="point_history.html">
                     <div class="flexH">
                         <div class="img"><img src="icon/point.svg"></div>
                         <div class="flexV">
@@ -103,7 +112,7 @@
                         </div>
                         <div class="icon gray"><i class="fa-solid fa-angle-right"></i></div>
                     </div>
-                </a>
+                </a> -->
                 <!-- <div class="lineH"></div> -->
                 <!-- 任務 -->
                 <div class="mission flexH width">
@@ -115,6 +124,10 @@
                         <img src="icon/checkin.svg">
                         <span class="fM">每日簽到</span>
                     </a> -->
+                    <a class="flexV center width" href="service.html">
+                        <img src="icon/service-b.svg">
+                        <span class="fM">市政互動</span>
+                    </a>
                     <a class="flexV center width none" href="activity.html"> <!-- class: none -->
                         <img src="icon/mission-c.svg">
                         <span class="fM">專屬任務</span>
@@ -122,18 +135,18 @@
                             <span class="fS primary single">暫無任務</span>
                         </div>
                     </a>
-                    <a class="flexV center width" onclick="popNoQA()">
-                        <img src="icon/game.svg">
-                        <span class="fM">小遊戲</span>
-                    </a>
                     <a class="flexV center width" href="video.html">
                         <img src="icon/video.svg">
                         <span class="fM">看影片</span>
                     </a>
-                    <a class="flexV center width" href="activity_questions.html">
+                    <a class="flexV center width" onclick="popNoQA()">
+                        <img src="icon/game.svg">
+                        <span class="fM">小遊戲</span>
+                    </a>
+                    <!-- <a class="flexV center width" href="activity_questions.html">
                         <img src="icon/question.svg">
                         <span class="fM">問答</span>
-                    </a>
+                    </a> -->
                 </div>
                 <!-- <div class="missions carousels">
                     <div class="flexH">
@@ -169,7 +182,7 @@
                     <a class="tab">
                         <span>特店優惠</span>
                     </a> -->
-                    <span class="secondary">|</span>
+                    <!-- <span class="secondary">|</span> -->
                     <a class="tab" onclick="popNotice()">
                         <span>最新消息</span>
                     </a>
