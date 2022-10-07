@@ -949,6 +949,7 @@
 .body .scan.popCode .popMain {
   padding: 0 5px 5px;
   margin-bottom: 0 !important;
+  overflow: hidden !important;
 }
 .body .scan.popCode .popMain > * {
   min-height: fit-content;
