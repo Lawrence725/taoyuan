@@ -3034,13 +3034,11 @@
 }
 .body .stores.main .list .information {
   width: calc(100vw - 32px) !important;
-  margin: 0 5px;
-  padding: 10px;
-  border-radius: 0;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: white;
   box-sizing: border-box;
-}
-.body .stores.main .list .information:not(:last-child) {
-  border-bottom: 1px solid var(--cG5);
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .stores.main .list .information {
@@ -3055,44 +3053,35 @@
   border-radius: 5px;
   aspect-ratio: 1/1;
 }
-.body .stores.main .list .information .fL {
-  order: 2;
-}
 .body .stores.main .list .information .fM {
-  order: 3;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.body .stores.main .list .information .flexV > *:not(:last-child) {
-  margin-top: 2.5px;
+.body .stores.main .list .information .flexV {
+  gap: 2px;
 }
 .body .stores.main .list .information .detail {
   flex-wrap: wrap;
-  order: 1;
-  padding: 1px 5px;
-  border: 1px solid var(--c1);
-  border-radius: 99px;
 }
-.body .stores.main .list .information .detail span {
-  color: var(--c1) !important;
+.body .stores.main .list .information .detail > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.body .stores.main .list .information .detail .img.point {
-  width: 20px;
+.body .stores.main .list .information .detail > div:not(:first-child) {
+  padding-left: 7.5px;
+  margin-left: 7.5px;
+  border-left: 1px solid var(--cG5);
+}
+.body .stores.main .list .information .detail img {
   height: 20px;
-  margin: 0 5px 0 0;
 }
-.body .stores.main .list .information .detail .img.ticket {
-  width: 18px;
-  height: 18px;
-  margin: 0 5px 0 0;
-}
-.body .stores.main .list .information .detail .img.stamp {
-  width: 16px;
-  height: 16px;
-  margin: 0 5px 0 0;
+.body .stores.main .list .information .detail i,
+.body .stores.main .list .information .detail svg {
+  color: var(--c1);
 }
 .body .stores.main .list .information .icon {
   margin: 0 5px 0 0;

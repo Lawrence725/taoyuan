@@ -719,18 +719,16 @@
                     select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
             .list { overflow-y: auto;
                 input { width: calc(100vw - 30px) !important; padding-left: 10px; }
-                .information { width: calc(100vw - 32px) !important; margin: 0 5px; padding: 10px; border-radius: 0; box-sizing: border-box;
-                    &:not(:last-child) { border-bottom: 1px solid var(--cG5); }
+                .information { width: calc(100vw - 32px) !important; margin: 10px 5px; padding: 10px 15px; border-radius: 20px; background-color: white; box-sizing: border-box;
                     @media @sD, @sT { width: 728px !important; }
                     img.store { display: none; width: 80px; height: 80px; margin-left: 10px; border-radius: 5px; aspect-ratio: 1/1; }
-                    .fL { order: 2; }
-                    .fM { order: 3; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
-                    .flexV > *:not(:last-child) { margin-top: 2.5px; }
-                    .detail { flex-wrap: wrap; order: 1; padding: 1px 5px; border: 1px solid var(--c1); border-radius: 99px;
-                        span { color: var(--c1) !important; }
-                        .img.point { width: 20px; height: 20px; margin: 0 5px 0 0; }
-                        .img.ticket { width: 18px; height: 18px; margin: 0 5px 0 0; }
-                        .img.stamp { width: 16px; height: 16px; margin: 0 5px 0 0; }}
+                    .fM { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+                    .flexV { gap: 2px; }
+                    .detail { flex-wrap: wrap;
+                        > div { display: flex; align-items: center; gap: 5px;
+                            &:not(:first-child) { padding-left: 7.5px; margin-left: 7.5px; border-left: 1px solid var(--cG5); }}
+                        img { height: 20px; }
+                        i, svg { color: var(--c1); }}
                     .icon { margin: 0 5px 0 0; }}}}}
     .store {
         &.main { padding: 0 10px 80px !important; position: relative; align-items: center;
