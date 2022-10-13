@@ -258,13 +258,13 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
             &:not(.active) {
                 &:hover { background-color: var(--cG4); }
                 span { color: var(--cG3); }}}}
-    .switch { position: relative; display: inline-block; min-width: 34px; max-width: 34px; height: 20px; margin: 5px;
+    .switch { position: relative; display: inline-block; min-width: 40px; max-width: 40px; height: 24px; margin: 5px;
         input { opacity: 0; width: 0; height: 0;
             &:checked + .slider { background-color: var(--cGreen); }
             &:focus + .slider { box-shadow: 0 0 1px var(--cGreen); }
-            &:checked + .slider:before { -webkit-transform: translateX(14px); -ms-transform: translateX(14px); transform: translateX(14px); }}
+            &:checked + .slider:before { -webkit-transform: translateX(16px); -ms-transform: translateX(16px); transform: translateX(16px); }}
         .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; border-radius: 34px; background-color: var(--cG4); -webkit-transition: .4s; transition: .4s;
-            &:before { position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; border-radius: 50%; background-color: white; -webkit-transition: .4s; transition: .4s; }}}
+            &:before { position: absolute; content: ""; height: 20px; width: 20px; left: 2px; bottom: 2px; border-radius: 50%; background-color: white; -webkit-transition: .4s; transition: .4s; }}}
     .check { width: fit-content; min-height: 20px; padding: 10px 15px 10px 30px; border-radius: 10px; position: relative; display: flex; align-items: center; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: 12px;
         &:hover { background: var(--cBg); } 
         &:hover input ~ .checkmark { background-color: white; } /* On mouse-over, add a grey background color */

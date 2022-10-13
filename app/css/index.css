@@ -925,9 +925,9 @@ span {
 .body .switch {
   position: relative;
   display: inline-block;
-  min-width: 34px;
-  max-width: 34px;
-  height: 20px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 24px;
   margin: 5px;
 }
 .body .switch input {
@@ -942,9 +942,9 @@ span {
   box-shadow: 0 0 1px var(--cGreen);
 }
 .body .switch input:checked + .slider:before {
-  -webkit-transform: translateX(14px);
-  -ms-transform: translateX(14px);
-  transform: translateX(14px);
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
 }
 .body .switch .slider {
   position: absolute;
@@ -961,8 +961,8 @@ span {
 .body .switch .slider:before {
   position: absolute;
   content: "";
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
   left: 2px;
   bottom: 2px;
   border-radius: 50%;
