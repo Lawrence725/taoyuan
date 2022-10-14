@@ -845,7 +845,8 @@
                 li { margin-top: 20px;
                     &:first-child { margin-top: 5px; }
                     &.fXXL.primary { font-size: var(--fL); color: var(--c4) !important; }}
-                label.check { width: 100%; box-sizing: border-box;
+                label.check { width: 100%; padding-left: 0; box-sizing: border-box;
+                    .checkmark { left: -30px; }
                     .checkmark.radio { border: 2px solid var(--cG4); }
                     .checkmark.checkbox { border: 2px solid var(--cG4); }
                     input:checked ~ .checkmark { border: 2px solid var(--c1); }
