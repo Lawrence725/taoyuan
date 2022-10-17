@@ -105,6 +105,7 @@
             > * { margin-bottom: 20px; }
             .img.cover { width: calc(100% + 20px); height: fit-content; margin: -5px 0 10px -10px; }
             img { width: 100%; }
+            span:not(.center) { text-align: justify; }
             iframe { width: 100%; height: fit-content; }}}
     
     // Main Pages
@@ -810,6 +811,7 @@
             @media @sD, @sT { width: 748px !important; margin: 60px auto 20px; }
             > * { margin-bottom: 20px; }
             .img.cover { width: calc(100% + 20px); height: fit-content; margin: -5px 0 10px -10px; }
+            span:not(.center) { text-align: justify; }
             .progress { margin-top: 0; padding-top: 0;
                 .bar { height: 10px; margin-left: 10px; background-color: var(--cG5);
                     div { width: 60%; height: 100%; border-radius: 99px; background-color: var(--c1); }}
@@ -841,18 +843,19 @@
             // > :last-child { margin: 0; }
             .img.cover { width: calc(100% + 20px); height: fit-content; margin: -10px 0 10px -10px; }
             .img.queIcon { width: 80px; height: fit-content; }
+            span:not(.center) { text-align: justify; }
             span.fXXL.third { color: var(--c4) !important; }
-            ol { padding: 0 0 0 40px; margin-top: 0;
-                li { margin-top: 20px;
+            ol { padding: 0 0 0 36px; margin-top: 0;
+                li { margin-top: 20px; list-style: decimal-leading-zero;
                     &:first-child { margin-top: 5px; }
                     &.fXXL.primary { font-size: var(--fL); color: var(--c4) !important; }}
-                label.check { width: 100%; padding-left: 0; box-sizing: border-box;
-                    .checkmark { left: -30px; }
+                label.check { width: 100%; padding: 10px 0; box-sizing: border-box;
+                    .checkmark { left: -36px; }
                     .checkmark.radio { border: 2px solid var(--cG4); }
                     .checkmark.checkbox { border: 2px solid var(--cG4); }
                     input:checked ~ .checkmark { border: 2px solid var(--c1); }
                     .fM.bold.third { white-space: nowrap; }
-                    .text { width: 100%; }}}
+                    .text { width: 100%; margin-left: 0; }}}
             .button { width: calc(50% - 30px); }}
         &.popCorrect {
             .close { color: white; border-radius: 99px;
