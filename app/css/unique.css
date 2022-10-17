@@ -1170,12 +1170,10 @@
 .body .map .bottom .information {
   width: calc(100vw - 60px);
   margin: 0 20px 20px 10px;
-  padding: 10px;
-  border: 1px solid #FFFFFF;
+  padding: 10px 0 10px 15px;
   border-radius: 20px;
-  background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: white;
   box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
-  backdrop-filter: blur(30px);
   pointer-events: initial;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
@@ -1184,45 +1182,32 @@
   }
 }
 .body .map .bottom .information img.store {
+  display: none;
   width: 80px;
   height: 80px;
   margin-right: 10px;
   border-radius: 5px;
   aspect-ratio: 1/1;
 }
-.body .map .bottom .information .flexV > *:not(:last-child) {
-  margin-top: 2.5px;
-}
-.body .map .bottom .information .fL {
-  order: 2;
-}
-.body .map .bottom .information .fM {
-  order: 3;
-}
 .body .map .bottom .information .detail {
   flex-wrap: wrap;
-  order: 1;
-  padding: 1px 5px;
-  border: 1px solid var(--c1);
-  border-radius: 99px;
 }
-.body .map .bottom .information .detail span {
-  color: var(--c1) !important;
+.body .map .bottom .information .detail > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.body .map .bottom .information .detail .img.point {
-  width: 20px;
+.body .map .bottom .information .detail > div:not(:first-child) {
+  padding-left: 7.5px;
+  margin-left: 7.5px;
+  border-left: 1px solid var(--cG5);
+}
+.body .map .bottom .information .detail img {
   height: 20px;
-  margin: 0 5px 0 0;
 }
-.body .map .bottom .information .detail .img.ticket {
-  width: 18px;
-  height: 18px;
-  margin: 0 5px 0 0;
-}
-.body .map .bottom .information .detail .img.stamp {
-  width: 16px;
-  height: 16px;
-  margin: 0 5px 0 0;
+.body .map .bottom .information .detail i,
+.body .map .bottom .information .detail svg {
+  color: var(--c1);
 }
 .body .map .bottom .information .icon {
   margin: 0 5px 0 0;
