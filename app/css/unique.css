@@ -1189,6 +1189,16 @@
   border-radius: 5px;
   aspect-ratio: 1/1;
 }
+.body .map .bottom .information .fM {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.body .map .bottom .information .flexV {
+  gap: 2px;
+}
 .body .map .bottom .information .detail {
   flex-wrap: wrap;
 }
