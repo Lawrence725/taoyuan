@@ -475,6 +475,9 @@
   height: fit-content;
   margin: -5px 0 10px -10px;
 }
+.body .new.main img {
+  width: 100%;
+}
 .body .new.main iframe {
   width: 100%;
   height: fit-content;
