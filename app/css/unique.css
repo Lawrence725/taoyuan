@@ -754,6 +754,7 @@
   padding: 20px;
   border-radius: 20px;
   position: relative;
+  box-sizing: border-box;
 }
 .body .service .top .flexV.receipt {
   background-color: var(--c1);
