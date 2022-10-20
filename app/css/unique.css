@@ -914,7 +914,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 .body .serial.main .button {
   width: calc(50% - 30px);
