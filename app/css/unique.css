@@ -917,7 +917,6 @@
 }
 .body .serial.main .button {
   width: calc(50% - 30px);
-  margin: 20px 5px;
 }
 .body .scan.main {
   width: 100vw;
