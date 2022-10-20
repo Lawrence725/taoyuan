@@ -1326,7 +1326,7 @@ span {
 }
 .body .popup .popBody {
   min-width: 300px;
-  max-width: 100%;
+  max-width: 748px;
   height: fit-content;
   max-height: calc(100% - 60px);
   padding: 10px;
