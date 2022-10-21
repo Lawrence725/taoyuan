@@ -29,7 +29,8 @@
   font-weight: bold;
   color: white;
 }
-.body .footer a.visit i {
+.body .footer a.visit i,
+.body .footer a.visit svg {
   color: white;
 }
 .body section.popDropdown {
