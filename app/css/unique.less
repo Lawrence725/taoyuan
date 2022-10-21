@@ -18,8 +18,8 @@
             a { width: 100%; padding: 10px 5px; display: flex; align-items: center; box-sizing: border-box;
                 &:not(:last-child) { border-bottom: 1px solid var(--cG5); }
                 &.active { span { color: var(--c1) }}}}}
-    @keyframes popup { 0% { margin-bottom: -100vh; } 100% { margin-bottom: 0; }}
-    @keyframes popdown { 0% { margin-bottom: 0; } 100% { margin-bottom: -100vh; }}
+    @keyframes popup { 0% { margin-bottom: -100vh; } 100% { margin-bottom: 10px; }}
+    @keyframes popdown { 0% { margin-bottom: 10px; } 100% { margin-bottom: -100vh; }}
     .listEmpty { min-height: calc(100vh - 150px);
         .icon { margin-bottom: 50px; }}
     .landscape { border-radius: 0; display: none; position: absolute; background: linear-gradient(135deg, rgba(239, 96, 121, 0.5) 0%, #EF6079 100%), #FFFFFF; z-index: 9;
@@ -878,7 +878,7 @@
                     .checkmark.radio { border: 2px solid var(--cG4); }
                     .checkmark.checkbox { border: 2px solid var(--cG4); }
                     input:checked ~ .checkmark { border: 2px solid var(--c1); }
-                    .fM.bold.third { white-space: nowrap; }
+                    .fM.bold.third { margin: 0 5px; white-space: nowrap; }
                     .text { width: 100%; margin-left: 0; }}}
             .button { width: calc(50% - 30px); }}
         &.popCorrect {

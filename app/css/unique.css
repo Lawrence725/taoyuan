@@ -66,12 +66,12 @@
     margin-bottom: -100vh;
   }
   100% {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 @keyframes popdown {
   0% {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
   100% {
     margin-bottom: -100vh;
@@ -3388,6 +3388,7 @@
   border: 2px solid var(--c1);
 }
 .body .activity_question.main ol label.check .fM.bold.third {
+  margin: 0 5px;
   white-space: nowrap;
 }
 .body .activity_question.main ol label.check .text {
