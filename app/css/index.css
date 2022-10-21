@@ -348,7 +348,7 @@ span {
   height: 34px;
 }
 .body.fixed .header > span {
-  font-size: var(--fXL);
+  margin: 5px;
   white-space: nowrap;
 }
 .body.fixed .header .left,

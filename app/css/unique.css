@@ -6,6 +6,20 @@
   line-height: 0.04167em;
   vertical-align: -0.125em;
 }
+.body .header.v2 {
+  background: url(../img/bg.png);
+  background-size: cover;
+  box-shadow: 0px 10px 20px rgba(239, 96, 121, 0.1);
+}
+.body .header.v2 i,
+.body .header.v2 svg,
+.body .header.v2 span {
+  color: white !important;
+}
+.body .main.v2 {
+  background: url(../img/bg.png);
+  background-size: cover;
+}
 .body .footer {
   width: 100%;
   padding: 0 !important;
@@ -31,6 +45,10 @@
 }
 .body .footer a.visit i,
 .body .footer a.visit svg {
+  color: white;
+}
+.body .function.v2 span,
+.body .functions.v2 span {
   color: white;
 }
 .body section.popDropdown {
@@ -556,22 +574,6 @@
   width: 100%;
   height: fit-content;
 }
-.body .index.header.v2 {
-  background: url(../img/bg.png);
-  background-size: cover;
-}
-.body .index.header.v2 i,
-.body .index.header.v2 svg,
-.body .index.header.v2 span {
-  color: white !important;
-}
-.body .index.main.v2 {
-  background: url(../img/bg.png);
-  background-size: cover;
-}
-.body .index .function.v2 span {
-  color: white;
-}
 .body .index.main {
   align-items: center;
   gap: 10px;
@@ -614,12 +616,13 @@
   height: fit-content;
 }
 .body .index .mission {
-  width: calc(100% - 42px) !important;
+  width: calc(100% - 20px) !important;
   padding: 20px 10px 55px;
-  margin: 15px 10px 10px;
+  margin: 15px 0 10px;
   border: 1px solid var(--cG4);
   border-radius: 20px !important;
   position: relative;
+  box-sizing: border-box;
 }
 .body .index .mission a {
   position: relative;
@@ -834,12 +837,12 @@
   border-radius: 5px;
 }
 .body .service.main {
-  padding: 60px 20px 90px !important;
+  padding: 80px 20px 90px !important;
   gap: 20px;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .service.main {
-    width: 728px !important;
+    width: 748px !important;
   }
 }
 .body .service .top .flexV {
@@ -978,7 +981,7 @@
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .scan.main {
-    width: 768px !important;
+    width: 748px !important;
   }
 }
 .body .scan.main::-webkit-scrollbar {
@@ -1144,7 +1147,7 @@
 }
 .body .map.main {
   height: calc(100vh - 130px);
-  padding: 60px 10px 70px !important;
+  padding: 80px 10px 70px !important;
   position: relative;
   overflow-y: hidden;
 }
@@ -1342,7 +1345,7 @@
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .profile.main {
-    width: 728px !important;
+    width: 748px !important;
   }
 }
 .body .profile .tag {
@@ -1525,7 +1528,8 @@
 }
 .body .profile .functions {
   width: calc(100% + 10px) !important;
-  margin: 0 -10px;
+  padding: 5px;
+  margin: 10px -10px 0;
 }
 .body .profile .functions .fM {
   margin: 5px 0;
@@ -1600,6 +1604,7 @@
 .body .profile .invite {
   width: calc(100% - 2px);
   padding: 5px 0;
+  margin: 10px 0;
   border: 1px solid var(--c1);
   background: white;
 }
@@ -1740,9 +1745,20 @@
   position: absolute;
 }
 .body .point_get.main .card .info {
-  bottom: 20px;
-  right: 20px;
+  max-width: 100%;
+  padding: 20px;
+  bottom: 0;
+  right: 0;
   position: absolute;
+  box-sizing: border-box;
+}
+.body .point_get.main .card .info span.fL {
+  text-align: right;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .body .scan_point.main {
   /* height: 100vh; height: var(--app-height); */
@@ -2794,7 +2810,7 @@
   border-radius: 10px;
 }
 .body .stores.main {
-  padding: 60px 10px 70px !important;
+  padding: 80px 10px 70px !important;
 }
 .body .stores.main .tabs {
   height: 30px;

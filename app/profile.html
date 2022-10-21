@@ -20,34 +20,17 @@
             <!-- Loading Spinner -->
             <!-- <div class="spinner"><div><div></div></div></div> -->
             <!-- Header -->
-            <section class="header profile">
-                <a class="left" href="point_history.html">
-                    <img class="logo" src="img/favicon.svg">
-                    <span>200</span>
-                </a>
-                <!-- <img src="img/title.svg"> -->
-                <span>會員中心</span>
-                <div class="right">
-                    <a class="icon iconButton">
-                        <i class="fa-solid fa-barcode fa-xl"></i>
-                    </a>
-                    <a class="icon iconButton" href="notice.html">
-                        <img src="icon/bell.svg">
-                        <div class="new"><span class="fXS white">3</span></div>
-                    </a>
+            <section class="header profile v2">
+                <div class="icon iconButton">
+                    <span class="fXL bold">會員中心</span>
                 </div>
+                <a class="icon iconButton" href="notice.html">
+                    <img src="icon/bell-w.svg">
+                    <div class="new"><span class="fXS white">3</span></div>
+                </a>
             </section>
             <!-- Main -->
-            <section class="main profile">
-                <!-- 個人資訊 -->
-                <div class="tag">
-                    <img src="img/profile.png">
-                    <div>
-                        <span class="title">桃園市民</span>
-                        <span>陳小明</span>
-                    </div>
-                    <a href="profile_edit.html"><i class="fa-regular fa-pen-to-square fa-lg"></i></a>
-                </div>
+            <section class="main profile v2">
                 <!-- <div class="flexV width center">
                     <div class="img picture"><img src="img/profile.png"></div>
                     <span class="fM primary">桃園市民</span>
@@ -129,22 +112,31 @@
                     </a>
                 </div> -->
                 <!-- 點券章 -->
-                <div class="functions flexH width">
+                <div class="functions flexH width v2">
                     <a class="flexV center width" href="point_receipt.html">
-                        <img src="icon/record.svg">
+                        <img src="icon/record-w.svg">
                         <span class="fM">交易紀錄</span>
                         <!-- <span class="fS"><img src="icon/point.svg">1,000</span> -->
                     </a>
-                    <a class="flexV center width disabled" href="tickets.html">
-                        <img src="icon/ticket.svg">
+                    <a class="flexV center width" href="tickets.html"> <!-- disabled -->
+                        <img src="icon/ticket-w.svg">
                         <span class="fM">我的票券</span>
                         <!-- <span class="fS">50張</span> -->
                     </a>
                     <a class="flexV center width" href="stamps.html">
-                        <img src="icon/stamp.svg">
-                        <span class="fM">集章卡</span>
+                        <img src="icon/stamp-w.svg">
+                        <span class="fM">我的集章</span>
                         <!-- <span class="fS">5張</span> -->
                     </a>
+                </div>
+                <!-- 個人資訊 -->
+                <div class="tag">
+                    <img src="img/profile.png">
+                    <div>
+                        <span class="title">桃園市民</span>
+                        <span>陳小明</span>
+                    </div>
+                    <a href="profile_edit.html"><i class="fa-regular fa-pen-to-square fa-lg"></i></a>
                 </div>
                 <!-- 邀請 -->
                 <a class="invite flexH width rounded middle" onclick="popInvite()">
