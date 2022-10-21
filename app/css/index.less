@@ -209,7 +209,7 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
         &.black { color: var(--cG1); }
         &.white { color: white; }
         &.fit { min-width: fit-content; min-height: fit-content; margin: 0; }
-        .new { min-width: 10px; height: 15px; padding: 1px 3px 0; border-radius: 99px; bottom: 15px; right: 18px; position: absolute; display: flex; align-items: center; justify-content: center; background-color: var(--cRed); }
+        .new { min-width: 10px; height: 15px; padding: 1px 3px 0; border: 1px solid #FBEFF2; border-radius: 99px; bottom: 15px; right: 18px; position: absolute; display: flex; align-items: center; justify-content: center; background-color: var(--cRed); }
         .material-icons.md-18 { font-size: 18px; }
         .material-icons.md-24 { font-size: 24px; }
         .material-icons.md-36 { font-size: 36px; }
@@ -279,8 +279,8 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
         .checkmark.checkbox { position: absolute; top: auto; bottom: auto; left: 5px; height: 16px; width: 16px; border-radius: 5px; border: solid 2px var(--c1); background-color: white;
             &:after { content: ""; position: absolute; display: none; } /* Create the checkmark/indicator (hidden when not checked) */
             &:after { left: 4px; top: -0.5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); } /* Style the checkmark/indicator */}}
-    .banners { width: calc(100% - 20px); position: relative;
-        .banner { height: 100%; display: none;
+    .banners { width: calc(100% - 20px); position: relative; filter: drop-shadow(0px 5px 10px rgba(55, 84, 170, 0.2));
+        .banner { height: 100%; border-radius: 20px; display: none;
             img { width: 100%; aspect-ratio: 16 / 9; border-radius: 20px; object-fit: cover; }
             .text { top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; position: absolute; display: flex; align-items: center; justify-content: center; background-color:rgba(0,0,0,0.5);
                 span { color: white; }}}

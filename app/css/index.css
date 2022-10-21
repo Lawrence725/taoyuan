@@ -708,6 +708,7 @@ span {
   min-width: 10px;
   height: 15px;
   padding: 1px 3px 0;
+  border: 1px solid #FBEFF2;
   border-radius: 99px;
   bottom: 15px;
   right: 18px;
@@ -1074,11 +1075,13 @@ span {
 .body .banners {
   width: calc(100% - 20px);
   position: relative;
+  filter: drop-shadow(0px 5px 10px rgba(55, 84, 170, 0.2));
   /* Position the "next button" to the right */
   /* On hover, add a grey background color */
 }
 .body .banners .banner {
   height: 100%;
+  border-radius: 20px;
   display: none;
 }
 .body .banners .banner img {
