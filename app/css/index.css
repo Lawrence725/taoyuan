@@ -251,13 +251,17 @@ span {
   box-sizing: unset;
   -webkit-box-sizing: unset;
 }
+.body *:visited {
+  color: inherit;
+}
 .body .header {
-  width: calc(100% - 20px);
+  width: 100%;
   height: fit-content;
   padding: 10px 10px 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .body .header .img {
   width: fit-content;

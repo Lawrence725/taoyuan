@@ -100,9 +100,10 @@ body, h1, h2, h3, h4, h5, h6, p, select, input, textarea, button, span { font-fa
     select:hover                { cursor: pointer; }
     iframe                      { border: 0; }
     *, :after, :before          { box-sizing: unset; -webkit-box-sizing: unset; }
+    *:visited                   { color: inherit; }
 
     // Container
-    .header { width: calc(100% - 20px); height: fit-content; padding: 10px 10px 0 10px; display: flex; align-items: center; justify-content: space-between;
+    .header { width: 100%; height: fit-content; padding: 10px 10px 0 10px; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box;
         .img { width: fit-content; height: 38px; }}
     .main   { min-height: 100vh; padding: 10px; display: flex; flex-direction: column; overflow-y: auto; overflow-x: hidden; box-sizing: border-box;
         > * { min-height: fit-content; }}
