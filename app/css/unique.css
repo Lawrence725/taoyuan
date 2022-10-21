@@ -9,6 +9,7 @@
 .body .header.v2 {
   background: url(../img/bg.png);
   background-size: cover;
+  background-position: center;
   box-shadow: 0px 10px 20px rgba(239, 96, 121, 0.1);
 }
 .body .header.v2 i,
@@ -19,6 +20,7 @@
 .body .main.v2 {
   background: url(../img/bg.png);
   background-size: cover;
+  background-position: center;
 }
 .body .footer {
   width: 100%;
