@@ -122,13 +122,14 @@
             iframe { width: 100%; height: fit-content; }}}
     
     // Main Pages
-    .index { background: url(../img/bg.png); background-size: cover;
-        &.header { background: url(../img/bg.png); background-size: cover;
+    .index {
+        &.header.v2 { background: url(../img/bg.png); background-size: cover;
             i, svg, span { color: white !important; }}
+        &.main.v2 { background: url(../img/bg.png); background-size: cover; }
+        .function.v2 span { color: white; }
         &.main { align-items: center; gap: 10px; }
         .lineH { width: calc(100% - 20px); margin: 10px; }
         .function { margin: 10px 0 0;
-            span { color: white; }
             .fM { margin: 5px 0; }
             .fS { width: 70px; padding: 2px; border: 1px solid var(--c2); border-radius: 99px; line-height: 16px; text-align: center; display: flex; justify-content: center;
                 img { width: 20px; margin-right: 2px; }}}

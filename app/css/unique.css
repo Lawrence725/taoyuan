@@ -556,18 +556,21 @@
   width: 100%;
   height: fit-content;
 }
-.body .index {
+.body .index.header.v2 {
   background: url(../img/bg.png);
   background-size: cover;
 }
-.body .index.header {
-  background: url(../img/bg.png);
-  background-size: cover;
-}
-.body .index.header i,
-.body .index.header svg,
-.body .index.header span {
+.body .index.header.v2 i,
+.body .index.header.v2 svg,
+.body .index.header.v2 span {
   color: white !important;
+}
+.body .index.main.v2 {
+  background: url(../img/bg.png);
+  background-size: cover;
+}
+.body .index .function.v2 span {
+  color: white;
 }
 .body .index.main {
   align-items: center;
@@ -579,9 +582,6 @@
 }
 .body .index .function {
   margin: 10px 0 0;
-}
-.body .index .function span {
-  color: white;
 }
 .body .index .function .fM {
   margin: 5px 0;
