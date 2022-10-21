@@ -682,6 +682,7 @@
   height: 50px;
   margin: 5px 10px 0;
   border-radius: 10px;
+  gap: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -694,6 +695,10 @@
 }
 .body .index .mall span.title {
   font-size: var(--fL);
+  color: white;
+}
+.body .index .mall i,
+.body .index .mall svg {
   color: white;
 }
 .body .index .tabs {
