@@ -1149,7 +1149,7 @@
 }
 .body .map.main {
   height: calc(100vh - 130px);
-  padding: 80px 10px 70px !important;
+  padding: 70px 10px 70px !important;
   position: relative;
   overflow-y: hidden;
 }
@@ -2812,7 +2812,7 @@
   border-radius: 10px;
 }
 .body .stores.main {
-  padding: 80px 10px 70px !important;
+  padding: 70px 10px 70px !important;
 }
 .body .stores.main .tabs {
   height: 30px;
