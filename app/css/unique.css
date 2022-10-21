@@ -39,6 +39,7 @@
 }
 .body section.popDropdown .popBody {
   width: 100%;
+  margin: 10px;
   animation-name: popup;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -2147,6 +2148,7 @@
 }
 .body .point_history.popTime .popBody {
   width: 100%;
+  margin: 10px;
   animation-name: popup;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
