@@ -127,7 +127,8 @@
     
     // Main Pages
     .index {
-        &.main { align-items: center; gap: 10px; }
+        &.main { align-items: center; gap: 10px;
+            @media @sD, @sT { width: 748px !important; }}
         .lineH { width: calc(100% - 20px); margin: 10px; }
         .function { margin: 10px 0 0;
             .fM { margin: 5px 0; }
@@ -749,7 +750,7 @@
             .list { overflow-y: auto;
                 input { width: calc(100vw - 30px) !important; padding-left: 10px; }
                 .information { width: calc(100vw - 32px) !important; margin: 10px 5px; padding: 10px 15px; border-radius: 20px; background-color: white; box-sizing: border-box;
-                    @media @sD, @sT { width: 728px !important; }
+                    @media @sD, @sT { width: 718px !important; }
                     img.store { display: none; width: 80px; height: 80px; margin-left: 10px; border-radius: 5px; aspect-ratio: 1/1; }
                     .fM { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
                     .flexV { gap: 2px; }

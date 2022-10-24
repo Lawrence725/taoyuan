@@ -580,6 +580,11 @@
   align-items: center;
   gap: 10px;
 }
+@media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
+  .body .index.main {
+    width: 748px !important;
+  }
+}
 .body .index .lineH {
   width: calc(100% - 20px);
   margin: 10px;
@@ -2874,7 +2879,7 @@
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .stores.main .list .information {
-    width: 728px !important;
+    width: 718px !important;
   }
 }
 .body .stores.main .list .information img.store {
