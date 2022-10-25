@@ -708,7 +708,6 @@ span {
   min-width: 10px;
   height: 15px;
   padding: 1px 3px 0;
-  border: 1px solid var(--c1);
   border-radius: 99px;
   bottom: 15px;
   right: 18px;
@@ -716,9 +715,13 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--cRed);
+}
+.body .icon .new.v2 {
+  border: 1px solid var(--c1);
   background-color: white;
 }
-.body .icon .new span.fXS.white {
+.body .icon .new.v2 span.fXS.white {
   color: var(--cRed) !important;
 }
 .body .icon .material-icons.md-18 {
