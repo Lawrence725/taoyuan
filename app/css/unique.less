@@ -306,6 +306,7 @@
             @supports (-webkit-touch-callout: none) and (not (translate: none)) { > * { margin-bottom: 20px !important; }}
             @media @sD, @sT { width: 748px !important; }}
         .tag { width: 100%; padding: 10px 20px 10px 10px; border-radius: 99px; display: flex; align-items: center; gap: 10px; background-color: white; box-sizing: border-box; box-shadow: 0px 10px 20px rgba(239, 96, 121, 0.2);
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) { > *:not(:last-child) { margin-right: 10px !important; }}
             img { width: 80px; height: 80px; border-radius: 999px; }
             div { width: 100%; display: flex; flex-direction: column;
                 span { font-size: var(--fL);
@@ -758,7 +759,7 @@
                 .dropdown { width: fit-content;
                     select { width: fit-content; padding: 0 30px 0 10px; background-color: transparent; }}}
             .list { overflow-y: auto;
-                input { width: calc(100vw - 30px) !important; padding-left: 10px; }
+                input { width: 100% !important; padding-left: 10px; }
                 .information { width: calc(100vw - 32px) !important; margin: 10px 5px; padding: 10px 15px; border-radius: 20px; background-color: white; box-sizing: border-box;
                     @media @sD, @sT { width: 718px !important; }
                     img.store { display: none; width: 80px; height: 80px; margin-left: 10px; border-radius: 5px; aspect-ratio: 1/1; }
@@ -901,7 +902,7 @@
             .popHeader { height: 200px; margin: 0 !important; padding-bottom: 30px; border-radius: 20px 20px 0 0; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1)); background: url(../img/bg2.png); background-position: bottom; background-attachment: initial; background-size: cover; }
             .popMain { height: 100%; margin: 0 !important; justify-content: center !important;
                 .img { width: 30px; height: fit-content; }}
-            .popFooter { margin: 30px 10px 10px;
+            .popFooter { margin: 30px 10px 10px; align-items: flex-end;
                 .img { width: 20px; height: 20px; margin-left: 0; }}}}
 
     // 設定
@@ -929,7 +930,7 @@
         .popMain { height: 100%; margin: 0 !important; justify-content: center !important;
             .img { width: 30px; height: fit-content; }
             span { text-align: center; }}
-        .popFooter { min-height: fit-content; margin: 30px 10px 10px;
+        .popFooter { min-height: fit-content; margin: 30px 10px 10px; align-items: flex-end;
             .img { width: 20px; height: 20px; margin-left: 0; }}}
         
     .popNoQA {

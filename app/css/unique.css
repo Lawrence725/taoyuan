@@ -1387,6 +1387,11 @@
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(239, 96, 121, 0.2);
 }
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .body .profile .tag > *:not(:last-child) {
+    margin-right: 10px !important;
+  }
+}
 .body .profile .tag img {
   width: 80px;
   height: 80px;
@@ -2910,7 +2915,7 @@
   overflow-y: auto;
 }
 .body .stores.main .list input {
-  width: calc(100vw - 30px) !important;
+  width: 100% !important;
   padding-left: 10px;
 }
 .body .stores.main .list .information {
@@ -3507,6 +3512,7 @@
 }
 .body .activity_question.popCorrect .popFooter {
   margin: 30px 10px 10px;
+  align-items: flex-end;
 }
 .body .activity_question.popCorrect .popFooter .img {
   width: 20px;
@@ -3609,6 +3615,7 @@
 .body .popPoint .popFooter {
   min-height: fit-content;
   margin: 30px 10px 10px;
+  align-items: flex-end;
 }
 .body .popPoint .popFooter .img {
   width: 20px;

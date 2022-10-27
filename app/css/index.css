@@ -707,7 +707,7 @@ span {
 .body .icon .new {
   min-width: 10px;
   height: 15px;
-  padding: 1px 3px 0;
+  padding: 0 3px 2px;
   border-radius: 99px;
   bottom: 15px;
   right: 18px;
