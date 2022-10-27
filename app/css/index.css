@@ -372,7 +372,7 @@ span {
   font-size: var(--fL);
 }
 .body.fixed .header .right {
-  justify-content: end;
+  justify-content: flex-end;
   gap: 10px;
 }
 .body.fixed .main {

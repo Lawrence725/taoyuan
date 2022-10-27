@@ -1,9 +1,10 @@
 // Screen Size
-@sD:    (min-width: 1024px);                                                                                // Desktop
-@sT:    (max-width: 1023px) and (min-width: 768px);                                                         // Tablet
-@sM:    (max-width: 767px);                                                                                 // Mobile
-@sMs:   (max-width: 374px);                                                                                 // Mobile (Small)
-@sLand: (max-height: 767px) and (min-width: 568px) and (max-width: 1080px) and (orientation: landscape);    // Mobile (Landscape)
+@sD:    (min-width: 1024px);                            // Desktop
+@sT:    (max-width: 1023px) and (min-width: 768px);     // Tablet
+@sM:    (max-width: 767px);                             // Mobile
+@sMs:   (max-width: 374px);                             // Mobile (Small)
+@sLand: (max-height: 767px) and (min-width: 568px);     // Mobile (Landscape)
+@iPhone: (-webkit-touch-callout: none) and (not (translate: none));
 
 .body {
     .header .fa-chevron-left, .header .fa-xmark, .header .fa-times { color: var(--c3) !important; font-size: 1.5em; line-height: 0.04167em; vertical-align: -0.125em; }
@@ -185,10 +186,13 @@
                 img { border-radius: 5px; }}}
     .service {
         &.main { padding: 80px 20px 90px !important; gap: 20px;
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) { > * { margin-bottom: 20px; }}
             @media @sD, @sT { width: 748px !important; }}
         .top .flexV { min-height: 120px; aspect-ratio: 1/1; padding: 20px; border-radius: 20px; position: relative; box-sizing: border-box;
-            &.receipt { background-color: var(--c1); box-shadow: 0px 5px 10px rgba(239, 96, 121, 0.2); }
-            &.checkin { background-color: var(--c3); box-shadow: 0px 5px 10px rgba(92, 184, 178, 0.2); }
+            &.receipt { background-color: var(--c1); box-shadow: 0px 5px 10px rgba(239, 96, 121, 0.2);
+                @supports (-webkit-touch-callout: none) and (not (translate: none)) { margin-right: 10px; }}
+            &.checkin { background-color: var(--c3); box-shadow: 0px 5px 10px rgba(92, 184, 178, 0.2);
+                @supports (-webkit-touch-callout: none) and (not (translate: none)) { margin-left: 10px; }}
             .img { width: fit-content; height: 50px; }
             i { position: absolute; right: 20px; bottom: 20px; color: white; }}
         .middle { min-height: 120px; padding: 10px; border-radius: 20px; background-color: white; box-sizing: border-box; box-shadow: 0px 50px 100px rgba(55, 84, 170, 0.05);
@@ -254,7 +258,7 @@
                 @keyframes shimmer { 100% { transform: translateX(100%); }}}}}
     .map {
         &.main { height: calc(100vh - 130px); padding: 70px 10px 70px !important; position: relative; overflow-y: hidden; }
-        .tabs { height: 30px; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+        .tabs { height: 30px; max-height: 30px; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
             .tab { padding: 5px 0;
                 &.active { color: var(--c1); }
                 &:not(.active) * { color: var(--cG4); }}
@@ -299,6 +303,7 @@
                 .icon { margin: 0 5px 0 0; }}}}
     .profile {
         &.main { padding: 60px 20px 90px !important; gap: 20px;
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) { > * { margin-bottom: 20px !important; }}
             @media @sD, @sT { width: 748px !important; }}
         .tag { width: 100%; padding: 10px 20px 10px 10px; border-radius: 99px; display: flex; align-items: center; gap: 10px; background-color: white; box-sizing: border-box; box-shadow: 0px 10px 20px rgba(239, 96, 121, 0.2);
             img { width: 80px; height: 80px; border-radius: 999px; }
@@ -309,10 +314,14 @@
             a i, a svg { color: var(--c1); }
         }
         .category { width: 100%; display: flex; flex-direction: column; gap: 10px;
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) { > span.title { margin-bottom: 10px; }}
             span { font-size: var(--fM);
                 &.title { font-weight: bold; }}
             div.item { width: 100%; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;
+                @supports (-webkit-touch-callout: none) and (not (translate: none)) { > * { margin: 5px 3.33px; }}
                 a { width: calc(33.33% - 6.67px); display: flex; flex-direction: column; align-items: center; gap: 5px;
+                    @supports (-webkit-touch-callout: none) and (not (translate: none)) { > * { margin-bottom: 5px; }}
+                    span { text-align: center; }
                     div.pic { width: 60px; height: 60px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: white;
                         i, svg { color: var(--c3); }
                         img { min-height: 25px; }}}}
@@ -390,6 +399,7 @@
         .info { margin-bottom: 20px !important; border-radius: 20px; background-color: white; }}
     .website {
         &.main { max-height: calc(100vh - 60px); padding: 60px 20px 0 !important; gap: 20px;
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) { > * { margin-bottom: 20px; }}
             a { width: 100%; padding: 15px 15px 15px 20px; border-radius: 99px; display: flex; gap: 10px; align-items: center; justify-content: space-between; background-color: white; box-sizing: border-box;
                 span { font-size: var(--fL); }
                 img { height: 80px; }}}
@@ -690,9 +700,9 @@
                 img { width: calc(20% - 10px); margin: 5px; border-radius: 10px;
                     &.none { filter: grayscale(100%); opacity: 0.25; }}}
             .dashH { margin: 10px 0; }
-            .gift { min-width: 100%; max-width: 400px; aspect-ratio: 285/120; margin: 10px auto; padding: 0 30px 0 20px; box-sizing: border-box; position: relative; backdrop-filter: blur(30px); background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); background-image: url(../img/bg-gift.svg); background-size: contain; background-repeat: no-repeat;
+            .gift { min-width: 100%; max-width: 400px; aspect-ratio: 285/120; margin: 10px auto; padding: 10px 30px 10px 20px; border-radius: 15px; box-sizing: border-box; position: relative; backdrop-filter: blur(30px); background-color: var(--cBg); /* background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); background-image: url(../img/bg-gift.svg); background-size: contain; background-repeat: no-repeat; */
                 > .flexV {
-                    > * { margin: 5px 0 0 0; }
+                    > *:not(:first) { margin: 5px 0 0 0; }
                     > .fM { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }}
                 .topLeft { width: 100px; height: 60px; top: 0; left: 0; position: absolute; overflow: hidden;
                     .textBg { width: 150px; top: 5px; left: -50px; position: absolute; display: none; background-color: var(--cG4); transform: rotate(-30deg);
@@ -733,7 +743,7 @@
     // 特店/任務
     .stores {
         &.main { padding: 70px 10px 70px !important;
-            .tabs { height: 30px; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            .tabs { height: 30px; max-height: 30px; border: 1px solid white; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
                 .tab { padding: 5px 0;
                     &.active { color: var(--c1); }
                     &:not(.active) {
@@ -756,6 +766,7 @@
                     .flexV { gap: 2px; }
                     .detail { flex-wrap: wrap;
                         > div { display: flex; align-items: center; gap: 5px;
+                            @supports (-webkit-touch-callout: none) and (not (translate: none)) { img, i, svg { margin-right: 5px; }}
                             &:not(:first-child) { padding-left: 7.5px; margin-left: 7.5px; border-left: 1px solid var(--cG5); }}
                         img { height: 20px; }
                         i, svg { color: var(--c1); }}
@@ -928,7 +939,7 @@
         .popHeader { height: 200px; margin: 0 !important; padding-bottom: 30px; border-radius: 20px 20px 0 0; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 20px rgba(55, 84, 170, 0.1)); background: url(../img/bg2.png); background-position: bottom; background-attachment: initial; background-size: cover; }
         .popMain { height: 100%; margin: 0 !important; justify-content: center !important;
             span { margin: 5px 0; }}
-        .popFooter { margin: 30px 10px 20px;
+        .popFooter { margin: 30px 10px 10px; align-items: flex-end;
             .lineV { height: 30px; }
             .img { width: 20px; height: 20px; }}}
 
