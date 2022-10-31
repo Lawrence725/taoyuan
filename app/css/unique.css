@@ -627,10 +627,11 @@
   margin: 15px 0 10px;
   border: 1px solid var(--cG4);
   border-radius: 20px !important;
+  align-items: flex-end !important;
   position: relative;
   box-sizing: border-box;
 }
-.body .index .mission a {
+.body .index .mission a:not(.title) {
   position: relative;
 }
 .body .index .mission img {
@@ -663,6 +664,13 @@
 }
 .body .index .mission .label {
   display: none;
+}
+.body .index .mission .feature {
+  width: 20px;
+  height: auto;
+  top: -15%;
+  left: 10%;
+  position: absolute;
 }
 .body .index .mission .none {
   pointer-events: none;
@@ -710,6 +718,14 @@
 .body .index .mall i,
 .body .index .mall svg {
   color: white;
+}
+.body .index .tkMall {
+  width: calc(100% - 20px);
+}
+.body .index .tkMall img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
 }
 .body .index .tabs {
   width: calc(100% - 26px);

@@ -322,6 +322,12 @@ span {
   text-align: center;
   line-height: 24px;
 }
+.body .footer .iconButton .feature {
+  width: 20px;
+  top: -5%;
+  left: 15%;
+  position: absolute;
+}
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .body .header,
   .body .main,
