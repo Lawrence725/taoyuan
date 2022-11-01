@@ -623,7 +623,7 @@
 }
 .body .index .mission {
   width: calc(100% - 20px) !important;
-  padding: 20px 10px 55px;
+  padding: 10px 10px 55px;
   margin: 15px 0 10px;
   border: 1px solid var(--cG4);
   border-radius: 20px !important;
@@ -632,7 +632,15 @@
   box-sizing: border-box;
 }
 .body .index .mission a:not(.title) {
+  height: 80px;
+  padding-bottom: 10px;
+  justify-content: flex-end;
+  border-radius: 15px;
   position: relative;
+}
+.body .index .mission a:nth-child(2) {
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px rgba(239, 96, 121, 0.2);
 }
 .body .index .mission img {
   height: 40px;
@@ -668,9 +676,24 @@
 .body .index .mission .feature {
   width: 20px;
   height: auto;
-  top: -15%;
+  top: 5%;
   left: 10%;
   position: absolute;
+}
+.body .index .mission .hot {
+  padding: 3px 5px 1px;
+  border-radius: 15px;
+  top: -7.5px;
+  right: -7.5px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cRed);
+}
+.body .index .mission .hot span {
+  font-size: var(--fS);
+  color: white;
 }
 .body .index .mission .none {
   pointer-events: none;

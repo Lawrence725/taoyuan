@@ -136,8 +136,9 @@
                 img { width: 20px; margin-right: 2px; }}}
         .point { width: calc(100% - 40px); padding: 10px; margin: 10px; border: 1px solid var(--c1); border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
             .img { width: 50px; height: fit-content; }}
-        .mission { width: calc(100% - 20px) !important; padding: 20px 10px 55px; margin: 15px 0 10px; border: 1px solid var(--cG4); border-radius: 20px !important; align-items: flex-end !important; position: relative; box-sizing: border-box;
-            a:not(.title) { position: relative; }
+        .mission { width: calc(100% - 20px) !important; padding: 10px 10px 55px; margin: 15px 0 10px; border: 1px solid var(--cG4); border-radius: 20px !important; align-items: flex-end !important; position: relative; box-sizing: border-box;
+            a:not(.title) { height: 80px; padding-bottom: 10px; justify-content: flex-end; border-radius: 15px; position: relative; }
+            a:nth-child(2) { background-color: rgba(255, 255, 255, 1); box-shadow: 0px 5px 10px rgba(239, 96, 121, 0.2); }
             img { height: 40px; }
             .fM { margin-top: 5px; }
             .title { width: fit-content !important; border-bottom: 2px solid var(--c1); border-radius: 0; left: 50%; transform: translate(-50%, 0); bottom: 15px; position: absolute; text-align: center;
@@ -146,7 +147,9 @@
             .third { color: var(--c1) !important; }
             a:nth-child(2) img { margin: -2.5px 0; }
             .label { display: none; }
-            .feature { width: 20px; height: auto; top: -15%; left: 10%; position: absolute; }
+            .feature { width: 20px; height: auto; top: 5%; left: 10%; position: absolute; }
+            .hot { padding: 3px 5px 1px; border-radius: 15px; top: -7.5px; right: -7.5px; position: absolute; display: flex; align-items: center; justify-content: center; background-color: var(--cRed);
+                span { font-size: var(--fS); color: white; }}
             .none { pointer-events: none;
                 .label { padding: 2.5px 5px; border: 1px solid var(--c1) !important; border-radius: 5px; display: flex; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); filter: grayscale(0%) !important; opacity: 1 !important; background: linear-gradient(104.62deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%); backdrop-filter: blur(30px); }}}
         .missions { min-height: 80px;
