@@ -633,7 +633,7 @@
 }
 .body .index .mission a:not(.title) {
   height: 80px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   justify-content: flex-end;
   border-radius: 15px;
   position: relative;
@@ -681,7 +681,7 @@
   position: absolute;
 }
 .body .index .mission .hot {
-  padding: 3px 5px 1px;
+  padding: 2.5px 5px;
   border-radius: 15px;
   top: -7.5px;
   right: -7.5px;
