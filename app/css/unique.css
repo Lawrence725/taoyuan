@@ -3619,6 +3619,111 @@
 .body .code_set.main > div .button {
   width: calc(50% - 30px);
 }
+.body .ipass_get {
+  position: relative;
+}
+.body .ipass_get.main {
+  align-items: center;
+  padding-bottom: 30px;
+}
+.body .ipass_get.main > * {
+  margin-bottom: 20px;
+}
+.body .ipass_get.main .flexV {
+  position: relative;
+  padding-top: 48px;
+}
+.body .ipass_get.main .flexV::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 40px;
+  height: 40px;
+  display: block;
+  background: url(../img/bg-w-store.png) center center no-repeat;
+  background-size: cover;
+}
+.body .ipass_get.main .flexV span {
+  font-size: 14px;
+  color: #333F48;
+}
+.body .ipass_get.main .Note {
+  width: 100%;
+  padding: 0 13px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+}
+.body .ipass_get.main .Note span {
+  color: #333;
+  font-weight: bold;
+}
+.body .ipass_get.main .Note a {
+  color: #EF6079;
+  text-decoration: underline !important;
+}
+.body .ipass_get.main .Note a:hover {
+  text-decoration: none !important;
+}
+.body .ipass_get.main .Note ul {
+  list-style-type: decimal;
+  padding-inline-start: 20px;
+}
+.body .ipass_get.main .Note ul li {
+  color: #828282;
+  font-size: 14px;
+  line-height: 20px;
+}
+.body .ipass_get.main .remove {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+.body .ipass_get.main .remove span {
+  font-size: 14px;
+}
+.body .ipass_get.main .remove a {
+  font-size: 14px;
+  color: var(--c1);
+}
+.body .ipass_get.main .flexH {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+}
+.body .ipass_get.main .card {
+  width: calc(100% - 10px);
+  height: 230px;
+  margin-top: 15px;
+  max-width: 384px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
+  background: url(../img/card-ipass.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: center center;
+}
+.body .ipass_get.main .card .bg-dark {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #00000076;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.body .ipass_get.main .card .bg-dark p {
+  font-size: 22px;
+  color: #fff;
+  transform-origin: 50% 0%;
+  transform: rotateZ(-15deg);
+}
 .body .popPoint .close {
   color: white;
   border-radius: 99px;
