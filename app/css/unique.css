@@ -1028,6 +1028,10 @@
 .body .serial.main .button {
   width: calc(50% - 30px);
 }
+.body .scan.header a.ipass {
+  margin: 5px 10px 5px auto;
+  background-color: white;
+}
 .body .scan.main {
   width: 100vw;
   height: calc(100% - 130px);
