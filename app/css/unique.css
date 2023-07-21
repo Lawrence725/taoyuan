@@ -3023,6 +3023,9 @@
 .body .stores.main .list .information .detail svg {
   color: var(--c1);
 }
+.body .stores.main .list .information .detail .fa-leaf {
+  color: var(--cGreen);
+}
 .body .stores.main .list .information .icon {
   margin: 0 5px 0 0;
 }
