@@ -136,12 +136,14 @@
                 img { width: 20px; margin-right: 2px; }}}
         .point { width: calc(100% - 40px); padding: 10px; margin: 10px; border: 1px solid var(--c1); border-radius: 20px; backdrop-filter: blur(30px); background: radial-gradient(100% 445.79% at 100% 100%, rgba(239, 96, 121, 0.5) 0%, rgba(255, 255, 255, 0.5) 50.65%, rgba(255, 255, 255, 0.8) 100%);
             .img { width: 50px; height: fit-content; }}
-        .mission { width: calc(100% - 20px) !important; padding: 10px 10px 55px; margin: 15px 0 10px; border: 1px solid var(--cG4); border-radius: 20px !important; align-items: flex-end !important; position: relative; box-sizing: border-box;
+        .mission { width: calc(100% - 20px) !important; padding: 10px; margin: 15px 0 10px; border: 1px solid var(--cG4); border-radius: 20px !important; gap: 10px; align-items: flex-end !important; position: relative; box-sizing: border-box;
             a:not(.title) { height: 80px; padding-bottom: 5px; justify-content: flex-end; border-radius: 15px; position: relative; }
             // a:nth-child(2) { background-color: rgba(255, 255, 255, 1); box-shadow: 0px 5px 10px rgba(239, 96, 121, 0.2); }
             img { height: 40px; }
-            .fM { margin-top: 5px; }
-            .title { width: fit-content !important; border-bottom: 2px solid var(--c1); border-radius: 0; left: 50%; transform: translate(-50%, 0); bottom: 15px; position: absolute; text-align: center;
+            > div:first-child .fM { margin-top: 5px; }
+            > div:last-child { padding: 0 7.5px; box-sizing: border-box;
+                > span:first-child { color: var(--cG3) !important; }}
+            .title { width: fit-content !important; border-bottom: 2px solid var(--c1); border-radius: 0; /* left: 50%; transform: translate(-50%, 0); bottom: 15px; position: absolute; */ text-align: center;
                 span { margin: 0; }
                 .icon { margin: 0; }}
             .third { color: var(--c1) !important; }

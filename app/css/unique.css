@@ -623,10 +623,11 @@
 }
 .body .index .mission {
   width: calc(100% - 20px) !important;
-  padding: 10px 10px 55px;
+  padding: 10px;
   margin: 15px 0 10px;
   border: 1px solid var(--cG4);
   border-radius: 20px !important;
+  gap: 10px;
   align-items: flex-end !important;
   position: relative;
   box-sizing: border-box;
@@ -641,17 +642,21 @@
 .body .index .mission img {
   height: 40px;
 }
-.body .index .mission .fM {
+.body .index .mission > div:first-child .fM {
   margin-top: 5px;
+}
+.body .index .mission > div:last-child {
+  padding: 0 7.5px;
+  box-sizing: border-box;
+}
+.body .index .mission > div:last-child > span:first-child {
+  color: var(--cG3) !important;
 }
 .body .index .mission .title {
   width: fit-content !important;
   border-bottom: 2px solid var(--c1);
   border-radius: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  bottom: 15px;
-  position: absolute;
+  /* left: 50%; transform: translate(-50%, 0); bottom: 15px; position: absolute; */
   text-align: center;
 }
 .body .index .mission .title span {
