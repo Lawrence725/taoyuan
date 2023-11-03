@@ -21,6 +21,11 @@ function popDetail() {
     document.getElementById("popDetail").style.display = "flex";
     document.body.style.overflow = "hidden"; }
 
+// Popup (活動點數)
+function popDetail_event() {
+    document.getElementById("popDetail_event").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
 // Popup (下拉選單)
 function popDropdown() {
     var popDropdown = document.getElementById("popDropdown");

@@ -2154,6 +2154,31 @@
   width: 30px;
   height: fit-content;
 }
+.body .point_success.main .info .detail .arrPoint {
+  margin-left: 10px;
+}
+.body .point_success.main .info .detail .arrPointList {
+  padding: 8px 0;
+}
+.body .point_success.main .info .detail .arrPointList .gray {
+  padding-left: 20px;
+}
+.body .point_success.main .info .plus {
+  padding: 0 5px;
+}
+.body .point_success.main .info .img-linepay-x {
+  width: 64px;
+  margin-right: 5px;
+}
+.body .point_success.main .info .img-linepay-x img {
+  width: 100%;
+}
+.body .point_success.main .info .img-peach {
+  width: 32px;
+}
+.body .point_success.main .info .img-peach img {
+  width: 100%;
+}
 .body .point_history.main {
   padding: 60px 10px 70px !important;
 }
@@ -2288,6 +2313,32 @@
   border-bottom: 1px solid var(--cG5);
   border-radius: 0;
   gap: 5px;
+}
+.body .point_history.popDetail .popMain .get span {
+  padding: 3px 0;
+}
+.body .point_history.popDetail .popMain .get .img {
+  width: 55px;
+  height: 55px;
+}
+.body .point_history.popDetail .popMain .get .img img {
+  width: initial;
+  border-radius: 50%;
+}
+.body .point_history.popDetail .popMain .store_type {
+  width: 25px;
+  height: 25px;
+}
+.body .point_history.popDetail .popMain .place {
+  min-width: 82px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid var(--cG4);
+  overflow: auto;
+}
+.body .point_history.popDetail .popMain .place .top {
+  background-color: var(--cG4);
+  color: #fff;
 }
 .body .tickets.main {
   padding: 60px 10px 70px !important;
