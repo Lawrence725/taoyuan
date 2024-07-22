@@ -703,7 +703,7 @@ span {
   color: var(--cG1);
 }
 .body .icon.white {
-  color: white;
+  color: white !important;
 }
 .body .icon.fit {
   min-width: fit-content;
